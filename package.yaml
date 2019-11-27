@@ -1,5 +1,5 @@
 name: ComiCal
-version: 0.0.0.1
+version: !include "./VERSION"
 synopsis: Track the publish dates of your favorite comics
 author: Eric Bailey
 maintainer: eric@ericb.me
@@ -10,6 +10,11 @@ extra-source-files:
 - CHANGELOG.md
 dependencies:
 - base >= 4.12
+- bytestring >= 0.10
+- modern-uri
+- req
+- text
+- time
 ghc-options:
 - -Wall
 - -Werror
@@ -17,8 +22,10 @@ library:
   ghc-options:
   - -fwarn-incomplete-patterns
   source-dirs: src
-  exposed-modules: []
-  dependencies: []
+  exposed-modules:
+  - Data.ComiCal
+  dependencies:
+  - tagsoup >= 0.14
 executable:
   ghc-options:
   - -O2

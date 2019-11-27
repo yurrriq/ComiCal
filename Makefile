@@ -1,12 +1,7 @@
-define build_expr
-with import <nixpkgs> {}; haskellPackages.callPackage ./. {}
-endef
-
-
 .PHONY: build
-build: default.nix $(wildcard src/**.hs) $(wildcard app/**.hs)
-	nix-build -E '${build_expr}'
+build: release.nix default.nix $(wildcard src/**.hs) $(wildcard app/**.hs)
+	@ nix build -f $<
 
 
-default.nix: package.yaml
-	cabal2nix . --maintainer yurrriq --hpack >$@
+default.nix: package.yaml VERSION
+	@ cabal2nix . --maintainer yurrriq --hpack >$@

@@ -1,5 +1,9 @@
+{-# LANGUAGE OverloadedStrings #-}
+
 module Main (main) where
+
+import           Data.ComiCal (imageComic)
 
 
 main :: IO ()
-main = putStrLn "Hello, Haskell!"
+main = print =<< imageComic "gideon-falls"
