@@ -3,7 +3,7 @@ build: release.nix default.nix $(wildcard src/**.hs) $(wildcard app/**.hs)
 	@ nix build -f $<
 
 
-default.nix: package.yaml VERSION
+default.nix: package.yaml LICENSE VERSION
 	@ cabal2nix . --maintainer yurrriq --hpack >$@
 
 

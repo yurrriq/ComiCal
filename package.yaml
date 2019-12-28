@@ -9,12 +9,8 @@ verbatim:
 extra-source-files:
 - CHANGELOG.md
 dependencies:
-- base >= 4.12
-- bytestring >= 0.10
-- modern-uri
-- req
+- base
 - text
-- time
 ghc-options:
 - -Wall
 - -Werror
@@ -25,7 +21,11 @@ library:
   exposed-modules:
   - Data.ComiCal
   dependencies:
-  - tagsoup >= 0.14
+  - bytestring
+  - modern-uri
+  - req
+  - tagsoup
+  - time
 executable:
   ghc-options:
   - -O2

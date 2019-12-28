@@ -5,5 +5,10 @@ let
 in
 
 pkgs.mkShell {
-  buildInputs = project.env.nativeBuildInputs;
+  buildInputs = project.env.nativeBuildInputs ++ (with pkgs.haskellPackages; [
+    cabal-install
+    hindent
+    hpack
+    pointfree
+  ]);
 }

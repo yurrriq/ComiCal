@@ -38,15 +38,6 @@ instance Show Release where
     show (Release uri date) = unwords [ Text.unpack (URI.render uri), "on", show date ]
 
 
--- sample :: IO String
--- sample = readFile "../../data/ascender.html"
-
--- do uri <- liftIO $ URI.mkURI "https://example.com"
---    let (url, options) = fromJust (useHttpsURI uri)
-
--- >>> imageComic "ascender"
--- >>> imageComic "gideon-falls"
--- >>> imageComic "spawn"
 imageComic :: Text -> IO Series
 imageComic slug = runReq defaultHttpConfig $
     do let url = https "imagecomics.com" /: "comics" /: "list" /: "series" /: slug /: "releases"
