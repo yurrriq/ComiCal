@@ -9,12 +9,13 @@ import           Data.Maybe            (catMaybes)
 import           Data.Text             (Text)
 import qualified Data.Text             as Text
 import           Data.Text.Encoding    (decodeUtf8)
-import           Data.Time
+import           Data.Time             (Day, defaultTimeLocale, parseTimeM)
 import           Network.HTTP.Req      (GET (..), NoReqBody (..),
                                         Scheme (Https), Url, bsResponse,
                                         defaultHttpConfig, https, req,
                                         responseBody, runReq, (/:))
-import           Text.HTML.TagSoup
+import           Text.HTML.TagSoup     (Tag, fromAttrib, fromTagText, isTagText,
+                                        parseTags, sections, (~/=), (~==))
 import           Text.URI              (URI)
 import qualified Text.URI              as URI
 
