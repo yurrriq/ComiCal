@@ -1,14 +1,14 @@
-{ mkDerivation, base, bytestring, hpack, modern-uri, req, stdenv
-, tagsoup, text, time
+{ mkDerivation, base, bytestring, hpack, lens, modern-uri, req
+, stdenv, tagsoup, text, time
 }:
 mkDerivation {
   pname = "ComiCal";
-  version = "0.0.2.1";
+  version = "0.1.0.0";
   src = ./.;
   isLibrary = true;
   isExecutable = true;
   libraryHaskellDepends = [
-    base bytestring modern-uri req tagsoup text time
+    base bytestring lens modern-uri req tagsoup text time
   ];
   libraryToolDepends = [ hpack ];
   executableHaskellDepends = [ base text ];

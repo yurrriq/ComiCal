@@ -1,10 +1,13 @@
 {-# LANGUAGE DataKinds         #-}
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE TemplateHaskell   #-}
 
 module Data.ComiCal where
 
+import           Control.Lens          (makeLenses, (^.))
 import           Data.ByteString.Char8 (ByteString)
 import qualified Data.ByteString.Char8 as BS
+import qualified Data.List.NonEmpty    as NE
 import           Data.Maybe            (catMaybes)
 import           Data.Text             (Text)
 import qualified Data.Text             as Text
@@ -16,27 +19,36 @@ import           Network.HTTP.Req      (GET (..), NoReqBody (..),
                                         responseBody, runReq, (/:))
 import           Text.HTML.TagSoup     (Tag, fromAttrib, fromTagText, isTagText,
                                         parseTags, sections, (~/=), (~==))
+import           Text.Printf           (printf)
 import           Text.URI              (URI)
 import qualified Text.URI              as URI
 
 
-data Series = Series
-  { seriesTitle    :: ByteString
-  , seriesURI      :: Url 'Https
-  , seriesReleases :: [Release]
-  }
-  deriving (Eq, Show)
-
-
 data Release = Release
-  { releaseURI  :: URI
-  , releaseDate :: Day
-  }
+  { _issue      :: Int
+  , _releaseURI :: URI
+  , _date       :: Day }
   deriving (Eq)
 
+makeLenses ''Release
 
 instance Show Release where
-    show (Release uri date) = unwords [ Text.unpack (URI.render uri), "on", show date ]
+    show release =
+      printf "#%d on %s" (release^.issue) (show (release^.date))
+
+
+data Series = Series
+  { _title     :: ByteString
+  , _seriesURI :: Url 'Https
+  , _releases  :: [Release] }
+  deriving (Eq)
+
+makeLenses ''Series
+
+instance Show Series where
+  show series = printf "%s (%d releases)"
+                (BS.unpack (series^.title))
+                (length (series^.releases))
 
 
 imageComic :: Text -> IO Series
@@ -55,7 +67,16 @@ imageComic slug = runReq defaultHttpConfig $
 
     parseRelease :: [Tag ByteString] -> Maybe Release
     parseRelease release =
-        Release <$> parseReleaseURI release <*> parseReleaseDate release
+        do uri <- parseReleaseURI release
+           lastPath <- NE.last . snd <$> URI.uriPath uri
+           -- FIXME: https://imagecomics.com/comics/releases/gideon-falls-1-directors-cut
+           -- FIXME: https://imagecomics.com/comics/releases/medieval-spawn-witchblade-4-of-4
+           let n = read .
+                   reverse . takeWhile (/= '-') . reverse .
+                   Text.unpack . URI.unRText $
+                   lastPath
+           Release n uri <$> parseReleaseDate release
+
 
     parseReleaseURI :: [Tag ByteString] -> Maybe URI
     parseReleaseURI =
