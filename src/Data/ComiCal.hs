@@ -77,7 +77,6 @@ imageComic slug = runReq defaultHttpConfig $
                    lastPath
            Release n uri <$> parseReleaseDate release
 
-
     parseReleaseURI :: [Tag ByteString] -> Maybe URI
     parseReleaseURI =
         URI.mkURI .
