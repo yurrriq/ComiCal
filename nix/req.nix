@@ -12,6 +12,7 @@ mkDerivation {
     url = "https://github.com/mrkkrp/req.git";
     sha256 = "1nprj59p06pjar2vxhdmn6wcj06466w220qb4yjk927d6d9ml1ry";
     rev = "fd460ba5224ec09cfe7d28c3031b84c2074f8b0d";
+    fetchSubmodules = true;
   };
   enableSeparateDataOutput = true;
   libraryHaskellDepends = [

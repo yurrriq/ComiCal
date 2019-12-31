@@ -3,7 +3,9 @@
 
 module Main (main) where
 
-import           Data.ComiCal       (_releases, imageComic)
+import           Control.Lens       (view)
+import           Data.ComiCal       (imageSeries)
+import           Data.ComiCal.Types (releases)
 import           Data.Text          (Text, pack)
 import           System.Environment (getArgs)
 
@@ -11,7 +13,8 @@ import           System.Environment (getArgs)
 main :: IO ()
 main = mapM_ go =<< getSlugs
   where
-    go slug = mapM_ print =<< _releases <$> imageComic slug
+    go :: Text -> IO ()
+    go slug = mapM_ print =<< view releases <$> imageSeries slug
 
     getSlugs :: IO [Text]
     getSlugs = getArgs >>= \case
