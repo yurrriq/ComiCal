@@ -3,20 +3,21 @@
 
 module Main (main) where
 
-import           Control.Lens       (view)
-import           Data.ComiCal       (imageSeries)
-import           Data.ComiCal.Types (releases)
-import           Data.Text          (Text, pack)
-import           System.Environment (getArgs)
+import           Data.ByteString.Char8 (ByteString)
+import qualified Data.ByteString.Char8 as BS
+import           Data.ComiCal          (imageSeries)
+import           Data.ComiCal.Types    (Calendar, mkCalendar)
+import qualified Data.List.NonEmpty as NE
+import           System.Environment    (getArgs)
 
 
 main :: IO ()
-main = mapM_ go =<< getSlugs
+main = print =<< foldr1 (<>) <$> (mapM go =<< getSlugs)
   where
-    go :: Text -> IO ()
-    go slug = mapM_ print =<< view releases <$> imageSeries slug
+    go :: ByteString -> IO Calendar
+    go slug = mkCalendar <$> imageSeries slug
 
-    getSlugs :: IO [Text]
+    getSlugs :: IO (NE.NonEmpty ByteString)
     getSlugs = getArgs >>= \case
       []    -> error "Must specify slug(s)"
-      slugs -> pure (pack <$> slugs)
+      slugs -> pure (NE.fromList (BS.pack <$> slugs))

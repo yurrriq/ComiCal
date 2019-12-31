@@ -3,7 +3,7 @@
 }:
 mkDerivation {
   pname = "ComiCal";
-  version = "0.2.0.0";
+  version = "0.3.0.0";
   src = ./.;
   isLibrary = true;
   isExecutable = true;
@@ -11,7 +11,7 @@ mkDerivation {
     base bytestring lens modern-uri req tagsoup text time
   ];
   libraryToolDepends = [ hpack ];
-  executableHaskellDepends = [ base lens text ];
+  executableHaskellDepends = [ base bytestring lens text ];
   prePatch = "hpack";
   homepage = "https://github.com/yurrriq/ComiCal#readme";
   description = "Track the publish dates of your favorite comics";

@@ -8,7 +8,8 @@ import           Data.ComiCal.Parser   (parseSeries)
 import           Data.ComiCal.Types    (Series)
 
 import           Data.ByteString.Char8 (ByteString)
-import           Data.Text             (Text)
+import qualified Data.ByteString.Char8 as BS
+import qualified Data.Text             as Text
 import           Network.HTTP.Req      (GET (..), MonadHttp, NoReqBody (..),
                                         bsResponse, defaultHttpConfig, req,
                                         responseBody, runReq, useHttpsURI)
@@ -18,17 +19,17 @@ import           Text.URI              (URI, mkURI)
 
 -- | Given an [Image Comics series](https://imagecomics.com/comics/series) slug,
 -- fetch, parse, and return the 'Series'.
-imageSeries :: Text -> IO Series
+imageSeries :: ByteString -> IO Series
 imageSeries slug = runReq defaultHttpConfig $
     do uri <- mkSeriesListURI slug
        parseSeries slug uri <$> getSeries uri
 
 
-mkSeriesListURI :: Applicative f => Text -> f URI
+mkSeriesListURI :: Applicative f => ByteString-> f URI
 mkSeriesListURI slug =
     maybe (error "Failed to construct series URI") pure .
     mkURI $ "https://imagecomics.com/comics/list/series/" <>
-    slug <> "/releases"
+    (Text.pack (BS.unpack slug)) <> "/releases"
 
 
 getSeries :: MonadHttp m => URI -> m [Tag ByteString]
