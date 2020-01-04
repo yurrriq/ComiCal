@@ -7,3 +7,21 @@ script:
 - cachix use yurrriq
 # TODO: - cachix push yurrriq --watch-store&
 - nix-build release.nix
+- mkdir -p site
+- |-
+  ./result/bin/ComiCal \
+      ascender \
+      gideon-falls \
+      oblivion-song-by-kirkman-de-felici \
+      spawn \
+      >site/comics.ics
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  target_branch: gh-pages
+  local_dir: site
+  on:
+    branch: master
