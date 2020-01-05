@@ -1,9 +1,9 @@
-{ mkDerivation, base, bytestring, hpack, lens, modern-uri, req
-, stdenv, tagsoup, text, time
+{ mkDerivation, base, bytestring, hpack, lens, modern-uri
+, optparse-applicative, req, stdenv, tagsoup, text, time
 }:
 mkDerivation {
   pname = "ComiCal";
-  version = "0.3.0.2";
+  version = "0.3.1.0";
   src = ./.;
   isLibrary = true;
   isExecutable = true;
@@ -11,7 +11,9 @@ mkDerivation {
     base bytestring lens modern-uri req tagsoup text time
   ];
   libraryToolDepends = [ hpack ];
-  executableHaskellDepends = [ base bytestring lens text ];
+  executableHaskellDepends = [
+    base bytestring lens optparse-applicative text
+  ];
   prePatch = "hpack";
   homepage = "https://github.com/yurrriq/ComiCal#readme";
   description = "Track the publish dates of your favorite comics";

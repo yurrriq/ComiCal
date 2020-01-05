@@ -36,3 +36,4 @@ executable:
   main: Main.hs
   dependencies:
   - ComiCal
+  - optparse-applicative
