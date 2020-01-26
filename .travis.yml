@@ -10,10 +10,16 @@ script:
 - mkdir -p site
 - |-
   ./result/bin/ComiCal \
-      ascender \
-      gideon-falls \
-      oblivion-song-by-kirkman-de-felici \
-      spawn \
+      --collections east-of-west \
+      --collections gideon-falls \
+      --collections lazarus \
+      --collections outcast-by-kirkman-azaceta \
+      --collections pretty-deadly \
+      --collections southern-bastards \
+      --collections the-fix \
+      --issues      ascender \
+      --issues      oblivion-song-by-kirkman-de-felici \
+      --issues      spawn \
       >site/comics.ics
 
 deploy:

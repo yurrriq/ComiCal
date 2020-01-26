@@ -3,7 +3,7 @@
 }:
 mkDerivation {
   pname = "ComiCal";
-  version = "0.3.1.0";
+  version = "0.4.0.0";
   src = ./.;
   isLibrary = true;
   isExecutable = true;

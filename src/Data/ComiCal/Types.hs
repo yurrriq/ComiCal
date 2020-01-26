@@ -6,7 +6,7 @@
 {-# LANGUAGE TemplateHaskell        #-}
 
 module Data.ComiCal.Types
-  ( Release (Release), issue
+  ( Release (Release), number
   , Series (Series), title, releases
   , Event (Event), dtstamp, uid, summary
   , Calendar (Calendar), name, events, mkCalendar
@@ -31,17 +31,17 @@ import qualified Text.URI              as URI
 
 -- | A 'Release' has an 'issue' number, a 'uri', and a 'date'.
 data Release = Release
-  { _releaseIssue :: Int
-  , _releaseSlug  :: ByteString
-  , _releaseUri   :: URI
-  , _releaseDate  :: Day }
+  { _releaseSlug   :: ByteString
+  , _releaseTitle  :: ByteString
+  , _releaseNumber :: Maybe Int
+  , _releaseUri    :: URI
+  , _releaseDate   :: Day }
   deriving (Eq)
 
 makeLensesWith (defaultFieldRules & generateUpdateableOptics .~ False) ''Release
 
 instance Show Release where
-    show release =
-      printf "#%d on %s" (release^.issue) (show (release^.date))
+    show release = printf "%s on %s" (BS.unpack (release^.title)) (show (release^.date))
 
 
 -- | A 'Series' has a 'title', a 'uri', and a list of 'releases'.
@@ -112,5 +112,4 @@ mkCalendar series = Calendar (series^.title) $ NE.map go (series^.releases)
   where
     go :: Release -> Event
     go rel =
-      Event (rel^.date) (BS.pack (printf "%s@imagecomics.com" (BS.unpack (rel^.slug))))
-      (BS.pack (printf "%s #%d" (BS.unpack (series^.title)) (rel^.issue))) (rel^.uri)
+      Event (rel^.date) (BS.pack (printf "%s@imagecomics.com" (BS.unpack (rel^.slug)))) (rel^.title) (rel^.uri)
