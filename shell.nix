@@ -9,6 +9,7 @@ pkgs.mkShell {
     project.env.nativeBuildInputs ++ (
       with pkgs; [
         nix-prefetch-git
+        niv
       ]
     ) ++ (
       with pkgs.haskellPackages; [
