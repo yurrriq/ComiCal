@@ -6,14 +6,17 @@ in
 
 pkgs.mkShell {
   buildInputs =
-    project.env.nativeBuildInputs ++
-    (with pkgs; [
-      nix-prefetch-git
-    ]) ++ (with pkgs.haskellPackages; [
-      cabal2nix
-      cabal-install
-      hindent
-      hpack
-      pointfree
-    ]);
+    project.env.nativeBuildInputs ++ (
+      with pkgs; [
+        nix-prefetch-git
+      ]
+    ) ++ (
+      with pkgs.haskellPackages; [
+        cabal2nix
+        cabal-install
+        hindent
+        hpack
+        pointfree
+      ]
+    );
 }

@@ -1,5 +1,15 @@
-{ mkDerivation, base, bytestring, hpack, lens, modern-uri
-, optparse-applicative, req, stdenv, tagsoup, text, time
+{ mkDerivation
+, base
+, bytestring
+, hpack
+, lens
+, modern-uri
+, optparse-applicative
+, req
+, stdenv
+, tagsoup
+, text
+, time
 }:
 mkDerivation {
   pname = "ComiCal";
@@ -8,11 +18,22 @@ mkDerivation {
   isLibrary = true;
   isExecutable = true;
   libraryHaskellDepends = [
-    base bytestring lens modern-uri req tagsoup text time
+    base
+    bytestring
+    lens
+    modern-uri
+    req
+    tagsoup
+    text
+    time
   ];
   libraryToolDepends = [ hpack ];
   executableHaskellDepends = [
-    base bytestring lens optparse-applicative text
+    base
+    bytestring
+    lens
+    optparse-applicative
+    text
   ];
   prePatch = "hpack";
   homepage = "https://github.com/yurrriq/ComiCal#readme";
