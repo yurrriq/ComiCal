@@ -81,3 +81,6 @@ parseReleases theSlug =
 
 maybeRead :: Read a => String -> Maybe a
 maybeRead = fmap fst . listToMaybe . reads
+
+
+-- (map (partitions (~== "<span class=\"field-content\">")) . partitions (~== "<div class=\"views-field views-field-title\">") . dropWhile (~/= ("<tbody>")) . parseTags) <$> (BS.readFile "../../../data/hellblazer.html")
