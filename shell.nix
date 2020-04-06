@@ -1,13 +1,12 @@
-{ pkgs ? import ./nix/nixpkgs.nix {} }:
-
+{ pkgs ? import ./nix {} }:
 let
   project = import ./release.nix { inherit pkgs; };
 in
-
 pkgs.mkShell {
   buildInputs =
     project.env.nativeBuildInputs ++ (
       with pkgs; [
+        cargo
         nix-prefetch-git
         niv
       ]
@@ -16,8 +15,14 @@ pkgs.mkShell {
         cabal2nix
         cabal-install
         hindent
+        hlint
         hpack
         pointfree
+      ]
+    ) ++ (
+      with pkgs.python3Packages; [
+        pre-commit
+        yamllint
       ]
     );
 }
