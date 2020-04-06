@@ -2,6 +2,7 @@
 
 module Data.ComiCal
   ( imageCollections, imageIssues
+  , dcIssues
   ) where
 
 import           Data.ByteString.Char8 (ByteString)
@@ -20,30 +21,43 @@ import           Text.URI              (URI, mkURI)
 -- fetch, parse, and return the collections of the 'Series'.
 imageCollections :: ByteString -> IO Series
 imageCollections slug = runReq defaultHttpConfig $
-    do uri <- mkSeriesCollectionsURI slug
+    do uri <- mkSeriesCollectionsURI
        parseSeries slug uri <$> getSeries uri
+  where
+    mkSeriesCollectionsURI :: Applicative f => f URI
+    mkSeriesCollectionsURI =
+        maybe (error "Failed to construct series URI") pure .
+          mkURI $ "https://imagecomics.com/comics/list/series/" <>
+          Text.pack (BS.unpack slug) <> "/collected-editions"
+
 
 
 -- | Given an [Image Comics series](https://imagecomics.com/comics/series) slug,
 -- fetch, parse, and return the issues of the 'Series'.
 imageIssues :: ByteString -> IO Series
 imageIssues slug = runReq defaultHttpConfig $
-    do uri <- mkSeriesListURI slug
+    do uri <- mkSeriesListURI
        parseSeries slug uri <$> getSeries uri
+  where
+    mkSeriesListURI :: Applicative f => f URI
+    mkSeriesListURI =
+        maybe (error "Failed to construct series URI") pure .
+        mkURI $ "https://imagecomics.com/comics/list/series/" <>
+        Text.pack (BS.unpack slug) <> "/releases"
 
 
-mkSeriesListURI :: Applicative f => ByteString-> f URI
-mkSeriesListURI slug =
-    maybe (error "Failed to construct series URI") pure .
-    mkURI $ "https://imagecomics.com/comics/list/series/" <>
-    (Text.pack (BS.unpack slug)) <> "/releases"
-
-
-mkSeriesCollectionsURI :: Applicative f => ByteString-> f URI
-mkSeriesCollectionsURI slug =
-  maybe (error "Failed to construct series URI") pure .
-    mkURI $ "https://imagecomics.com/comics/list/series/" <>
-    (Text.pack (BS.unpack slug)) <> "/collected-editions"
+-- | Given a [DC Comics series](https://www.dccomics.com/comics) slug,
+-- fetch, parse, and return the issues of the 'Series'.
+dcIssues :: ByteString -> IO Series
+dcIssues slug = runReq defaultHttpConfig $
+    do uri <- mkSeriesListURI
+       parseSeries slug uri <$> getSeries uri
+  where
+    mkSeriesListURI :: Applicative f => f URI
+    mkSeriesListURI =
+        maybe (error "Failed to construct series URI") pure .
+        mkURI $ "https://www.dccomics.com/comics/" <>
+        Text.pack (BS.unpack slug)
 
 
 getSeries :: MonadHttp m => URI -> m [Tag ByteString]

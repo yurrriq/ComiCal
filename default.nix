@@ -9,11 +9,11 @@
 , stdenv
 , tagsoup
 , text
-, time
+, time-compat
 }:
 mkDerivation {
   pname = "ComiCal";
-  version = "0.4.0.0";
+  version = "1.0.0.0";
   src = ./.;
   isLibrary = true;
   isExecutable = true;
@@ -25,7 +25,7 @@ mkDerivation {
     req
     tagsoup
     text
-    time
+    time-compat
   ];
   libraryToolDepends = [ hpack ];
   executableHaskellDepends = [

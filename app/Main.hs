@@ -1,24 +1,32 @@
-{-# LANGUAGE LambdaCase        #-}
 {-# LANGUAGE OverloadedStrings #-}
 
 module Main (main) where
 
 import           Control.Applicative   (many)
 import           Data.ByteString.Char8 (ByteString)
-import           Data.ComiCal          (imageCollections, imageIssues)
+import qualified Data.ComiCal          as ComiCal
 import           Data.ComiCal.Types    (mkCalendar)
 import           Options.Applicative
 
 
+data PullBox = PullBox
+  { imageCollectionSlugs :: [ByteString]
+  , imageIssueSlugs      :: [ByteString]
+  , dcIssueSlugs         :: [ByteString] }
+  deriving (Eq)
+
+
 main :: IO ()
 main =
-    do (collectionSlugs, issueSlugs) <- execParser opts
-       print . foldr1 (<>) =<< mappend <$>
-         mapM (fmap mkCalendar . imageIssues) issueSlugs <*>
-         mapM (fmap mkCalendar . imageCollections) collectionSlugs
+    do pullBox <- execParser opts
+       let pull = mapM . (fmap mkCalendar .)
+       print . foldr1 (<>) =<<
+         pull ComiCal.imageCollections (imageCollectionSlugs pullBox) <>
+         pull ComiCal.imageIssues (imageIssueSlugs pullBox) <>
+         pull ComiCal.dcIssues (dcIssueSlugs pullBox)
 
 
-opts :: ParserInfo ([ByteString], [ByteString])
+opts :: ParserInfo PullBox
 opts =
   info (args <**> helper) $
   fullDesc <>
@@ -26,25 +34,32 @@ opts =
   header "ComiCal - comics in your calendar"
 
 
-args :: Parser ([ByteString], [ByteString])
-args = (,) <$> collections <*> issues
+args :: Parser PullBox
+args = PullBox <$> imageCollections <*> imageIssues <*> dcIssues
 
 
-collections :: Parser [ByteString]
-collections =
+imageCollections :: Parser [ByteString]
+imageCollections =
   many $ strOption (
-    long "collections" <>
-    short 'c' <>
+    long "image-collections" <>
     metavar "SLUG" <>
-    help "Track collected editions"
+    help "Track collected editions of Image comics"
   )
 
 
-issues :: Parser [ByteString]
-issues =
+imageIssues :: Parser [ByteString]
+imageIssues =
   many $ strOption (
-    long "issues" <>
-    short 'i' <>
+    long "image-issues" <>
     metavar "SLUG" <>
-    help "Track single issues"
+    help "Track single issues of Image comics"
+  )
+
+
+dcIssues :: Parser [ByteString]
+dcIssues =
+  many $ strOption (
+    long "dc-issues" <>
+    metavar "SLUG" <>
+    help "Track single issues of DC comics"
   )

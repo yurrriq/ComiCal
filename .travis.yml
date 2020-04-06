@@ -10,16 +10,19 @@ script:
 - mkdir -p site
 - |-
   ./result/bin/ComiCal \
-      --collections east-of-west \
-      --collections gideon-falls \
-      --collections lazarus \
-      --collections outcast-by-kirkman-azaceta \
-      --collections pretty-deadly \
-      --collections southern-bastards \
-      --collections the-fix \
-      --issues      ascender \
-      --issues      oblivion-song-by-kirkman-de-felici \
-      --issues      spawn \
+      --dc-issues         john-constantine-hellblazer-2019 \
+      --dc-issues         supermans-pal-jimmy-olsen-2019 \
+      --image-collections east-of-west \
+      --image-collections gideon-falls \
+      --image-collections lazarus \
+      --image-collections outcast-by-kirkman-azaceta \
+      --image-collections pretty-deadly \
+      --image-collections southern-bastards \
+      --image-collections the-fix \
+      --image-issues      ascender \
+      --image-issues      family-tree \
+      --image-issues      oblivion-song-by-kirkman-de-felici \
+      --image-issues      spawn \
       >site/comics.ics
 
 deploy:

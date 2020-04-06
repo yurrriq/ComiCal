@@ -28,7 +28,7 @@ library:
   - modern-uri
   - req
   - tagsoup
-  - time
+  - time-compat
 executable:
   ghc-options:
   - -O2

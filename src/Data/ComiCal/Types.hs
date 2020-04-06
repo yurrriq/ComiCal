@@ -1,7 +1,6 @@
 {-# LANGUAGE DataKinds              #-}
 {-# LANGUAGE FlexibleInstances      #-}
 {-# LANGUAGE FunctionalDependencies #-}
-{-# LANGUAGE MultiParamTypeClasses  #-}
 {-# LANGUAGE OverloadedStrings      #-}
 {-# LANGUAGE TemplateHaskell        #-}
 
@@ -21,11 +20,12 @@ import           Control.Lens          (defaultFieldRules,
 import           Data.ByteString.Char8 (ByteString)
 import qualified Data.ByteString.Char8 as BS
 import qualified Data.List.NonEmpty    as NE
-import           Data.Time             (Day, UTCTime (UTCTime), addUTCTime,
+import           Data.Maybe            (fromMaybe)
+import           Data.Time.Compat      (Day, UTCTime (UTCTime), addUTCTime,
                                         defaultTimeLocale, formatTime,
                                         nominalDay, secondsToDiffTime)
 import           Text.Printf           (printf)
-import           Text.URI              (URI)
+import           Text.URI              (URI, relativeTo)
 import qualified Text.URI              as URI
 
 
@@ -103,7 +103,7 @@ instance Show Calendar where
     , "PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN"
     , "VERSION:2.0"
     , printf "X-WR-CALNAME:%s" (BS.unpack (cal^.name))] <>
-    (NE.toList (show <$> cal^.events)) <>
+    NE.toList (show <$> cal^.events) <>
     [ "END:VCALENDAR" ]
 
 
@@ -112,4 +112,5 @@ mkCalendar series = Calendar (series^.title) $ NE.map go (series^.releases)
   where
     go :: Release -> Event
     go rel =
-      Event (rel^.date) (BS.pack (printf "%s@imagecomics.com" (BS.unpack (rel^.slug)))) (rel^.title) (rel^.uri)
+      Event (rel^.date) (rel^.slug) (rel^.title) $
+      fromMaybe (rel^.uri) ((rel^.uri) `relativeTo` (series^.uri))
