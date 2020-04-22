@@ -3,8 +3,7 @@ os:
 language: nix
 
 env:
-- LANG=C
-- LC_ALL=C
+- LC_ALL=en_US.UTF-8
 
 script:
 - nix-env -iA cachix -f https://cachix.org/api/v1/install
