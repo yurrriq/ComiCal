@@ -2,6 +2,10 @@ os:
 - linux
 language: nix
 
+env:
+- LANG=C
+- LC_ALL=C
+
 script:
 - nix-env -iA cachix -f https://cachix.org/api/v1/install
 - cachix use yurrriq
