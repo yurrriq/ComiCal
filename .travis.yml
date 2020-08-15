@@ -3,7 +3,7 @@ os:
 language: nix
 
 env:
-- LC_ALL=en_US.UTF-8
+- LANG=C.utf8
 
 script:
 - nix-build
