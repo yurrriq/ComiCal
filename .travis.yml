@@ -6,9 +6,6 @@ env:
 - LC_ALL=en_US.UTF-8
 
 script:
-- nix-env -iA cachix -f https://cachix.org/api/v1/install
-- cachix use yurrriq
-# TODO: - cachix push yurrriq --watch-store&
 - nix-build release.nix
 - mkdir -p site
 - |-
