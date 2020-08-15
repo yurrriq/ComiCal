@@ -1,4 +1,4 @@
-{ pkgs ? import ./nix {} }:
+{ pkgs ? import ./nix }:
 let
   project = import ./release.nix { inherit pkgs; };
 in
