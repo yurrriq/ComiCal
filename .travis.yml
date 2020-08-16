@@ -11,7 +11,6 @@ script:
 - |-
   ./result/bin/ComiCal \
       --dc-issues         john-constantine-hellblazer-2019 \
-      --dc-issues         supermans-pal-jimmy-olsen-2019 \
       --image-collections gideon-falls \
       --image-collections lazarus \
       --image-collections pretty-deadly \
