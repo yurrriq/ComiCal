@@ -3,7 +3,7 @@
 
 # ComiCal
 
-*Track the publish dates of your favorite [(Image) comics][Image comics]*
+*Track the publish dates of your favorite [DC] and [Image] comics*
 
 
 
@@ -14,4 +14,5 @@
 [Travis link]: https://travis-ci.org/yurrriq/ComiCal
 [Built with Nix]: https://builtwithnix.org
 [Built with Nix badge]: https://builtwithnix.org/badge.svg
-[Image comics]: https://imagecomics.com/comics/series
+[DC]: https://www.dccomics.com/comics
+[Image]: https://imagecomics.com/comics/series
