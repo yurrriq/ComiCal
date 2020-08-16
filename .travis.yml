@@ -2,14 +2,14 @@ os:
 - linux
 language: nix
 
+env:
+- LANG=C.utf8
+
 script:
-- nix-env -iA nixpkgs.locale
-- locale -a
 - nix-build
 - mkdir -p site
 - |-
-  env LANG=C.utf8 \
-      ./result/bin/ComiCal \
+  ./result/bin/ComiCal \
       --dc-issues         john-constantine-hellblazer-2019 \
       --dc-issues         supermans-pal-jimmy-olsen-2019 \
       --image-collections gideon-falls \
