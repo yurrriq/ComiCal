@@ -18,6 +18,7 @@ script:
       --image-collections southern-bastards \
       --image-collections the-fix \
       --image-issues      ascender \
+      --image-issues      bliss \
       --image-issues      family-tree \
       --image-issues      nailbiter \
       --image-issues      oblivion-song-by-kirkman-de-felici \
