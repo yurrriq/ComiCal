@@ -10,7 +10,7 @@
 
 <!-- Named Links -->
 
-[Travis badge]: https://img.shields.io/travis/yurrriq/ComiCal/master?style=for-the-badge
+[Travis badge]: https://img.shields.io/travis/yurrriq/ComiCal/main?style=for-the-badge
 [Travis link]: https://travis-ci.org/yurrriq/ComiCal
 [Built with Nix]: https://builtwithnix.org
 [Built with Nix badge]: https://builtwithnix.org/badge.svg
