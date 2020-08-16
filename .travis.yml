@@ -11,6 +11,7 @@ script:
 - |-
   ./result/bin/ComiCal \
       --dc-issues         john-constantine-hellblazer-2019 \
+      --dc-issues         strange-adventures-2020 \
       --image-collections gideon-falls \
       --image-collections lazarus \
       --image-collections pretty-deadly \
