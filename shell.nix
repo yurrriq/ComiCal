@@ -1,6 +1,6 @@
 { pkgs ? import ./nix }:
 let
-  project = import ./release.nix { inherit pkgs; };
+  project = import ./. { inherit pkgs; };
 in
 pkgs.mkShell {
   buildInputs =
