@@ -11,19 +11,19 @@ repos:
     id: check-yaml
     name: Check pre-commit config
   repo: git://github.com/pre-commit/pre-commit-hooks
-  rev: v2.4.0
+  rev: v3.4.0
 - hooks:
   - args: ["--format=colored"]
     files: ^.pre-commit-config.yaml$
     id: yamllint
     name: Lint pre-commit config
   repo: git://github.com/adrienverge/yamllint.git
-  rev: v1.17.0
+  rev: v1.26.0
 - hooks:
   - id: nixpkgs-fmt
     name: Format .nix files
   repo: git://github.com/nix-community/nixpkgs-fmt
-  rev: master
+  rev: v1.0.0
 - hooks:
   - args: ["--format=tty", "--shell=bash"]
     files: ^.envrc$
@@ -33,9 +33,15 @@ repos:
   repo: git://github.com/detailyang/pre-commit-shell
   rev: v1.0.6
 - hooks:
+  - description: Prettify Haskell code with ormolu
+    entry: "ormolu --mode inplace"
+    files: '.+\.hs$'
+    id: ormolu
+    language: system
+    name: Prettify Haskell code
   - entry: hlint
     files: '.+\.hs$'
     id: hlint
     language: system
-    name: Lint Haskell files
+    name: Lint Haskell code
   repo: local
