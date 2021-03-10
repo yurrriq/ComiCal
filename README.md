@@ -1,4 +1,4 @@
-[![Build Status][Travis badge]][Travis link]
+[![Build Status][GitHub Actions badge]][GitHub Actions link]
 [![Built with Nix][Built with Nix badge]][Built with Nix]
 
 # ComiCal
@@ -10,8 +10,8 @@
 
 <!-- Named Links -->
 
-[Travis badge]: https://img.shields.io/travis/yurrriq/ComiCal/main?style=for-the-badge
-[Travis link]: https://travis-ci.org/yurrriq/ComiCal
+[GitHub Actions badge]: https://github.com/yurrriq/dotfiles/actions/workflows/build.yml/badge.svg?branch=main
+[GitHub Actions link]: https://github.com/yurrriq/dotfiles/actions/workflows/build.yml
 [Built with Nix]: https://builtwithnix.org
 [Built with Nix badge]: https://builtwithnix.org/badge.svg
 [DC]: https://www.dccomics.com/comics
