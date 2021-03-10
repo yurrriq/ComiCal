@@ -10,10 +10,8 @@ script:
 - mkdir -p site
 - |-
   ./result/bin/ComiCal \
+      --dc-issues         american-vampire-1976-2020 \
       --dc-issues         batman-white-knight-presents-harley-quinn-2020 \
-      --dc-issues         catwoman-2018 \
-      --dc-issues         john-constantine-hellblazer-2019 \
-      --dc-issues         hellblazer-rise-and-fall-2020 \
       --dc-issues         strange-adventures-2020 \
       --dc-issues         sweet-tooth-the-return-2020 \
       --image-collections gideon-falls \
