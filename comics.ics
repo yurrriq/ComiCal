@@ -227,6 +227,14 @@ URL:https://imagecomics.com/comics/releases/the-fix-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
+UID:ascender-16-1
+SUMMARY:Ascender #16
+DTSTART;VALUE=DATE:20210623
+DTEND;VALUE=DATE:20210624
+URL:https://imagecomics.com/comics/releases/ascender-16-1
+END:VEVENT
+
+BEGIN:VEVENT
 UID:ascender-15-1
 SUMMARY:Ascender #15
 DTSTART;VALUE=DATE:20210526
@@ -413,8 +421,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:family-tree-12
 SUMMARY:Family Tree #12
-DTSTART;VALUE=DATE:20210428
-DTEND;VALUE=DATE:20210429
+DTSTART;VALUE=DATE:20210519
+DTEND;VALUE=DATE:20210520
 URL:https://imagecomics.com/comics/releases/family-tree-12
 END:VEVENT
 
@@ -699,6 +707,14 @@ URL:https://imagecomics.com/comics/releases/nailbiter-17
 END:VEVENT
 
 BEGIN:VEVENT
+UID:oblivion-song-by-kirkman-de-felici-31
+SUMMARY:Oblivion Song By Kirkman & De Felici #31
+DTSTART;VALUE=DATE:20210609
+DTEND;VALUE=DATE:20210610
+URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-31
+END:VEVENT
+
+BEGIN:VEVENT
 UID:oblivion-song-by-kirkman-de-felici-30
 SUMMARY:Oblivion Song By Kirkman & De Felici #30
 DTSTART;VALUE=DATE:20210224
@@ -883,11 +899,19 @@ URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-9
 END:VEVENT
 
 BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-8
-SUMMARY:Oblivion Song By Kirkman & De Felici #8
-DTSTART;VALUE=DATE:20181010
-DTEND;VALUE=DATE:20181011
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-8
+UID:spawns-universe-1
+SUMMARY:Spawn's Universe: #1 
+DTSTART;VALUE=DATE:20210630
+DTEND;VALUE=DATE:20210701
+URL:https://imagecomics.com/comics/releases/spawns-universe-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-319
+SUMMARY:Spawn #319
+DTSTART;VALUE=DATE:20210623
+DTEND;VALUE=DATE:20210624
+URL:https://imagecomics.com/comics/releases/spawn-319
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1067,19 +1091,11 @@ URL:https://imagecomics.com/comics/releases/spawn-297
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-296
-SUMMARY:Spawn #296
-DTSTART;VALUE=DATE:20190424
-DTEND;VALUE=DATE:20190425
-URL:https://imagecomics.com/comics/releases/spawn-296
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-295
-SUMMARY:Spawn #295
-DTSTART;VALUE=DATE:20190327
-DTEND;VALUE=DATE:20190328
-URL:https://imagecomics.com/comics/releases/spawn-295
+UID:the-department-of-truth-10
+SUMMARY:The Department of Truth #10
+DTSTART;VALUE=DATE:20210630
+DTEND;VALUE=DATE:20210701
+URL:https://imagecomics.com/comics/releases/the-department-of-truth-10
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1155,6 +1171,14 @@ URL:https://imagecomics.com/comics/releases/the-department-of-truth-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:american-vampire-1976-7
+SUMMARY:AMERICAN VAMPIRE 1976 #7
+DTSTART;VALUE=DATE:20210413
+DTEND;VALUE=DATE:20210414
+URL:https://www.dccomics.com/comics/american-vampire-1976-2020/american-vampire-1976-7
+END:VEVENT
+
+BEGIN:VEVENT
 UID:american-vampire-1976-6
 SUMMARY:AMERICAN VAMPIRE 1976 #6
 DTSTART;VALUE=DATE:20210309
@@ -1203,6 +1227,14 @@ URL:https://www.dccomics.com/comics/american-vampire-1976-2020/american-vampire-
 END:VEVENT
 
 BEGIN:VEVENT
+UID:batman-white-knight-presents-harley-quinn-6
+SUMMARY:BATMAN: WHITE KNIGHT PRESENTS: HARLEY QUINN #6
+DTSTART;VALUE=DATE:20210323
+DTEND;VALUE=DATE:20210324
+URL:https://www.dccomics.com/comics/batman-white-knight-presents-harley-quinn-2020/batman-white-knight-presents-harley-quinn-6
+END:VEVENT
+
+BEGIN:VEVENT
 UID:batman-white-knight-presents-harley-quinn-5
 SUMMARY:BATMAN: WHITE KNIGHT PRESENTS: HARLEY QUINN #5
 DTSTART;VALUE=DATE:20210223
@@ -1240,6 +1272,14 @@ SUMMARY:BATMAN: WHITE KNIGHT PRESENTS: HARLEY QUINN #1
 DTSTART;VALUE=DATE:20201020
 DTEND;VALUE=DATE:20201021
 URL:https://www.dccomics.com/comics/batman-white-knight-presents-harley-quinn-2020/batman-white-knight-presents-harley-quinn-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:strange-adventures-9
+SUMMARY:STRANGE ADVENTURES #9
+DTSTART;VALUE=DATE:20210330
+DTEND;VALUE=DATE:20210331
+URL:https://www.dccomics.com/comics/strange-adventures-2020/strange-adventures-9
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1312,6 +1352,14 @@ SUMMARY:STRANGE ADVENTURES #1
 DTSTART;VALUE=DATE:20200304
 DTEND;VALUE=DATE:20200305
 URL:https://www.dccomics.com/comics/strange-adventures-2020/strange-adventures-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:sweet-tooth-the-return-6
+SUMMARY:SWEET TOOTH: THE RETURN #6
+DTSTART;VALUE=DATE:20210413
+DTEND;VALUE=DATE:20210414
+URL:https://www.dccomics.com/comics/sweet-tooth-the-return-2020/sweet-tooth-the-return-6
 END:VEVENT
 
 BEGIN:VEVENT
