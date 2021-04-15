@@ -899,19 +899,19 @@ URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-9
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawns-universe-1
-SUMMARY:Spawn's Universe: #1 
+UID:spawn-319
+SUMMARY:Spawn #319
 DTSTART;VALUE=DATE:20210630
 DTEND;VALUE=DATE:20210701
-URL:https://imagecomics.com/comics/releases/spawns-universe-1
+URL:https://imagecomics.com/comics/releases/spawn-319
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-319
-SUMMARY:Spawn #319
+UID:spawns-universe-1
+SUMMARY:Spawn's Universe: #1 
 DTSTART;VALUE=DATE:20210623
 DTEND;VALUE=DATE:20210624
-URL:https://imagecomics.com/comics/releases/spawn-319
+URL:https://imagecomics.com/comics/releases/spawns-universe-1
 END:VEVENT
 
 BEGIN:VEVENT
