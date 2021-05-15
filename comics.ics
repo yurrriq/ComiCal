@@ -924,7 +924,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:spawns-universe-1
-SUMMARY:Spawn's Universe: #1 
+SUMMARY:Spawn's Universe: #1
 DTSTART;VALUE=DATE:20210623
 DTEND;VALUE=DATE:20210624
 URL:https://imagecomics.com/comics/releases/spawns-universe-1
