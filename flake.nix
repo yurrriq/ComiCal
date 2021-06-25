@@ -2,12 +2,13 @@
   description = "Track the publish dates of your favorite comics";
 
   inputs = {
+    emacs-overlay.url = "github:nix-community/emacs-overlay";
     flake-utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "github:nixos/nixpkgs";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
-    let
+  outputs = { self, emacs-overlay, flake-utils, nixpkgs }:
+    {
       overlay = final: prev: {
         haskellPackages = prev.haskellPackages.override {
           overrides = hfinal: hprev: {
@@ -21,43 +22,44 @@
               { };
           };
         };
+
+        myEmacs = prev.emacsWithPackagesFromUsePackage {
+          alwaysEnsure = true;
+          config = ./emacs.el;
+        };
       };
-    in
-    { inherit overlay; } // flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
+    } // flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
-          overlays = [ overlay ];
+          overlays = [
+            emacs-overlay.overlay
+            self.overlay
+          ];
           inherit system;
         };
       in
-      pkgs.lib.fix (this: {
-        packages.ComiCal = pkgs.haskellPackages.ComiCal;
-
+    {
         apps.ComiCal = flake-utils.lib.mkApp {
-          drv = pkgs.haskell.lib.justStaticExecutables this.defaultPackage;
+          drv = pkgs.haskell.lib.justStaticExecutables self.defaultPackage.${system};
         };
 
-        defaultApp = this.apps.ComiCal;
+        defaultApp = self.apps.${system}.ComiCal;
 
-        defaultPackage = this.packages.ComiCal;
+        defaultPackage = self.packages.${system}.ComiCal;
 
         devShell = pkgs.mkShell {
-          buildInputs =
-            this.defaultPackage.env.nativeBuildInputs ++ (
-              with pkgs; [
-                gitAndTools.pre-commit
-                python3Packages.yamllint
-                yq
-              ]
-            ) ++ (
-              with pkgs.haskellPackages; [
-                cabal-install
-                hlint
-                hpack
-                ormolu
-                pointfree
-              ]
-            );
+          buildInputs = with pkgs; [
+            cabal-install
+            ghcid
+            gitAndTools.pre-commit
+            haskell-language-server
+            haskellPackages.ormolu
+            haskellPackages.pointfree
+            myEmacs
+            python3Packages.yamllint
+          ] ++ self.defaultPackage.${system}.env.nativeBuildInputs;
         };
-      }));
+
+        packages = { inherit (pkgs.haskellPackages) ComiCal; };
+    });
 }
