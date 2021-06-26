@@ -37,6 +37,9 @@
 
 (use-package haskell-mode)
 
+(use-package hl-todo
+  :config (global-hl-todo-mode t))
+
 (use-package lsp-mode
   :hook ((haskell-mode . lsp-deferred))
   :commands (lsp lsp-deferred)
