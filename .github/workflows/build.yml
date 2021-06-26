@@ -27,16 +27,7 @@ jobs:
         skipPush: true
     - run: |
         mkdir -p site
-        nix run . -- \
-            --dc-issues         american-vampire-1976-2020 \
-            --dc-issues         batman-the-detective-2021 \
-            --dc-issues         strange-adventures-2020 \
-            --dc-issues         wonder-girl-2021 \
-            --image-collections ascender \
-            --image-issues      oblivion-song-by-kirkman-de-felici \
-            --image-issues      spawn \
-            --image-issues      the-department-of-truth \
-            >site/comics.ics
+        nix run . -- -p pull.json >site/comics.ics
     - name: Deploy to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v2

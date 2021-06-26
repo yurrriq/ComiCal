@@ -1,38 +1,34 @@
-{-# LANGUAGE TupleSections #-}
+module ComiCal where
 
-module ComiCal
-  ( dcIssues,
-    imageCollections,
-    imageIssues,
-    mkCalendar,
-  )
-where
-
-import ComiCal.App (runApp)
+import ComiCal.App (Publisher (..), runComiCalApp)
 import qualified ComiCal.DC as DC
 import qualified ComiCal.Image as Image
-import ComiCal.Types
+import ComiCal.Types hiding (PullList (..))
 import Control.Lens ((^.))
-import Control.Monad.Reader (runReaderT)
 import Data.ByteString.Char8 (ByteString)
 import qualified Data.List.NonEmpty as NE
 import Data.Maybe (fromMaybe)
 import Text.URI (relativeTo)
 
 -- | Given a [DC Comics series](https://www.dccomics.com/comics) slug,
+-- fetch, parse, and return the collections of the 'Series'.
+dcCollections :: ByteString -> IO Series
+dcCollections = runComiCalApp getCollections DC.publisher
+
+-- | Given a [DC Comics series](https://www.dccomics.com/comics) slug,
 -- fetch, parse, and return the issues of the 'Series'.
 dcIssues :: ByteString -> IO Series
-dcIssues = runReaderT (runApp DC.getIssues) . (,DC.config)
+dcIssues = runComiCalApp getIssues DC.publisher
 
 -- | Given an [Image Comics series](https://imagecomics.com/comics/series) slug,
 -- fetch, parse, and return the collections of the 'Series'.
 imageCollections :: ByteString -> IO Series
-imageCollections = runReaderT (runApp Image.getCollections) . (,Image.config)
+imageCollections = runComiCalApp getCollections Image.publisher
 
 -- | Given an [Image Comics series](https://imagecomics.com/comics/series) slug,
 -- fetch, parse, and return the issues of the 'Series'.
 imageIssues :: ByteString -> IO Series
-imageIssues = runReaderT (runApp Image.getIssues) . (,Image.config)
+imageIssues = runComiCalApp getIssues Image.publisher
 
 mkCalendar :: Series -> Calendar
 mkCalendar series = Calendar (series ^. title) $ NE.map go (series ^. releases)

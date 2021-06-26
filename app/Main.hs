@@ -3,59 +3,77 @@
 module Main (main) where
 
 import qualified ComiCal
-import Data.ByteString.Char8 (ByteString)
+import ComiCal.Types (PullList (..))
+import Control.Monad.Trans
+import Data.Aeson
 import Options.Applicative
 
-data PullBox = PullBox
-  { imageCollectionSlugs :: [ByteString],
-    imageIssueSlugs :: [ByteString],
-    dcIssueSlugs :: [ByteString]
-  }
-  deriving (Eq)
+data AppMode
+  = FromFile FilePath
+  | FromFlags PullList
 
 main :: IO ()
 main =
   do
-    pullBox <- execParser opts
+    appMode <- execParser opts
+    pullList <- case appMode of
+      FromFile fname ->
+        do
+          -- FIXME
+          Just pullList <- liftIO $ decodeFileStrict fname
+          pure pullList
+      FromFlags pullList -> pure pullList
     let pull = mapM . (fmap ComiCal.mkCalendar .)
     print . foldr1 (<>)
-      =<< pull ComiCal.imageCollections (imageCollectionSlugs pullBox)
-      <> pull ComiCal.imageIssues (imageIssueSlugs pullBox)
-      <> pull ComiCal.dcIssues (dcIssueSlugs pullBox)
+      =<< pull ComiCal.imageCollections (imageCollections pullList)
+      <> pull ComiCal.imageIssues (imageIssues pullList)
+      <> pull ComiCal.dcIssues (dcIssues pullList)
 
-opts :: ParserInfo PullBox
+opts :: ParserInfo AppMode
 opts =
-  info (args <**> helper) $
+  info (mkAppMode <**> helper) $
     fullDesc
       <> progDesc "Track the publish dates of comics"
       <> header "ComiCal - comics in your calendar"
 
-args :: Parser PullBox
-args = PullBox <$> imageCollections <*> imageIssues <*> dcIssues
+mkAppMode :: Parser AppMode
+mkAppMode = FromFile <$> config <|> FromFlags <$> fromFlags
+  where
+    config =
+      strOption
+        ( long "pull-list" <> short 'p'
+            <> metavar "PULL_LIST"
+            <> help "Pull list file (JSON)"
+        )
 
-imageCollections :: Parser [ByteString]
-imageCollections =
-  many $
-    strOption
-      ( long "image-collections"
-          <> metavar "SLUG"
-          <> help "Track collected editions of Image comics"
+fromFlags :: Parser PullList
+fromFlags =
+  PullList
+    <$> many
+      ( strOption
+          ( long "dc-collections"
+              <> metavar "SLUG"
+              <> help "Track collected editions of DC comics"
+          )
       )
-
-imageIssues :: Parser [ByteString]
-imageIssues =
-  many $
-    strOption
-      ( long "image-issues"
-          <> metavar "SLUG"
-          <> help "Track single issues of Image comics"
-      )
-
-dcIssues :: Parser [ByteString]
-dcIssues =
-  many $
-    strOption
-      ( long "dc-issues"
-          <> metavar "SLUG"
-          <> help "Track single issues of DC comics"
-      )
+      <*> many
+        ( strOption
+            ( long "dc-issues"
+                <> metavar "SLUG"
+                <> help "Track single issues of DC comics"
+            )
+        )
+      <*> many
+        ( strOption
+            ( long "image-collections"
+                <> metavar "SLUG"
+                <> help "Track collected editions of Image comics"
+            )
+        )
+      <*> many
+        ( strOption
+            ( long "image-issues"
+                <> metavar "SLUG"
+                <> help "Track single issues of Image comics"
+            )
+        )

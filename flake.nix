@@ -12,14 +12,7 @@
       overlay = final: prev: {
         haskellPackages = prev.haskellPackages.override {
           overrides = hfinal: hprev: {
-            ComiCal = hfinal.callCabal2nix "ComiCal" self { };
-            req = hprev.callHackageDirect
-              {
-                pkg = "req";
-                ver = "3.9.0";
-                sha256 = "sha256-2NykJlUKhRAHa1lxDj4xWxruSwHFU98xYNNiVSZAKes=";
-              }
-              { };
+            ComiCal = hprev.callCabal2nix "ComiCal" self { };
           };
         };
 
