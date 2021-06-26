@@ -9,26 +9,28 @@ extra-source-files:
 dependencies:
 - base
 - bytestring
+- exceptions
 - lens
+- modern-uri
+- mtl
+- optparse-applicative
+- req
+- tagsoup
 - text
+- time-compat
+- transformers
+default-extensions:
+- OverloadedStrings
 ghc-options:
 - -Wall
 - -Werror
+- -fwarn-incomplete-patterns
 library:
-  ghc-options:
-  - -fwarn-incomplete-patterns
   source-dirs: src
-  exposed-modules:
-  - Data.ComiCal
-  - Data.ComiCal.Types
   other-modules:
-  - Data.ComiCal.Parser
+  - Data.ComiCal.App
+  - Data.ComiCal.Util
   - Paths_ComiCal
-  dependencies:
-  - modern-uri
-  - req
-  - tagsoup
-  - time-compat
 executable:
   ghc-options:
   - -O2
@@ -36,4 +38,3 @@ executable:
   main: Main.hs
   dependencies:
   - ComiCal
-  - optparse-applicative
