@@ -1,4 +1,5 @@
 {-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DeriveGeneric #-}
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE FunctionalDependencies #-}
 {-# LANGUAGE TemplateHaskell #-}
@@ -22,6 +23,8 @@ module ComiCal.Types
     slug,
     HasUri,
     uri,
+    Scraper (..),
+    PullList (..),
   )
 where
 
@@ -34,8 +37,10 @@ import Control.Lens
     (.~),
     (^.),
   )
+import Data.Aeson.Types hiding (Series)
 import Data.ByteString.Char8 (ByteString)
 import qualified Data.ByteString.Char8 as BS
+import Data.Functor.Syntax ((<$$>))
 import qualified Data.List.NonEmpty as NE
 import Data.Time.Compat
   ( Day,
@@ -46,6 +51,8 @@ import Data.Time.Compat
     nominalDay,
     secondsToDiffTime,
   )
+import GHC.Generics
+import Text.HTML.TagSoup
 import Text.Printf (printf)
 import Text.URI (URI)
 import qualified Text.URI as URI
@@ -129,3 +136,30 @@ instance Show Calendar where
       ]
         <> NE.toList (show <$> cal ^. events)
         <> ["END:VCALENDAR"]
+
+data Scraper = Scraper
+  { partitionReleases :: [Tag ByteString] -> [[Tag ByteString]],
+    parseTitle :: [Tag ByteString] -> ByteString,
+    parseReleaseTitle :: [Tag ByteString] -> ByteString,
+    parseReleaseDate :: [Tag ByteString] -> Maybe Day
+  }
+
+data PullList = PullList
+  { dcCollections :: [ByteString],
+    dcIssues :: [ByteString],
+    imageCollections :: [ByteString],
+    imageIssues :: [ByteString]
+  }
+  deriving (Show, Generic)
+
+instance FromJSON PullList where
+  parseJSON (Object v) =
+    PullList
+      <$> BS.pack <$$> v .: "dcCollections"
+      <*> BS.pack <$$> v .: "dcIssues"
+      <*> BS.pack <$$> v .: "imageCollections"
+      <*> BS.pack <$$> v .: "imageIssues"
+  parseJSON invalid =
+    prependFailure
+      "parsing ComiCalConfig failed, "
+      (typeMismatch "Object" invalid)

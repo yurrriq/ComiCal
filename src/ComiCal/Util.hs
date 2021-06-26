@@ -2,6 +2,7 @@ module ComiCal.Util where
 
 import ComiCal.App
 import ComiCal.Types
+import Control.Arrow (second)
 import Control.Monad.Reader
 import Data.ByteString.Char8 (ByteString)
 import qualified Data.ByteString.Char8 as BS
@@ -27,14 +28,14 @@ getSeries theUri =
 
 parseReleases :: [Tag ByteString] -> ComiCalApp (NE.NonEmpty Release)
 parseReleases tags =
-  asks (partitionReleases . snd) <*> pure tags
+  asks (partitionReleases . scraper . snd) <*> pure tags
     >>= fmap (NE.fromList . catMaybes)
       . mapM parseRelease
 
 parseRelease :: [Tag ByteString] -> ComiCalApp (Maybe Release)
 parseRelease tags =
   do
-    (seriesSlug, cfg) <- ask
+    (seriesSlug, cfg) <- asks (second scraper)
     let theTitle = parseReleaseTitle cfg tags
     -- FIXME: MaybeT?
     Just theURI <- pure $ parseReleaseURI tags

@@ -1,9 +1,10 @@
 module ComiCal.DC where
 
-import ComiCal.App (ComiCalApp, ComiCalConfig (..))
-import ComiCal.Types (Series (..))
+import ComiCal.App (Publisher (..))
+import ComiCal.Types (Scraper (..), Series (..))
 import ComiCal.Util (getSeries, parseReleases)
-import Control.Monad.Reader (MonadIO (liftIO), MonadReader (ask))
+import Control.Arrow (second)
+import Control.Monad.Reader (MonadIO (liftIO), asks)
 import qualified Data.ByteString.Char8 as BS
 import qualified Data.Text as T
 import Data.Time.Compat (localDay, zonedTimeToLocalTime)
@@ -18,39 +19,39 @@ import Text.HTML.TagSoup
   )
 import Text.URI (mkURI)
 
-config :: ComiCalConfig
-config =
-  ComiCalConfig
-    { partitionReleases =
-        concatMap (partitions (~== ("<span class=\"field-content\">" :: String)))
-          . partitions (~== ("<div class=\"views-field views-field-title\">" :: String))
-          . dropWhile (~/= ("<tbody>" :: String)),
-      parseTitle =
-        BS.unwords . takeWhile (/= "Releases") . BS.words
-          . fromTagText
-          . head
-          . filter isTagText
-          . dropWhile (~/= ("<div id=\"content-area\">" :: String)),
-      parseReleaseTitle =
-        fromTagText . head . filter isTagText
-          . dropWhile (~/= ("<span>" :: String)),
-      parseReleaseDate =
-        fmap (localDay . zonedTimeToLocalTime) . iso8601ParseM
-          . BS.unpack
-          . fromAttrib "content"
-          . head
-          . dropWhile (~/= ("<span property=\"schema:datePublished\">" :: String))
+publisher :: Publisher
+publisher =
+  Publisher
+    { scraper =
+        Scraper
+          { partitionReleases =
+              concatMap (partitions (~== ("<span class=\"field-content\">" :: String)))
+                . partitions (~== ("<div class=\"views-field views-field-title\">" :: String))
+                . dropWhile (~/= ("<tbody>" :: String)),
+            parseTitle =
+              BS.unwords . takeWhile (/= "Releases") . BS.words
+                . fromTagText
+                . head
+                . filter isTagText
+                . dropWhile (~/= ("<div id=\"content-area\">" :: String)),
+            parseReleaseTitle =
+              fromTagText . head . filter isTagText
+                . dropWhile (~/= ("<span>" :: String)),
+            parseReleaseDate =
+              fmap (localDay . zonedTimeToLocalTime) . iso8601ParseM
+                . BS.unpack
+                . fromAttrib "content"
+                . head
+                . dropWhile (~/= ("<span property=\"schema:datePublished\">" :: String))
+          },
+      getCollections = fail "Not yet implemented",
+      getIssues =
+        do
+          (seriesSlug, cfg) <- asks (second scraper)
+          issuesURI <-
+            mkURI $
+              "https://www.dccomics.com/comics/"
+                <> T.pack (BS.unpack seriesSlug)
+          tags <- liftIO $ getSeries issuesURI
+          Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags
     }
-
--- | Given a [DC Comics series](https://www.dccomics.com/comics) slug,
--- fetch, parse, and return the issues of the 'Series'.
-getIssues :: ComiCalApp Series
-getIssues =
-  do
-    (seriesSlug, cfg) <- ask
-    issuesURI <-
-      mkURI $
-        "https://www.dccomics.com/comics/"
-          <> T.pack (BS.unpack seriesSlug)
-    tags <- liftIO $ getSeries issuesURI
-    Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags
