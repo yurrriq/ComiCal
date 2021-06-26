@@ -1,229 +1,13 @@
 BEGIN:VCALENDAR
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 VERSION:2.0
-X-WR-CALNAME:Gideon Falls Collected Editions, Lazarus Collected Editions, Pretty Deadly Collected Editions, Southern Bastards Collected Editions, The Fix Collected Editions, Ascender, Bliss, Family Tree, Nailbiter, Oblivion Song by Kirkman & De Felici, Spawn, The Department of Truth, AMERICAN VAMPIRE 1976 2020, BATMAN: WHITE KNIGHT PRESENTS: HARLEY QUINN 2020, STRANGE ADVENTURES 2020, SWEET TOOTH: THE RETURN 2020
+X-WR-CALNAME:Ascender, Oblivion Song by Kirkman & De Felici, Spawn, The Department of Truth, , , , 
 BEGIN:VEVENT
-UID:gideon-falls-vol-6-the-end-tp
-SUMMARY:Gideon Falls, Vol. 6: The End TP
-DTSTART;VALUE=DATE:20210428
-DTEND;VALUE=DATE:20210429
-URL:https://imagecomics.com/comics/releases/gideon-falls-vol-6-the-end-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:gideon-falls-vol-5-wicked-worlds-tp
-SUMMARY:Gideon Falls, Vol. 5: Wicked Worlds TP
-DTSTART;VALUE=DATE:20201125
-DTEND;VALUE=DATE:20201126
-URL:https://imagecomics.com/comics/releases/gideon-falls-vol-5-wicked-worlds-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:gideon-falls-vol-4-the-pentoculus-tp
-SUMMARY:Gideon Falls, Vol. 4: The Pentoculus TP
-DTSTART;VALUE=DATE:20200722
-DTEND;VALUE=DATE:20200723
-URL:https://imagecomics.com/comics/releases/gideon-falls-vol-4-the-pentoculus-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:gideon-falls-vol-3-stations-of-the-cross-tp
-SUMMARY:Gideon Falls, Vol. 3: Stations of the Cross TP
-DTSTART;VALUE=DATE:20191016
-DTEND;VALUE=DATE:20191017
-URL:https://imagecomics.com/comics/releases/gideon-falls-vol-3-stations-of-the-cross-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:gideon-falls-vol-2-original-sins-tp
-SUMMARY:Gideon Falls, Vol. 2: Original Sins TP
-DTSTART;VALUE=DATE:20190417
-DTEND;VALUE=DATE:20190418
-URL:https://imagecomics.com/comics/releases/gideon-falls-vol-2-original-sins-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:gideon-falls-vol-1-the-black-barn-tp
-SUMMARY:Gideon Falls, Vol. 1: The Black Barn TP
-DTSTART;VALUE=DATE:20181017
-DTEND;VALUE=DATE:20181018
-URL:https://imagecomics.com/comics/releases/gideon-falls-vol-1-the-black-barn-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:lazarus-vol-6-fracture-i-tp
-SUMMARY:Lazarus, Vol. 6: Fracture I TP
-DTSTART;VALUE=DATE:20200115
-DTEND;VALUE=DATE:20200116
-URL:https://imagecomics.com/comics/releases/lazarus-vol-6-fracture-i-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:lazarus-the-third-collection-hc
-SUMMARY:Lazarus: The Third Collection HC
-DTSTART;VALUE=DATE:20190918
-DTEND;VALUE=DATE:20190919
-URL:https://imagecomics.com/comics/releases/lazarus-the-third-collection-hc
-END:VEVENT
-
-BEGIN:VEVENT
-UID:lazarus-vol-2-lift-tp
-SUMMARY:Lazarus, Vol. 2: Lift TP
-DTSTART;VALUE=DATE:20180801
-DTEND;VALUE=DATE:20180802
-URL:https://imagecomics.com/comics/releases/lazarus-vol-2-lift-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:lazarus-sourcebook-collection-vol-1-tp
-SUMMARY:Lazarus: Sourcebook Collection, Vol. 1 TP
-DTSTART;VALUE=DATE:20180425
-DTEND;VALUE=DATE:20180426
-URL:https://imagecomics.com/comics/releases/lazarus-sourcebook-collection-vol-1-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:lazarus-x-66-tp
-SUMMARY:Lazarus: X+66 TP
-DTSTART;VALUE=DATE:20180411
-DTEND;VALUE=DATE:20180412
-URL:https://imagecomics.com/comics/releases/lazarus-x-66-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:lazarus-vol-5-cull-tp-3
-SUMMARY:Lazarus, Vol 5: Cull TP
-DTSTART;VALUE=DATE:20170531
-DTEND;VALUE=DATE:20170601
-URL:https://imagecomics.com/comics/releases/lazarus-vol-5-cull-tp-3
-END:VEVENT
-
-BEGIN:VEVENT
-UID:lazarus-the-second-collection-hardcover
-SUMMARY:Lazarus: The Second Collection Hardcover
-DTSTART;VALUE=DATE:20160518
-DTEND;VALUE=DATE:20160519
-URL:https://imagecomics.com/comics/releases/lazarus-the-second-collection-hardcover
-END:VEVENT
-
-BEGIN:VEVENT
-UID:lazarus-vol-4-poison
-SUMMARY:Lazarus Vol. 4: Poison
-DTSTART;VALUE=DATE:20160127
-DTEND;VALUE=DATE:20160128
-URL:https://imagecomics.com/comics/releases/lazarus-vol-4-poison
-END:VEVENT
-
-BEGIN:VEVENT
-UID:lazarus-vol-3-conclave-tp
-SUMMARY:Lazarus, Vol. 3: Conclave TP
-DTSTART;VALUE=DATE:20150318
-DTEND;VALUE=DATE:20150319
-URL:https://imagecomics.com/comics/releases/lazarus-vol-3-conclave-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:lazarus-book-one-hc
-SUMMARY:Lazarus Book One HC
-DTSTART;VALUE=DATE:20141119
-DTEND;VALUE=DATE:20141120
-URL:https://imagecomics.com/comics/releases/lazarus-book-one-hc
-END:VEVENT
-
-BEGIN:VEVENT
-UID:lazarus-vol-1-tp
-SUMMARY:Lazarus, Vol. 1 TP
-DTSTART;VALUE=DATE:20131009
-DTEND;VALUE=DATE:20131010
-URL:https://imagecomics.com/comics/releases/lazarus-vol-1-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:pretty-deadly-vol-3-the-rat-tp
-SUMMARY:Pretty Deadly, Vol. 3: The Rat TP
-DTSTART;VALUE=DATE:20200318
-DTEND;VALUE=DATE:20200319
-URL:https://imagecomics.com/comics/releases/pretty-deadly-vol-3-the-rat-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:pretty-deadly-vol-2-the-bear-tp
-SUMMARY:Pretty Deadly, Vol. 2: The Bear TP
-DTSTART;VALUE=DATE:20160824
-DTEND;VALUE=DATE:20160825
-URL:https://imagecomics.com/comics/releases/pretty-deadly-vol-2-the-bear-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:pretty-deadly-volume-1-the-shrike-tp
-SUMMARY:Pretty Deadly Volume 1: The Shrike TP
-DTSTART;VALUE=DATE:20140430
-DTEND;VALUE=DATE:20140501
-URL:https://imagecomics.com/comics/releases/pretty-deadly-volume-1-the-shrike-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:southern-bastards-vol-4-gut-check-tp
-SUMMARY:Southern Bastards, Vol. 4: Gut Check TP
-DTSTART;VALUE=DATE:20180627
-DTEND;VALUE=DATE:20180628
-URL:https://imagecomics.com/comics/releases/southern-bastards-vol-4-gut-check-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:southern-bastards-vol-3-homecoming-tp
-SUMMARY:Southern Bastards, Vol. 3: Homecoming TP
-DTSTART;VALUE=DATE:20160713
-DTEND;VALUE=DATE:20160714
-URL:https://imagecomics.com/comics/releases/southern-bastards-vol-3-homecoming-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:southern-bastards-book-one-premiere-hc
-SUMMARY:Southern Bastards Book One Premiere HC
-DTSTART;VALUE=DATE:20150930
-DTEND;VALUE=DATE:20151001
-URL:https://imagecomics.com/comics/releases/southern-bastards-book-one-premiere-hc
-END:VEVENT
-
-BEGIN:VEVENT
-UID:southern-bastards-vol-2-gridiron-tp
-SUMMARY:Southern Bastards, Vol. 2: Gridiron TP
-DTSTART;VALUE=DATE:20150506
-DTEND;VALUE=DATE:20150507
-URL:https://imagecomics.com/comics/releases/southern-bastards-vol-2-gridiron-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:southern-bastards-vol-1-here-was-a-man-tp-4
-SUMMARY:Southern Bastards, Vol 1: Here Was A Man TP
-DTSTART;VALUE=DATE:20141001
-DTEND;VALUE=DATE:20141002
-URL:https://imagecomics.com/comics/releases/southern-bastards-vol-1-here-was-a-man-tp-4
-END:VEVENT
-
-BEGIN:VEVENT
-UID:the-fix-vol-3-tp
-SUMMARY:The Fix, Vol. 3 TP
-DTSTART;VALUE=DATE:20180905
-DTEND;VALUE=DATE:20180906
-URL:https://imagecomics.com/comics/releases/the-fix-vol-3-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:the-fix-vol-2-tp
-SUMMARY:The Fix, Vol. 2 TP
-DTSTART;VALUE=DATE:20170412
-DTEND;VALUE=DATE:20170413
-URL:https://imagecomics.com/comics/releases/the-fix-vol-2-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:the-fix-vol-1-tp
-SUMMARY:The Fix, Vol. 1 TP
-DTSTART;VALUE=DATE:20160914
-DTEND;VALUE=DATE:20160915
-URL:https://imagecomics.com/comics/releases/the-fix-vol-1-tp
+UID:ascender-18
+SUMMARY:Ascender #18
+DTSTART;VALUE=DATE:20210818
+DTEND;VALUE=DATE:20210819
+URL:https://imagecomics.com/comics/releases/ascender-18
 END:VEVENT
 
 BEGIN:VEVENT
@@ -363,355 +147,19 @@ URL:https://imagecomics.com/comics/releases/ascender-1
 END:VEVENT
 
 BEGIN:VEVENT
-UID:bliss-8-of-8
-SUMMARY:Bliss #8 (of 8)
-DTSTART;VALUE=DATE:20210602
-DTEND;VALUE=DATE:20210603
-URL:https://imagecomics.com/comics/releases/bliss-8-of-8
+UID:oblivion-song-by-kirkman-de-felici-34
+SUMMARY:Oblivion Song by Kirkman & De Felici #34
+DTSTART;VALUE=DATE:20210908
+DTEND;VALUE=DATE:20210909
+URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-34
 END:VEVENT
 
 BEGIN:VEVENT
-UID:bliss-7-of-8
-SUMMARY:Bliss #7 (of 8)
-DTSTART;VALUE=DATE:20210505
-DTEND;VALUE=DATE:20210506
-URL:https://imagecomics.com/comics/releases/bliss-7-of-8
-END:VEVENT
-
-BEGIN:VEVENT
-UID:bliss-6
-SUMMARY:Bliss #6
-DTSTART;VALUE=DATE:20210407
-DTEND;VALUE=DATE:20210408
-URL:https://imagecomics.com/comics/releases/bliss-6
-END:VEVENT
-
-BEGIN:VEVENT
-UID:bliss-5
-SUMMARY:Bliss #5
-DTSTART;VALUE=DATE:20210210
-DTEND;VALUE=DATE:20210211
-URL:https://imagecomics.com/comics/releases/bliss-5
-END:VEVENT
-
-BEGIN:VEVENT
-UID:bliss-4-of-8
-SUMMARY:Bliss #4 (OF 8)
-DTSTART;VALUE=DATE:20201028
-DTEND;VALUE=DATE:20201029
-URL:https://imagecomics.com/comics/releases/bliss-4-of-8
-END:VEVENT
-
-BEGIN:VEVENT
-UID:bliss-3-of-8
-SUMMARY:Bliss #3 (of 8)
-DTSTART;VALUE=DATE:20200923
-DTEND;VALUE=DATE:20200924
-URL:https://imagecomics.com/comics/releases/bliss-3-of-8
-END:VEVENT
-
-BEGIN:VEVENT
-UID:bliss-2-of-8
-SUMMARY:Bliss #2 (of 8)
-DTSTART;VALUE=DATE:20200826
-DTEND;VALUE=DATE:20200827
-URL:https://imagecomics.com/comics/releases/bliss-2-of-8
-END:VEVENT
-
-BEGIN:VEVENT
-UID:bliss-1-of-8
-SUMMARY:Bliss #1 (OF 8)
-DTSTART;VALUE=DATE:20200722
-DTEND;VALUE=DATE:20200723
-URL:https://imagecomics.com/comics/releases/bliss-1-of-8
-END:VEVENT
-
-BEGIN:VEVENT
-UID:family-tree-12
-SUMMARY:Family Tree #12
-DTSTART;VALUE=DATE:20210602
-DTEND;VALUE=DATE:20210603
-URL:https://imagecomics.com/comics/releases/family-tree-12
-END:VEVENT
-
-BEGIN:VEVENT
-UID:family-tree-11
-SUMMARY:Family Tree #11
-DTSTART;VALUE=DATE:20210217
-DTEND;VALUE=DATE:20210218
-URL:https://imagecomics.com/comics/releases/family-tree-11
-END:VEVENT
-
-BEGIN:VEVENT
-UID:family-tree-10
-SUMMARY:Family Tree #10
-DTSTART;VALUE=DATE:20201223
-DTEND;VALUE=DATE:20201224
-URL:https://imagecomics.com/comics/releases/family-tree-10
-END:VEVENT
-
-BEGIN:VEVENT
-UID:family-tree-9
-SUMMARY:Family Tree #9
-DTSTART;VALUE=DATE:20201021
-DTEND;VALUE=DATE:20201022
-URL:https://imagecomics.com/comics/releases/family-tree-9
-END:VEVENT
-
-BEGIN:VEVENT
-UID:family-tree-8
-SUMMARY:Family Tree #8
-DTSTART;VALUE=DATE:20200826
-DTEND;VALUE=DATE:20200827
-URL:https://imagecomics.com/comics/releases/family-tree-8
-END:VEVENT
-
-BEGIN:VEVENT
-UID:family-tree-7
-SUMMARY:Family Tree #7
-DTSTART;VALUE=DATE:20200715
-DTEND;VALUE=DATE:20200716
-URL:https://imagecomics.com/comics/releases/family-tree-7
-END:VEVENT
-
-BEGIN:VEVENT
-UID:family-tree-6
-SUMMARY:Family Tree #6
-DTSTART;VALUE=DATE:20200617
-DTEND;VALUE=DATE:20200618
-URL:https://imagecomics.com/comics/releases/family-tree-6
-END:VEVENT
-
-BEGIN:VEVENT
-UID:family-tree-5
-SUMMARY:Family Tree #5
-DTSTART;VALUE=DATE:20200318
-DTEND;VALUE=DATE:20200319
-URL:https://imagecomics.com/comics/releases/family-tree-5
-END:VEVENT
-
-BEGIN:VEVENT
-UID:family-tree-4
-SUMMARY:Family Tree #4
-DTSTART;VALUE=DATE:20200219
-DTEND;VALUE=DATE:20200220
-URL:https://imagecomics.com/comics/releases/family-tree-4
-END:VEVENT
-
-BEGIN:VEVENT
-UID:family-tree-3
-SUMMARY:Family Tree #3
-DTSTART;VALUE=DATE:20200122
-DTEND;VALUE=DATE:20200123
-URL:https://imagecomics.com/comics/releases/family-tree-3
-END:VEVENT
-
-BEGIN:VEVENT
-UID:family-tree-2
-SUMMARY:Family Tree #2
-DTSTART;VALUE=DATE:20191218
-DTEND;VALUE=DATE:20191219
-URL:https://imagecomics.com/comics/releases/family-tree-2
-END:VEVENT
-
-BEGIN:VEVENT
-UID:family-tree-1
-SUMMARY:Family Tree #1
-DTSTART;VALUE=DATE:20191113
-DTEND;VALUE=DATE:20191114
-URL:https://imagecomics.com/comics/releases/family-tree-1
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-returns-10
-SUMMARY:Nailbiter Returns #10
-DTSTART;VALUE=DATE:20210224
-DTEND;VALUE=DATE:20210225
-URL:https://imagecomics.com/comics/releases/nailbiter-returns-10
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-returns-9
-SUMMARY:Nailbiter Returns #9
-DTSTART;VALUE=DATE:20210127
-DTEND;VALUE=DATE:20210128
-URL:https://imagecomics.com/comics/releases/nailbiter-returns-9
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-returns-8
-SUMMARY:Nailbiter Returns #8
-DTSTART;VALUE=DATE:20201230
-DTEND;VALUE=DATE:20201231
-URL:https://imagecomics.com/comics/releases/nailbiter-returns-8
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-returns-7
-SUMMARY:Nailbiter Returns #7
-DTSTART;VALUE=DATE:20201125
-DTEND;VALUE=DATE:20201126
-URL:https://imagecomics.com/comics/releases/nailbiter-returns-7
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-returns-6
-SUMMARY:Nailbiter Returns #6
-DTSTART;VALUE=DATE:20201028
-DTEND;VALUE=DATE:20201029
-URL:https://imagecomics.com/comics/releases/nailbiter-returns-6
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-returns-5
-SUMMARY:Nailbiter Returns #5
-DTSTART;VALUE=DATE:20200930
-DTEND;VALUE=DATE:20201001
-URL:https://imagecomics.com/comics/releases/nailbiter-returns-5
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-returns-4
-SUMMARY:Nailbiter Returns #4
-DTSTART;VALUE=DATE:20200826
-DTEND;VALUE=DATE:20200827
-URL:https://imagecomics.com/comics/releases/nailbiter-returns-4
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-returns-3
-SUMMARY:Nailbiter Returns #3
-DTSTART;VALUE=DATE:20200729
-DTEND;VALUE=DATE:20200730
-URL:https://imagecomics.com/comics/releases/nailbiter-returns-3
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-returns-2
-SUMMARY:Nailbiter Returns #2
-DTSTART;VALUE=DATE:20200701
-DTEND;VALUE=DATE:20200702
-URL:https://imagecomics.com/comics/releases/nailbiter-returns-2
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-returns-1
-SUMMARY:Nailbiter Returns #1
-DTSTART;VALUE=DATE:20200603
-DTEND;VALUE=DATE:20200604
-URL:https://imagecomics.com/comics/releases/nailbiter-returns-1
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-30
-SUMMARY:Nailbiter #30
-DTSTART;VALUE=DATE:20170301
-DTEND;VALUE=DATE:20170302
-URL:https://imagecomics.com/comics/releases/nailbiter-30
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-29
-SUMMARY:Nailbiter #29
-DTSTART;VALUE=DATE:20170201
-DTEND;VALUE=DATE:20170202
-URL:https://imagecomics.com/comics/releases/nailbiter-29
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-28
-SUMMARY:Nailbiter #28
-DTSTART;VALUE=DATE:20170104
-DTEND;VALUE=DATE:20170105
-URL:https://imagecomics.com/comics/releases/nailbiter-28
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-27
-SUMMARY:Nailbiter #27
-DTSTART;VALUE=DATE:20161207
-DTEND;VALUE=DATE:20161208
-URL:https://imagecomics.com/comics/releases/nailbiter-27
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-26
-SUMMARY:Nailbiter #26
-DTSTART;VALUE=DATE:20161102
-DTEND;VALUE=DATE:20161103
-URL:https://imagecomics.com/comics/releases/nailbiter-26
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-25
-SUMMARY:Nailbiter #25
-DTSTART;VALUE=DATE:20160907
-DTEND;VALUE=DATE:20160908
-URL:https://imagecomics.com/comics/releases/nailbiter-25
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-24
-SUMMARY:Nailbiter #24
-DTSTART;VALUE=DATE:20160803
-DTEND;VALUE=DATE:20160804
-URL:https://imagecomics.com/comics/releases/nailbiter-24
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-23
-SUMMARY:Nailbiter #23
-DTSTART;VALUE=DATE:20160706
-DTEND;VALUE=DATE:20160707
-URL:https://imagecomics.com/comics/releases/nailbiter-23
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-22
-SUMMARY:Nailbiter #22
-DTSTART;VALUE=DATE:20160601
-DTEND;VALUE=DATE:20160602
-URL:https://imagecomics.com/comics/releases/nailbiter-22
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-21
-SUMMARY:Nailbiter #21
-DTSTART;VALUE=DATE:20160504
-DTEND;VALUE=DATE:20160505
-URL:https://imagecomics.com/comics/releases/nailbiter-21
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-20
-SUMMARY:Nailbiter #20
-DTSTART;VALUE=DATE:20160203
-DTEND;VALUE=DATE:20160204
-URL:https://imagecomics.com/comics/releases/nailbiter-20
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-19
-SUMMARY:Nailbiter #19
-DTSTART;VALUE=DATE:20160106
-DTEND;VALUE=DATE:20160107
-URL:https://imagecomics.com/comics/releases/nailbiter-19
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-18
-SUMMARY:Nailbiter #18
-DTSTART;VALUE=DATE:20151202
-DTEND;VALUE=DATE:20151203
-URL:https://imagecomics.com/comics/releases/nailbiter-18
-END:VEVENT
-
-BEGIN:VEVENT
-UID:nailbiter-17
-SUMMARY:Nailbiter #17
-DTSTART;VALUE=DATE:20151104
-DTEND;VALUE=DATE:20151105
-URL:https://imagecomics.com/comics/releases/nailbiter-17
+UID:oblivion-song-by-kirkman-de-felici-33
+SUMMARY:Oblivion Song By Kirkman & De Felici #33
+DTSTART;VALUE=DATE:20210811
+DTEND;VALUE=DATE:20210812
+URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-33
 END:VEVENT
 
 BEGIN:VEVENT
@@ -891,26 +339,42 @@ URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-1
 END:VEVENT
 
 BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-11
-SUMMARY:Oblivion Song By Kirkman & De Felici #11
-DTSTART;VALUE=DATE:20190109
-DTEND;VALUE=DATE:20190110
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-11
+UID:spawn-322
+SUMMARY:Spawn #322
+DTSTART;VALUE=DATE:20210922
+DTEND;VALUE=DATE:20210923
+URL:https://imagecomics.com/comics/releases/spawn-322
 END:VEVENT
 
 BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-10
-SUMMARY:Oblivion Song By Kirkman & De Felici #10
-DTSTART;VALUE=DATE:20181212
-DTEND;VALUE=DATE:20181213
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-10
+UID:king-spawn-2
+SUMMARY:King Spawn #2
+DTSTART;VALUE=DATE:20210915
+DTEND;VALUE=DATE:20210916
+URL:https://imagecomics.com/comics/releases/king-spawn-2
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-321
+SUMMARY:Spawn #321
+DTSTART;VALUE=DATE:20210825
+DTEND;VALUE=DATE:20210826
+URL:https://imagecomics.com/comics/releases/spawn-321
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-1
+SUMMARY:King Spawn #1
+DTSTART;VALUE=DATE:20210811
+DTEND;VALUE=DATE:20210812
+URL:https://imagecomics.com/comics/releases/king-spawn-1
 END:VEVENT
 
 BEGIN:VEVENT
 UID:spawn-320
 SUMMARY:Spawn #320
-DTSTART;VALUE=DATE:20210721
-DTEND;VALUE=DATE:20210722
+DTSTART;VALUE=DATE:20210728
+DTEND;VALUE=DATE:20210729
 URL:https://imagecomics.com/comics/releases/spawn-320
 END:VEVENT
 
@@ -924,7 +388,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:spawns-universe-1
-SUMMARY:Spawn's Universe: #1
+SUMMARY:Spawn's Universe: #1 
 DTSTART;VALUE=DATE:20210623
 DTEND;VALUE=DATE:20210624
 URL:https://imagecomics.com/comics/releases/spawns-universe-1
@@ -1067,35 +531,19 @@ URL:https://imagecomics.com/comics/releases/spawn-302
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-301
-SUMMARY:Spawn #301
-DTSTART;VALUE=DATE:20191009
-DTEND;VALUE=DATE:20191010
-URL:https://imagecomics.com/comics/releases/spawn-301
+UID:the-department-of-truth-13
+SUMMARY:The Department of Truth #13
+DTSTART;VALUE=DATE:20210929
+DTEND;VALUE=DATE:20210930
+URL:https://imagecomics.com/comics/releases/the-department-of-truth-13
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-300
-SUMMARY:Spawn #300
-DTSTART;VALUE=DATE:20190904
-DTEND;VALUE=DATE:20190905
-URL:https://imagecomics.com/comics/releases/spawn-300
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-299
-SUMMARY:Spawn #299
-DTSTART;VALUE=DATE:20190731
-DTEND;VALUE=DATE:20190801
-URL:https://imagecomics.com/comics/releases/spawn-299
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-298
-SUMMARY:Spawn #298
-DTSTART;VALUE=DATE:20190626
-DTEND;VALUE=DATE:20190627
-URL:https://imagecomics.com/comics/releases/spawn-298
+UID:the-department-of-truth-12
+SUMMARY:The Department of Truth #12
+DTSTART;VALUE=DATE:20210825
+DTEND;VALUE=DATE:20210826
+URL:https://imagecomics.com/comics/releases/the-department-of-truth-12
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1187,6 +635,14 @@ URL:https://imagecomics.com/comics/releases/the-department-of-truth-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:american-vampire-1976-9
+SUMMARY:AMERICAN VAMPIRE 1976 #9
+DTSTART;VALUE=DATE:20210608
+DTEND;VALUE=DATE:20210609
+URL:https://www.dccomics.com/comics/american-vampire-1976-2020/american-vampire-1976-9
+END:VEVENT
+
+BEGIN:VEVENT
 UID:american-vampire-1976-8
 SUMMARY:AMERICAN VAMPIRE 1976 #8
 DTSTART;VALUE=DATE:20210511
@@ -1251,51 +707,27 @@ URL:https://www.dccomics.com/comics/american-vampire-1976-2020/american-vampire-
 END:VEVENT
 
 BEGIN:VEVENT
-UID:batman-white-knight-presents-harley-quinn-6
-SUMMARY:BATMAN: WHITE KNIGHT PRESENTS: HARLEY QUINN #6
-DTSTART;VALUE=DATE:20210323
-DTEND;VALUE=DATE:20210324
-URL:https://www.dccomics.com/comics/batman-white-knight-presents-harley-quinn-2020/batman-white-knight-presents-harley-quinn-6
+UID:batman-the-detective-3
+SUMMARY:BATMAN: THE DETECTIVE #3
+DTSTART;VALUE=DATE:20210608
+DTEND;VALUE=DATE:20210609
+URL:https://www.dccomics.com/comics/batman-the-detective-2021/batman-the-detective-3
 END:VEVENT
 
 BEGIN:VEVENT
-UID:batman-white-knight-presents-harley-quinn-5
-SUMMARY:BATMAN: WHITE KNIGHT PRESENTS: HARLEY QUINN #5
-DTSTART;VALUE=DATE:20210223
-DTEND;VALUE=DATE:20210224
-URL:https://www.dccomics.com/comics/batman-white-knight-presents-harley-quinn-2020/batman-white-knight-presents-harley-quinn-5
+UID:batman-the-detective-2
+SUMMARY:BATMAN: THE DETECTIVE #2
+DTSTART;VALUE=DATE:20210511
+DTEND;VALUE=DATE:20210512
+URL:https://www.dccomics.com/comics/batman-the-detective-2021/batman-the-detective-2
 END:VEVENT
 
 BEGIN:VEVENT
-UID:batman-white-knight-presents-harley-quinn-4
-SUMMARY:BATMAN: WHITE KNIGHT PRESENTS: HARLEY QUINN #4
-DTSTART;VALUE=DATE:20210126
-DTEND;VALUE=DATE:20210127
-URL:https://www.dccomics.com/comics/batman-white-knight-presents-harley-quinn-2020/batman-white-knight-presents-harley-quinn-4
-END:VEVENT
-
-BEGIN:VEVENT
-UID:batman-white-knight-presents-harley-quinn-3
-SUMMARY:BATMAN: WHITE KNIGHT PRESENTS: HARLEY QUINN #3
-DTSTART;VALUE=DATE:20201222
-DTEND;VALUE=DATE:20201223
-URL:https://www.dccomics.com/comics/batman-white-knight-presents-harley-quinn-2020/batman-white-knight-presents-harley-quinn-3
-END:VEVENT
-
-BEGIN:VEVENT
-UID:batman-white-knight-presents-harley-quinn-2
-SUMMARY:BATMAN: WHITE KNIGHT PRESENTS: HARLEY QUINN #2
-DTSTART;VALUE=DATE:20201124
-DTEND;VALUE=DATE:20201125
-URL:https://www.dccomics.com/comics/batman-white-knight-presents-harley-quinn-2020/batman-white-knight-presents-harley-quinn-2
-END:VEVENT
-
-BEGIN:VEVENT
-UID:batman-white-knight-presents-harley-quinn-1
-SUMMARY:BATMAN: WHITE KNIGHT PRESENTS: HARLEY QUINN #1
-DTSTART;VALUE=DATE:20201020
-DTEND;VALUE=DATE:20201021
-URL:https://www.dccomics.com/comics/batman-white-knight-presents-harley-quinn-2020/batman-white-knight-presents-harley-quinn-1
+UID:batman-the-detective-1
+SUMMARY:BATMAN: THE DETECTIVE #1
+DTSTART;VALUE=DATE:20210413
+DTEND;VALUE=DATE:20210414
+URL:https://www.dccomics.com/comics/batman-the-detective-2021/batman-the-detective-1
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1387,51 +819,19 @@ URL:https://www.dccomics.com/comics/strange-adventures-2020/strange-adventures-1
 END:VEVENT
 
 BEGIN:VEVENT
-UID:sweet-tooth-the-return-6
-SUMMARY:SWEET TOOTH: THE RETURN #6
-DTSTART;VALUE=DATE:20210413
-DTEND;VALUE=DATE:20210414
-URL:https://www.dccomics.com/comics/sweet-tooth-the-return-2020/sweet-tooth-the-return-6
+UID:wonder-girl-2
+SUMMARY:WONDER GIRL #2
+DTSTART;VALUE=DATE:20210706
+DTEND;VALUE=DATE:20210707
+URL:https://www.dccomics.com/comics/wonder-girl-2021/wonder-girl-2
 END:VEVENT
 
 BEGIN:VEVENT
-UID:sweet-tooth-the-return-5
-SUMMARY:SWEET TOOTH: THE RETURN #5
-DTSTART;VALUE=DATE:20210309
-DTEND;VALUE=DATE:20210310
-URL:https://www.dccomics.com/comics/sweet-tooth-the-return-2020/sweet-tooth-the-return-5
-END:VEVENT
-
-BEGIN:VEVENT
-UID:sweet-tooth-the-return-4
-SUMMARY:SWEET TOOTH: THE RETURN #4
-DTSTART;VALUE=DATE:20210209
-DTEND;VALUE=DATE:20210210
-URL:https://www.dccomics.com/comics/sweet-tooth-the-return-2020/sweet-tooth-the-return-4
-END:VEVENT
-
-BEGIN:VEVENT
-UID:sweet-tooth-the-return-3
-SUMMARY:SWEET TOOTH: THE RETURN #3
-DTSTART;VALUE=DATE:20210112
-DTEND;VALUE=DATE:20210113
-URL:https://www.dccomics.com/comics/sweet-tooth-the-return-2020/sweet-tooth-the-return-3
-END:VEVENT
-
-BEGIN:VEVENT
-UID:sweet-tooth-the-return-2
-SUMMARY:SWEET TOOTH: THE RETURN #2
-DTSTART;VALUE=DATE:20201208
-DTEND;VALUE=DATE:20201209
-URL:https://www.dccomics.com/comics/sweet-tooth-the-return-2020/sweet-tooth-the-return-2
-END:VEVENT
-
-BEGIN:VEVENT
-UID:sweet-tooth-the-return-1
-SUMMARY:SWEET TOOTH: THE RETURN #1
-DTSTART;VALUE=DATE:20201103
-DTEND;VALUE=DATE:20201104
-URL:https://www.dccomics.com/comics/sweet-tooth-the-return-2020/sweet-tooth-the-return-1
+UID:wonder-girl-1
+SUMMARY:WONDER GIRL #1
+DTSTART;VALUE=DATE:20210518
+DTEND;VALUE=DATE:20210519
+URL:https://www.dccomics.com/comics/wonder-girl-2021/wonder-girl-1
 END:VEVENT
 
 END:VCALENDAR
