@@ -3,7 +3,7 @@
 {-# LANGUAGE FunctionalDependencies #-}
 {-# LANGUAGE TemplateHaskell #-}
 
-module Data.ComiCal.Types
+module ComiCal.Types
   ( Release (Release),
     number,
     Series (Series),
@@ -16,7 +16,6 @@ module Data.ComiCal.Types
     Calendar (Calendar),
     name,
     events,
-    mkCalendar,
     HasDate,
     date,
     HasSlug,
@@ -38,7 +37,6 @@ import Control.Lens
 import Data.ByteString.Char8 (ByteString)
 import qualified Data.ByteString.Char8 as BS
 import qualified Data.List.NonEmpty as NE
-import Data.Maybe (fromMaybe)
 import Data.Time.Compat
   ( Day,
     UTCTime (UTCTime),
@@ -49,7 +47,7 @@ import Data.Time.Compat
     secondsToDiffTime,
   )
 import Text.Printf (printf)
-import Text.URI (URI, relativeTo)
+import Text.URI (URI)
 import qualified Text.URI as URI
 
 -- | A 'Release' has an 'issue' number, a 'uri', and a 'date'.
@@ -131,11 +129,3 @@ instance Show Calendar where
       ]
         <> NE.toList (show <$> cal ^. events)
         <> ["END:VCALENDAR"]
-
-mkCalendar :: Series -> Calendar
-mkCalendar series = Calendar (series ^. title) $ NE.map go (series ^. releases)
-  where
-    go :: Release -> Event
-    go rel =
-      Event (rel ^. date) (rel ^. slug) (rel ^. title) $
-        fromMaybe (rel ^. uri) ((rel ^. uri) `relativeTo` (series ^. uri))

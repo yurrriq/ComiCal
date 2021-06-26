@@ -1,10 +1,10 @@
-module Data.ComiCal.DC where
+module ComiCal.DC where
 
+import ComiCal.App (ComiCalApp, ComiCalConfig (..))
+import ComiCal.Types (Series (..))
+import ComiCal.Util (getSeries, parseReleases)
 import Control.Monad.Reader (MonadIO (liftIO), MonadReader (ask))
 import qualified Data.ByteString.Char8 as BS
-import Data.ComiCal.App (ComiCalApp, ComiCalConfig (..))
-import Data.ComiCal.Types (Series (..))
-import Data.ComiCal.Util (getSeries, parseReleases)
 import qualified Data.Text as T
 import Data.Time.Compat (localDay, zonedTimeToLocalTime)
 import Data.Time.Format.ISO8601.Compat (iso8601ParseM)
