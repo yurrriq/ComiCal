@@ -28,7 +28,7 @@
           config = ./emacs.el;
         };
       };
-    } // flake-utils.lib.eachSystem ["x86_64-linux"] (system:
+    } // flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
         pkgs = import nixpkgs {
           overlays = [
@@ -38,7 +38,7 @@
           inherit system;
         };
       in
-    {
+      {
         apps.ComiCal = flake-utils.lib.mkApp {
           drv = pkgs.haskell.lib.justStaticExecutables self.defaultPackage.${system};
         };
@@ -50,6 +50,7 @@
         devShell = pkgs.mkShell {
           buildInputs = with pkgs; [
             cabal-install
+            cargo # NOTE: needed for nixpkgs-fmt pre-commit hook
             ghcid
             gitAndTools.pre-commit
             haskell-language-server
@@ -57,10 +58,11 @@
             haskellPackages.pointfree
             hlint
             myEmacs
+            nixpkgs-fmt
             python3Packages.yamllint
           ] ++ self.defaultPackage.${system}.env.nativeBuildInputs;
         };
 
         packages = { inherit (pkgs.haskellPackages) ComiCal; };
-    });
+      });
 }
