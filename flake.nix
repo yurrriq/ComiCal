@@ -55,6 +55,7 @@
             haskell-language-server
             haskellPackages.ormolu
             haskellPackages.pointfree
+            hlint
             myEmacs
             python3Packages.yamllint
           ] ++ self.defaultPackage.${system}.env.nativeBuildInputs;
