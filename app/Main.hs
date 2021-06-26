@@ -2,9 +2,8 @@
 
 module Main (main) where
 
+import qualified ComiCal
 import Data.ByteString.Char8 (ByteString)
-import qualified Data.ComiCal as ComiCal
-import Data.ComiCal.Types (mkCalendar)
 import Options.Applicative
 
 data PullBox = PullBox
@@ -18,7 +17,7 @@ main :: IO ()
 main =
   do
     pullBox <- execParser opts
-    let pull = mapM . (fmap mkCalendar .)
+    let pull = mapM . (fmap ComiCal.mkCalendar .)
     print . foldr1 (<>)
       =<< pull ComiCal.imageCollections (imageCollectionSlugs pullBox)
       <> pull ComiCal.imageIssues (imageIssueSlugs pullBox)

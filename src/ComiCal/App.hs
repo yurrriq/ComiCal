@@ -1,7 +1,7 @@
 {-# LANGUAGE DeriveFunctor #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 
-module Data.ComiCal.App where
+module ComiCal.App where
 
 import Control.Monad.Catch
 import Control.Monad.Reader

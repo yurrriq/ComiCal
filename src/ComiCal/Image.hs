@@ -1,12 +1,12 @@
 {-# LANGUAGE DataKinds #-}
 
-module Data.ComiCal.Image where
+module ComiCal.Image where
 
+import ComiCal.App (ComiCalApp, ComiCalConfig (..))
+import ComiCal.Types (Series (..))
+import ComiCal.Util (getSeries, parseReleases)
 import Control.Monad.Reader (MonadIO (liftIO), MonadReader (ask))
 import qualified Data.ByteString.Char8 as BS
-import Data.ComiCal.App (ComiCalApp, ComiCalConfig (..))
-import Data.ComiCal.Types (Series (..))
-import Data.ComiCal.Util (getSeries, parseReleases)
 import Data.List (find)
 import qualified Data.Text as T
 import Data.Time.Compat (defaultTimeLocale, parseTimeM)

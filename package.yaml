@@ -28,8 +28,8 @@ ghc-options:
 library:
   source-dirs: src
   other-modules:
-  - Data.ComiCal.App
-  - Data.ComiCal.Util
+  - ComiCal.App
+  - ComiCal.Util
   - Paths_ComiCal
 executable:
   ghc-options:
