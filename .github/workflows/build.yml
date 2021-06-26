@@ -32,7 +32,7 @@ jobs:
             --dc-issues         batman-the-detective-2021 \
             --dc-issues         strange-adventures-2020 \
             --dc-issues         wonder-girl-2021 \
-            --image-issues      ascender \
+            --image-collections ascender \
             --image-issues      oblivion-song-by-kirkman-de-felici \
             --image-issues      spawn \
             --image-issues      the-department-of-truth \
