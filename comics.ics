@@ -715,6 +715,14 @@ URL:https://www.dccomics.com/comics/american-vampire-1976-2020/american-vampire-
 END:VEVENT
 
 BEGIN:VEVENT
+UID:batman-the-detective-4
+SUMMARY:BATMAN: THE DETECTIVE #4
+DTSTART;VALUE=DATE:20210713
+DTEND;VALUE=DATE:20210714
+URL:https://www.dccomics.com/comics/batman-the-detective-2021/batman-the-detective-4
+END:VEVENT
+
+BEGIN:VEVENT
 UID:batman-the-detective-3
 SUMMARY:BATMAN: THE DETECTIVE #3
 DTSTART;VALUE=DATE:20210608
@@ -736,6 +744,14 @@ SUMMARY:BATMAN: THE DETECTIVE #1
 DTSTART;VALUE=DATE:20210413
 DTEND;VALUE=DATE:20210414
 URL:https://www.dccomics.com/comics/batman-the-detective-2021/batman-the-detective-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:strange-adventures-11
+SUMMARY:STRANGE ADVENTURES #11
+DTSTART;VALUE=DATE:20210727
+DTEND;VALUE=DATE:20210728
+URL:https://www.dccomics.com/comics/strange-adventures-2020/strange-adventures-11
 END:VEVENT
 
 BEGIN:VEVENT
