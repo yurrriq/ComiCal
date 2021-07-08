@@ -25,9 +25,10 @@ main =
       FromFlags pullList -> pure pullList
     let pull = mapM . (fmap ComiCal.mkCalendar .)
     print . foldr1 (<>)
-      =<< pull ComiCal.imageCollections (imageCollections pullList)
+      =<< pull ComiCal.dcIssues (dcIssues pullList)
+      <> pull ComiCal.imageCollections (imageCollections pullList)
       <> pull ComiCal.imageIssues (imageIssues pullList)
-      <> pull ComiCal.dcIssues (dcIssues pullList)
+      <> pull ComiCal.marvelIssues (marvelIssues pullList)
 
 opts :: ParserInfo AppMode
 opts =
@@ -75,5 +76,19 @@ fromFlags =
             ( long "image-issues"
                 <> metavar "SLUG"
                 <> help "Track single issues of Image comics"
+            )
+        )
+      <*> many
+        ( strOption
+            ( long "marvel-collections"
+                <> metavar "SLUG"
+                <> help "Track collected editions of Marvel comics"
+            )
+        )
+      <*> many
+        ( strOption
+            ( long "marvel-issues"
+                <> metavar "SLUG"
+                <> help "Track single issues of Marvel comics"
             )
         )

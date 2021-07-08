@@ -1,5 +1,4 @@
 {
-  "dcCollections": [],
   "dcIssues": [
     "american-vampire-1976-2020",
     "batman-the-detective-2021",
@@ -16,5 +15,10 @@
     "oblivion-song-by-kirkman-de-felici",
     "spawn",
     "the-department-of-truth"
+  ],
+  "marvelIssues": [
+    "28031/thor_2020",
+    "29700/black_widow_2020_-_present",
+    "31322/black_cat_2020_-_present"
   ]
 }

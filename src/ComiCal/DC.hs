@@ -2,7 +2,7 @@ module ComiCal.DC where
 
 import ComiCal.App (Publisher (..))
 import ComiCal.Types (Scraper (..), Series (..))
-import ComiCal.Util (getSeries, parseReleases)
+import ComiCal.Util (getHttps, parseReleases)
 import Control.Arrow (second)
 import Control.Monad.Reader (MonadIO (liftIO), asks)
 import qualified Data.ByteString.Char8 as BS
@@ -52,6 +52,6 @@ publisher =
             mkURI $
               "https://www.dccomics.com/comics/"
                 <> T.pack (BS.unpack seriesSlug)
-          tags <- liftIO $ getSeries issuesURI
+          tags <- liftIO $ getHttps issuesURI
           Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags
     }

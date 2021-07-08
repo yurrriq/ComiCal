@@ -16,10 +16,10 @@ import Text.HTML.TagSoup
 import Text.Read (readMaybe)
 import Text.URI
 
-getSeries :: MonadIO m => URI -> m [Tag ByteString]
-getSeries theUri =
+getHttps :: MonadIO m => URI -> m [Tag ByteString]
+getHttps theUri =
   do
-    url <- maybe (error "Failed to GET issues") (pure . fst) (useHttpsURI theUri)
+    url <- maybe (error ("Failed to GET " <> show theUri)) (pure . fst) (useHttpsURI theUri)
     res <-
       liftIO $
         runReq defaultHttpConfig $
@@ -38,11 +38,17 @@ parseRelease tags =
     (seriesSlug, cfg) <- asks (second scraper)
     let theTitle = parseReleaseTitle cfg tags
     -- FIXME: MaybeT?
-    Just theURI <- pure $ parseReleaseURI tags
+    Just theURI_ <- pure $ parseReleaseURI tags
+    let theURI = theURI_ {uriScheme = mkScheme "https"}
     -- FIXME: MaybeT?
     Just lastPath <- pure $ unRText . NE.last . snd <$> uriPath theURI
-    let n = parseReleaseNumber seriesSlug lastPath "-"
-    pure $ Release (BS.pack (T.unpack lastPath)) theTitle n theURI <$> parseReleaseDate cfg tags
+    case parseReleaseNumber seriesSlug lastPath "-" of
+      Just n ->
+        mkRelease lastPath theTitle n theURI tags
+      Nothing ->
+        do
+          let Just n = parseReleaseNumber (last (BS.split '/' seriesSlug)) lastPath "_"
+          mkRelease lastPath theTitle n theURI =<< getHttps theURI
 
 parseReleaseNumber :: ByteString -> Text -> Text -> Maybe Int
 parseReleaseNumber seriesSlug lastPath sep =
@@ -55,3 +61,11 @@ parseReleaseURI tags =
   do
     anchorTag <- listToMaybe (dropWhile (~/= ("<a>" :: String)) tags)
     mkURI (decodeUtf8 (fromAttrib "href" anchorTag))
+
+mkRelease :: Text -> ByteString -> Int -> URI -> [Tag ByteString] -> ComiCalApp (Maybe Release)
+mkRelease lastPath theTitle n theURI tags =
+  do
+    cfg <- asks (scraper . snd)
+    pure $
+      Release (BS.pack (T.unpack lastPath)) theTitle (Just n) theURI
+        <$> parseReleaseDate cfg tags

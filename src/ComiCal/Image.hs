@@ -4,7 +4,7 @@ module ComiCal.Image where
 
 import ComiCal.App (Publisher (..))
 import ComiCal.Types (Scraper (..), Series (..))
-import ComiCal.Util (getSeries, parseReleases)
+import ComiCal.Util (getHttps, parseReleases)
 import Control.Arrow (second)
 import Control.Monad.Reader (MonadIO (liftIO), asks)
 import qualified Data.ByteString.Char8 as BS
@@ -53,7 +53,7 @@ publisher =
               "https://imagecomics.com/comics/list/series/"
                 <> T.pack (BS.unpack seriesSlug)
                 <> "/collected-editions"
-          tags <- liftIO $ getSeries collectionsURI
+          tags <- liftIO $ getHttps collectionsURI
           Series (parseTitle cfg tags) seriesSlug collectionsURI <$> parseReleases tags,
       getIssues =
         do
@@ -63,6 +63,6 @@ publisher =
               "https://imagecomics.com/comics/list/series/"
                 <> T.pack (BS.unpack seriesSlug)
                 <> "/releases"
-          tags <- liftIO $ getSeries issuesURI
+          tags <- liftIO $ getHttps issuesURI
           Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags
     }
