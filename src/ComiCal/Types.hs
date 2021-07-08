@@ -28,6 +28,7 @@ module ComiCal.Types
   )
 where
 
+import Control.Applicative ((<|>))
 import Control.Lens
   ( defaultFieldRules,
     generateUpdateableOptics,
@@ -148,17 +149,23 @@ data PullList = PullList
   { dcCollections :: [ByteString],
     dcIssues :: [ByteString],
     imageCollections :: [ByteString],
-    imageIssues :: [ByteString]
+    imageIssues :: [ByteString],
+    marvelCollections :: [ByteString],
+    marvelIssues :: [ByteString]
   }
   deriving (Show, Generic)
 
 instance FromJSON PullList where
   parseJSON (Object v) =
     PullList
-      <$> BS.pack <$$> v .: "dcCollections"
-      <*> BS.pack <$$> v .: "dcIssues"
-      <*> BS.pack <$$> v .: "imageCollections"
-      <*> BS.pack <$$> v .: "imageIssues"
+      <$> maybeSlugs "dcCollections"
+      <*> maybeSlugs "dcIssues"
+      <*> maybeSlugs "imageCollections"
+      <*> maybeSlugs "imageIssues"
+      <*> maybeSlugs "marvelCollections"
+      <*> maybeSlugs "marvelIssues"
+    where
+      maybeSlugs key = BS.pack <$$> v .: key <|> pure mempty
   parseJSON invalid =
     prependFailure
       "parsing ComiCalConfig failed, "

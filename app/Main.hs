@@ -77,3 +77,17 @@ fromFlags =
                 <> help "Track single issues of Image comics"
             )
         )
+      <*> many
+        ( strOption
+            ( long "marvel-collections"
+                <> metavar "SLUG"
+                <> help "Track collected editions of Marvel comics"
+            )
+        )
+      <*> many
+        ( strOption
+            ( long "marvel-issues"
+                <> metavar "SLUG"
+                <> help "Track single issues of Marvel comics"
+            )
+        )

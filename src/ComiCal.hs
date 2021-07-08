@@ -3,6 +3,7 @@ module ComiCal where
 import ComiCal.App (Publisher (..), runComiCalApp)
 import qualified ComiCal.DC as DC
 import qualified ComiCal.Image as Image
+import qualified ComiCal.Marvel as Marvel
 import ComiCal.Types hiding (PullList (..))
 import Control.Lens ((^.))
 import Data.ByteString.Char8 (ByteString)
@@ -29,6 +30,11 @@ imageCollections = runComiCalApp getCollections Image.publisher
 -- fetch, parse, and return the issues of the 'Series'.
 imageIssues :: ByteString -> IO Series
 imageIssues = runComiCalApp getIssues Image.publisher
+
+-- | Given a [Marvel Comics series](https://www.marvel.com/comics) slug,
+-- fetch, parse, and return the issues of the 'Series'.
+marvelIssues :: ByteString -> IO Series
+marvelIssues = runComiCalApp getIssues Marvel.publisher
 
 mkCalendar :: Series -> Calendar
 mkCalendar series = Calendar (series ^. title) $ NE.map go (series ^. releases)
