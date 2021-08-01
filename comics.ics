@@ -3,6 +3,14 @@ PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 VERSION:2.0
 X-WR-CALNAME:Ascender Collected Editions, Black Magick Collected Editions, Killadelphia Collected Editions, Crossover, Oblivion Song by Kirkman & De Felici, Spawn, The Department of Truth, , , , 
 BEGIN:VEVENT
+UID:ascender-vol-4-star-seed-tp
+SUMMARY:Ascender, Vol. 4: Star Seed TP
+DTSTART;VALUE=DATE:20211006
+DTEND;VALUE=DATE:20211007
+URL:https://imagecomics.com/comics/releases/ascender-vol-4-star-seed-tp
+END:VEVENT
+
+BEGIN:VEVENT
 UID:ascender-vol-3-the-digital-mage-tp
 SUMMARY:Ascender, Vol. 3: The Digital Mage TP
 DTSTART;VALUE=DATE:20201223
@@ -91,6 +99,14 @@ URL:https://imagecomics.com/comics/releases/crossover-9
 END:VEVENT
 
 BEGIN:VEVENT
+UID:crossover-11
+SUMMARY:Crossover #11
+DTSTART;VALUE=DATE:20211020
+DTEND;VALUE=DATE:20211021
+URL:https://imagecomics.com/comics/releases/crossover-11
+END:VEVENT
+
+BEGIN:VEVENT
 UID:crossover-8
 SUMMARY:Crossover #8
 DTSTART;VALUE=DATE:20210929
@@ -155,18 +171,26 @@ URL:https://imagecomics.com/comics/releases/crossover-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:oblivion-song-by-kirkman-de-felici-35
+SUMMARY:Oblivion Song By Kirkman & De Felici #35
+DTSTART;VALUE=DATE:20211020
+DTEND;VALUE=DATE:20211021
+URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-35
+END:VEVENT
+
+BEGIN:VEVENT
 UID:oblivion-song-by-kirkman-de-felici-34
 SUMMARY:Oblivion Song by Kirkman & De Felici #34
-DTSTART;VALUE=DATE:20210908
-DTEND;VALUE=DATE:20210909
+DTSTART;VALUE=DATE:20210922
+DTEND;VALUE=DATE:20210923
 URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-34
 END:VEVENT
 
 BEGIN:VEVENT
 UID:oblivion-song-by-kirkman-de-felici-33
 SUMMARY:Oblivion Song By Kirkman & De Felici #33
-DTSTART;VALUE=DATE:20210811
-DTEND;VALUE=DATE:20210812
+DTSTART;VALUE=DATE:20210825
+DTEND;VALUE=DATE:20210826
 URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-33
 END:VEVENT
 
@@ -339,11 +363,27 @@ URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-1
 END:VEVENT
 
 BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-12
-SUMMARY:Oblivion Song By Kirkman & De Felici #12
-DTSTART;VALUE=DATE:20190213
-DTEND;VALUE=DATE:20190214
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-12
+UID:spawn-323
+SUMMARY:Spawn #323
+DTSTART;VALUE=DATE:20211020
+DTEND;VALUE=DATE:20211021
+URL:https://imagecomics.com/comics/releases/spawn-323
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-3
+SUMMARY:King Spawn #3
+DTSTART;VALUE=DATE:20211013
+DTEND;VALUE=DATE:20211014
+URL:https://imagecomics.com/comics/releases/king-spawn-3
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-1
+SUMMARY:Gunslinger Spawn #1
+DTSTART;VALUE=DATE:20211006
+DTEND;VALUE=DATE:20211007
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-1
 END:VEVENT
 
 BEGIN:VEVENT
@@ -363,19 +403,19 @@ URL:https://imagecomics.com/comics/releases/king-spawn-2
 END:VEVENT
 
 BEGIN:VEVENT
+UID:king-spawn-1
+SUMMARY:King Spawn #1
+DTSTART;VALUE=DATE:20210825
+DTEND;VALUE=DATE:20210826
+URL:https://imagecomics.com/comics/releases/king-spawn-1
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-321
 SUMMARY:Spawn #321
 DTSTART;VALUE=DATE:20210825
 DTEND;VALUE=DATE:20210826
 URL:https://imagecomics.com/comics/releases/spawn-321
-END:VEVENT
-
-BEGIN:VEVENT
-UID:king-spawn-1
-SUMMARY:King Spawn #1
-DTSTART;VALUE=DATE:20210818
-DTEND;VALUE=DATE:20210819
-URL:https://imagecomics.com/comics/releases/king-spawn-1
 END:VEVENT
 
 BEGIN:VEVENT
@@ -515,30 +555,6 @@ URL:https://imagecomics.com/comics/releases/spawn-305
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-304
-SUMMARY:Spawn #304
-DTSTART;VALUE=DATE:20200115
-DTEND;VALUE=DATE:20200116
-URL:https://imagecomics.com/comics/releases/spawn-304
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-303
-SUMMARY:Spawn #303
-DTSTART;VALUE=DATE:20191204
-DTEND;VALUE=DATE:20191205
-URL:https://imagecomics.com/comics/releases/spawn-303
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-302
-SUMMARY:Spawn #302
-DTSTART;VALUE=DATE:20191106
-DTEND;VALUE=DATE:20191107
-URL:https://imagecomics.com/comics/releases/spawn-302
-END:VEVENT
-
-BEGIN:VEVENT
 UID:the-department-of-truth-13
 SUMMARY:The Department of Truth #13
 DTSTART;VALUE=DATE:20210929
@@ -640,6 +656,14 @@ SUMMARY:The Department of Truth #1
 DTSTART;VALUE=DATE:20200930
 DTEND;VALUE=DATE:20201001
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:american-vampire-1976-10
+SUMMARY:AMERICAN VAMPIRE 1976 #10
+DTSTART;VALUE=DATE:20210803
+DTEND;VALUE=DATE:20210804
+URL:https://www.dccomics.com/comics/american-vampire-1976-2020/american-vampire-1976-10
 END:VEVENT
 
 BEGIN:VEVENT
@@ -840,6 +864,14 @@ SUMMARY:STRANGE ADVENTURES #1
 DTSTART;VALUE=DATE:20200304
 DTEND;VALUE=DATE:20200305
 URL:https://www.dccomics.com/comics/strange-adventures-2020/strange-adventures-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:wonder-girl-3
+SUMMARY:WONDER GIRL #3
+DTSTART;VALUE=DATE:20210824
+DTEND;VALUE=DATE:20210825
+URL:https://www.dccomics.com/comics/wonder-girl-2021/wonder-girl-3
 END:VEVENT
 
 BEGIN:VEVENT
