@@ -403,19 +403,19 @@ URL:https://imagecomics.com/comics/releases/king-spawn-2
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-321
+SUMMARY:Spawn #321
+DTSTART;VALUE=DATE:20210901
+DTEND;VALUE=DATE:20210902
+URL:https://imagecomics.com/comics/releases/spawn-321
+END:VEVENT
+
+BEGIN:VEVENT
 UID:king-spawn-1
 SUMMARY:King Spawn #1
 DTSTART;VALUE=DATE:20210825
 DTEND;VALUE=DATE:20210826
 URL:https://imagecomics.com/comics/releases/king-spawn-1
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-321
-SUMMARY:Spawn #321
-DTSTART;VALUE=DATE:20210825
-DTEND;VALUE=DATE:20210826
-URL:https://imagecomics.com/comics/releases/spawn-321
 END:VEVENT
 
 BEGIN:VEVENT
