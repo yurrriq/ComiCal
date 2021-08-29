@@ -19,7 +19,7 @@ import Text.URI
 getHttps :: MonadIO m => URI -> m [Tag ByteString]
 getHttps theUri =
   do
-    url <- maybe (error ("Failed to GET " <> show theUri)) (pure . fst) (useHttpsURI theUri)
+    url <- maybe (error ("Failed to GET " <> renderStr theUri)) (pure . fst) (useHttpsURI theUri)
     res <-
       liftIO $
         runReq defaultHttpConfig $
