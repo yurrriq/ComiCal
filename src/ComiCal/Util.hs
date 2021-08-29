@@ -51,10 +51,8 @@ parseRelease tags =
           mkRelease lastPath theTitle n theURI =<< getHttps theURI
 
 parseReleaseNumber :: ByteString -> Text -> Text -> Maybe Int
-parseReleaseNumber seriesSlug lastPath sep =
-  do
-    let prefix = T.pack (BS.unpack seriesSlug) <> sep
-    readMaybe . T.unpack =<< T.stripPrefix prefix lastPath
+parseReleaseNumber _seriesSlug lastPath sep =
+  readMaybe (T.unpack (last (T.splitOn sep lastPath)))
 
 parseReleaseURI :: [Tag ByteString] -> Maybe URI
 parseReleaseURI tags =
