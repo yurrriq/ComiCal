@@ -1,7 +1,159 @@
 BEGIN:VCALENDAR
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 VERSION:2.0
-X-WR-CALNAME:Ascender Collected Editions, Black Magick Collected Editions, Killadelphia Collected Editions, Crossover, Oblivion Song by Kirkman & De Felici, Spawn, The Department of Truth, , , , 
+X-WR-CALNAME:, , , Ascender Collected Editions, Black Magick Collected Editions, Killadelphia Collected Editions, Crossover, Oblivion Song by Kirkman & De Felici, Spawn, That Texas Blood, The Department of Truth, Vinyl, Thor (2020), Black Widow (2020 - Present), Black Cat (2020 - Present)
+BEGIN:VEVENT
+UID:batman-the-detective-4
+SUMMARY:BATMAN: THE DETECTIVE #4
+DTSTART;VALUE=DATE:20210713
+DTEND;VALUE=DATE:20210714
+URL:https:/comics/batman-the-detective-2021/batman-the-detective-4
+END:VEVENT
+
+BEGIN:VEVENT
+UID:batman-the-detective-3
+SUMMARY:BATMAN: THE DETECTIVE #3
+DTSTART;VALUE=DATE:20210608
+DTEND;VALUE=DATE:20210609
+URL:https:/comics/batman-the-detective-2021/batman-the-detective-3
+END:VEVENT
+
+BEGIN:VEVENT
+UID:batman-the-detective-2
+SUMMARY:BATMAN: THE DETECTIVE #2
+DTSTART;VALUE=DATE:20210511
+DTEND;VALUE=DATE:20210512
+URL:https:/comics/batman-the-detective-2021/batman-the-detective-2
+END:VEVENT
+
+BEGIN:VEVENT
+UID:batman-the-detective-1
+SUMMARY:BATMAN: THE DETECTIVE #1
+DTSTART;VALUE=DATE:20210413
+DTEND;VALUE=DATE:20210414
+URL:https:/comics/batman-the-detective-2021/batman-the-detective-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:strange-adventures-11
+SUMMARY:STRANGE ADVENTURES #11
+DTSTART;VALUE=DATE:20210727
+DTEND;VALUE=DATE:20210728
+URL:https:/comics/strange-adventures-2020/strange-adventures-11
+END:VEVENT
+
+BEGIN:VEVENT
+UID:strange-adventures-10
+SUMMARY:STRANGE ADVENTURES #10
+DTSTART;VALUE=DATE:20210525
+DTEND;VALUE=DATE:20210526
+URL:https:/comics/strange-adventures-2020/strange-adventures-10
+END:VEVENT
+
+BEGIN:VEVENT
+UID:strange-adventures-9
+SUMMARY:STRANGE ADVENTURES #9
+DTSTART;VALUE=DATE:20210330
+DTEND;VALUE=DATE:20210331
+URL:https:/comics/strange-adventures-2020/strange-adventures-9
+END:VEVENT
+
+BEGIN:VEVENT
+UID:strange-adventures-8
+SUMMARY:STRANGE ADVENTURES #8
+DTSTART;VALUE=DATE:20210126
+DTEND;VALUE=DATE:20210127
+URL:https:/comics/strange-adventures-2020/strange-adventures-8
+END:VEVENT
+
+BEGIN:VEVENT
+UID:strange-adventures-7
+SUMMARY:STRANGE ADVENTURES #7
+DTSTART;VALUE=DATE:20201201
+DTEND;VALUE=DATE:20201202
+URL:https:/comics/strange-adventures-2020/strange-adventures-7
+END:VEVENT
+
+BEGIN:VEVENT
+UID:strange-adventures-directors-cut-1
+SUMMARY:STRANGE ADVENTURES DIRECTOR'S CUT #1
+DTSTART;VALUE=DATE:20201103
+DTEND;VALUE=DATE:20201104
+URL:https:/comics/strange-adventures-2020/strange-adventures-directors-cut-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:strange-adventures-6
+SUMMARY:STRANGE ADVENTURES #6
+DTSTART;VALUE=DATE:20201013
+DTEND;VALUE=DATE:20201014
+URL:https:/comics/strange-adventures-2020/strange-adventures-6
+END:VEVENT
+
+BEGIN:VEVENT
+UID:strange-adventures-5
+SUMMARY:STRANGE ADVENTURES #5
+DTSTART;VALUE=DATE:20200901
+DTEND;VALUE=DATE:20200902
+URL:https:/comics/strange-adventures-2020/strange-adventures-5
+END:VEVENT
+
+BEGIN:VEVENT
+UID:strange-adventures-4
+SUMMARY:STRANGE ADVENTURES #4
+DTSTART;VALUE=DATE:20200804
+DTEND;VALUE=DATE:20200805
+URL:https:/comics/strange-adventures-2020/strange-adventures-4
+END:VEVENT
+
+BEGIN:VEVENT
+UID:strange-adventures-3
+SUMMARY:STRANGE ADVENTURES #3
+DTSTART;VALUE=DATE:20200714
+DTEND;VALUE=DATE:20200715
+URL:https:/comics/strange-adventures-2020/strange-adventures-3
+END:VEVENT
+
+BEGIN:VEVENT
+UID:strange-adventures-2
+SUMMARY:STRANGE ADVENTURES #2
+DTSTART;VALUE=DATE:20200616
+DTEND;VALUE=DATE:20200617
+URL:https:/comics/strange-adventures-2020/strange-adventures-2
+END:VEVENT
+
+BEGIN:VEVENT
+UID:strange-adventures-1
+SUMMARY:STRANGE ADVENTURES #1
+DTSTART;VALUE=DATE:20200304
+DTEND;VALUE=DATE:20200305
+URL:https:/comics/strange-adventures-2020/strange-adventures-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:wonder-girl-3
+SUMMARY:WONDER GIRL #3
+DTSTART;VALUE=DATE:20210824
+DTEND;VALUE=DATE:20210825
+URL:https:/comics/wonder-girl-2021/wonder-girl-3
+END:VEVENT
+
+BEGIN:VEVENT
+UID:wonder-girl-2
+SUMMARY:WONDER GIRL #2
+DTSTART;VALUE=DATE:20210706
+DTEND;VALUE=DATE:20210707
+URL:https:/comics/wonder-girl-2021/wonder-girl-2
+END:VEVENT
+
+BEGIN:VEVENT
+UID:wonder-girl-1
+SUMMARY:WONDER GIRL #1
+DTSTART;VALUE=DATE:20210518
+DTEND;VALUE=DATE:20210519
+URL:https:/comics/wonder-girl-2021/wonder-girl-1
+END:VEVENT
+
 BEGIN:VEVENT
 UID:ascender-vol-4-star-seed-tp
 SUMMARY:Ascender, Vol. 4: Star Seed TP
@@ -13,24 +165,24 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ascender-vol-3-the-digital-mage-tp
 SUMMARY:Ascender, Vol. 3: The Digital Mage TP
-DTSTART;VALUE=DATE:20201223
-DTEND;VALUE=DATE:20201224
+DTSTART;VALUE=DATE:20211006
+DTEND;VALUE=DATE:20211007
 URL:https://imagecomics.com/comics/releases/ascender-vol-3-the-digital-mage-tp
 END:VEVENT
 
 BEGIN:VEVENT
 UID:ascender-vol-2-the-dead-sea-tp
 SUMMARY:Ascender, Vol. 2: The Dead Sea TP
-DTSTART;VALUE=DATE:20200624
-DTEND;VALUE=DATE:20200625
+DTSTART;VALUE=DATE:20211006
+DTEND;VALUE=DATE:20211007
 URL:https://imagecomics.com/comics/releases/ascender-vol-2-the-dead-sea-tp
 END:VEVENT
 
 BEGIN:VEVENT
 UID:ascender-vol-1-the-haunted-galaxy-tp
 SUMMARY:Ascender, Vol. 1: The Haunted Galaxy TP
-DTSTART;VALUE=DATE:20191023
-DTEND;VALUE=DATE:20191024
+DTSTART;VALUE=DATE:20211006
+DTEND;VALUE=DATE:20211007
 URL:https://imagecomics.com/comics/releases/ascender-vol-1-the-haunted-galaxy-tp
 END:VEVENT
 
@@ -45,24 +197,24 @@ END:VEVENT
 BEGIN:VEVENT
 UID:black-magick-the-first-book-of-shadows-hc
 SUMMARY:Black Magick: The First Book Of Shadows HC
-DTSTART;VALUE=DATE:20190522
-DTEND;VALUE=DATE:20190523
+DTSTART;VALUE=DATE:20210127
+DTEND;VALUE=DATE:20210128
 URL:https://imagecomics.com/comics/releases/black-magick-the-first-book-of-shadows-hc
 END:VEVENT
 
 BEGIN:VEVENT
 UID:black-magick-vol-2-awakenings-2-tp
 SUMMARY:Black Magick, Vol. 2: Awakenings 2 TP
-DTSTART;VALUE=DATE:20180516
-DTEND;VALUE=DATE:20180517
+DTSTART;VALUE=DATE:20210127
+DTEND;VALUE=DATE:20210128
 URL:https://imagecomics.com/comics/releases/black-magick-vol-2-awakenings-2-tp
 END:VEVENT
 
 BEGIN:VEVENT
 UID:black-magick-vol-1-awakening-part-1-tp
 SUMMARY:Black Magick, Vol. 1: Awakening Part 1 TP
-DTSTART;VALUE=DATE:20160427
-DTEND;VALUE=DATE:20160428
+DTSTART;VALUE=DATE:20210127
+DTEND;VALUE=DATE:20210128
 URL:https://imagecomics.com/comics/releases/black-magick-vol-1-awakening-part-1-tp
 END:VEVENT
 
@@ -77,8 +229,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:killadelphia-vol-1-sins-of-the-father-tp
 SUMMARY:Killadelphia, Vol. 1: Sins Of The Father TP
-DTSTART;VALUE=DATE:20200708
-DTEND;VALUE=DATE:20200709
+DTSTART;VALUE=DATE:20210331
+DTEND;VALUE=DATE:20210401
 URL:https://imagecomics.com/comics/releases/killadelphia-vol-1-sins-of-the-father-tp
 END:VEVENT
 
@@ -363,27 +515,59 @@ URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-324
+SUMMARY:Spawn #324
+DTSTART;VALUE=DATE:20211124
+DTEND;VALUE=DATE:20211125
+URL:https://imagecomics.com/comics/releases/spawn-324
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-2
+SUMMARY:Gunslinger Spawn #2
+DTSTART;VALUE=DATE:20211117
+DTEND;VALUE=DATE:20211118
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-2
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-4
+SUMMARY:King Spawn #4
+DTSTART;VALUE=DATE:20211110
+DTEND;VALUE=DATE:20211111
+URL:https://imagecomics.com/comics/releases/king-spawn-4
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-323
 SUMMARY:Spawn #323
-DTSTART;VALUE=DATE:20211020
-DTEND;VALUE=DATE:20211021
+DTSTART;VALUE=DATE:20211027
+DTEND;VALUE=DATE:20211028
 URL:https://imagecomics.com/comics/releases/spawn-323
 END:VEVENT
 
 BEGIN:VEVENT
 UID:king-spawn-3
 SUMMARY:King Spawn #3
-DTSTART;VALUE=DATE:20211013
-DTEND;VALUE=DATE:20211014
+DTSTART;VALUE=DATE:20211020
+DTEND;VALUE=DATE:20211021
 URL:https://imagecomics.com/comics/releases/king-spawn-3
 END:VEVENT
 
 BEGIN:VEVENT
 UID:gunslinger-spawn-1
 SUMMARY:Gunslinger Spawn #1
-DTSTART;VALUE=DATE:20211006
-DTEND;VALUE=DATE:20211007
+DTSTART;VALUE=DATE:20211013
+DTEND;VALUE=DATE:20211014
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-2
+SUMMARY:King Spawn #2
+DTSTART;VALUE=DATE:20210922
+DTEND;VALUE=DATE:20210923
+URL:https://imagecomics.com/comics/releases/king-spawn-2
 END:VEVENT
 
 BEGIN:VEVENT
@@ -392,14 +576,6 @@ SUMMARY:Spawn #322
 DTSTART;VALUE=DATE:20210922
 DTEND;VALUE=DATE:20210923
 URL:https://imagecomics.com/comics/releases/spawn-322
-END:VEVENT
-
-BEGIN:VEVENT
-UID:king-spawn-2
-SUMMARY:King Spawn #2
-DTSTART;VALUE=DATE:20210915
-DTEND;VALUE=DATE:20210916
-URL:https://imagecomics.com/comics/releases/king-spawn-2
 END:VEVENT
 
 BEGIN:VEVENT
@@ -531,27 +707,107 @@ URL:https://imagecomics.com/comics/releases/spawn-308
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-307
-SUMMARY:Spawn #307
+UID:that-texas-blood-12
+SUMMARY:That Texas Blood #12
+DTSTART;VALUE=DATE:20211117
+DTEND;VALUE=DATE:20211118
+URL:https://imagecomics.com/comics/releases/that-texas-blood-12
+END:VEVENT
+
+BEGIN:VEVENT
+UID:that-texas-blood-11
+SUMMARY:That Texas Blood #11
+DTSTART;VALUE=DATE:20211020
+DTEND;VALUE=DATE:20211021
+URL:https://imagecomics.com/comics/releases/that-texas-blood-11
+END:VEVENT
+
+BEGIN:VEVENT
+UID:that-texas-blood-10
+SUMMARY:That Texas Blood #10
+DTSTART;VALUE=DATE:20210922
+DTEND;VALUE=DATE:20210923
+URL:https://imagecomics.com/comics/releases/that-texas-blood-10
+END:VEVENT
+
+BEGIN:VEVENT
+UID:that-texas-blood-9
+SUMMARY:That Texas Blood #9
+DTSTART;VALUE=DATE:20210825
+DTEND;VALUE=DATE:20210826
+URL:https://imagecomics.com/comics/releases/that-texas-blood-9
+END:VEVENT
+
+BEGIN:VEVENT
+UID:that-texas-blood-8
+SUMMARY:That Texas Blood #8
+DTSTART;VALUE=DATE:20210728
+DTEND;VALUE=DATE:20210729
+URL:https://imagecomics.com/comics/releases/that-texas-blood-8
+END:VEVENT
+
+BEGIN:VEVENT
+UID:that-texas-blood-7
+SUMMARY:That Texas Blood #7
+DTSTART;VALUE=DATE:20210630
+DTEND;VALUE=DATE:20210701
+URL:https://imagecomics.com/comics/releases/that-texas-blood-7
+END:VEVENT
+
+BEGIN:VEVENT
+UID:that-texas-blood-6
+SUMMARY:That Texas Blood #6
+DTSTART;VALUE=DATE:20201202
+DTEND;VALUE=DATE:20201203
+URL:https://imagecomics.com/comics/releases/that-texas-blood-6
+END:VEVENT
+
+BEGIN:VEVENT
+UID:that-texas-blood-5
+SUMMARY:That Texas Blood #5
+DTSTART;VALUE=DATE:20201104
+DTEND;VALUE=DATE:20201105
+URL:https://imagecomics.com/comics/releases/that-texas-blood-5
+END:VEVENT
+
+BEGIN:VEVENT
+UID:that-texas-blood-4
+SUMMARY:That Texas Blood #4
+DTSTART;VALUE=DATE:20200930
+DTEND;VALUE=DATE:20201001
+URL:https://imagecomics.com/comics/releases/that-texas-blood-4
+END:VEVENT
+
+BEGIN:VEVENT
+UID:that-texas-blood-3
+SUMMARY:That Texas Blood #3
+DTSTART;VALUE=DATE:20200826
+DTEND;VALUE=DATE:20200827
+URL:https://imagecomics.com/comics/releases/that-texas-blood-3
+END:VEVENT
+
+BEGIN:VEVENT
+UID:that-texas-blood-2
+SUMMARY:That Texas Blood #2
+DTSTART;VALUE=DATE:20200729
+DTEND;VALUE=DATE:20200730
+URL:https://imagecomics.com/comics/releases/that-texas-blood-2
+END:VEVENT
+
+BEGIN:VEVENT
+UID:that-texas-blood-1
+SUMMARY:That Texas Blood #1
 DTSTART;VALUE=DATE:20200624
 DTEND;VALUE=DATE:20200625
-URL:https://imagecomics.com/comics/releases/spawn-307
+URL:https://imagecomics.com/comics/releases/that-texas-blood-1
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-306
-SUMMARY:Spawn #306
-DTSTART;VALUE=DATE:20200318
-DTEND;VALUE=DATE:20200319
-URL:https://imagecomics.com/comics/releases/spawn-306
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-305
-SUMMARY:Spawn #305
-DTSTART;VALUE=DATE:20200219
-DTEND;VALUE=DATE:20200220
-URL:https://imagecomics.com/comics/releases/spawn-305
+UID:the-department-of-truth-14
+SUMMARY:The Department of Truth #14
+DTSTART;VALUE=DATE:20211124
+DTEND;VALUE=DATE:20211125
+URL:https://imagecomics.com/comics/releases/the-department-of-truth-14
 END:VEVENT
 
 BEGIN:VEVENT
@@ -659,235 +915,331 @@ URL:https://imagecomics.com/comics/releases/the-department-of-truth-1
 END:VEVENT
 
 BEGIN:VEVENT
-UID:american-vampire-1976-10
-SUMMARY:AMERICAN VAMPIRE 1976 #10
-DTSTART;VALUE=DATE:20210803
-DTEND;VALUE=DATE:20210804
-URL:https://www.dccomics.com/comics/american-vampire-1976-2020/american-vampire-1976-10
+UID:vinyl-6-of-6
+SUMMARY:Vinyl #6 (of 6)
+DTSTART;VALUE=DATE:20211117
+DTEND;VALUE=DATE:20211118
+URL:https://imagecomics.com/comics/releases/vinyl-6-of-6
 END:VEVENT
 
 BEGIN:VEVENT
-UID:american-vampire-1976-9
-SUMMARY:AMERICAN VAMPIRE 1976 #9
-DTSTART;VALUE=DATE:20210608
-DTEND;VALUE=DATE:20210609
-URL:https://www.dccomics.com/comics/american-vampire-1976-2020/american-vampire-1976-9
+UID:vinyl-5-of-6
+SUMMARY:Vinyl #5 (of 6)
+DTSTART;VALUE=DATE:20211020
+DTEND;VALUE=DATE:20211021
+URL:https://imagecomics.com/comics/releases/vinyl-5-of-6
 END:VEVENT
 
 BEGIN:VEVENT
-UID:american-vampire-1976-8
-SUMMARY:AMERICAN VAMPIRE 1976 #8
-DTSTART;VALUE=DATE:20210511
-DTEND;VALUE=DATE:20210512
-URL:https://www.dccomics.com/comics/american-vampire-1976-2020/american-vampire-1976-8
+UID:vinyl-4-of-6
+SUMMARY:Vinyl #4 (of 6)
+DTSTART;VALUE=DATE:20210922
+DTEND;VALUE=DATE:20210923
+URL:https://imagecomics.com/comics/releases/vinyl-4-of-6
 END:VEVENT
 
 BEGIN:VEVENT
-UID:american-vampire-1976-7
-SUMMARY:AMERICAN VAMPIRE 1976 #7
-DTSTART;VALUE=DATE:20210413
-DTEND;VALUE=DATE:20210414
-URL:https://www.dccomics.com/comics/american-vampire-1976-2020/american-vampire-1976-7
+UID:vinyl-3-of-6
+SUMMARY:Vinyl #3 (of 6)
+DTSTART;VALUE=DATE:20210825
+DTEND;VALUE=DATE:20210826
+URL:https://imagecomics.com/comics/releases/vinyl-3-of-6
 END:VEVENT
 
 BEGIN:VEVENT
-UID:american-vampire-1976-6
-SUMMARY:AMERICAN VAMPIRE 1976 #6
-DTSTART;VALUE=DATE:20210309
-DTEND;VALUE=DATE:20210310
-URL:https://www.dccomics.com/comics/american-vampire-1976-2020/american-vampire-1976-6
+UID:vinyl-2-of-6
+SUMMARY:Vinyl #2 (of 6)
+DTSTART;VALUE=DATE:20210728
+DTEND;VALUE=DATE:20210729
+URL:https://imagecomics.com/comics/releases/vinyl-2-of-6
 END:VEVENT
 
 BEGIN:VEVENT
-UID:american-vampire-1976-5
-SUMMARY:AMERICAN VAMPIRE 1976 #5
-DTSTART;VALUE=DATE:20210209
-DTEND;VALUE=DATE:20210210
-URL:https://www.dccomics.com/comics/american-vampire-1976-2020/american-vampire-1976-5
+UID:vinyl-1-of-6
+SUMMARY:Vinyl #1 (of 6)
+DTSTART;VALUE=DATE:20210623
+DTEND;VALUE=DATE:20210624
+URL:https://imagecomics.com/comics/releases/vinyl-1-of-6
 END:VEVENT
 
 BEGIN:VEVENT
-UID:american-vampire-1976-4
-SUMMARY:AMERICAN VAMPIRE 1976 #4
-DTSTART;VALUE=DATE:20210112
-DTEND;VALUE=DATE:20210113
-URL:https://www.dccomics.com/comics/american-vampire-1976-2020/american-vampire-1976-4
+UID:thor_2020_16
+SUMMARY:Thor #16
+DTSTART;VALUE=DATE:20210825
+DTEND;VALUE=DATE:20210826
+URL:https://www.marvel.com/comics/issue/89736/thor_2020_16
 END:VEVENT
 
 BEGIN:VEVENT
-UID:american-vampire-1976-3
-SUMMARY:AMERICAN VAMPIRE 1976 #3
-DTSTART;VALUE=DATE:20201208
-DTEND;VALUE=DATE:20201209
-URL:https://www.dccomics.com/comics/american-vampire-1976-2020/american-vampire-1976-3
+UID:thor_2020_15
+SUMMARY:Thor #15
+DTSTART;VALUE=DATE:20210714
+DTEND;VALUE=DATE:20210715
+URL:https://www.marvel.com/comics/issue/89735/thor_2020_15
 END:VEVENT
 
 BEGIN:VEVENT
-UID:american-vampire-1976-2
-SUMMARY:AMERICAN VAMPIRE 1976 #2
-DTSTART;VALUE=DATE:20201110
-DTEND;VALUE=DATE:20201111
-URL:https://www.dccomics.com/comics/american-vampire-1976-2020/american-vampire-1976-2
+UID:thor_2020_14
+SUMMARY:Thor #14
+DTSTART;VALUE=DATE:20210414
+DTEND;VALUE=DATE:20210415
+URL:https://www.marvel.com/comics/issue/89734/thor_2020_14
 END:VEVENT
 
 BEGIN:VEVENT
-UID:american-vampire-1976-1
-SUMMARY:AMERICAN VAMPIRE 1976 #1
-DTSTART;VALUE=DATE:20201006
-DTEND;VALUE=DATE:20201007
-URL:https://www.dccomics.com/comics/american-vampire-1976-2020/american-vampire-1976-1
+UID:thor_2020_13
+SUMMARY:Thor #13
+DTSTART;VALUE=DATE:20210317
+DTEND;VALUE=DATE:20210318
+URL:https://www.marvel.com/comics/issue/89733/thor_2020_13
 END:VEVENT
 
 BEGIN:VEVENT
-UID:batman-the-detective-4
-SUMMARY:BATMAN: THE DETECTIVE #4
-DTSTART;VALUE=DATE:20210713
-DTEND;VALUE=DATE:20210714
-URL:https://www.dccomics.com/comics/batman-the-detective-2021/batman-the-detective-4
+UID:thor_2020_12
+SUMMARY:Thor #12
+DTSTART;VALUE=DATE:20210217
+DTEND;VALUE=DATE:20210218
+URL:https://www.marvel.com/comics/issue/78638/thor_2020_12
 END:VEVENT
 
 BEGIN:VEVENT
-UID:batman-the-detective-3
-SUMMARY:BATMAN: THE DETECTIVE #3
-DTSTART;VALUE=DATE:20210608
-DTEND;VALUE=DATE:20210609
-URL:https://www.dccomics.com/comics/batman-the-detective-2021/batman-the-detective-3
+UID:thor_2020_11
+SUMMARY:Thor #11
+DTSTART;VALUE=DATE:20210106
+DTEND;VALUE=DATE:20210107
+URL:https://www.marvel.com/comics/issue/78637/thor_2020_11
 END:VEVENT
 
 BEGIN:VEVENT
-UID:batman-the-detective-2
-SUMMARY:BATMAN: THE DETECTIVE #2
-DTSTART;VALUE=DATE:20210511
-DTEND;VALUE=DATE:20210512
-URL:https://www.dccomics.com/comics/batman-the-detective-2021/batman-the-detective-2
+UID:thor_2020_10
+SUMMARY:Thor #10
+DTSTART;VALUE=DATE:20201202
+DTEND;VALUE=DATE:20201203
+URL:https://www.marvel.com/comics/issue/78636/thor_2020_10
 END:VEVENT
 
 BEGIN:VEVENT
-UID:batman-the-detective-1
-SUMMARY:BATMAN: THE DETECTIVE #1
-DTSTART;VALUE=DATE:20210413
-DTEND;VALUE=DATE:20210414
-URL:https://www.dccomics.com/comics/batman-the-detective-2021/batman-the-detective-1
+UID:thor_2020_9
+SUMMARY:Thor #9
+DTSTART;VALUE=DATE:20201104
+DTEND;VALUE=DATE:20201105
+URL:https://www.marvel.com/comics/issue/78635/thor_2020_9
 END:VEVENT
 
 BEGIN:VEVENT
-UID:strange-adventures-11
-SUMMARY:STRANGE ADVENTURES #11
-DTSTART;VALUE=DATE:20210727
-DTEND;VALUE=DATE:20210728
-URL:https://www.dccomics.com/comics/strange-adventures-2020/strange-adventures-11
+UID:thor_2020_8
+SUMMARY:Thor #8
+DTSTART;VALUE=DATE:20201007
+DTEND;VALUE=DATE:20201008
+URL:https://www.marvel.com/comics/issue/78634/thor_2020_8
 END:VEVENT
 
 BEGIN:VEVENT
-UID:strange-adventures-10
-SUMMARY:STRANGE ADVENTURES #10
-DTSTART;VALUE=DATE:20210525
-DTEND;VALUE=DATE:20210526
-URL:https://www.dccomics.com/comics/strange-adventures-2020/strange-adventures-10
+UID:thor_2020_7
+SUMMARY:Thor #7
+DTSTART;VALUE=DATE:20200916
+DTEND;VALUE=DATE:20200917
+URL:https://www.marvel.com/comics/issue/78633/thor_2020_7
 END:VEVENT
 
 BEGIN:VEVENT
-UID:strange-adventures-9
-SUMMARY:STRANGE ADVENTURES #9
-DTSTART;VALUE=DATE:20210330
-DTEND;VALUE=DATE:20210331
-URL:https://www.dccomics.com/comics/strange-adventures-2020/strange-adventures-9
+UID:thor_2020_6
+SUMMARY:Thor #6
+DTSTART;VALUE=DATE:20200819
+DTEND;VALUE=DATE:20200820
+URL:https://www.marvel.com/comics/issue/78632/thor_2020_6
 END:VEVENT
 
 BEGIN:VEVENT
-UID:strange-adventures-8
-SUMMARY:STRANGE ADVENTURES #8
-DTSTART;VALUE=DATE:20210126
-DTEND;VALUE=DATE:20210127
-URL:https://www.dccomics.com/comics/strange-adventures-2020/strange-adventures-8
+UID:thor_2020_5
+SUMMARY:Thor #5
+DTSTART;VALUE=DATE:20200624
+DTEND;VALUE=DATE:20200625
+URL:https://www.marvel.com/comics/issue/78631/thor_2020_5
 END:VEVENT
 
 BEGIN:VEVENT
-UID:strange-adventures-7
-SUMMARY:STRANGE ADVENTURES #7
-DTSTART;VALUE=DATE:20201201
-DTEND;VALUE=DATE:20201202
-URL:https://www.dccomics.com/comics/strange-adventures-2020/strange-adventures-7
+UID:thor_2020_4
+SUMMARY:Thor #4
+DTSTART;VALUE=DATE:20200311
+DTEND;VALUE=DATE:20200312
+URL:https://www.marvel.com/comics/issue/78630/thor_2020_4
 END:VEVENT
 
 BEGIN:VEVENT
-UID:strange-adventures-directors-cut-1
-SUMMARY:STRANGE ADVENTURES DIRECTOR'S CUT #1
-DTSTART;VALUE=DATE:20201103
-DTEND;VALUE=DATE:20201104
-URL:https://www.dccomics.com/comics/strange-adventures-2020/strange-adventures-directors-cut-1
+UID:thor_2020_3
+SUMMARY:Thor #3
+DTSTART;VALUE=DATE:20200212
+DTEND;VALUE=DATE:20200213
+URL:https://www.marvel.com/comics/issue/78629/thor_2020_3
 END:VEVENT
 
 BEGIN:VEVENT
-UID:strange-adventures-6
-SUMMARY:STRANGE ADVENTURES #6
-DTSTART;VALUE=DATE:20201013
-DTEND;VALUE=DATE:20201014
-URL:https://www.dccomics.com/comics/strange-adventures-2020/strange-adventures-6
+UID:thor_2020_2
+SUMMARY:Thor #2
+DTSTART;VALUE=DATE:20200129
+DTEND;VALUE=DATE:20200130
+URL:https://www.marvel.com/comics/issue/78628/thor_2020_2
 END:VEVENT
 
 BEGIN:VEVENT
-UID:strange-adventures-5
-SUMMARY:STRANGE ADVENTURES #5
-DTSTART;VALUE=DATE:20200901
-DTEND;VALUE=DATE:20200902
-URL:https://www.dccomics.com/comics/strange-adventures-2020/strange-adventures-5
+UID:thor_2020_1
+SUMMARY:Thor #1
+DTSTART;VALUE=DATE:20200101
+DTEND;VALUE=DATE:20200102
+URL:https://www.marvel.com/comics/issue/78627/thor_2020_1
 END:VEVENT
 
 BEGIN:VEVENT
-UID:strange-adventures-4
-SUMMARY:STRANGE ADVENTURES #4
-DTSTART;VALUE=DATE:20200804
-DTEND;VALUE=DATE:20200805
-URL:https://www.dccomics.com/comics/strange-adventures-2020/strange-adventures-4
+UID:black_widow_2020_10
+SUMMARY:Black Widow #10
+DTSTART;VALUE=DATE:20210825
+DTEND;VALUE=DATE:20210826
+URL:https://www.marvel.com/comics/issue/93022/black_widow_2020_10
 END:VEVENT
 
 BEGIN:VEVENT
-UID:strange-adventures-3
-SUMMARY:STRANGE ADVENTURES #3
-DTSTART;VALUE=DATE:20200714
-DTEND;VALUE=DATE:20200715
-URL:https://www.dccomics.com/comics/strange-adventures-2020/strange-adventures-3
+UID:black_widow_2020_9
+SUMMARY:Black Widow #9
+DTSTART;VALUE=DATE:20210728
+DTEND;VALUE=DATE:20210729
+URL:https://www.marvel.com/comics/issue/93021/black_widow_2020_9
 END:VEVENT
 
 BEGIN:VEVENT
-UID:strange-adventures-2
-SUMMARY:STRANGE ADVENTURES #2
-DTSTART;VALUE=DATE:20200616
-DTEND;VALUE=DATE:20200617
-URL:https://www.dccomics.com/comics/strange-adventures-2020/strange-adventures-2
+UID:black_widow_2020_8
+SUMMARY:Black Widow #8
+DTSTART;VALUE=DATE:20210630
+DTEND;VALUE=DATE:20210701
+URL:https://www.marvel.com/comics/issue/93020/black_widow_2020_8
 END:VEVENT
 
 BEGIN:VEVENT
-UID:strange-adventures-1
-SUMMARY:STRANGE ADVENTURES #1
-DTSTART;VALUE=DATE:20200304
-DTEND;VALUE=DATE:20200305
-URL:https://www.dccomics.com/comics/strange-adventures-2020/strange-adventures-1
+UID:black_widow_2020_7
+SUMMARY:Black Widow #7
+DTSTART;VALUE=DATE:20210526
+DTEND;VALUE=DATE:20210527
+URL:https://www.marvel.com/comics/issue/93019/black_widow_2020_7
 END:VEVENT
 
 BEGIN:VEVENT
-UID:wonder-girl-3
-SUMMARY:WONDER GIRL #3
-DTSTART;VALUE=DATE:20210824
-DTEND;VALUE=DATE:20210825
-URL:https://www.dccomics.com/comics/wonder-girl-2021/wonder-girl-3
+UID:black_widow_2020_6
+SUMMARY:Black Widow #6
+DTSTART;VALUE=DATE:20210428
+DTEND;VALUE=DATE:20210429
+URL:https://www.marvel.com/comics/issue/93018/black_widow_2020_6
 END:VEVENT
 
 BEGIN:VEVENT
-UID:wonder-girl-2
-SUMMARY:WONDER GIRL #2
-DTSTART;VALUE=DATE:20210706
-DTEND;VALUE=DATE:20210707
-URL:https://www.dccomics.com/comics/wonder-girl-2021/wonder-girl-2
+UID:black_widow_2020_5
+SUMMARY:Black Widow #5
+DTSTART;VALUE=DATE:20210217
+DTEND;VALUE=DATE:20210218
+URL:https://www.marvel.com/comics/issue/84369/black_widow_2020_5
 END:VEVENT
 
 BEGIN:VEVENT
-UID:wonder-girl-1
-SUMMARY:WONDER GIRL #1
-DTSTART;VALUE=DATE:20210518
-DTEND;VALUE=DATE:20210519
-URL:https://www.dccomics.com/comics/wonder-girl-2021/wonder-girl-1
+UID:black_widow_2020_4
+SUMMARY:Black Widow #4
+DTSTART;VALUE=DATE:20201202
+DTEND;VALUE=DATE:20201203
+URL:https://www.marvel.com/comics/issue/84368/black_widow_2020_4
+END:VEVENT
+
+BEGIN:VEVENT
+UID:black_widow_2020_3
+SUMMARY:Black Widow #3
+DTSTART;VALUE=DATE:20201104
+DTEND;VALUE=DATE:20201105
+URL:https://www.marvel.com/comics/issue/84367/black_widow_2020_3
+END:VEVENT
+
+BEGIN:VEVENT
+UID:black_widow_2020_2
+SUMMARY:Black Widow #2
+DTSTART;VALUE=DATE:20201007
+DTEND;VALUE=DATE:20201008
+URL:https://www.marvel.com/comics/issue/84366/black_widow_2020_2
+END:VEVENT
+
+BEGIN:VEVENT
+UID:black_widow_2020_1
+SUMMARY:Black Widow #1
+DTSTART;VALUE=DATE:20200902
+DTEND;VALUE=DATE:20200903
+URL:https://www.marvel.com/comics/issue/84365/black_widow_2020_1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:black_cat_2020_9
+SUMMARY:Black Cat #9
+DTSTART;VALUE=DATE:20210818
+DTEND;VALUE=DATE:20210819
+URL:https://www.marvel.com/comics/issue/91375/black_cat_2020_9
+END:VEVENT
+
+BEGIN:VEVENT
+UID:black_cat_2020_8
+SUMMARY:Black Cat #8
+DTSTART;VALUE=DATE:20210728
+DTEND;VALUE=DATE:20210729
+URL:https://www.marvel.com/comics/issue/91374/black_cat_2020_8
+END:VEVENT
+
+BEGIN:VEVENT
+UID:black_cat_2020_7
+SUMMARY:Black Cat #7
+DTSTART;VALUE=DATE:20210602
+DTEND;VALUE=DATE:20210603
+URL:https://www.marvel.com/comics/issue/91373/black_cat_2020_7
+END:VEVENT
+
+BEGIN:VEVENT
+UID:black_cat_2020_6
+SUMMARY:Black Cat #6
+DTSTART;VALUE=DATE:20210512
+DTEND;VALUE=DATE:20210513
+URL:https://www.marvel.com/comics/issue/91372/black_cat_2020_6
+END:VEVENT
+
+BEGIN:VEVENT
+UID:black_cat_2020_5
+SUMMARY:Black Cat #5
+DTSTART;VALUE=DATE:20210414
+DTEND;VALUE=DATE:20210415
+URL:https://www.marvel.com/comics/issue/91371/black_cat_2020_5
+END:VEVENT
+
+BEGIN:VEVENT
+UID:black_cat_2020_4
+SUMMARY:Black Cat #4
+DTSTART;VALUE=DATE:20210331
+DTEND;VALUE=DATE:20210401
+URL:https://www.marvel.com/comics/issue/91370/black_cat_2020_4
+END:VEVENT
+
+BEGIN:VEVENT
+UID:black_cat_2020_3
+SUMMARY:Black Cat #3
+DTSTART;VALUE=DATE:20210224
+DTEND;VALUE=DATE:20210225
+URL:https://www.marvel.com/comics/issue/91369/black_cat_2020_3
+END:VEVENT
+
+BEGIN:VEVENT
+UID:black_cat_2020_2
+SUMMARY:Black Cat #2
+DTSTART;VALUE=DATE:20210120
+DTEND;VALUE=DATE:20210121
+URL:https://www.marvel.com/comics/issue/91368/black_cat_2020_2
+END:VEVENT
+
+BEGIN:VEVENT
+UID:black_cat_2020_1
+SUMMARY:Black Cat #1
+DTSTART;VALUE=DATE:20201216
+DTEND;VALUE=DATE:20201217
+URL:https://www.marvel.com/comics/issue/91367/black_cat_2020_1
 END:VEVENT
 
 END:VCALENDAR
