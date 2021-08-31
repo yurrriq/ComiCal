@@ -1,5 +1,9 @@
 # Revision history for ComiCal
 
+## 2.2.2.0 -- 2021-08-29
+
+* Add support for Marvel single issues
+
 ## 2.0.0.0 -- 2021-06-25
 
 * Start stacking monads
