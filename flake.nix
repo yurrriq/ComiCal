@@ -44,6 +44,10 @@
         defaultPackage = self.packages.${system}.ComiCal;
 
         devShell = pkgs.mkShell {
+          FONTCONFIG_FILE = pkgs.makeFontsConf {
+            fontDirectories = [ pkgs.iosevka ];
+          };
+
           buildInputs = with pkgs; [
             cabal-install
             cargo # NOTE: needed for nixpkgs-fmt pre-commit hook
@@ -55,6 +59,7 @@
             hlint
             myEmacs
             nixpkgs-fmt
+            noweb
             python3Packages.yamllint
           ] ++ self.defaultPackage.${system}.env.nativeBuildInputs;
         };

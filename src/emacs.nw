@@ -1,3 +1,22 @@
+\section{Emacs config}
+
+<<emacs.el>>=
+<<Configure the æsthetics>>
+
+<<Configure packages>>
+
+<<Configure some global key bindings>>
+
+<<Configure use-package>>
+
+<<Configure the Haskell programming environment>>
+
+<<Configure some creature comforts>>
+
+<<Configure other major modes>>
+@
+
+<<Configure the æsthetics>>=
 (column-number-mode 1)
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
@@ -10,22 +29,30 @@
 (set-face-attribute 'default nil :family "Iosevka" :height 120)
 
 (load-theme 'wombat)
+@
 
+<<Configure packages>>=
 (require 'package)
 
 (setq-default package-archives nil
               package-enable-at-startup nil)
 
 (package-initialize)
+@
 
+<<Configure some global key bindings>>=
 (global-set-key (kbd "C-x C-k") 'kill-this-buffer)
 (global-set-key (kbd "s-u") 'revert-buffer)
+@
 
+<<Configure use-package>>=
 (eval-when-compile
   (require 'use-package))
 
 (setq-default use-package-always-ensure t)
+@
 
+<<Configure the Haskell programming environment>>=
 (use-package direnv
   :config
   (direnv-mode))
@@ -47,7 +74,9 @@
   (setq lsp-ui-doc-position 'bottom))
 
 (use-package lsp-haskell)
+@
 
+<<Configure some creature comforts>>=
 (use-package crux
   :config
   (global-set-key (kbd "C-a") 'crux-move-beginning-of-line))
@@ -88,7 +117,9 @@
 
 (use-package whitespace-cleanup-mode
   :config (global-whitespace-cleanup-mode t))
+@
 
+<<Configure other major modes>>=
 (use-package nix-mode)
 
 (let ((noweb-load-path
@@ -107,3 +138,4 @@
     :demand))
 
 (use-package yaml-mode)
+@
