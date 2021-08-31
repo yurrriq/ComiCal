@@ -28,7 +28,7 @@ ghc-options:
 - -Werror
 - -fwarn-incomplete-patterns
 library:
-  source-dirs: src
+  source-dirs: lib
   other-modules:
   - ComiCal.App
   - ComiCal.Util
