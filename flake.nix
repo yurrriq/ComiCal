@@ -9,25 +9,28 @@
 
   outputs = { self, emacs-overlay, flake-utils, nixpkgs }:
     {
-      overlay = final: prev: {
-        haskellPackages = prev.haskellPackages.override {
-          overrides = hfinal: hprev: {
-            ComiCal = hprev.callCabal2nix "ComiCal" self { };
+      overlay = nixpkgs.lib.composeManyExtensions (nixpkgs.lib.attrValues self.overlays);
+
+      overlays = {
+        haskellPackages = final: prev: {
+          haskellPackages = prev.haskellPackages.override {
+            overrides = hfinal: hprev: {
+              ComiCal = hprev.callCabal2nix "ComiCal" self { };
+            };
           };
         };
 
-        myEmacs = prev.emacsWithPackagesFromUsePackage {
-          alwaysEnsure = true;
-          config = ./emacs.el;
-        };
+        myEmacs = nixpkgs.lib.composeExtensions emacs-overlay.overlay (final: prev: {
+          myEmacs = prev.emacsWithPackagesFromUsePackage {
+            alwaysEnsure = true;
+            config = ./emacs.el;
+          };
+        });
       };
     } // flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
         pkgs = import nixpkgs {
-          overlays = [
-            emacs-overlay.overlay
-            self.overlay
-          ];
+          overlays = [ self.overlay ];
           inherit system;
         };
       in
