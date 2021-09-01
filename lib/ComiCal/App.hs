@@ -2,7 +2,19 @@
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE TupleSections #-}
 
-module ComiCal.App where
+-- |
+-- Module      : ComiCal.App
+-- Copyright   : (c) Eric Bailey, 2019-2021
+-- License     : MIT
+-- Maintainer  : eric@ericb.me
+-- Stability   : experimental
+-- Portability : POSIX
+module ComiCal.App
+  ( ComiCalApp,
+    runComiCalApp,
+    Publisher (..),
+  )
+where
 
 import ComiCal.Types
 import Control.Monad.Catch

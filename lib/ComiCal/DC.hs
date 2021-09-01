@@ -1,4 +1,11 @@
-module ComiCal.DC where
+-- |
+-- Module      : ComiCal.DC
+-- Copyright   : (c) Eric Bailey, 2019-2021
+-- License     : MIT
+-- Maintainer  : eric@ericb.me
+-- Stability   : experimental
+-- Portability : POSIX
+module ComiCal.DC (publisher) where
 
 import ComiCal.App (Publisher (..))
 import ComiCal.Types (Scraper (..), Series (..))

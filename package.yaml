@@ -9,30 +9,27 @@ extra-source-files:
 dependencies:
 - aeson
 - base
-- bytestring
-- composition-extra
-- exceptions
-- lens
-- modern-uri
 - mtl
-- optparse-applicative
-- req
-- tagsoup
-- text
-- time-compat
-- transformers
 default-extensions:
 - OverloadedStrings
 ghc-options:
 - -Wall
 - -Werror
-- -fwarn-incomplete-patterns
+- -Wincomplete-patterns
+- -Wincomplete-uni-patterns
 library:
   source-dirs: lib
-  other-modules:
-  - ComiCal.App
-  - ComiCal.Util
-  - Paths_ComiCal
+  dependencies:
+  - bytestring
+  - composition-extra
+  - exceptions
+  - lens
+  - modern-uri
+  - req
+  - tagsoup
+  - text
+  - time-compat
+  - transformers
 executable:
   ghc-options:
   - -O2
@@ -40,3 +37,4 @@ executable:
   main: Main.hs
   dependencies:
   - ComiCal
+  - optparse-applicative

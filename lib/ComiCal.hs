@@ -1,4 +1,19 @@
-module ComiCal where
+-- |
+-- Module      : ComiCal
+-- Description : The main API for ComiCal
+-- Copyright   : (c) Eric Bailey, 2019-2021
+-- License     : MIT
+-- Maintainer  : eric@ericb.me
+-- Stability   : stable
+-- Portability : POSIX
+module ComiCal
+  ( dcIssues,
+    imageCollections,
+    imageIssues,
+    marvelIssues,
+    mkCalendar,
+  )
+where
 
 import ComiCal.App (Publisher (..), runComiCalApp)
 import qualified ComiCal.DC as DC
@@ -10,11 +25,6 @@ import Data.ByteString.Char8 (ByteString)
 import qualified Data.List.NonEmpty as NE
 import Data.Maybe (fromMaybe)
 import Text.URI (relativeTo)
-
--- | Given a [DC Comics series](https://www.dccomics.com/comics) slug,
--- fetch, parse, and return the collections of the 'Series'.
-dcCollections :: ByteString -> IO Series
-dcCollections = runComiCalApp getCollections DC.publisher
 
 -- | Given a [DC Comics series](https://www.dccomics.com/comics) slug,
 -- fetch, parse, and return the issues of the 'Series'.
@@ -36,6 +46,8 @@ imageIssues = runComiCalApp getIssues Image.publisher
 marvelIssues :: ByteString -> IO Series
 marvelIssues = runComiCalApp getIssues Marvel.publisher
 
+-- | Given a 'Series', create an 'Event' from each 'Release' and return a
+-- 'Calendar'.
 mkCalendar :: Series -> Calendar
 mkCalendar series = Calendar (series ^. title) $ NE.map go (series ^. releases)
   where

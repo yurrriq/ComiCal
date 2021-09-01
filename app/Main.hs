@@ -18,10 +18,9 @@ main =
     appMode <- execParser opts
     pullList <- case appMode of
       FromFile fname ->
-        do
-          -- FIXME
-          Just pullList <- liftIO $ decodeFileStrict fname
-          pure pullList
+        liftIO $
+          decodeFileStrict fname
+            >>= maybe (error ("Failed to parse " <> fname)) pure
       FromFlags pullList -> pure pullList
     let pull = mapM . (fmap ComiCal.mkCalendar .)
     print . foldr1 (<>)

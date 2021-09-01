@@ -1,4 +1,11 @@
-module ComiCal.Marvel where
+-- |
+-- Module      : ComiCal.Marvel
+-- Copyright   : (c) Eric Bailey, 2019-2021
+-- License     : MIT
+-- Maintainer  : eric@ericb.me
+-- Stability   : experimental
+-- Portability : POSIX
+module ComiCal.Marvel (publisher) where
 
 import ComiCal.App
 import ComiCal.Types

@@ -1,6 +1,13 @@
 {-# LANGUAGE DataKinds #-}
 
-module ComiCal.Image where
+-- |
+-- Module      : ComiCal.Image
+-- Copyright   : (c) Eric Bailey, 2019-2021
+-- License     : MIT
+-- Maintainer  : eric@ericb.me
+-- Stability   : experimental
+-- Portability : POSIX
+module ComiCal.Image (publisher) where
 
 import ComiCal.App (Publisher (..))
 import ComiCal.Types (Scraper (..), Series (..))

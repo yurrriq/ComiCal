@@ -4,6 +4,13 @@
 {-# LANGUAGE FunctionalDependencies #-}
 {-# LANGUAGE TemplateHaskell #-}
 
+-- |
+-- Module      : ComiCal.Types
+-- Copyright   : (c) Eric Bailey, 2019-2021
+-- License     : MIT
+-- Maintainer  : eric@ericb.me
+-- Stability   : experimental
+-- Portability : POSIX
 module ComiCal.Types
   ( Release (Release),
     number,
@@ -113,6 +120,7 @@ instance Show Event where
         "END:VEVENT"
       ]
     where
+      formatDay :: UTCTime -> String
       formatDay = formatTime defaultTimeLocale "%Y%m%d"
       time = UTCTime (event ^. dtstamp) (secondsToDiffTime 0)
 
@@ -165,7 +173,7 @@ instance FromJSON PullList where
       <*> maybeSlugs "marvelCollections"
       <*> maybeSlugs "marvelIssues"
     where
-      maybeSlugs key = BS.pack <$$> v .: key <|> pure mempty
+      maybeSlugs key = BS.pack <$$> v .: key <|> pure []
   parseJSON invalid =
     prependFailure
       "parsing ComiCalConfig failed, "
