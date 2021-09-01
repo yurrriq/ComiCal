@@ -1,0 +1,4 @@
+*.defs
+*.nwi
+*.tex
+!all.tex

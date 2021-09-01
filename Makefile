@@ -1,2 +1,41 @@
-emacs.el: src/emacs.nw
-	notangle -R$@ $< | cpif $@
+cpif ?= | cpif
+
+latexmk_flags = -cd -f -file-line-error -interaction=nonstopmode -shell-escape -synctex=1 -xelatex
+ifneq (,$(findstring B,$(MAKEFLAGS)))
+latexmk_flags  += -gg
+endif
+
+NW_SRCS := \
+src/flake.nw \
+src/emacs.nw \
+src/haskell.nw
+
+DEFS := $(patsubst src/%.nw,src/%.defs,${NW_SRCS})
+
+SRCS := \
+flake.nix \
+emacs.el \
+Setup.hs
+
+${SRCS}: $(wildcard src/*.nw)
+	cat ${NW_SRCS} | notangle -R$@ ${cpif} $@
+
+src/%.tex: src/%.nw src/all.defs
+	noweave -delay -indexfrom src/all.defs -latex -n $^ ${cpif} $@
+
+src/%.defs: src/%.nw
+	nodefs $< >$@
+
+src/all.defs: ${DEFS}
+	sort -u $^ ${cpif} $@
+
+docs/all.pdf: src/all.tex $(addsuffix .tex,$(basename ${NW_SRCS}))
+	@ mkdir -p $(@D)
+	latexmk $(latexmk_flags) -outdir=$(CURDIR)/$(@D) $<
+	noindex src/all
+	latexmk $(latexmk_flags) -outdir=$(CURDIR)/$(@D) $<
+
+all: docs/all.pdf
+
+install:
+	@ cp -vr docs/* ${PREFIX}

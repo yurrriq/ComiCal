@@ -19,7 +19,6 @@
             };
           };
         };
-
         myEmacs = nixpkgs.lib.composeExtensions emacs-overlay.overlay (final: prev: {
           myEmacs = prev.emacsWithPackagesFromUsePackage {
             alwaysEnsure = true;
@@ -38,11 +37,8 @@
         apps.ComiCal = flake-utils.lib.mkApp {
           drv = pkgs.haskell.lib.justStaticExecutables self.defaultPackage.${system};
         };
-
         defaultApp = self.apps.${system}.ComiCal;
-
         defaultPackage = self.packages.${system}.ComiCal;
-
         devShell = pkgs.mkShell {
           FONTCONFIG_FILE = pkgs.makeFontsConf {
             fontDirectories = [ pkgs.iosevka ];
@@ -61,9 +57,26 @@
             nixpkgs-fmt
             noweb
             python3Packages.yamllint
+            (
+              texlive.combine {
+                inherit noweb;
+                inherit (texlive) scheme-small
+                  catchfile
+                  datetime
+                  fancyref
+                  fmtcount
+                  hardwrap
+                  latexmk
+                  mathpazo
+                  titlesec
+                  tufte-latex
+                  xetex
+                  ;
+              }
+            )
+            which
           ] ++ self.defaultPackage.${system}.env.nativeBuildInputs;
         };
-
         packages = { inherit (pkgs.haskellPackages) ComiCal; };
       });
 }

@@ -1,0 +1,57 @@
+\documentclass[a4paper,nobib,xelatex]{tufte-handout}
+
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{.}
+
+\usepackage{fontspec}
+\setmonofont[Mapping=tex-text,Scale]{Iosevka}
+
+\usepackage{hyperref}
+\newcommand{\hrefootnote}[2]{\href{#1}{#2}\footnote{\url{#1}}}
+
+\makeatletter
+\hypersetup{
+  pdffitwindow=true,
+  pdfstartview={FitH},
+  pdfsubject={Track the publish dates of your favorite comics},
+  pdfkeywords={comics, calendar, Haskell, Nix, Noweb, LaTeX},
+  pdfinfo={
+    CreationDate={D:20191123162411},
+    ModificationDate={D:\pdfdate},
+  },
+  colorlinks=true
+}
+\makeatother
+
+\usepackage{noweb}
+\noweboptions{smallcode,shortxref,hideunuseddefs,noidentxref,nomargintag,webnumbering}
+
+\setlength\parindent{0pt}
+
+\title{ComiCal}
+\author{Eric Bailey}
+
+\date{%
+  23 November, 2019
+  \thanks{Last updated \today}%
+}
+
+\begin{document}
+
+\maketitle
+
+\input{flake}
+
+\input{emacs}
+
+%% \input{haskell}
+
+\begin{multicols}{2}[\section{Chunks}]
+  \nowebchunks
+\end{multicols}
+
+\begin{multicols}{2}[\section{Index}]
+  \nowebindex
+\end{multicols}
+
+\end{document}
