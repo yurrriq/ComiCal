@@ -1,16 +1,18 @@
-{-# LANGUAGE OverloadedStrings #-}
-
+-- |
+-- Module      : Main
+-- Description : The main entrypoint for the ComiCal executable
+-- Copyright   : (c) Eric Bailey, 2019-2021
+-- License     : MIT
+-- Maintainer  : eric@ericb.me
+-- Stability   : stable
+-- Portability : POSIX
 module Main (main) where
 
 import qualified ComiCal
 import ComiCal.Types (PullList (..))
-import Control.Monad.Trans
-import Data.Aeson
+import Control.Monad.Trans (liftIO)
+import Data.Aeson (decodeFileStrict)
 import Options.Applicative
-
-data AppMode
-  = FromFile FilePath
-  | FromFlags PullList
 
 main :: IO ()
 main =
@@ -28,6 +30,10 @@ main =
       <> pull ComiCal.imageCollections (imageCollections pullList)
       <> pull ComiCal.imageIssues (imageIssues pullList)
       <> pull ComiCal.marvelIssues (marvelIssues pullList)
+
+data AppMode
+  = FromFile FilePath
+  | FromFlags PullList
 
 opts :: ParserInfo AppMode
 opts =

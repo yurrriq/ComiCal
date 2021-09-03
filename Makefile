@@ -15,10 +15,14 @@ DEFS := $(patsubst src/%.nw,src/%.defs,${NW_SRCS})
 SRCS := \
 flake.nix \
 emacs.el \
-Setup.hs
+package.yaml \
+Setup.hs \
+app/Main.hs
+
+srcs: ${SRCS}
 
 ${SRCS}: $(wildcard src/*.nw)
-	cat ${NW_SRCS} | notangle -R$@ ${cpif} $@
+	notangle -R$@ ${NW_SRCS} ${cpif} $@
 
 src/%.tex: src/%.nw src/all.defs
 	noweave -delay -indexfrom src/all.defs -latex -n $^ ${cpif} $@
