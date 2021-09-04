@@ -3,6 +3,14 @@ PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 VERSION:2.0
 X-WR-CALNAME:, , , Ascender Collected Editions, Black Magick Collected Editions, Killadelphia Collected Editions, Crossover, Oblivion Song by Kirkman & De Felici, Spawn, That Texas Blood, The Department of Truth, Vinyl, Thor (2020), Black Widow (2020 - Present), Black Cat (2020 - Present)
 BEGIN:VEVENT
+UID:batman-the-detective-5
+SUMMARY:BATMAN: THE DETECTIVE #5
+DTSTART;VALUE=DATE:20210921
+DTEND;VALUE=DATE:20210922
+URL:https:/comics/batman-the-detective-2021/batman-the-detective-5
+END:VEVENT
+
+BEGIN:VEVENT
 UID:batman-the-detective-4
 SUMMARY:BATMAN: THE DETECTIVE #4
 DTSTART;VALUE=DATE:20210713
@@ -32,6 +40,14 @@ SUMMARY:BATMAN: THE DETECTIVE #1
 DTSTART;VALUE=DATE:20210413
 DTEND;VALUE=DATE:20210414
 URL:https:/comics/batman-the-detective-2021/batman-the-detective-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:strange-adventures-12
+SUMMARY:STRANGE ADVENTURES #12
+DTSTART;VALUE=DATE:20210928
+DTEND;VALUE=DATE:20210929
+URL:https:/comics/strange-adventures-2020/strange-adventures-12
 END:VEVENT
 
 BEGIN:VEVENT
@@ -165,24 +181,24 @@ END:VEVENT
 BEGIN:VEVENT
 UID:ascender-vol-3-the-digital-mage-tp
 SUMMARY:Ascender, Vol. 3: The Digital Mage TP
-DTSTART;VALUE=DATE:20211006
-DTEND;VALUE=DATE:20211007
+DTSTART;VALUE=DATE:20201223
+DTEND;VALUE=DATE:20201224
 URL:https://imagecomics.com/comics/releases/ascender-vol-3-the-digital-mage-tp
 END:VEVENT
 
 BEGIN:VEVENT
 UID:ascender-vol-2-the-dead-sea-tp
 SUMMARY:Ascender, Vol. 2: The Dead Sea TP
-DTSTART;VALUE=DATE:20211006
-DTEND;VALUE=DATE:20211007
+DTSTART;VALUE=DATE:20200624
+DTEND;VALUE=DATE:20200625
 URL:https://imagecomics.com/comics/releases/ascender-vol-2-the-dead-sea-tp
 END:VEVENT
 
 BEGIN:VEVENT
 UID:ascender-vol-1-the-haunted-galaxy-tp
 SUMMARY:Ascender, Vol. 1: The Haunted Galaxy TP
-DTSTART;VALUE=DATE:20211006
-DTEND;VALUE=DATE:20211007
+DTSTART;VALUE=DATE:20191023
+DTEND;VALUE=DATE:20191024
 URL:https://imagecomics.com/comics/releases/ascender-vol-1-the-haunted-galaxy-tp
 END:VEVENT
 
@@ -197,24 +213,24 @@ END:VEVENT
 BEGIN:VEVENT
 UID:black-magick-the-first-book-of-shadows-hc
 SUMMARY:Black Magick: The First Book Of Shadows HC
-DTSTART;VALUE=DATE:20210127
-DTEND;VALUE=DATE:20210128
+DTSTART;VALUE=DATE:20190522
+DTEND;VALUE=DATE:20190523
 URL:https://imagecomics.com/comics/releases/black-magick-the-first-book-of-shadows-hc
 END:VEVENT
 
 BEGIN:VEVENT
 UID:black-magick-vol-2-awakenings-2-tp
 SUMMARY:Black Magick, Vol. 2: Awakenings 2 TP
-DTSTART;VALUE=DATE:20210127
-DTEND;VALUE=DATE:20210128
+DTSTART;VALUE=DATE:20180516
+DTEND;VALUE=DATE:20180517
 URL:https://imagecomics.com/comics/releases/black-magick-vol-2-awakenings-2-tp
 END:VEVENT
 
 BEGIN:VEVENT
 UID:black-magick-vol-1-awakening-part-1-tp
 SUMMARY:Black Magick, Vol. 1: Awakening Part 1 TP
-DTSTART;VALUE=DATE:20210127
-DTEND;VALUE=DATE:20210128
+DTSTART;VALUE=DATE:20160427
+DTEND;VALUE=DATE:20160428
 URL:https://imagecomics.com/comics/releases/black-magick-vol-1-awakening-part-1-tp
 END:VEVENT
 
@@ -229,8 +245,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:killadelphia-vol-1-sins-of-the-father-tp
 SUMMARY:Killadelphia, Vol. 1: Sins Of The Father TP
-DTSTART;VALUE=DATE:20210331
-DTEND;VALUE=DATE:20210401
+DTSTART;VALUE=DATE:20200708
+DTEND;VALUE=DATE:20200709
 URL:https://imagecomics.com/comics/releases/killadelphia-vol-1-sins-of-the-father-tp
 END:VEVENT
 
@@ -325,16 +341,16 @@ END:VEVENT
 BEGIN:VEVENT
 UID:oblivion-song-by-kirkman-de-felici-35
 SUMMARY:Oblivion Song By Kirkman & De Felici #35
-DTSTART;VALUE=DATE:20211020
-DTEND;VALUE=DATE:20211021
+DTSTART;VALUE=DATE:20211103
+DTEND;VALUE=DATE:20211104
 URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-35
 END:VEVENT
 
 BEGIN:VEVENT
 UID:oblivion-song-by-kirkman-de-felici-34
 SUMMARY:Oblivion Song by Kirkman & De Felici #34
-DTSTART;VALUE=DATE:20210922
-DTEND;VALUE=DATE:20210923
+DTSTART;VALUE=DATE:20211006
+DTEND;VALUE=DATE:20211007
 URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-34
 END:VEVENT
 
