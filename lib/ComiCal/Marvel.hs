@@ -57,6 +57,6 @@ publisher =
             mkURI $
               "https://www.marvel.com/comics/series/"
                 <> T.pack (BS.unpack seriesSlug)
-          tags <- liftIO $ getHttps issuesURI
+          tags <- getHttps issuesURI
           Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags
     }

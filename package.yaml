@@ -12,6 +12,7 @@ dependencies:
 - mtl
 default-extensions:
 - OverloadedStrings
+- TemplateHaskell
 ghc-options:
 - -Wall
 - -Werror
@@ -23,8 +24,10 @@ library:
   - bytestring
   - composition-extra
   - exceptions
+  - http-client
   - lens
   - modern-uri
+  - monad-logger
   - req
   - tagsoup
   - text

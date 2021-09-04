@@ -13,7 +13,7 @@ import ComiCal.App (Publisher (..))
 import ComiCal.Types (Scraper (..), Series (..))
 import ComiCal.Util (getHttps, parseReleases)
 import Control.Arrow (second)
-import Control.Monad.Reader (MonadIO (liftIO), asks)
+import Control.Monad.Reader (asks)
 import qualified Data.ByteString.Char8 as BS
 import Data.List (find)
 import qualified Data.Text as T
@@ -60,7 +60,7 @@ publisher =
               "https://imagecomics.com/comics/list/series/"
                 <> T.pack (BS.unpack seriesSlug)
                 <> "/collected-editions"
-          tags <- liftIO $ getHttps collectionsURI
+          tags <- getHttps collectionsURI
           Series (parseTitle cfg tags) seriesSlug collectionsURI <$> parseReleases tags,
       getIssues =
         do
@@ -70,6 +70,6 @@ publisher =
               "https://imagecomics.com/comics/list/series/"
                 <> T.pack (BS.unpack seriesSlug)
                 <> "/releases"
-          tags <- liftIO $ getHttps issuesURI
+          tags <- getHttps issuesURI
           Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags
     }

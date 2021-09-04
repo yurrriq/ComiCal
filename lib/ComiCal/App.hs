@@ -18,15 +18,17 @@ where
 
 import ComiCal.Types
 import Control.Monad.Catch
+import Control.Monad.Logger
 import Control.Monad.Reader
 import Data.ByteString.Char8 (ByteString)
 
 newtype ComiCalApp a = ComiCalApp
-  {runApp :: ReaderT (ByteString, Publisher) IO a}
+  {runApp :: ReaderT (ByteString, Publisher) (LoggingT IO) a}
   deriving
     ( Functor,
       Applicative,
       Monad,
+      MonadLogger,
       MonadIO,
       MonadReader (ByteString, Publisher),
       MonadFail,
@@ -34,7 +36,10 @@ newtype ComiCalApp a = ComiCalApp
     )
 
 runComiCalApp :: (Publisher -> ComiCalApp a) -> Publisher -> ByteString -> IO a
-runComiCalApp getter publisher = runReaderT (runApp (getter publisher)) . (,publisher)
+runComiCalApp getter publisher =
+  runStderrLoggingT
+    . runReaderT (runApp (getter publisher))
+    . (,publisher)
 
 data Publisher = Publisher
   { getCollections :: ComiCalApp Series,

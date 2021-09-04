@@ -31,6 +31,7 @@ type annotations for string literals.
 <<package.yaml>>=
 default-extensions:
 - OverloadedStrings
+- TemplateHaskell
 @
 
 Enable GHC to catch more issues at compile time.
@@ -52,8 +53,10 @@ library:
   - bytestring
   - composition-extra
   - exceptions
+  - http-client
   - lens
   - modern-uri
+  - monad-logger
   - req
   - tagsoup
   - text
