@@ -39,10 +39,7 @@ getHttps theURI =
   do
     $(logDebug) $ "GET " <> render theURI
     url <- maybe badURI (pure . fst) (useHttpsURI theURI)
-    res <-
-      liftIO $
-        runReq defaultHttpConfig $
-          req GET url NoReqBody bsResponse mempty
+    res <- runReq defaultHttpConfig $ req GET url NoReqBody bsResponse mempty
     pure (parseTags (responseBody res))
   where
     badURI = throwInvalidUrlM (renderStr theURI) "Unable to construct Network.HTTP.Req.Url"
