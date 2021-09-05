@@ -16,26 +16,26 @@ module ComiCal.App
   )
 where
 
-import ComiCal.Types
-import Control.Monad.Catch
-import Control.Monad.Logger
-import Control.Monad.Reader
-import Data.ByteString.Lazy.Char8 (ByteString)
+import ComiCal.Types (Scraper, Series)
+import Control.Monad.Catch (MonadThrow)
+import Control.Monad.Logger (LoggingT, MonadLogger, runStderrLoggingT)
+import Control.Monad.Reader (MonadIO, MonadReader, ReaderT (..))
+import Data.Text (Text)
 
 newtype ComiCalApp a = ComiCalApp
-  {runApp :: ReaderT (ByteString, Publisher) (LoggingT IO) a}
+  {runApp :: ReaderT (Text, Publisher) (LoggingT IO) a}
   deriving
     ( Functor,
       Applicative,
       Monad,
       MonadLogger,
       MonadIO,
-      MonadReader (ByteString, Publisher),
+      MonadReader (Text, Publisher),
       MonadFail,
       MonadThrow
     )
 
-runComiCalApp :: (Publisher -> ComiCalApp a) -> Publisher -> ByteString -> IO a
+runComiCalApp :: (Publisher -> ComiCalApp a) -> Publisher -> Text -> IO a
 runComiCalApp getter publisher =
   runStderrLoggingT
     . runReaderT (runApp (getter publisher))

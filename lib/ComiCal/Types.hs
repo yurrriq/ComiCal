@@ -44,9 +44,8 @@ import Control.Lens
     (.~),
     (^.),
   )
+import qualified Data.Text as T
 import Data.Aeson.Types hiding (Series)
-import Data.ByteString.Lazy.Char8 (ByteString)
-import qualified Data.ByteString.Lazy.Char8 as LBS
 import Data.Functor.Syntax ((<$$>))
 import qualified Data.List.NonEmpty as NE
 import Data.Time.Compat
@@ -59,15 +58,16 @@ import Data.Time.Compat
     secondsToDiffTime,
   )
 import GHC.Generics
-import Text.HTML.TagSoup
 import Text.Printf (printf)
 import Text.URI (URI)
 import qualified Text.URI as URI
+import Text.XML.Cursor
+import Data.Text (Text)
 
 -- | A 'Release' has an 'issue' number, a 'uri', and a 'date'.
 data Release = Release
-  { _releaseSlug :: ByteString,
-    _releaseTitle :: ByteString,
+  { _releaseSlug :: Text,
+    _releaseTitle :: Text,
     _releaseNumber :: Maybe Int,
     _releaseUri :: URI,
     _releaseDate :: Day
@@ -77,12 +77,12 @@ data Release = Release
 makeLensesWith (defaultFieldRules & generateUpdateableOptics .~ False) ''Release
 
 instance Show Release where
-  show release = printf "%s on %s" (LBS.unpack (release ^. title)) (show (release ^. date))
+  show release = printf "%s on %s" (T.unpack (release ^. title)) (show (release ^. date))
 
 -- | A 'Series' has a 'title', a 'uri', and a list of 'releases'.
 data Series = Series
-  { _seriesTitle :: ByteString,
-    _seriesSlug :: ByteString,
+  { _seriesTitle :: Text,
+    _seriesSlug :: Text,
     _seriesUri :: URI,
     _seriesReleases :: NE.NonEmpty Release
   }
@@ -94,13 +94,13 @@ instance Show Series where
   show series =
     printf
       "%s (%d releases)"
-      (LBS.unpack (series ^. title))
+      (series ^. title)
       (length (series ^. releases))
 
 data Event = Event
   { _eventDtstamp :: Day,
-    _eventUid :: ByteString,
-    _eventSummary :: ByteString,
+    _eventUid :: Text,
+    _eventSummary :: Text,
     _eventUri :: URI
   }
   deriving (Eq)
@@ -111,8 +111,8 @@ instance Show Event where
   show event =
     unlines
       [ "BEGIN:VEVENT",
-        printf "UID:%s" (LBS.unpack (event ^. uid)),
-        printf "SUMMARY:%s" (LBS.unpack (event ^. summary)),
+        printf "UID:%s" (event ^. uid),
+        printf "SUMMARY:%s" (event ^. summary),
         printf "DTSTART;VALUE=DATE:%s" $ formatDay time,
         printf "DTEND;VALUE=DATE:%s" $ formatDay (addUTCTime nominalDay time),
         printf "URL:%s" (URI.render (event ^. uri)),
@@ -124,7 +124,7 @@ instance Show Event where
       time = UTCTime (event ^. dtstamp) (secondsToDiffTime 0)
 
 data Calendar = Calendar
-  { _calendarName :: ByteString,
+  { _calendarName :: Text,
     _calendarEvents :: NE.NonEmpty Event
   }
   deriving (Eq)
@@ -140,25 +140,25 @@ instance Show Calendar where
       [ "BEGIN:VCALENDAR",
         "PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN",
         "VERSION:2.0",
-        printf "X-WR-CALNAME:%s" (LBS.unpack (cal ^. name))
+        printf "X-WR-CALNAME:%s" (cal ^. name)
       ]
         <> NE.toList (show <$> cal ^. events)
         <> ["END:VCALENDAR"]
 
 data Scraper = Scraper
-  { partitionReleases :: [Tag ByteString] -> [[Tag ByteString]],
-    parseTitle :: [Tag ByteString] -> ByteString,
-    parseReleaseTitle :: [Tag ByteString] -> ByteString,
-    parseReleaseDate :: [Tag ByteString] -> Maybe Day
+  { partitionReleases :: Cursor -> [Cursor],
+    parseTitle :: Cursor -> Text,
+    parseReleaseTitle :: Cursor -> Text,
+    parseReleaseDate :: Cursor -> Maybe Day
   }
 
 data PullList = PullList
-  { dcCollections :: [ByteString],
-    dcIssues :: [ByteString],
-    imageCollections :: [ByteString],
-    imageIssues :: [ByteString],
-    marvelCollections :: [ByteString],
-    marvelIssues :: [ByteString]
+  { dcCollections :: [Text],
+    dcIssues :: [Text],
+    imageCollections :: [Text],
+    imageIssues :: [Text],
+    marvelCollections :: [Text],
+    marvelIssues :: [Text]
   }
   deriving (Show, Generic)
 
@@ -172,7 +172,7 @@ instance FromJSON PullList where
       <*> maybeSlugs "marvelCollections"
       <*> maybeSlugs "marvelIssues"
     where
-      maybeSlugs key = LBS.pack <$$> v .: key <|> pure []
+      maybeSlugs key = T.pack <$$> v .: key <|> pure []
   parseJSON invalid =
     prependFailure
       "parsing ComiCalConfig failed, "

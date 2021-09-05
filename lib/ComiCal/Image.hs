@@ -11,46 +11,37 @@ module ComiCal.Image (publisher) where
 
 import ComiCal.App (Publisher (..))
 import ComiCal.Types (Scraper (..), Series (..))
-import ComiCal.Util (getHttps, parseReleases)
+import ComiCal.Util (getHttps, parseReleases, urlEncode)
 import Control.Arrow (second)
 import Control.Monad.Reader (asks)
-import qualified Data.ByteString.Lazy.Char8 as BS
-import Data.List (find)
 import qualified Data.Text as T
 import Data.Time.Compat (defaultTimeLocale, parseTimeM)
-import Text.HTML.TagSoup
-  ( fromTagText,
-    isTagText,
-    partitions,
-    (~/=),
-    (~==),
-  )
 import Text.URI (mkURI)
+import Text.XML.Cursor
 
 publisher :: Publisher
 publisher =
   Publisher
     { scraper =
         Scraper
-          { partitionReleases =
-              partitions (~== ("<div class=\"cell u-mb1\">" :: String))
-                . dropWhile (~/= ("<section class=\"comics-grid u-pb2\">" :: String)),
-            parseTitle =
-              BS.unwords . takeWhile (/= "Releases") . BS.words
-                . fromTagText
-                . head
-                . filter isTagText
-                . dropWhile (~/= ("<h2>" :: String)),
-            parseReleaseTitle =
-              fromTagText . head . filter isTagText
-                . dropWhile (~/= ("<span>" :: String)),
-            parseReleaseDate = \tags ->
-              do
-                spanTag <-
-                  find isTagText $
-                    dropWhile (~/= ("<span class=date>" :: String)) tags
-                let input = BS.unpack (fromTagText spanTag)
-                parseTimeM True defaultTimeLocale "%b %e, %Y" input
+          { partitionReleases = \cursor ->
+              cursor $// element "div" >=> attributeIs "class" "cell u-mb1",
+            parseTitle = \cursor ->
+              last . T.splitOn " | " . head $
+                cursor
+                  $// (element "meta" >=> attributeIs "property" "og:title")
+                  &| head . attribute "content",
+            parseReleaseTitle = \cursor ->
+              head $
+                cursor
+                  $// element "a"
+                  &// element "span"
+                  &/ content,
+            parseReleaseDate = \cursor ->
+              parseTimeM True defaultTimeLocale "%b %e, %Y" . T.unpack . head $
+                cursor
+                  $// element "span" >=> attributeIs "class" "date"
+                  &/ content
           },
       getCollections =
         do
@@ -58,7 +49,7 @@ publisher =
           collectionsURI <-
             mkURI $
               "https://imagecomics.com/comics/list/series/"
-                <> T.pack (BS.unpack seriesSlug)
+                <> urlEncode seriesSlug
                 <> "/collected-editions"
           tags <- getHttps collectionsURI
           Series (parseTitle cfg tags) seriesSlug collectionsURI <$> parseReleases tags,
@@ -68,7 +59,7 @@ publisher =
           issuesURI <-
             mkURI $
               "https://imagecomics.com/comics/list/series/"
-                <> T.pack (BS.unpack seriesSlug)
+                <> urlEncode seriesSlug
                 <> "/releases"
           tags <- getHttps issuesURI
           Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags

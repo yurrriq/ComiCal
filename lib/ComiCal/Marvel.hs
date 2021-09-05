@@ -7,48 +7,42 @@
 -- Portability : POSIX
 module ComiCal.Marvel (publisher) where
 
-import ComiCal.App
-import ComiCal.Types
-import ComiCal.Util
+import ComiCal.App (Publisher (..))
+import ComiCal.Types (Scraper (..), Series (..))
+import ComiCal.Util (getHttps, parseReleases, urlEncode)
 import Control.Arrow (second)
-import Control.Monad.Reader
-import qualified Data.ByteString.Lazy.Char8 as LBS
-import Data.List (find)
+import Control.Monad.Reader (asks)
 import qualified Data.Text as T
-import Data.Time.Format.Compat
-import Text.HTML.TagSoup
-import Text.URI
+import Data.Time.Compat (defaultTimeLocale, parseTimeM)
+import Text.URI (mkURI)
+import Text.XML.Cursor
 
 publisher :: Publisher
 publisher =
   Publisher
     { scraper =
         Scraper
-          { partitionReleases =
-              concatMap (partitions (~== ("<div class=\"row-item-text\">" :: String)))
-                . partitions (~== ("<div class=\"row-item comic-item\">" :: String))
-                . takeWhile (~/= ("<section>" :: String))
-                . dropWhile (~/= ("<div class=\"JCMultiRow  JCMultiRow-comic_issue\">" :: String)),
-            parseTitle =
-              fromTagText
-                . head
-                . filter isTagText
-                . dropWhile (~/= ("<h1>" :: String)),
-            parseReleaseTitle =
-              -- FIXME: strip
-              fromTagText . head . filter isTagText
-                . dropWhile (~/= ("<h5>" :: String)),
-            parseReleaseDate = \tags ->
-              do
-                tag <-
-                  find isTagText $
-                    head $
-                      tail $
-                        tail $
-                          partitions (~== ("<div>" :: String)) $
-                            dropWhile (~/= ("<div class=\"featured-item-meta\">" :: String)) tags
-                let input = LBS.unpack (fromTagText tag)
-                parseTimeM True defaultTimeLocale "%B %e, %Y" input
+          { partitionReleases = \cursor ->
+              cursor
+                $// element "div" >=> attributeIs "class" "JCMultiRow  JCMultiRow-comic_issue"
+                &// element "div" >=> attributeIs "class" "row-item-text",
+            parseTitle = \cursor ->
+              head . T.splitOn " | " . head $
+                cursor
+                  $// (element "meta" >=> attributeIs "property" "og:title")
+                  &| head . attribute "content",
+            parseReleaseTitle = \cursor ->
+              T.strip . head $
+                cursor
+                  $// element "h5"
+                  &// element "a" >=> attributeIs "class" "meta-title"
+                  &/ content,
+            parseReleaseDate = \cursor ->
+              parseTimeM True defaultTimeLocale "%B %e, %Y" . T.unpack . last $
+                cursor
+                  $// element "div" >=> attributeIs "class" "featured-item-meta"
+                  &/ element "div"
+                  &/ content
           },
       getCollections = fail "Not yet implemented",
       getIssues =
@@ -57,7 +51,7 @@ publisher =
           issuesURI <-
             mkURI $
               "https://www.marvel.com/comics/series/"
-                <> T.pack (LBS.unpack seriesSlug)
+                <> urlEncode seriesSlug
           tags <- getHttps issuesURI
           Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags
     }
