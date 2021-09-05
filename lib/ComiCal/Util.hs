@@ -20,13 +20,12 @@ import Control.Lens (views, (.~))
 import Control.Monad.Catch (Exception, MonadThrow, displayException, throwM)
 import Control.Monad.Logger
 import Control.Monad.Reader
-import Data.ByteString.Char8 (ByteString)
-import qualified Data.ByteString.Char8 as BS
+import Data.ByteString.Lazy.Char8 (ByteString)
+import qualified Data.ByteString.Lazy.Char8 as LBS
 import qualified Data.List.NonEmpty as NE
 import Data.Maybe (catMaybes, listToMaybe)
 import Data.Text (Text)
 import qualified Data.Text as T
-import Data.Text.Encoding (decodeUtf8)
 import Network.HTTP.Client (HttpException (..))
 import Network.HTTP.Req
 import Text.HTML.TagSoup
@@ -39,7 +38,7 @@ getHttps theURI =
   do
     $(logDebug) $ "GET " <> render theURI
     url <- maybe badURI (pure . fst) (useHttpsURI theURI)
-    res <- runReq defaultHttpConfig $ req GET url NoReqBody bsResponse mempty
+    res <- runReq defaultHttpConfig $ req GET url NoReqBody lbsResponse mempty
     pure (parseTags (responseBody res))
   where
     badURI = throwInvalidUrlM (renderStr theURI) "Unable to construct Network.HTTP.Req.Url"
@@ -86,12 +85,12 @@ parseReleaseURI :: MonadThrow m => [Tag ByteString] -> m URI
 parseReleaseURI tags =
   do
     anchorTag <- headM (NoParse tags) (dropWhile (~/= ("<a>" :: String)) tags)
-    mkURI (decodeUtf8 (fromAttrib "href" anchorTag))
+    mkURI (T.pack (LBS.unpack (fromAttrib "href" anchorTag)))
 
 mkRelease :: Text -> ByteString -> Maybe Int -> URI -> [Tag ByteString] -> ComiCalApp (Maybe Release)
 mkRelease lastPath theTitle maybeReleaseNumber theURI tags =
   asks $
-    fmap (Release (BS.pack (T.unpack lastPath)) theTitle maybeReleaseNumber theURI)
+    fmap (Release (LBS.pack (T.unpack lastPath)) theTitle maybeReleaseNumber theURI)
       . (flip parseReleaseDate tags . scraper . snd)
 
 throwInvalidUrlM :: MonadThrow m => String -> String -> m a

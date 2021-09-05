@@ -12,7 +12,7 @@ import ComiCal.Types (Scraper (..), Series (..))
 import ComiCal.Util (getHttps, parseReleases)
 import Control.Arrow (second)
 import Control.Monad.Reader (asks)
-import qualified Data.ByteString.Char8 as BS
+import qualified Data.ByteString.Lazy.Char8 as LBS
 import qualified Data.Text as T
 import Data.Time.Compat (localDay, zonedTimeToLocalTime)
 import Data.Time.Format.ISO8601.Compat (iso8601ParseM)
@@ -36,7 +36,7 @@ publisher =
                 . partitions (~== ("<div class=\"views-field views-field-title\">" :: String))
                 . dropWhile (~/= ("<tbody>" :: String)),
             parseTitle =
-              BS.unwords . takeWhile (/= "Releases") . BS.words
+              LBS.unwords . takeWhile (/= "Releases") . LBS.words
                 . fromTagText
                 . head
                 . filter isTagText
@@ -46,7 +46,7 @@ publisher =
                 . dropWhile (~/= ("<span>" :: String)),
             parseReleaseDate =
               fmap (localDay . zonedTimeToLocalTime) . iso8601ParseM
-                . BS.unpack
+                . LBS.unpack
                 . fromAttrib "content"
                 . head
                 . dropWhile (~/= ("<span property=\"schema:datePublished\">" :: String))
@@ -58,7 +58,7 @@ publisher =
           issuesURI <-
             mkURI $
               "https://www.dccomics.com/comics/"
-                <> T.pack (BS.unpack seriesSlug)
+                <> T.pack (LBS.unpack seriesSlug)
           tags <- getHttps issuesURI
           Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags
     }

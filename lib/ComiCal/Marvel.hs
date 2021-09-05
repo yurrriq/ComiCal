@@ -12,7 +12,7 @@ import ComiCal.Types
 import ComiCal.Util
 import Control.Arrow (second)
 import Control.Monad.Reader
-import qualified Data.ByteString.Char8 as BS
+import qualified Data.ByteString.Lazy.Char8 as LBS
 import Data.List (find)
 import qualified Data.Text as T
 import Data.Time.Format.Compat
@@ -35,7 +35,8 @@ publisher =
                 . filter isTagText
                 . dropWhile (~/= ("<h1>" :: String)),
             parseReleaseTitle =
-              BS.strip . fromTagText . head . filter isTagText
+              -- FIXME: strip
+              fromTagText . head . filter isTagText
                 . dropWhile (~/= ("<h5>" :: String)),
             parseReleaseDate = \tags ->
               do
@@ -46,7 +47,7 @@ publisher =
                         tail $
                           partitions (~== ("<div>" :: String)) $
                             dropWhile (~/= ("<div class=\"featured-item-meta\">" :: String)) tags
-                let input = BS.unpack (fromTagText tag)
+                let input = LBS.unpack (fromTagText tag)
                 parseTimeM True defaultTimeLocale "%B %e, %Y" input
           },
       getCollections = fail "Not yet implemented",
@@ -56,7 +57,7 @@ publisher =
           issuesURI <-
             mkURI $
               "https://www.marvel.com/comics/series/"
-                <> T.pack (BS.unpack seriesSlug)
+                <> T.pack (LBS.unpack seriesSlug)
           tags <- getHttps issuesURI
           Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags
     }

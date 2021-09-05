@@ -20,7 +20,7 @@ import ComiCal.Types
 import Control.Monad.Catch
 import Control.Monad.Logger
 import Control.Monad.Reader
-import Data.ByteString.Char8 (ByteString)
+import Data.ByteString.Lazy.Char8 (ByteString)
 
 newtype ComiCalApp a = ComiCalApp
   {runApp :: ReaderT (ByteString, Publisher) (LoggingT IO) a}

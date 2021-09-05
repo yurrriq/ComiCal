@@ -45,8 +45,8 @@ import Control.Lens
     (^.),
   )
 import Data.Aeson.Types hiding (Series)
-import Data.ByteString.Char8 (ByteString)
-import qualified Data.ByteString.Char8 as BS
+import Data.ByteString.Lazy.Char8 (ByteString)
+import qualified Data.ByteString.Lazy.Char8 as LBS
 import Data.Functor.Syntax ((<$$>))
 import qualified Data.List.NonEmpty as NE
 import Data.Time.Compat
@@ -77,7 +77,7 @@ data Release = Release
 makeLensesWith (defaultFieldRules & generateUpdateableOptics .~ False) ''Release
 
 instance Show Release where
-  show release = printf "%s on %s" (BS.unpack (release ^. title)) (show (release ^. date))
+  show release = printf "%s on %s" (LBS.unpack (release ^. title)) (show (release ^. date))
 
 -- | A 'Series' has a 'title', a 'uri', and a list of 'releases'.
 data Series = Series
@@ -94,7 +94,7 @@ instance Show Series where
   show series =
     printf
       "%s (%d releases)"
-      (BS.unpack (series ^. title))
+      (LBS.unpack (series ^. title))
       (length (series ^. releases))
 
 data Event = Event
@@ -111,8 +111,8 @@ instance Show Event where
   show event =
     unlines
       [ "BEGIN:VEVENT",
-        printf "UID:%s" (BS.unpack (event ^. uid)),
-        printf "SUMMARY:%s" (BS.unpack (event ^. summary)),
+        printf "UID:%s" (LBS.unpack (event ^. uid)),
+        printf "SUMMARY:%s" (LBS.unpack (event ^. summary)),
         printf "DTSTART;VALUE=DATE:%s" $ formatDay time,
         printf "DTEND;VALUE=DATE:%s" $ formatDay (addUTCTime nominalDay time),
         printf "URL:%s" (URI.render (event ^. uri)),
@@ -140,7 +140,7 @@ instance Show Calendar where
       [ "BEGIN:VCALENDAR",
         "PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN",
         "VERSION:2.0",
-        printf "X-WR-CALNAME:%s" (BS.unpack (cal ^. name))
+        printf "X-WR-CALNAME:%s" (LBS.unpack (cal ^. name))
       ]
         <> NE.toList (show <$> cal ^. events)
         <> ["END:VCALENDAR"]
@@ -172,7 +172,7 @@ instance FromJSON PullList where
       <*> maybeSlugs "marvelCollections"
       <*> maybeSlugs "marvelIssues"
     where
-      maybeSlugs key = BS.pack <$$> v .: key <|> pure []
+      maybeSlugs key = LBS.pack <$$> v .: key <|> pure []
   parseJSON invalid =
     prependFailure
       "parsing ComiCalConfig failed, "

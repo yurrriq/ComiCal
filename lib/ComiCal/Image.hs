@@ -14,7 +14,7 @@ import ComiCal.Types (Scraper (..), Series (..))
 import ComiCal.Util (getHttps, parseReleases)
 import Control.Arrow (second)
 import Control.Monad.Reader (asks)
-import qualified Data.ByteString.Char8 as BS
+import qualified Data.ByteString.Lazy.Char8 as BS
 import Data.List (find)
 import qualified Data.Text as T
 import Data.Time.Compat (defaultTimeLocale, parseTimeM)

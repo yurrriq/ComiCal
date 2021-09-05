@@ -21,7 +21,7 @@ import qualified ComiCal.Image as Image
 import qualified ComiCal.Marvel as Marvel
 import ComiCal.Types hiding (PullList (..))
 import Control.Lens ((^.))
-import Data.ByteString.Char8 (ByteString)
+import Data.ByteString.Lazy.Char8 (ByteString)
 import qualified Data.List.NonEmpty as NE
 import Data.Maybe (fromMaybe)
 import Text.URI (relativeTo)
