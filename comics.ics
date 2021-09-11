@@ -1,7 +1,7 @@
 BEGIN:VCALENDAR
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 VERSION:2.0
-X-WR-CALNAME:, , , Ascender Collected Editions, Black Magick Collected Editions, Killadelphia Collected Editions, Crossover, Oblivion Song by Kirkman & De Felici, Spawn, That Texas Blood, The Department of Truth, Vinyl, Thor (2020), Black Widow (2020 - Present), Black Cat (2020 - Present)
+X-WR-CALNAME:BATMAN: THE DETECTIVE 2021, STRANGE ADVENTURES 2020, WONDER GIRL 2021, Ascender, Black Magick, Killadelphia, Crossover, Oblivion Song by Kirkman & De Felici, Spawn, That Texas Blood, The Department of Truth, Vinyl, Thor (2020), Black Widow (2020 - Present), Black Cat (2020 - Present)
 BEGIN:VEVENT
 UID:batman-the-detective-5
 SUMMARY:BATMAN: THE DETECTIVE #5
@@ -563,19 +563,19 @@ URL:https://imagecomics.com/comics/releases/spawn-323
 END:VEVENT
 
 BEGIN:VEVENT
+UID:gunslinger-spawn-1
+SUMMARY:Gunslinger Spawn #1
+DTSTART;VALUE=DATE:20211020
+DTEND;VALUE=DATE:20211021
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-1
+END:VEVENT
+
+BEGIN:VEVENT
 UID:king-spawn-3
 SUMMARY:King Spawn #3
 DTSTART;VALUE=DATE:20211020
 DTEND;VALUE=DATE:20211021
 URL:https://imagecomics.com/comics/releases/king-spawn-3
-END:VEVENT
-
-BEGIN:VEVENT
-UID:gunslinger-spawn-1
-SUMMARY:Gunslinger Spawn #1
-DTSTART;VALUE=DATE:20211013
-DTEND;VALUE=DATE:20211014
-URL:https://imagecomics.com/comics/releases/gunslinger-spawn-1
 END:VEVENT
 
 BEGIN:VEVENT
