@@ -341,16 +341,16 @@ END:VEVENT
 BEGIN:VEVENT
 UID:oblivion-song-by-kirkman-de-felici-35
 SUMMARY:Oblivion Song By Kirkman & De Felici #35
-DTSTART;VALUE=DATE:20211103
-DTEND;VALUE=DATE:20211104
+DTSTART;VALUE=DATE:20211110
+DTEND;VALUE=DATE:20211111
 URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-35
 END:VEVENT
 
 BEGIN:VEVENT
 UID:oblivion-song-by-kirkman-de-felici-34
 SUMMARY:Oblivion Song by Kirkman & De Felici #34
-DTSTART;VALUE=DATE:20211006
-DTEND;VALUE=DATE:20211007
+DTSTART;VALUE=DATE:20211013
+DTEND;VALUE=DATE:20211014
 URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-34
 END:VEVENT
 
@@ -579,19 +579,19 @@ URL:https://imagecomics.com/comics/releases/king-spawn-3
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-322
+SUMMARY:Spawn #322
+DTSTART;VALUE=DATE:20210929
+DTEND;VALUE=DATE:20210930
+URL:https://imagecomics.com/comics/releases/spawn-322
+END:VEVENT
+
+BEGIN:VEVENT
 UID:king-spawn-2
 SUMMARY:King Spawn #2
 DTSTART;VALUE=DATE:20210922
 DTEND;VALUE=DATE:20210923
 URL:https://imagecomics.com/comics/releases/king-spawn-2
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-322
-SUMMARY:Spawn #322
-DTSTART;VALUE=DATE:20210922
-DTEND;VALUE=DATE:20210923
-URL:https://imagecomics.com/comics/releases/spawn-322
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1104,6 +1104,14 @@ SUMMARY:Thor #1
 DTSTART;VALUE=DATE:20200101
 DTEND;VALUE=DATE:20200102
 URL:https://www.marvel.com/comics/issue/78627/thor_2020_1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:black_widow_2020_11
+SUMMARY:Black Widow #11
+DTSTART;VALUE=DATE:20210915
+DTEND;VALUE=DATE:20210916
+URL:https://www.marvel.com/comics/issue/95776/black_widow_2020_11
 END:VEVENT
 
 BEGIN:VEVENT
