@@ -235,6 +235,15 @@ URL:https://imagecomics.com/comics/releases/black-magick-vol-1-awakening-part-1-
 END:VEVENT
 
 BEGIN:VEVENT
+UID:killadelphia-vol-3-home-is-where-the-hatred-is-tp
+SUMMARY:KILLADELPHIA, VOL. 3: HOME IS WHERE THE HATRED IS TP
+
+DTSTART;VALUE=DATE:20211222
+DTEND;VALUE=DATE:20211223
+URL:https://imagecomics.com/comics/releases/killadelphia-vol-3-home-is-where-the-hatred-is-tp
+END:VEVENT
+
+BEGIN:VEVENT
 UID:killadelphia-vol-2-burn-baby-burn-tp
 SUMMARY:Killadelphia, Vol 2: Burn Baby Burn TP
 DTSTART;VALUE=DATE:20210331
@@ -341,16 +350,16 @@ END:VEVENT
 BEGIN:VEVENT
 UID:oblivion-song-by-kirkman-de-felici-35
 SUMMARY:Oblivion Song By Kirkman & De Felici #35
-DTSTART;VALUE=DATE:20211110
-DTEND;VALUE=DATE:20211111
+DTSTART;VALUE=DATE:20211117
+DTEND;VALUE=DATE:20211118
 URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-35
 END:VEVENT
 
 BEGIN:VEVENT
 UID:oblivion-song-by-kirkman-de-felici-34
 SUMMARY:Oblivion Song by Kirkman & De Felici #34
-DTSTART;VALUE=DATE:20211013
-DTEND;VALUE=DATE:20211014
+DTSTART;VALUE=DATE:20211020
+DTEND;VALUE=DATE:20211021
 URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-34
 END:VEVENT
 
@@ -531,6 +540,15 @@ URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-325
+SUMMARY:SPAWN #325
+
+DTSTART;VALUE=DATE:20211222
+DTEND;VALUE=DATE:20211223
+URL:https://imagecomics.com/comics/releases/spawn-325
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-324
 SUMMARY:Spawn #324
 DTSTART;VALUE=DATE:20211124
@@ -563,19 +581,19 @@ URL:https://imagecomics.com/comics/releases/spawn-323
 END:VEVENT
 
 BEGIN:VEVENT
-UID:gunslinger-spawn-1
-SUMMARY:Gunslinger Spawn #1
-DTSTART;VALUE=DATE:20211020
-DTEND;VALUE=DATE:20211021
-URL:https://imagecomics.com/comics/releases/gunslinger-spawn-1
-END:VEVENT
-
-BEGIN:VEVENT
 UID:king-spawn-3
 SUMMARY:King Spawn #3
 DTSTART;VALUE=DATE:20211020
 DTEND;VALUE=DATE:20211021
 URL:https://imagecomics.com/comics/releases/king-spawn-3
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-1
+SUMMARY:Gunslinger Spawn #1
+DTSTART;VALUE=DATE:20211020
+DTEND;VALUE=DATE:20211021
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-1
 END:VEVENT
 
 BEGIN:VEVENT
@@ -715,11 +733,11 @@ URL:https://imagecomics.com/comics/releases/spawn-309
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-308
-SUMMARY:Spawn #308
-DTSTART;VALUE=DATE:20200729
-DTEND;VALUE=DATE:20200730
-URL:https://imagecomics.com/comics/releases/spawn-308
+UID:that-texas-blood-13
+SUMMARY:That Texas Blood #13
+DTSTART;VALUE=DATE:20211215
+DTEND;VALUE=DATE:20211216
+URL:https://imagecomics.com/comics/releases/that-texas-blood-13
 END:VEVENT
 
 BEGIN:VEVENT
@@ -816,6 +834,15 @@ SUMMARY:That Texas Blood #1
 DTSTART;VALUE=DATE:20200624
 DTEND;VALUE=DATE:20200625
 URL:https://imagecomics.com/comics/releases/that-texas-blood-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:the-department-of-truth-15
+SUMMARY:THE DEPARTMENT OF TRUTH #15
+
+DTSTART;VALUE=DATE:20211229
+DTEND;VALUE=DATE:20211230
+URL:https://imagecomics.com/comics/releases/the-department-of-truth-15
 END:VEVENT
 
 BEGIN:VEVENT
@@ -976,6 +1003,22 @@ SUMMARY:Vinyl #1 (of 6)
 DTSTART;VALUE=DATE:20210623
 DTEND;VALUE=DATE:20210624
 URL:https://imagecomics.com/comics/releases/vinyl-1-of-6
+END:VEVENT
+
+BEGIN:VEVENT
+UID:thor_2020_19
+SUMMARY:Thor #19
+DTSTART;VALUE=DATE:20211117
+DTEND;VALUE=DATE:20211118
+URL:https://www.marvel.com/comics/issue/89739/thor_2020_19
+END:VEVENT
+
+BEGIN:VEVENT
+UID:thor_2020_17
+SUMMARY:Thor #17
+DTSTART;VALUE=DATE:20210929
+DTEND;VALUE=DATE:20210930
+URL:https://www.marvel.com/comics/issue/89737/thor_2020_17
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1192,6 +1235,14 @@ SUMMARY:Black Widow #1
 DTSTART;VALUE=DATE:20200902
 DTEND;VALUE=DATE:20200903
 URL:https://www.marvel.com/comics/issue/84365/black_widow_2020_1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:black_cat_2020_10
+SUMMARY:Black Cat #10
+DTSTART;VALUE=DATE:20210929
+DTEND;VALUE=DATE:20210930
+URL:https://www.marvel.com/comics/issue/91376/black_cat_2020_10
 END:VEVENT
 
 BEGIN:VEVENT
