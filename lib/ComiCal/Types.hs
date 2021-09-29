@@ -64,7 +64,7 @@ import qualified Text.URI as URI
 import Text.XML.Cursor
 import Data.Text (Text)
 
--- | A 'Release' has an 'issue' number, a 'uri', and a 'date'.
+-- | A 'Release' represents a single issue or a trade paperback.
 data Release = Release
   { _releaseSlug :: Text,
     _releaseTitle :: Text,
@@ -79,7 +79,7 @@ makeLensesWith (defaultFieldRules & generateUpdateableOptics .~ False) ''Release
 instance Show Release where
   show release = printf "%s on %s" (T.unpack (release ^. title)) (show (release ^. date))
 
--- | A 'Series' has a 'title', a 'uri', and a list of 'releases'.
+-- | A 'Series' is a collection of 'Release's.
 data Series = Series
   { _seriesTitle :: Text,
     _seriesSlug :: Text,
@@ -97,6 +97,7 @@ instance Show Series where
       (series ^. title)
       (length (series ^. releases))
 
+-- | A calender 'Event' represents a 'Release' date.
 data Event = Event
   { _eventDtstamp :: Day,
     _eventUid :: Text,
@@ -123,6 +124,7 @@ instance Show Event where
       formatDay = formatTime defaultTimeLocale "%Y%m%d"
       time = UTCTime (event ^. dtstamp) (secondsToDiffTime 0)
 
+-- | A 'Calendar' is a nonempty collection of 'Event's.
 data Calendar = Calendar
   { _calendarName :: Text,
     _calendarEvents :: NE.NonEmpty Event
