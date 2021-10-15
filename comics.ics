@@ -276,19 +276,19 @@ URL:https://imagecomics.com/comics/releases/crossover-10
 END:VEVENT
 
 BEGIN:VEVENT
+UID:crossover-11
+SUMMARY:Crossover #11
+DTSTART;VALUE=DATE:20211027
+DTEND;VALUE=DATE:20211028
+URL:https://imagecomics.com/comics/releases/crossover-11
+END:VEVENT
+
+BEGIN:VEVENT
 UID:crossover-9
 SUMMARY:Crossover #9
 DTSTART;VALUE=DATE:20211027
 DTEND;VALUE=DATE:20211028
 URL:https://imagecomics.com/comics/releases/crossover-9
-END:VEVENT
-
-BEGIN:VEVENT
-UID:crossover-11
-SUMMARY:Crossover #11
-DTSTART;VALUE=DATE:20211020
-DTEND;VALUE=DATE:20211021
-URL:https://imagecomics.com/comics/releases/crossover-11
 END:VEVENT
 
 BEGIN:VEVENT
@@ -358,16 +358,16 @@ END:VEVENT
 BEGIN:VEVENT
 UID:oblivion-song-by-kirkman-de-felici-35
 SUMMARY:Oblivion Song By Kirkman & De Felici #35
-DTSTART;VALUE=DATE:20211117
-DTEND;VALUE=DATE:20211118
+DTSTART;VALUE=DATE:20211124
+DTEND;VALUE=DATE:20211125
 URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-35
 END:VEVENT
 
 BEGIN:VEVENT
 UID:oblivion-song-by-kirkman-de-felici-34
 SUMMARY:Oblivion Song by Kirkman & De Felici #34
-DTSTART;VALUE=DATE:20211020
-DTEND;VALUE=DATE:20211021
+DTSTART;VALUE=DATE:20211027
+DTEND;VALUE=DATE:20211028
 URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-34
 END:VEVENT
 
@@ -589,19 +589,19 @@ URL:https://imagecomics.com/comics/releases/spawn-323
 END:VEVENT
 
 BEGIN:VEVENT
-UID:king-spawn-3
-SUMMARY:King Spawn #3
-DTSTART;VALUE=DATE:20211020
-DTEND;VALUE=DATE:20211021
-URL:https://imagecomics.com/comics/releases/king-spawn-3
-END:VEVENT
-
-BEGIN:VEVENT
 UID:gunslinger-spawn-1
 SUMMARY:Gunslinger Spawn #1
 DTSTART;VALUE=DATE:20211020
 DTEND;VALUE=DATE:20211021
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-3
+SUMMARY:King Spawn #3
+DTSTART;VALUE=DATE:20211020
+DTEND;VALUE=DATE:20211021
+URL:https://imagecomics.com/comics/releases/king-spawn-3
 END:VEVENT
 
 BEGIN:VEVENT
