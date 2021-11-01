@@ -3,6 +3,14 @@ PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 VERSION:2.0
 X-WR-CALNAME:BATMAN: THE DETECTIVE 2021, STRANGE ADVENTURES 2020, WONDER GIRL 2021, Ascender, Black Magick, Killadelphia, Crossover, Oblivion Song by Kirkman & De Felici, Spawn, That Texas Blood, The Department of Truth, Vinyl, Thor (2020), Black Widow (2020 - Present), Black Cat (2020 - Present)
 BEGIN:VEVENT
+UID:batman-the-detective-6
+SUMMARY:BATMAN: THE DETECTIVE #6
+DTSTART;VALUE=DATE:20211130
+DTEND;VALUE=DATE:20211201
+URL:https:/comics/batman-the-detective-2021/batman-the-detective-6
+END:VEVENT
+
+BEGIN:VEVENT
 UID:batman-the-detective-5
 SUMMARY:BATMAN: THE DETECTIVE #5
 DTSTART;VALUE=DATE:20210921
@@ -147,6 +155,14 @@ URL:https:/comics/strange-adventures-2020/strange-adventures-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:wonder-girl-5
+SUMMARY:WONDER GIRL #5
+DTSTART;VALUE=DATE:20211123
+DTEND;VALUE=DATE:20211124
+URL:https:/comics/wonder-girl-2021/wonder-girl-5
+END:VEVENT
+
+BEGIN:VEVENT
 UID:wonder-girl-4
 SUMMARY:WONDER GIRL #4
 DTSTART;VALUE=DATE:20211026
@@ -268,26 +284,26 @@ URL:https://imagecomics.com/comics/releases/killadelphia-vol-1-sins-of-the-fathe
 END:VEVENT
 
 BEGIN:VEVENT
-UID:crossover-10
-SUMMARY:Crossover #10
-DTSTART;VALUE=DATE:20211124
-DTEND;VALUE=DATE:20211125
-URL:https://imagecomics.com/comics/releases/crossover-10
+UID:crossover-11
+SUMMARY:Crossover #11
+DTSTART;VALUE=DATE:20211229
+DTEND;VALUE=DATE:20211230
+URL:https://imagecomics.com/comics/releases/crossover-11
 END:VEVENT
 
 BEGIN:VEVENT
-UID:crossover-11
-SUMMARY:Crossover #11
-DTSTART;VALUE=DATE:20211027
-DTEND;VALUE=DATE:20211028
-URL:https://imagecomics.com/comics/releases/crossover-11
+UID:crossover-10
+SUMMARY:Crossover #10
+DTSTART;VALUE=DATE:20211201
+DTEND;VALUE=DATE:20211202
+URL:https://imagecomics.com/comics/releases/crossover-10
 END:VEVENT
 
 BEGIN:VEVENT
 UID:crossover-9
 SUMMARY:Crossover #9
-DTSTART;VALUE=DATE:20211027
-DTEND;VALUE=DATE:20211028
+DTSTART;VALUE=DATE:20211103
+DTEND;VALUE=DATE:20211104
 URL:https://imagecomics.com/comics/releases/crossover-9
 END:VEVENT
 
@@ -353,6 +369,15 @@ SUMMARY:Crossover #1
 DTSTART;VALUE=DATE:20201104
 DTEND;VALUE=DATE:20201105
 URL:https://imagecomics.com/comics/releases/crossover-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:oblivion-song-by-kirkman-de-felici-36
+SUMMARY:OBLIVION SONG by KIRKMAN & DE FELICI #36
+
+DTSTART;VALUE=DATE:20220126
+DTEND;VALUE=DATE:20220127
+URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-36
 END:VEVENT
 
 BEGIN:VEVENT
@@ -540,11 +565,12 @@ URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-1
 END:VEVENT
 
 BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-13
-SUMMARY:Oblivion Song by Kirkman & De Felici #13
-DTSTART;VALUE=DATE:20190313
-DTEND;VALUE=DATE:20190314
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-13
+UID:spawn-326
+SUMMARY:SPAWN #326
+
+DTSTART;VALUE=DATE:20220119
+DTEND;VALUE=DATE:20220120
+URL:https://imagecomics.com/comics/releases/spawn-326
 END:VEVENT
 
 BEGIN:VEVENT
@@ -567,8 +593,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:gunslinger-spawn-2
 SUMMARY:Gunslinger Spawn #2
-DTSTART;VALUE=DATE:20211117
-DTEND;VALUE=DATE:20211118
+DTSTART;VALUE=DATE:20211124
+DTEND;VALUE=DATE:20211125
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-2
 END:VEVENT
 
@@ -583,24 +609,24 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-323
 SUMMARY:Spawn #323
-DTSTART;VALUE=DATE:20211027
-DTEND;VALUE=DATE:20211028
+DTSTART;VALUE=DATE:20211103
+DTEND;VALUE=DATE:20211104
 URL:https://imagecomics.com/comics/releases/spawn-323
 END:VEVENT
 
 BEGIN:VEVENT
 UID:gunslinger-spawn-1
 SUMMARY:Gunslinger Spawn #1
-DTSTART;VALUE=DATE:20211020
-DTEND;VALUE=DATE:20211021
+DTSTART;VALUE=DATE:20211027
+DTEND;VALUE=DATE:20211028
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-1
 END:VEVENT
 
 BEGIN:VEVENT
 UID:king-spawn-3
 SUMMARY:King Spawn #3
-DTSTART;VALUE=DATE:20211020
-DTEND;VALUE=DATE:20211021
+DTSTART;VALUE=DATE:20211027
+DTEND;VALUE=DATE:20211028
 URL:https://imagecomics.com/comics/releases/king-spawn-3
 END:VEVENT
 
@@ -733,14 +759,6 @@ URL:https://imagecomics.com/comics/releases/spawn-310
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-309
-SUMMARY:Spawn #309
-DTSTART;VALUE=DATE:20200826
-DTEND;VALUE=DATE:20200827
-URL:https://imagecomics.com/comics/releases/spawn-309
-END:VEVENT
-
-BEGIN:VEVENT
 UID:that-texas-blood-13
 SUMMARY:That Texas Blood #13
 DTSTART;VALUE=DATE:20211215
@@ -751,16 +769,16 @@ END:VEVENT
 BEGIN:VEVENT
 UID:that-texas-blood-12
 SUMMARY:That Texas Blood #12
-DTSTART;VALUE=DATE:20211117
-DTEND;VALUE=DATE:20211118
+DTSTART;VALUE=DATE:20211124
+DTEND;VALUE=DATE:20211125
 URL:https://imagecomics.com/comics/releases/that-texas-blood-12
 END:VEVENT
 
 BEGIN:VEVENT
 UID:that-texas-blood-11
 SUMMARY:That Texas Blood #11
-DTSTART;VALUE=DATE:20211020
-DTEND;VALUE=DATE:20211021
+DTSTART;VALUE=DATE:20211027
+DTEND;VALUE=DATE:20211028
 URL:https://imagecomics.com/comics/releases/that-texas-blood-11
 END:VEVENT
 
@@ -842,6 +860,14 @@ SUMMARY:That Texas Blood #1
 DTSTART;VALUE=DATE:20200624
 DTEND;VALUE=DATE:20200625
 URL:https://imagecomics.com/comics/releases/that-texas-blood-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:the-department-of-truth-16
+SUMMARY:THE DEPARTMENT OF TRUTH #16
+DTSTART;VALUE=DATE:20220126
+DTEND;VALUE=DATE:20220127
+URL:https://imagecomics.com/comics/releases/the-department-of-truth-16
 END:VEVENT
 
 BEGIN:VEVENT
@@ -968,16 +994,16 @@ END:VEVENT
 BEGIN:VEVENT
 UID:vinyl-6-of-6
 SUMMARY:Vinyl #6 (of 6)
-DTSTART;VALUE=DATE:20211117
-DTEND;VALUE=DATE:20211118
+DTSTART;VALUE=DATE:20211124
+DTEND;VALUE=DATE:20211125
 URL:https://imagecomics.com/comics/releases/vinyl-6-of-6
 END:VEVENT
 
 BEGIN:VEVENT
 UID:vinyl-5-of-6
 SUMMARY:Vinyl #5 (of 6)
-DTSTART;VALUE=DATE:20211020
-DTEND;VALUE=DATE:20211021
+DTSTART;VALUE=DATE:20211027
+DTEND;VALUE=DATE:20211028
 URL:https://imagecomics.com/comics/releases/vinyl-5-of-6
 END:VEVENT
 
@@ -1016,9 +1042,17 @@ END:VEVENT
 BEGIN:VEVENT
 UID:thor_2020_19
 SUMMARY:Thor #19
-DTSTART;VALUE=DATE:20211117
-DTEND;VALUE=DATE:20211118
+DTSTART;VALUE=DATE:20211124
+DTEND;VALUE=DATE:20211125
 URL:https://www.marvel.com/comics/issue/89739/thor_2020_19
+END:VEVENT
+
+BEGIN:VEVENT
+UID:thor_2020_18
+SUMMARY:Thor #18
+DTSTART;VALUE=DATE:20211020
+DTEND;VALUE=DATE:20211021
+URL:https://www.marvel.com/comics/issue/89738/thor_2020_18
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1163,6 +1197,14 @@ SUMMARY:Black Widow #13
 DTSTART;VALUE=DATE:20211222
 DTEND;VALUE=DATE:20211223
 URL:https://www.marvel.com/comics/issue/95778/black_widow_2020_13
+END:VEVENT
+
+BEGIN:VEVENT
+UID:black_widow_2020_12
+SUMMARY:Black Widow #12
+DTSTART;VALUE=DATE:20211027
+DTEND;VALUE=DATE:20211028
+URL:https://www.marvel.com/comics/issue/95777/black_widow_2020_12
 END:VEVENT
 
 BEGIN:VEVENT
