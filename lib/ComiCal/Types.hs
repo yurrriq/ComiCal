@@ -44,10 +44,11 @@ import Control.Lens
     (.~),
     (^.),
   )
-import qualified Data.Text as T
 import Data.Aeson.Types hiding (Series)
 import Data.Functor.Syntax ((<$$>))
 import qualified Data.List.NonEmpty as NE
+import Data.Text (Text)
+import qualified Data.Text as T
 import Data.Time.Compat
   ( Day,
     UTCTime (UTCTime),
@@ -62,7 +63,6 @@ import Text.Printf (printf)
 import Text.URI (URI)
 import qualified Text.URI as URI
 import Text.XML.Cursor
-import Data.Text (Text)
 
 -- | A 'Release' represents a single issue or a trade paperback.
 data Release = Release

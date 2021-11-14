@@ -10,7 +10,7 @@
 module ComiCal.Util
   ( getHttps,
     parseReleases,
-    urlEncode
+    urlEncode,
   )
 where
 
@@ -25,15 +25,15 @@ import qualified Data.List.NonEmpty as NE
 import Data.Maybe (catMaybes, listToMaybe)
 import Data.Text (Text)
 import qualified Data.Text as T
+import Data.Text.Encoding as TE
 import Network.HTTP.Client (HttpException (..))
 import Network.HTTP.Req
+import qualified Network.HTTP.Types.URI as HTTP
+import Text.HTML.DOM (parseLBS)
 import Text.Read (readMaybe)
 import Text.URI (URI, mkScheme, mkURI, render, renderStr, unRText)
 import Text.URI.Lens (uriPath, uriScheme)
 import Text.XML.Cursor
-import Text.HTML.DOM (parseLBS)
-import Data.Text.Encoding as TE
-import qualified Network.HTTP.Types.URI as HTTP
 
 getHttps :: (MonadIO m, MonadLogger m, MonadThrow m) => URI -> m Cursor
 getHttps theURI =
@@ -83,7 +83,7 @@ newtype ComiCalException = NoParse Cursor
 instance Exception ComiCalException where
   displayException (NoParse tags) = "Failed to parse tags: " <> show tags
 
-parseReleaseURI :: (MonadLogger m , MonadThrow m) => Cursor -> m URI
+parseReleaseURI :: (MonadLogger m, MonadThrow m) => Cursor -> m URI
 parseReleaseURI cursor =
   do
     anchorTag <- headM (NoParse cursor) (cursor $// element "a")

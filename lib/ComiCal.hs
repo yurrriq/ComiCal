@@ -23,8 +23,8 @@ import ComiCal.Types hiding (PullList (..))
 import Control.Lens ((^.))
 import qualified Data.List.NonEmpty as NE
 import Data.Maybe (fromMaybe)
-import Text.URI (relativeTo)
 import Data.Text (Text)
+import Text.URI (relativeTo)
 
 -- | Given a [DC Comics series](https://www.dccomics.com/comics) slug,
 -- fetch, parse, and return the issues of the 'Series'.
