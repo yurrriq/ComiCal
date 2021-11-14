@@ -25,6 +25,16 @@
             config = ./emacs.el;
           };
         });
+        pre-commit = final: prev: {
+          gitAndTools = prev.gitAndTools // {
+            pre-commit = prev.gitAndTools.pre-commit.overrideAttrs (oldAttrs: {
+              propagatedBuildInputs = oldAttrs.propagatedBuildInputs ++ [
+                prev.cargo # NOTE: for nixpkgs-fmt hook
+                prev.python3Packages.ruamel_yaml # NOTE: for check-yaml hook
+              ];
+            });
+          };
+        };
       };
     } // flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
@@ -46,7 +56,6 @@
 
           buildInputs = with pkgs; [
             cabal-install
-            cargo # NOTE: needed for nixpkgs-fmt pre-commit hook
             ghcid
             gitAndTools.pre-commit
             haskell-language-server
@@ -56,7 +65,6 @@
             myEmacs
             nixpkgs-fmt
             noweb
-            python3Packages.yamllint
             (
               texlive.combine {
                 inherit noweb;

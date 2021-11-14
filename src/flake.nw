@@ -57,6 +57,19 @@ myEmacs = nixpkgs.lib.composeExtensions emacs-overlay.overlay (final: prev: {
 });
 @
 
+<<Overlays>>=
+pre-commit = final: prev: {
+  gitAndTools = prev.gitAndTools // {
+    pre-commit = prev.gitAndTools.pre-commit.overrideAttrs (oldAttrs: {
+      propagatedBuildInputs = oldAttrs.propagatedBuildInputs ++ [
+        prev.cargo # NOTE: for nixpkgs-fmt hook
+        prev.python3Packages.ruamel_yaml # NOTE: for check-yaml hook
+      ];
+    });
+  };
+};
+@
+
 <<Per-system outputs>>=
 apps.ComiCal = flake-utils.lib.mkApp {
   drv = pkgs.haskell.lib.justStaticExecutables self.defaultPackage.${system};
@@ -79,7 +92,6 @@ devShell = pkgs.mkShell {
 
   buildInputs = with pkgs; [
     cabal-install
-    cargo # NOTE: needed for nixpkgs-fmt pre-commit hook
     ghcid
     gitAndTools.pre-commit
     haskell-language-server
@@ -89,7 +101,6 @@ devShell = pkgs.mkShell {
     myEmacs
     nixpkgs-fmt
     noweb
-    python3Packages.yamllint
     (
       texlive.combine {
         inherit noweb;
