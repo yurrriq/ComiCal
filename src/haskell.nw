@@ -53,7 +53,9 @@ library:
   - bytestring
   - composition-extra
   - exceptions
+  - html-conduit
   - http-client
+  - http-types
   - lens
   - modern-uri
   - monad-logger
@@ -62,6 +64,7 @@ library:
   - text
   - time-compat
   - transformers
+  - xml-conduit
 @
 
 Configure the executable.
