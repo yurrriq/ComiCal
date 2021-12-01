@@ -69,8 +69,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:wonder-girl-5
 SUMMARY:WONDER GIRL #5
-DTSTART;VALUE=DATE:20211123
-DTEND;VALUE=DATE:20211124
+DTSTART;VALUE=DATE:20211130
+DTEND;VALUE=DATE:20211201
 URL:https:/comics/wonder-girl-2021/wonder-girl-5
 END:VEVENT
 
@@ -479,8 +479,8 @@ BEGIN:VEVENT
 UID:spawn-compendium-vol-2-tp
 SUMMARY:SPAWN COMPENDIUM, VOL. 2 TP
 
-DTSTART;VALUE=DATE:20211208
-DTEND;VALUE=DATE:20211209
+DTSTART;VALUE=DATE:20211215
+DTEND;VALUE=DATE:20211216
 URL:https://imagecomics.com/comics/releases/spawn-compendium-vol-2-tp
 END:VEVENT
 
@@ -557,6 +557,14 @@ URL:https://imagecomics.com/comics/releases/medieval-spawn-witchblade-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-origins-vol-5
+SUMMARY:Spawn Origins, Vol. 5
+DTSTART;VALUE=DATE:20180801
+DTEND;VALUE=DATE:20180802
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-5
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-origins-vol-2
 SUMMARY:Spawn Origins, Vol. 2
 DTSTART;VALUE=DATE:20180801
@@ -570,14 +578,6 @@ SUMMARY:Spawn Origins, Vol. 3
 DTSTART;VALUE=DATE:20180801
 DTEND;VALUE=DATE:20180802
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-3
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-origins-vol-5
-SUMMARY:Spawn Origins, Vol. 5
-DTSTART;VALUE=DATE:20180801
-DTEND;VALUE=DATE:20180802
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-5
 END:VEVENT
 
 BEGIN:VEVENT
@@ -702,6 +702,15 @@ URL:https://imagecomics.com/comics/releases/the-department-of-truth-vol-1-the-en
 END:VEVENT
 
 BEGIN:VEVENT
+UID:crossover-12
+SUMMARY:CROSSOVER #12
+
+DTSTART;VALUE=DATE:20220223
+DTEND;VALUE=DATE:20220224
+URL:https://imagecomics.com/comics/releases/crossover-12
+END:VEVENT
+
+BEGIN:VEVENT
 UID:crossover-11
 SUMMARY:Crossover #11
 DTSTART;VALUE=DATE:20220112
@@ -801,8 +810,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:oblivion-song-by-kirkman-de-felici-35
 SUMMARY:Oblivion Song By Kirkman & De Felici #35
-DTSTART;VALUE=DATE:20211215
-DTEND;VALUE=DATE:20211216
+DTSTART;VALUE=DATE:20220119
+DTEND;VALUE=DATE:20220120
 URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-35
 END:VEVENT
 
@@ -983,6 +992,33 @@ URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-327
+SUMMARY:SPAWN #327
+
+DTSTART;VALUE=DATE:20220216
+DTEND;VALUE=DATE:20220217
+URL:https://imagecomics.com/comics/releases/spawn-327
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-5
+SUMMARY:GUNSLINGER SPAWN #5
+
+DTSTART;VALUE=DATE:20220209
+DTEND;VALUE=DATE:20220210
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-5
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-7
+SUMMARY:KING SPAWN #7
+
+DTSTART;VALUE=DATE:20220209
+DTEND;VALUE=DATE:20220210
+URL:https://imagecomics.com/comics/releases/king-spawn-7
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-326
 SUMMARY:SPAWN #326
 
@@ -1153,30 +1189,6 @@ URL:https://imagecomics.com/comics/releases/spawn-313
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-312
-SUMMARY:Spawn #312
-DTSTART;VALUE=DATE:20201125
-DTEND;VALUE=DATE:20201126
-URL:https://imagecomics.com/comics/releases/spawn-312
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-311
-SUMMARY:Spawn #311
-DTSTART;VALUE=DATE:20201028
-DTEND;VALUE=DATE:20201029
-URL:https://imagecomics.com/comics/releases/spawn-311
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-310
-SUMMARY:Spawn #310
-DTSTART;VALUE=DATE:20200930
-DTEND;VALUE=DATE:20201001
-URL:https://imagecomics.com/comics/releases/spawn-310
-END:VEVENT
-
-BEGIN:VEVENT
 UID:that-texas-blood-13
 SUMMARY:That Texas Blood #13
 DTSTART;VALUE=DATE:20211222
@@ -1286,6 +1298,15 @@ SUMMARY:THE DEPARTMENT OF TRUTH #16
 DTSTART;VALUE=DATE:20220223
 DTEND;VALUE=DATE:20220224
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-16
+END:VEVENT
+
+BEGIN:VEVENT
+UID:the-department-of-truth-17
+SUMMARY:THE DEPARTMENT OF TRUTH #17
+
+DTSTART;VALUE=DATE:20220223
+DTEND;VALUE=DATE:20220224
+URL:https://imagecomics.com/comics/releases/the-department-of-truth-17
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1407,6 +1428,15 @@ SUMMARY:The Department of Truth #1
 DTSTART;VALUE=DATE:20200930
 DTEND;VALUE=DATE:20201001
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:the-scorched-3
+SUMMARY:THE SCORCHED #3
+
+DTSTART;VALUE=DATE:20220216
+DTEND;VALUE=DATE:20220217
+URL:https://imagecomics.com/comics/releases/the-scorched-3
 END:VEVENT
 
 BEGIN:VEVENT
