@@ -1,53 +1,13 @@
 BEGIN:VCALENDAR
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 VERSION:2.0
-X-WR-CALNAME:BATMAN: THE DETECTIVE 2021, BATMAN: THE IMPOSTER 2021, WONDER GIRL 2021, Bitter Root, Black Magick, Geiger, Killadelphia, Monstress, Nailbiter, Reckless, Saga, Spawn, That Texas Blood, The Department of Truth, Crossover, Oblivion Song by Kirkman & De Felici, Spawn, That Texas Blood, The Department of Truth, The Scorched, Vinyl, Black Widow (2020 - Present), Black Cat (2020 - Present)
+X-WR-CALNAME:BATMAN: THE IMPOSTER 2021, WONDER GIRL 2021, Bitter Root, Black Magick, Geiger, Killadelphia, Monstress, Nailbiter, Reckless, Saga, Spawn, That Texas Blood, The Department of Truth, Crossover, Oblivion Song by Kirkman & De Felici, Spawn, That Texas Blood, The Department of Truth, The Scorched, Vinyl, Black Widow (2020 - Present), Black Cat (2020 - Present), Venom (2021 - Present)
 BEGIN:VEVENT
-UID:batman-the-detective-6
-SUMMARY:BATMAN: THE DETECTIVE #6
-DTSTART;VALUE=DATE:20211130
-DTEND;VALUE=DATE:20211201
-URL:https:/comics/batman-the-detective-2021/batman-the-detective-6
-END:VEVENT
-
-BEGIN:VEVENT
-UID:batman-the-detective-5
-SUMMARY:BATMAN: THE DETECTIVE #5
-DTSTART;VALUE=DATE:20210921
-DTEND;VALUE=DATE:20210922
-URL:https:/comics/batman-the-detective-2021/batman-the-detective-5
-END:VEVENT
-
-BEGIN:VEVENT
-UID:batman-the-detective-4
-SUMMARY:BATMAN: THE DETECTIVE #4
-DTSTART;VALUE=DATE:20210713
-DTEND;VALUE=DATE:20210714
-URL:https:/comics/batman-the-detective-2021/batman-the-detective-4
-END:VEVENT
-
-BEGIN:VEVENT
-UID:batman-the-detective-3
-SUMMARY:BATMAN: THE DETECTIVE #3
-DTSTART;VALUE=DATE:20210608
-DTEND;VALUE=DATE:20210609
-URL:https:/comics/batman-the-detective-2021/batman-the-detective-3
-END:VEVENT
-
-BEGIN:VEVENT
-UID:batman-the-detective-2
-SUMMARY:BATMAN: THE DETECTIVE #2
-DTSTART;VALUE=DATE:20210511
-DTEND;VALUE=DATE:20210512
-URL:https:/comics/batman-the-detective-2021/batman-the-detective-2
-END:VEVENT
-
-BEGIN:VEVENT
-UID:batman-the-detective-1
-SUMMARY:BATMAN: THE DETECTIVE #1
-DTSTART;VALUE=DATE:20210413
-DTEND;VALUE=DATE:20210414
-URL:https:/comics/batman-the-detective-2021/batman-the-detective-1
+UID:batman-the-imposter-3
+SUMMARY:BATMAN: THE IMPOSTER #3
+DTSTART;VALUE=DATE:20211214
+DTEND;VALUE=DATE:20211215
+URL:https:/comics/batman-the-imposter-2021/batman-the-imposter-3
 END:VEVENT
 
 BEGIN:VEVENT
@@ -64,6 +24,14 @@ SUMMARY:BATMAN: THE IMPOSTER #1
 DTSTART;VALUE=DATE:20211012
 DTEND;VALUE=DATE:20211013
 URL:https:/comics/batman-the-imposter-2021/batman-the-imposter-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:wonder-girl-6
+SUMMARY:WONDER GIRL #6
+DTSTART;VALUE=DATE:20211214
+DTEND;VALUE=DATE:20211215
+URL:https:/comics/wonder-girl-2021/wonder-girl-6
 END:VEVENT
 
 BEGIN:VEVENT
@@ -557,6 +525,14 @@ URL:https://imagecomics.com/comics/releases/medieval-spawn-witchblade-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-origins-vol-3
+SUMMARY:Spawn Origins, Vol. 3
+DTSTART;VALUE=DATE:20180801
+DTEND;VALUE=DATE:20180802
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-3
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-origins-vol-5
 SUMMARY:Spawn Origins, Vol. 5
 DTSTART;VALUE=DATE:20180801
@@ -570,14 +546,6 @@ SUMMARY:Spawn Origins, Vol. 2
 DTSTART;VALUE=DATE:20180801
 DTEND;VALUE=DATE:20180802
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-origins-vol-3
-SUMMARY:Spawn Origins, Vol. 3
-DTSTART;VALUE=DATE:20180801
-DTEND;VALUE=DATE:20180802
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-3
 END:VEVENT
 
 BEGIN:VEVENT
@@ -661,11 +629,11 @@ URL:https://imagecomics.com/comics/releases/spawn-origins-vol-19
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-the-dark-ages-complete-collection-hc
-SUMMARY:Spawn: The Dark Ages Complete Collection HC
+UID:spawn-origins-book-9-hc
+SUMMARY:Spawn: Origins Book 9 HC
 DTSTART;VALUE=DATE:20130828
 DTEND;VALUE=DATE:20130829
-URL:https://imagecomics.com/comics/releases/spawn-the-dark-ages-complete-collection-hc
+URL:https://imagecomics.com/comics/releases/spawn-origins-book-9-hc
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1505,6 +1473,14 @@ URL:https://imagecomics.com/comics/releases/vinyl-1-of-6
 END:VEVENT
 
 BEGIN:VEVENT
+UID:black_widow_2020_14
+SUMMARY:Black Widow #14
+DTSTART;VALUE=DATE:20220216
+DTEND;VALUE=DATE:20220217
+URL:https://www.marvel.com/comics/issue/95779/black_widow_2020_14
+END:VEVENT
+
+BEGIN:VEVENT
 UID:black_widow_2020_13
 SUMMARY:Black Widow #13
 DTSTART;VALUE=DATE:20220105
@@ -1686,6 +1662,38 @@ SUMMARY:Black Cat #1
 DTSTART;VALUE=DATE:20201216
 DTEND;VALUE=DATE:20201217
 URL:https://www.marvel.com/comics/issue/91367/black_cat_2020_1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:venom_2021_5
+SUMMARY:Venom #5
+DTSTART;VALUE=DATE:20220209
+DTEND;VALUE=DATE:20220210
+URL:https://www.marvel.com/comics/issue/95883/venom_2021_5
+END:VEVENT
+
+BEGIN:VEVENT
+UID:venom_2021_4
+SUMMARY:Venom #4
+DTSTART;VALUE=DATE:20220119
+DTEND;VALUE=DATE:20220120
+URL:https://www.marvel.com/comics/issue/95882/venom_2021_4
+END:VEVENT
+
+BEGIN:VEVENT
+UID:venom_2021_2
+SUMMARY:Venom #2
+DTSTART;VALUE=DATE:20211201
+DTEND;VALUE=DATE:20211202
+URL:https://www.marvel.com/comics/issue/95880/venom_2021_2
+END:VEVENT
+
+BEGIN:VEVENT
+UID:venom_2021_1
+SUMMARY:Venom #1
+DTSTART;VALUE=DATE:20211110
+DTEND;VALUE=DATE:20211111
+URL:https://www.marvel.com/comics/issue/95879/venom_2021_1
 END:VEVENT
 
 END:VCALENDAR
