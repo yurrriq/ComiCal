@@ -629,11 +629,11 @@ URL:https://imagecomics.com/comics/releases/spawn-origins-vol-19
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-origins-book-9-hc
-SUMMARY:Spawn: Origins Book 9 HC
+UID:spawn-the-dark-ages-complete-collection-hc
+SUMMARY:Spawn: The Dark Ages Complete Collection HC
 DTSTART;VALUE=DATE:20130828
 DTEND;VALUE=DATE:20130829
-URL:https://imagecomics.com/comics/releases/spawn-origins-book-9-hc
+URL:https://imagecomics.com/comics/releases/spawn-the-dark-ages-complete-collection-hc
 END:VEVENT
 
 BEGIN:VEVENT
@@ -681,8 +681,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:crossover-11
 SUMMARY:Crossover #11
-DTSTART;VALUE=DATE:20220112
-DTEND;VALUE=DATE:20220113
+DTSTART;VALUE=DATE:20220126
+DTEND;VALUE=DATE:20220127
 URL:https://imagecomics.com/comics/releases/crossover-11
 END:VEVENT
 
