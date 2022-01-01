@@ -308,6 +308,15 @@ URL:https://imagecomics.com/comics/releases/nailbiter-vol-1-there-will-be-blood-
 END:VEVENT
 
 BEGIN:VEVENT
+UID:the-ghost-in-you-a-reckless-book-hc
+SUMMARY:THE GHOST IN YOU: A RECKLESS BOOK HC
+
+DTSTART;VALUE=DATE:20220413
+DTEND;VALUE=DATE:20220414
+URL:https://imagecomics.com/comics/releases/the-ghost-in-you-a-reckless-book-hc
+END:VEVENT
+
+BEGIN:VEVENT
 UID:destroy-all-monsters-a-reckless-book-hc
 SUMMARY:Destroy All Monsters: A Reckless Book HC
 DTSTART;VALUE=DATE:20211020
@@ -525,6 +534,14 @@ URL:https://imagecomics.com/comics/releases/medieval-spawn-witchblade-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-origins-vol-2
+SUMMARY:Spawn Origins, Vol. 2
+DTSTART;VALUE=DATE:20180801
+DTEND;VALUE=DATE:20180802
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-origins-vol-3
 SUMMARY:Spawn Origins, Vol. 3
 DTSTART;VALUE=DATE:20180801
@@ -538,14 +555,6 @@ SUMMARY:Spawn Origins, Vol. 5
 DTSTART;VALUE=DATE:20180801
 DTEND;VALUE=DATE:20180802
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-5
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-origins-vol-2
-SUMMARY:Spawn Origins, Vol. 2
-DTSTART;VALUE=DATE:20180801
-DTEND;VALUE=DATE:20180802
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
 END:VEVENT
 
 BEGIN:VEVENT
@@ -670,6 +679,15 @@ URL:https://imagecomics.com/comics/releases/the-department-of-truth-vol-1-the-en
 END:VEVENT
 
 BEGIN:VEVENT
+UID:crossover-13
+SUMMARY:CROSSOVER #13
+
+DTSTART;VALUE=DATE:20220323
+DTEND;VALUE=DATE:20220324
+URL:https://imagecomics.com/comics/releases/crossover-13
+END:VEVENT
+
+BEGIN:VEVENT
 UID:crossover-12
 SUMMARY:CROSSOVER #12
 
@@ -770,16 +788,16 @@ BEGIN:VEVENT
 UID:oblivion-song-by-kirkman-de-felici-36
 SUMMARY:OBLIVION SONG by KIRKMAN & DE FELICI #36
 
-DTSTART;VALUE=DATE:20220126
-DTEND;VALUE=DATE:20220127
+DTSTART;VALUE=DATE:20220223
+DTEND;VALUE=DATE:20220224
 URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-36
 END:VEVENT
 
 BEGIN:VEVENT
 UID:oblivion-song-by-kirkman-de-felici-35
 SUMMARY:Oblivion Song By Kirkman & De Felici #35
-DTSTART;VALUE=DATE:20220119
-DTEND;VALUE=DATE:20220120
+DTSTART;VALUE=DATE:20220126
+DTEND;VALUE=DATE:20220127
 URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-35
 END:VEVENT
 
@@ -957,6 +975,15 @@ SUMMARY:Oblivion Song by Kirkman & De Felici #14
 DTSTART;VALUE=DATE:20190410
 DTEND;VALUE=DATE:20190411
 URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-14
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-328
+SUMMARY:SPAWN #328
+
+DTSTART;VALUE=DATE:20220330
+DTEND;VALUE=DATE:20220331
+URL:https://imagecomics.com/comics/releases/spawn-328
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1146,14 +1173,6 @@ SUMMARY:Spawn #314
 DTSTART;VALUE=DATE:20210127
 DTEND;VALUE=DATE:20210128
 URL:https://imagecomics.com/comics/releases/spawn-314
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-313
-SUMMARY:Spawn #313
-DTSTART;VALUE=DATE:20201223
-DTEND;VALUE=DATE:20201224
-URL:https://imagecomics.com/comics/releases/spawn-313
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1396,6 +1415,14 @@ SUMMARY:The Department of Truth #1
 DTSTART;VALUE=DATE:20200930
 DTEND;VALUE=DATE:20201001
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:the-scorched-4
+SUMMARY:THE SCORCHED #4
+DTSTART;VALUE=DATE:20220406
+DTEND;VALUE=DATE:20220407
+URL:https://imagecomics.com/comics/releases/the-scorched-4
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1678,6 +1705,14 @@ SUMMARY:Venom #4
 DTSTART;VALUE=DATE:20220119
 DTEND;VALUE=DATE:20220120
 URL:https://www.marvel.com/comics/issue/95882/venom_2021_4
+END:VEVENT
+
+BEGIN:VEVENT
+UID:venom_2021_3
+SUMMARY:Venom #3
+DTSTART;VALUE=DATE:20211222
+DTEND;VALUE=DATE:20211223
+URL:https://www.marvel.com/comics/issue/95881/venom_2021_3
 END:VEVENT
 
 BEGIN:VEVENT
