@@ -1,6 +1,8 @@
 {
   "dcIssues": [
     "batman-the-imposter-2021",
+    "batman-one-dark-knight-2021",
+    "the-human-target-2021",
     "wonder-girl-2021"
   ],
   "imageCollections": [
@@ -22,8 +24,7 @@
     "spawn",
     "that-texas-blood",
     "the-department-of-truth",
-    "the-scorched",
-    "vinyl"
+    "the-scorched"
   ],
   "marvelCollections": [
     "24278/immortal_hulk_2018_-_present",
@@ -34,6 +35,7 @@
   "marvelIssues": [
     "29700/black_widow_2020_-_present",
     "31322/black_cat_2020_-_present",
+    "31374/hulk_2021_-_present",
     "32870/venom_2021_-_present"
   ]
 }
