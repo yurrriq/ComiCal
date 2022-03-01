@@ -27,11 +27,27 @@ URL:https:/comics/batman-the-imposter-2021/batman-the-imposter-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:batman-one-dark-knight-2
+SUMMARY:BATMAN: ONE DARK KNIGHT #2
+DTSTART;VALUE=DATE:20220329
+DTEND;VALUE=DATE:20220330
+URL:https:/comics/batman-one-dark-knight-2021/batman-one-dark-knight-2
+END:VEVENT
+
+BEGIN:VEVENT
 UID:batman-one-dark-knight-1
 SUMMARY:BATMAN: ONE DARK KNIGHT #1
 DTSTART;VALUE=DATE:20211221
 DTEND;VALUE=DATE:20211222
 URL:https:/comics/batman-one-dark-knight-2021/batman-one-dark-knight-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:the-human-target-6
+SUMMARY:THE HUMAN TARGET #6
+DTSTART;VALUE=DATE:20220322
+DTEND;VALUE=DATE:20220323
+URL:https:/comics/the-human-target-2021/the-human-target-6
 END:VEVENT
 
 BEGIN:VEVENT
@@ -220,14 +236,6 @@ URL:https://imagecomics.com/comics/releases/killadelphia-vol-1-sins-of-the-fathe
 END:VEVENT
 
 BEGIN:VEVENT
-UID:monstress-vol-2-tp
-SUMMARY:Monstress, Vol. 2 TP
-DTSTART;VALUE=DATE:20220302
-DTEND;VALUE=DATE:20220303
-URL:https://imagecomics.com/comics/releases/monstress-vol-2-tp
-END:VEVENT
-
-BEGIN:VEVENT
 UID:monstress-vol-6-the-vow-tp
 SUMMARY:Monstress, Vol. 6: The Vow TP
 DTSTART;VALUE=DATE:20210915
@@ -273,6 +281,14 @@ SUMMARY:Monstress, Vol . 1 TP
 DTSTART;VALUE=DATE:20180801
 DTEND;VALUE=DATE:20180802
 URL:https://imagecomics.com/comics/releases/monstress-vol-1-tp
+END:VEVENT
+
+BEGIN:VEVENT
+UID:monstress-vol-2-tp
+SUMMARY:Monstress, Vol. 2 TP
+DTSTART;VALUE=DATE:20170621
+DTEND;VALUE=DATE:20170622
+URL:https://imagecomics.com/comics/releases/monstress-vol-2-tp
 END:VEVENT
 
 BEGIN:VEVENT
@@ -608,14 +624,6 @@ URL:https://imagecomics.com/comics/releases/medieval-spawn-witchblade-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-origins-vol-2
-SUMMARY:Spawn Origins, Vol. 2
-DTSTART;VALUE=DATE:20180801
-DTEND;VALUE=DATE:20180802
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
-END:VEVENT
-
-BEGIN:VEVENT
 UID:spawn-origins-vol-3
 SUMMARY:Spawn Origins, Vol. 3
 DTSTART;VALUE=DATE:20180801
@@ -629,6 +637,14 @@ SUMMARY:Spawn Origins, Vol. 5
 DTSTART;VALUE=DATE:20180801
 DTEND;VALUE=DATE:20180802
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-5
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-origins-vol-2
+SUMMARY:Spawn Origins, Vol. 2
+DTSTART;VALUE=DATE:20180801
+DTEND;VALUE=DATE:20180802
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
 END:VEVENT
 
 BEGIN:VEVENT
@@ -749,8 +765,8 @@ BEGIN:VEVENT
 UID:crossover-13
 SUMMARY:CROSSOVER #13
 
-DTSTART;VALUE=DATE:20220330
-DTEND;VALUE=DATE:20220331
+DTSTART;VALUE=DATE:20220427
+DTEND;VALUE=DATE:20220428
 URL:https://imagecomics.com/comics/releases/crossover-13
 END:VEVENT
 
@@ -855,8 +871,8 @@ BEGIN:VEVENT
 UID:oblivion-song-by-kirkman-de-felici-36
 SUMMARY:OBLIVION SONG by KIRKMAN & DE FELICI #36
 
-DTSTART;VALUE=DATE:20220323
-DTEND;VALUE=DATE:20220324
+DTSTART;VALUE=DATE:20220420
+DTEND;VALUE=DATE:20220421
 URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-36
 END:VEVENT
 
@@ -1045,6 +1061,15 @@ URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-330
+SUMMARY:SPAWN #330
+
+DTSTART;VALUE=DATE:20220525
+DTEND;VALUE=DATE:20220526
+URL:https://imagecomics.com/comics/releases/spawn-330
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-329
 SUMMARY:SPAWN #329
 
@@ -1066,8 +1091,8 @@ BEGIN:VEVENT
 UID:spawn-327
 SUMMARY:SPAWN #327
 
-DTSTART;VALUE=DATE:20220302
-DTEND;VALUE=DATE:20220303
+DTSTART;VALUE=DATE:20220309
+DTEND;VALUE=DATE:20220310
 URL:https://imagecomics.com/comics/releases/spawn-327
 END:VEVENT
 
@@ -1234,14 +1259,6 @@ URL:https://imagecomics.com/comics/releases/spawn-308
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-307
-SUMMARY:Spawn #307
-DTSTART;VALUE=DATE:20200624
-DTEND;VALUE=DATE:20200625
-URL:https://imagecomics.com/comics/releases/spawn-307
-END:VEVENT
-
-BEGIN:VEVENT
 UID:that-texas-blood-13
 SUMMARY:That Texas Blood #13
 DTSTART;VALUE=DATE:20211222
@@ -1343,6 +1360,15 @@ SUMMARY:That Texas Blood #1
 DTSTART;VALUE=DATE:20200624
 DTEND;VALUE=DATE:20200625
 URL:https://imagecomics.com/comics/releases/that-texas-blood-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:the-department-of-truth-18
+SUMMARY:THE DEPARTMENT OF TRUTH #18
+
+DTSTART;VALUE=DATE:20220525
+DTEND;VALUE=DATE:20220526
+URL:https://imagecomics.com/comics/releases/the-department-of-truth-18
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1484,6 +1510,15 @@ URL:https://imagecomics.com/comics/releases/the-department-of-truth-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:the-scorched-6
+SUMMARY:THE SCORCHED #6
+
+DTSTART;VALUE=DATE:20220525
+DTEND;VALUE=DATE:20220526
+URL:https://imagecomics.com/comics/releases/the-scorched-6
+END:VEVENT
+
+BEGIN:VEVENT
 UID:the-scorched-5
 SUMMARY:THE SCORCHED #5
 
@@ -1504,8 +1539,8 @@ BEGIN:VEVENT
 UID:the-scorched-3
 SUMMARY:THE SCORCHED #3
 
-DTSTART;VALUE=DATE:20220309
-DTEND;VALUE=DATE:20220310
+DTSTART;VALUE=DATE:20220316
+DTEND;VALUE=DATE:20220317
 URL:https://imagecomics.com/comics/releases/the-scorched-3
 END:VEVENT
 
