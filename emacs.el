@@ -102,7 +102,6 @@
                       (executable-find "noweb"))))))))))
   (use-package noweb-mode
     :load-path load-path
-
     :mode ("\\.nw\\'")
     :demand))
 
