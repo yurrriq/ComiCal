@@ -1,31 +1,7 @@
 BEGIN:VCALENDAR
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 VERSION:2.0
-X-WR-CALNAME:BATMAN: THE IMPOSTER 2021, BATMAN: ONE DARK KNIGHT 2021, THE HUMAN TARGET 2021, WONDER GIRL 2021, Bitter Root, Black Magick, Geiger, Killadelphia, Monstress, Nailbiter, Reckless, Saga, Spawn, That Texas Blood, The Department of Truth, Crossover, Oblivion Song by Kirkman & De Felici, Spawn, That Texas Blood, The Department of Truth, The Scorched, Black Widow (2020 - Present), Black Cat (2020 - Present), Hulk (2021 - Present), Venom (2021 - Present)
-BEGIN:VEVENT
-UID:batman-the-imposter-3
-SUMMARY:BATMAN: THE IMPOSTER #3
-DTSTART;VALUE=DATE:20211214
-DTEND;VALUE=DATE:20211215
-URL:https:/comics/batman-the-imposter-2021/batman-the-imposter-3
-END:VEVENT
-
-BEGIN:VEVENT
-UID:batman-the-imposter-2
-SUMMARY:BATMAN: THE IMPOSTER #2
-DTSTART;VALUE=DATE:20211109
-DTEND;VALUE=DATE:20211110
-URL:https:/comics/batman-the-imposter-2021/batman-the-imposter-2
-END:VEVENT
-
-BEGIN:VEVENT
-UID:batman-the-imposter-1
-SUMMARY:BATMAN: THE IMPOSTER #1
-DTSTART;VALUE=DATE:20211012
-DTEND;VALUE=DATE:20211013
-URL:https:/comics/batman-the-imposter-2021/batman-the-imposter-1
-END:VEVENT
-
+X-WR-CALNAME:BATMAN: ONE DARK KNIGHT 2021, THE HUMAN TARGET 2021, WONDER GIRL 2021, Bitter Root, Black Magick, Geiger, Killadelphia, Monstress, Nailbiter, Reckless, Saga, Spawn, That Texas Blood, The Department of Truth, Crossover, Oblivion Song by Kirkman & De Felici, Spawn, That Texas Blood, The Department of Truth, The Scorched, Black Widow (2020 - Present), Black Cat (2020 - Present), Hulk (2021 - Present), Venom (2021 - Present)
 BEGIN:VEVENT
 UID:batman-one-dark-knight-2
 SUMMARY:BATMAN: ONE DARK KNIGHT #2
@@ -624,6 +600,14 @@ URL:https://imagecomics.com/comics/releases/medieval-spawn-witchblade-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-origins-vol-2
+SUMMARY:Spawn Origins, Vol. 2
+DTSTART;VALUE=DATE:20180801
+DTEND;VALUE=DATE:20180802
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-origins-vol-3
 SUMMARY:Spawn Origins, Vol. 3
 DTSTART;VALUE=DATE:20180801
@@ -637,14 +621,6 @@ SUMMARY:Spawn Origins, Vol. 5
 DTSTART;VALUE=DATE:20180801
 DTEND;VALUE=DATE:20180802
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-5
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-origins-vol-2
-SUMMARY:Spawn Origins, Vol. 2
-DTSTART;VALUE=DATE:20180801
-DTEND;VALUE=DATE:20180802
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1564,16 +1540,16 @@ END:VEVENT
 BEGIN:VEVENT
 UID:black_widow_2020_15
 SUMMARY:Black Widow #15
-DTSTART;VALUE=DATE:20220330
-DTEND;VALUE=DATE:20220331
+DTSTART;VALUE=DATE:20220406
+DTEND;VALUE=DATE:20220407
 URL:https://www.marvel.com/comics/issue/95780/black_widow_2020_15
 END:VEVENT
 
 BEGIN:VEVENT
 UID:black_widow_2020_14
 SUMMARY:Black Widow #14
-DTSTART;VALUE=DATE:20220216
-DTEND;VALUE=DATE:20220217
+DTSTART;VALUE=DATE:20220223
+DTEND;VALUE=DATE:20220224
 URL:https://www.marvel.com/comics/issue/95779/black_widow_2020_14
 END:VEVENT
 
