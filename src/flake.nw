@@ -15,7 +15,7 @@ The flake is comprised of a \nix{description},
   outputs = { self, emacs-overlay, flake-utils, nixpkgs }:
     {
       <<Top-level outputs>>
-    } // flake-utils.lib.eachDefaultSystem (system:
+    } // flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
         pkgs = import nixpkgs {
           overlays = [ self.overlay ];
