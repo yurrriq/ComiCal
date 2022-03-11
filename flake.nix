@@ -29,7 +29,6 @@
           gitAndTools = prev.gitAndTools // {
             pre-commit = prev.gitAndTools.pre-commit.overrideAttrs (oldAttrs: {
               propagatedBuildInputs = oldAttrs.propagatedBuildInputs ++ [
-                prev.cargo # NOTE: for nixpkgs-fmt hook
                 prev.python3Packages.ruamel_yaml # NOTE: for check-yaml hook
               ];
             });
