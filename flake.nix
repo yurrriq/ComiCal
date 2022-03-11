@@ -64,20 +64,27 @@
             myEmacs
             nixpkgs-fmt
             noweb
+            python3Packages.pygments
             (
               texlive.combine {
                 inherit noweb;
                 inherit (texlive) scheme-small
                   catchfile
                   datetime
+                  dirtytalk
                   fancyref
                   fmtcount
+                  framed
+                  fvextra
                   hardwrap
                   latexmk
                   mathpazo
+                  minted
                   titlesec
+                  todonotes
                   tufte-latex
                   xetex
+                  xstring
                   ;
               }
             )

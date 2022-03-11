@@ -1,4 +1,7 @@
 \section{Emacs config}
+\label{sec:emacs}
+
+Generate a project-local Emacs config.
 
 <<emacs.el>>=
 <<Configure the æsthetics>>
@@ -16,6 +19,9 @@
 <<Configure other major modes>>
 @
 
+Configure various {\ae}sthetic settings, including but not limited to, font and
+theme.
+
 <<Configure the æsthetics>>=
 (column-number-mode 1)
 (menu-bar-mode 0)
@@ -31,6 +37,8 @@
 (load-theme 'wombat)
 @
 
+Ensure the package set is deterministic.
+
 <<Configure packages>>=
 (require 'package)
 
@@ -40,10 +48,14 @@
 (package-initialize)
 @
 
+Configure some global key bindings that I'm too used to omit.
+
 <<Configure some global key bindings>>=
 (global-set-key (kbd "C-x C-k") 'kill-this-buffer)
 (global-set-key (kbd "s-u") 'revert-buffer)
 @
+
+Configure \hrefootnote{https://github.com/jwiegley/use-package}{use-package}.
 
 <<Configure use-package>>=
 (eval-when-compile
@@ -51,6 +63,9 @@
 
 (setq-default use-package-always-ensure t)
 @
+
+By way of \hrefootnote{https://direnv.net}{direnv} and \elisp{lsp-haskell},
+configure the Haskell programming environment.
 
 <<Configure the Haskell programming environment>>=
 (use-package direnv
@@ -119,9 +134,17 @@
   :config (global-whitespace-cleanup-mode t))
 @
 
+Configure basic syntax highlighting for Nix files.
+
 <<Configure other major modes>>=
 (use-package nix-mode)
 
+@
+
+Use the major mode that comes with
+\hrefootnote{https://github.com/nrnrnr/noweb}{noweb}.
+
+<<Configure other major modes>>=
 (let ((noweb-load-path
         (file-name-as-directory
           (expand-file-name "site-lisp"
@@ -133,9 +156,13 @@
                       (executable-find "noweb"))))))))))
   (use-package noweb-mode
     :load-path load-path
-
     :mode ("\\.nw\\'")
     :demand))
 
+@
+
+Configure YAML syntax highlighting, indenting, etc.
+
+<<Configure other major modes>>=
 (use-package yaml-mode)
 @

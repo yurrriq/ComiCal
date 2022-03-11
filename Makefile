@@ -17,15 +17,16 @@ flake.nix \
 emacs.el \
 package.yaml \
 Setup.hs \
-app/Main.hs
+app/Main.hs \
+lib/ComiCal/App.hs
 
 srcs: ${SRCS}
 
 ${SRCS}: $(wildcard src/*.nw)
 	notangle -R$@ ${NW_SRCS} ${cpif} $@
 
-src/%.tex: src/%.nw src/all.defs
-	noweave -delay -indexfrom src/all.defs -latex -n $^ ${cpif} $@
+src/%.tex: src/%.nw # src/all.defs
+	noweave -delay -index -latex -n $^ ${cpif} $@
 
 src/%.defs: src/%.nw
 	nodefs $< >$@

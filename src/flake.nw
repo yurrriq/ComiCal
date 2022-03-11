@@ -1,4 +1,8 @@
-\section{Flake}
+\section{Nix flake}
+
+The flake is comprised of a \nix{description},
+\hyperref[subsec:flake-inputs]{\nix{inputs}}, and
+\hyperref[subsec:flake-outputs]{\nix{outputs}}.
 
 <<flake.nix>>=
 {
@@ -11,7 +15,7 @@
   outputs = { self, emacs-overlay, flake-utils, nixpkgs }:
     {
       <<Top-level outputs>>
-    } // flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
+    } // flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
           overlays = [ self.overlay ];
@@ -24,21 +28,52 @@
 }
 @
 
+
+\subsection{Inputs}
+\label{subsec:flake-inputs}
+
+The \hrefootnote{https://github.com/nix-community/emacs-overlay}{Emacs overlay}
+\say{comes with extra functions to generate an Emacs closure from various types
+of dependency declaration.} Notably, \nix{emacsWithPackagesFromUsePackage},
+which generates an Emacs closure from an Emacs config file, by way of
+\hrefootnote{https://jwiegley.github.io/use-package/}{\elisp{use-package}}.  See
+\hyperref[sec:emacs]{the Emacs section} on page~\pageref{sec:emacs} for usage.
+
 <<inputs>>=
 emacs-overlay.url = "github:nix-community/emacs-overlay";
-flake-utils.url = "github:numtide/flake-utils";
-nixpkgs.url = "github:nixos/nixpkgs";
 @
+
+\todoo{Describe flake-utils}
+
+<<inputs>>=
+flake-utils.url = "github:numtide/flake-utils";
+@
+
+Pin a version of the Nix package collection.
+
+<<inputs>>=
+nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+@
+
+
+\subsection{Outputs}
+\label{subsec:flake-outputs}
+
+Use
+\hrefootnote{https://github.com/NixOS/nixpkgs/commit/c3b35f21}{\nix{composeManyExtensions}}
+to compose all the [[<<overlays>>]] into one.
 
 <<Top-level outputs>>=
 overlay = nixpkgs.lib.composeManyExtensions (nixpkgs.lib.attrValues self.overlays);
 
 overlays = {
-  <<Overlays>>
+  <<overlays>>
 };
 @
 
-<<Overlays>>=
+Override \nix{haskellPackages} to include this one.
+
+<<overlays>>=
 haskellPackages = final: prev: {
   haskellPackages = prev.haskellPackages.override {
     overrides = hfinal: hprev: {
@@ -48,7 +83,10 @@ haskellPackages = final: prev: {
 };
 @
 
-<<Overlays>>=
+Build \hrefootnote{https://www.gnu.org/software/emacs/}{Emacs} with a
+deterministic package set.
+
+<<overlays>>=
 myEmacs = nixpkgs.lib.composeExtensions emacs-overlay.overlay (final: prev: {
   myEmacs = prev.emacsWithPackagesFromUsePackage {
     alwaysEnsure = true;
@@ -57,12 +95,15 @@ myEmacs = nixpkgs.lib.composeExtensions emacs-overlay.overlay (final: prev: {
 });
 @
 
-<<Overlays>>=
+Override \hrefootnote{https://pre-commit.com/}{\nix{pre-commit}} to include
+\hrefootnote{https://pypi.org/project/ruamel.yaml/}{\py{ruamel.yaml}} for the
+\yaml{check-yaml} hook.
+
+<<overlays>>=
 pre-commit = final: prev: {
   gitAndTools = prev.gitAndTools // {
     pre-commit = prev.gitAndTools.pre-commit.overrideAttrs (oldAttrs: {
       propagatedBuildInputs = oldAttrs.propagatedBuildInputs ++ [
-        prev.cargo # NOTE: for nixpkgs-fmt hook
         prev.python3Packages.ruamel_yaml # NOTE: for check-yaml hook
       ];
     });
@@ -70,19 +111,23 @@ pre-commit = final: prev: {
 };
 @
 
+Define the ComiCal app, and make it the default.
+
 <<Per-system outputs>>=
 apps.ComiCal = flake-utils.lib.mkApp {
   drv = pkgs.haskell.lib.justStaticExecutables self.defaultPackage.${system};
 };
-@
-
-<<Per-system outputs>>=
 defaultApp = self.apps.${system}.ComiCal;
 @
+
+Make ComiCal the default package, too.
 
 <<Per-system outputs>>=
 defaultPackage = self.packages.${system}.ComiCal;
 @
+
+Define the default \nix{devShell}, which includes all the tools necessary to
+build the binary, Haskell documentation, and this PDF.
 
 <<Per-system outputs>>=
 devShell = pkgs.mkShell {
@@ -101,20 +146,27 @@ devShell = pkgs.mkShell {
     myEmacs
     nixpkgs-fmt
     noweb
+    python3Packages.pygments
     (
       texlive.combine {
         inherit noweb;
         inherit (texlive) scheme-small
           catchfile
           datetime
+          dirtytalk
           fancyref
           fmtcount
+          framed
+          fvextra
           hardwrap
           latexmk
           mathpazo
+          minted
           titlesec
+          todonotes
           tufte-latex
           xetex
+          xstring
           ;
       }
     )
@@ -122,6 +174,8 @@ devShell = pkgs.mkShell {
   ] ++ self.defaultPackage.${system}.env.nativeBuildInputs;
 };
 @
+
+Output the ComiCal derivation.
 
 <<Per-system outputs>>=
 packages = { inherit (pkgs.haskellPackages) ComiCal; };

@@ -1,91 +1,79 @@
 \section{Haskell}
 
-<<package.yaml>>=
-name: ComiCal
-version: !include "./VERSION"
-synopsis: Track the publish dates of your favorite comics
-author: Eric Bailey
-maintainer: eric@ericb.me
-github: yurrriq/ComiCal
-extra-source-files:
-- CHANGELOG.md
+\subsection{The ComiCal.App module}
+
+Define one of the fundamental data types to model a comic publisher. Each
+publisher is a record composed of a \hs{scraper :: Scraper} for extracting data
+from their website, and functions to fetch the publish dates of collections and
+single issues.
+
+<<The Publisher data type>>=
+data Publisher = Publisher
+  { getCollections :: ComiCalApp Series,
+    getIssues :: ComiCalApp Series,
+    scraper :: Scraper
+  }
+@ %def Publisher
+@ %def getCollections
+@ %def getIssues
+@ %def scraper
+
+<<The ComiCalApp newtype>>=
+newtype ComiCalApp a = ComiCalApp
+  {runApp :: ReaderT (Text, Publisher) (LoggingT IO) a}
+  deriving
+    ( Functor,
+      Applicative,
+      Monad,
+      MonadLogger,
+      MonadIO,
+      MonadReader (Text, Publisher),
+      MonadFail,
+      MonadThrow
+    )
+@ %def ComiCalApp
+
+<<Running the app>>=
+runComiCalApp :: (Publisher -> ComiCalApp a) -> Publisher -> Text -> IO a
+runComiCalApp getter publisher =
+  runStderrLoggingT
+    . runReaderT (runApp (getter publisher))
+    . (,publisher)
+@ %def runComiCalApp
+
+<<lib/ComiCal/App.hs>>=
+{-# LANGUAGE DeriveFunctor #-}
+{-# LANGUAGE GeneralizedNewtypeDeriving #-}
+{-# LANGUAGE TupleSections #-}
+
+-- |
+-- Module      : ComiCal.App
+-- Copyright   : (c) Eric Bailey, 2019-2021
+-- License     : MIT
+-- Maintainer  : eric@ericb.me
+-- Stability   : experimental
+-- Portability : POSIX
+module ComiCal.App
+  ( ComiCalApp,
+    runComiCalApp,
+    Publisher (..),
+  )
+where
+
+import ComiCal.Types (Scraper, Series)
+import Control.Monad.Catch (MonadThrow)
+import Control.Monad.Logger (LoggingT, MonadLogger, runStderrLoggingT)
+import Control.Monad.Reader (MonadIO, MonadReader, ReaderT (..))
+import Data.Text (Text)
+
+<<The ComiCalApp newtype>>
+
+<<Running the app>>
+
+<<The Publisher data type>>
 @
 
-Declare dependencies common to the library and executable.
-\begin{itemize}
-\item \hrefootnote{https://hackage.haskell.org/package/aeson}{aeson}: Fast JSON parsing and encoding
-\item \hrefootnote{https://hackage.haskell.org/package/base}{base}: The Standard Haskell Prelude and its support libraries
-\item \hrefootnote{https://hackage.haskell.org/package/mtl}{mtl}: Monad classes, using functional dependencies
-\end{itemize}
-
-<<package.yaml>>=
-dependencies:
-- aeson
-- base
-- mtl
-@
-
-Use the OverloadedStrings extension by default, so as to avoid worrying about
-type annotations for string literals.
-
-<<package.yaml>>=
-default-extensions:
-- OverloadedStrings
-- TemplateHaskell
-@
-
-Enable GHC to catch more issues at compile time.
-
-<<package.yaml>>=
-ghc-options:
-- -Wall
-- -Werror
-- -Wincomplete-patterns
-- -Wincomplete-uni-patterns
-@
-
-Configure the library.
-
-<<package.yaml>>=
-library:
-  source-dirs: lib
-  dependencies:
-  - bytestring
-  - composition-extra
-  - exceptions
-  - html-conduit
-  - http-client
-  - http-types
-  - lens
-  - modern-uri
-  - monad-logger
-  - req
-  - tagsoup
-  - text
-  - time-compat
-  - transformers
-  - xml-conduit
-@
-
-Configure the executable.
-
-<<package.yaml>>=
-executable:
-  ghc-options:
-  - -O2
-  source-dirs: app
-  main: Main.hs
-  dependencies:
-  - ComiCal
-  - optparse-applicative
-@
-
-<<Setup.hs>>=
-import Distribution.Simple
-
-main :: IO ()
-main = defaultMain
-@
+\subsection{Main}
 
 <<app/Main.hs>>=
 -- |
@@ -242,3 +230,93 @@ main =
       <> pull ComiCal.imageIssues (imageIssues pullList)
       <> pull ComiCal.marvelIssues (marvelIssues pullList)
 @ %def main
+
+\subsection{Package}
+
+
+<<package.yaml>>=
+name: ComiCal
+version: !include "./VERSION"
+synopsis: Track the publish dates of your favorite comics
+author: Eric Bailey
+maintainer: eric@ericb.me
+github: yurrriq/ComiCal
+extra-source-files:
+- CHANGELOG.md
+@
+
+Declare dependencies common to the library and executable.
+\begin{itemize}
+\item \hrefootnote{https://hackage.haskell.org/package/aeson}{aeson}: Fast JSON parsing and encoding
+\item \hrefootnote{https://hackage.haskell.org/package/base}{base}: The Standard Haskell Prelude and its support libraries
+\item \hrefootnote{https://hackage.haskell.org/package/mtl}{mtl}: Monad classes, using functional dependencies
+\end{itemize}
+
+<<package.yaml>>=
+dependencies:
+- aeson
+- base
+- mtl
+@
+
+Use the OverloadedStrings extension by default, so as to avoid worrying about
+type annotations for string literals.
+
+<<package.yaml>>=
+default-extensions:
+- OverloadedStrings
+- TemplateHaskell
+@
+
+Enable GHC to catch more issues at compile time.
+
+<<package.yaml>>=
+ghc-options:
+- -Wall
+- -Werror
+- -Wincomplete-patterns
+- -Wincomplete-uni-patterns
+@
+
+Configure the library.
+
+<<package.yaml>>=
+library:
+  source-dirs: lib
+  dependencies:
+  - bytestring
+  - composition-extra
+  - exceptions
+  - html-conduit
+  - http-client
+  - http-types
+  - lens
+  - modern-uri
+  - monad-logger
+  - req
+  - tagsoup
+  - text
+  - time-compat
+  - transformers
+  - xml-conduit
+@
+
+Configure the executable.
+
+<<package.yaml>>=
+executable:
+  ghc-options:
+  - -O2
+  source-dirs: app
+  main: Main.hs
+  dependencies:
+  - ComiCal
+  - optparse-applicative
+@
+
+<<Setup.hs>>=
+import Distribution.Simple
+
+main :: IO ()
+main = defaultMain
+@
