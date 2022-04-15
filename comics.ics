@@ -504,8 +504,8 @@ BEGIN:VEVENT
 UID:spawn-compendium-vol-3-tp
 SUMMARY:SPAWN COMPENDIUM, VOL. 3 TP
 
-DTSTART;VALUE=DATE:20220601
-DTEND;VALUE=DATE:20220602
+DTSTART;VALUE=DATE:20220810
+DTEND;VALUE=DATE:20220811
 URL:https://imagecomics.com/comics/releases/spawn-compendium-vol-3-tp
 END:VEVENT
 
@@ -513,8 +513,8 @@ BEGIN:VEVENT
 UID:spawn-the-record-breaker-tp
 SUMMARY:SPAWN: THE RECORD-BREAKER TP
 
-DTSTART;VALUE=DATE:20220504
-DTEND;VALUE=DATE:20220505
+DTSTART;VALUE=DATE:20220511
+DTEND;VALUE=DATE:20220512
 URL:https://imagecomics.com/comics/releases/spawn-the-record-breaker-tp
 END:VEVENT
 
@@ -561,19 +561,19 @@ URL:https://imagecomics.com/comics/releases/spawn-vault-edition-vol-2-hc
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-enemy-of-the-state-tp
-SUMMARY:Spawn: Enemy of the State TP
-DTSTART;VALUE=DATE:20190821
-DTEND;VALUE=DATE:20190822
-URL:https://imagecomics.com/comics/releases/spawn-enemy-of-the-state-tp
-END:VEVENT
-
-BEGIN:VEVENT
 UID:spawn-cover-gallery-vol-1-hc
 SUMMARY:Spawn Cover Gallery, Vol. 1 HC
 DTSTART;VALUE=DATE:20190821
 DTEND;VALUE=DATE:20190822
 URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-vol-1-hc
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-enemy-of-the-state-tp
+SUMMARY:Spawn: Enemy of the State TP
+DTSTART;VALUE=DATE:20190821
+DTEND;VALUE=DATE:20190822
+URL:https://imagecomics.com/comics/releases/spawn-enemy-of-the-state-tp
 END:VEVENT
 
 BEGIN:VEVENT
@@ -751,8 +751,8 @@ BEGIN:VEVENT
 UID:crossover-13
 SUMMARY:CROSSOVER #13
 
-DTSTART;VALUE=DATE:20220504
-DTEND;VALUE=DATE:20220505
+DTSTART;VALUE=DATE:20220511
+DTEND;VALUE=DATE:20220512
 URL:https://imagecomics.com/comics/releases/crossover-13
 END:VEVENT
 
@@ -857,8 +857,8 @@ BEGIN:VEVENT
 UID:oblivion-song-by-kirkman-de-felici-36
 SUMMARY:OBLIVION SONG by KIRKMAN & DE FELICI #36
 
-DTSTART;VALUE=DATE:20220420
-DTEND;VALUE=DATE:20220421
+DTSTART;VALUE=DATE:20220518
+DTEND;VALUE=DATE:20220519
 URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-36
 END:VEVENT
 
@@ -1777,6 +1777,14 @@ URL:https://www.marvel.com/comics/issue/91367/black_cat_2020_1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:hulk_2021_8
+SUMMARY:Hulk #8
+DTSTART;VALUE=DATE:20220622
+DTEND;VALUE=DATE:20220623
+URL:https://www.marvel.com/comics/issue/91727/hulk_2021_8
+END:VEVENT
+
+BEGIN:VEVENT
 UID:hulk_2021_7
 SUMMARY:Hulk #7
 DTSTART;VALUE=DATE:20220525
@@ -1830,6 +1838,14 @@ SUMMARY:Hulk #1
 DTSTART;VALUE=DATE:20211124
 DTEND;VALUE=DATE:20211125
 URL:https://www.marvel.com/comics/issue/91720/hulk_2021_1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:venom_2021_9
+SUMMARY:Venom #9
+DTSTART;VALUE=DATE:20220601
+DTEND;VALUE=DATE:20220602
+URL:https://www.marvel.com/comics/issue/95887/venom_2021_9
 END:VEVENT
 
 BEGIN:VEVENT
