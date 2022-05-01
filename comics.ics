@@ -504,9 +504,27 @@ BEGIN:VEVENT
 UID:spawn-compendium-vol-3-tp
 SUMMARY:SPAWN COMPENDIUM, VOL. 3 TP
 
-DTSTART;VALUE=DATE:20220810
-DTEND;VALUE=DATE:20220811
+DTSTART;VALUE=DATE:20220921
+DTEND;VALUE=DATE:20220922
 URL:https://imagecomics.com/comics/releases/spawn-compendium-vol-3-tp
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-origins-vol-11-hc
+SUMMARY:SPAWN ORIGINS, VOL. 11 HC
+
+DTSTART;VALUE=DATE:20220817
+DTEND;VALUE=DATE:20220818
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-11-hc
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-aftermath-tp
+SUMMARY:SPAWN: AFTERMATH TP
+
+DTSTART;VALUE=DATE:20220713
+DTEND;VALUE=DATE:20220714
+URL:https://imagecomics.com/comics/releases/spawn-aftermath-tp
 END:VEVENT
 
 BEGIN:VEVENT
@@ -609,14 +627,6 @@ URL:https://imagecomics.com/comics/releases/medieval-spawn-witchblade-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-origins-vol-2
-SUMMARY:Spawn Origins, Vol. 2
-DTSTART;VALUE=DATE:20180801
-DTEND;VALUE=DATE:20180802
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
-END:VEVENT
-
-BEGIN:VEVENT
 UID:spawn-origins-vol-3
 SUMMARY:Spawn Origins, Vol. 3
 DTSTART;VALUE=DATE:20180801
@@ -630,6 +640,14 @@ SUMMARY:Spawn Origins, Vol. 5
 DTSTART;VALUE=DATE:20180801
 DTEND;VALUE=DATE:20180802
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-5
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-origins-vol-2
+SUMMARY:Spawn Origins, Vol. 2
+DTSTART;VALUE=DATE:20180801
+DTEND;VALUE=DATE:20180802
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
 END:VEVENT
 
 BEGIN:VEVENT
@@ -678,22 +696,6 @@ SUMMARY:Spawn Coloring Book
 DTSTART;VALUE=DATE:20160413
 DTEND;VALUE=DATE:20160414
 URL:https://imagecomics.com/comics/releases/spawn-coloring-book
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-resurrection
-SUMMARY:Spawn Resurrection
-DTSTART;VALUE=DATE:20151125
-DTEND;VALUE=DATE:20151126
-URL:https://imagecomics.com/comics/releases/spawn-resurrection
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-origins-vol-20
-SUMMARY:Spawn Origins, Vol. 20
-DTSTART;VALUE=DATE:20140201
-DTEND;VALUE=DATE:20140202
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-20
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1047,6 +1049,15 @@ URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-332
+SUMMARY:SPAWN #332
+
+DTSTART;VALUE=DATE:20220727
+DTEND;VALUE=DATE:20220728
+URL:https://imagecomics.com/comics/releases/spawn-332
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-331
 SUMMARY:SPAWN #331
 
@@ -1239,11 +1250,12 @@ URL:https://imagecomics.com/comics/releases/spawn-311
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-310
-SUMMARY:Spawn #310
-DTSTART;VALUE=DATE:20200930
-DTEND;VALUE=DATE:20201001
-URL:https://imagecomics.com/comics/releases/spawn-310
+UID:that-texas-blood-15
+SUMMARY:THAT TEXAS BLOOD #15
+
+DTSTART;VALUE=DATE:20220706
+DTEND;VALUE=DATE:20220707
+URL:https://imagecomics.com/comics/releases/that-texas-blood-15
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1357,6 +1369,15 @@ SUMMARY:That Texas Blood #1
 DTSTART;VALUE=DATE:20200624
 DTEND;VALUE=DATE:20200625
 URL:https://imagecomics.com/comics/releases/that-texas-blood-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:the-department-of-truth-20
+SUMMARY:THE DEPARTMENT OF TRUTH #20
+
+DTSTART;VALUE=DATE:20220727
+DTEND;VALUE=DATE:20220728
+URL:https://imagecomics.com/comics/releases/the-department-of-truth-20
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1513,6 +1534,15 @@ SUMMARY:The Department of Truth #1
 DTSTART;VALUE=DATE:20200930
 DTEND;VALUE=DATE:20201001
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:the-scorched-8
+SUMMARY:THE SCORCHED #8
+
+DTSTART;VALUE=DATE:20220727
+DTEND;VALUE=DATE:20220728
+URL:https://imagecomics.com/comics/releases/the-scorched-8
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1777,10 +1807,18 @@ URL:https://www.marvel.com/comics/issue/91367/black_cat_2020_1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:hulk_2021_9
+SUMMARY:Hulk #9
+DTSTART;VALUE=DATE:20220817
+DTEND;VALUE=DATE:20220818
+URL:https://www.marvel.com/comics/issue/91728/hulk_2021_9
+END:VEVENT
+
+BEGIN:VEVENT
 UID:hulk_2021_8
 SUMMARY:Hulk #8
-DTSTART;VALUE=DATE:20220622
-DTEND;VALUE=DATE:20220623
+DTSTART;VALUE=DATE:20220713
+DTEND;VALUE=DATE:20220714
 URL:https://www.marvel.com/comics/issue/91727/hulk_2021_8
 END:VEVENT
 
@@ -1841,18 +1879,26 @@ URL:https://www.marvel.com/comics/issue/91720/hulk_2021_1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:venom_2021_10
+SUMMARY:Venom #10
+DTSTART;VALUE=DATE:20220803
+DTEND;VALUE=DATE:20220804
+URL:https://www.marvel.com/comics/issue/95888/venom_2021_10
+END:VEVENT
+
+BEGIN:VEVENT
 UID:venom_2021_9
 SUMMARY:Venom #9
-DTSTART;VALUE=DATE:20220601
-DTEND;VALUE=DATE:20220602
+DTSTART;VALUE=DATE:20220727
+DTEND;VALUE=DATE:20220728
 URL:https://www.marvel.com/comics/issue/95887/venom_2021_9
 END:VEVENT
 
 BEGIN:VEVENT
 UID:venom_2021_8
 SUMMARY:Venom #8
-DTSTART;VALUE=DATE:20220511
-DTEND;VALUE=DATE:20220512
+DTSTART;VALUE=DATE:20220608
+DTEND;VALUE=DATE:20220609
 URL:https://www.marvel.com/comics/issue/95886/venom_2021_8
 END:VEVENT
 
