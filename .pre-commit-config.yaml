@@ -1,9 +1,5 @@
 repos:
 - hooks:
-  - id: check-hooks-apply
-  - id: check-useless-excludes
-  repo: meta
-- hooks:
   - id: trailing-whitespace
   - exclude: ^VERSION$
     id: end-of-file-fixer
@@ -22,7 +18,7 @@ repos:
   rev: v1.0.6
 - hooks:
   - description: Prettify Haskell code with ormolu
-    entry: "ormolu --mode inplace"
+    entry: "ormolu --cabal-default-extensions --mode inplace"
     files: '.+\.hs$'
     id: ormolu
     language: system

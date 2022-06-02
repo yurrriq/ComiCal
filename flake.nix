@@ -25,15 +25,6 @@
             config = ./emacs.el;
           };
         });
-        pre-commit = final: prev: {
-          gitAndTools = prev.gitAndTools // {
-            pre-commit = prev.gitAndTools.pre-commit.overrideAttrs (oldAttrs: {
-              propagatedBuildInputs = oldAttrs.propagatedBuildInputs ++ [
-                prev.python3Packages.ruamel_yaml # NOTE: for check-yaml hook
-              ];
-            });
-          };
-        };
       };
     } // flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
@@ -56,7 +47,6 @@
           buildInputs = with pkgs; [
             cabal-install
             ghcid
-            gitAndTools.pre-commit
             haskell-language-server
             haskellPackages.ormolu
             haskellPackages.pointfree
@@ -64,6 +54,7 @@
             myEmacs
             nixpkgs-fmt
             noweb
+            pre-commit
             pythonPackages.pygments
             pythonPackages.pywatchman
             semver-tool

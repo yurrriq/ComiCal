@@ -95,22 +95,6 @@ myEmacs = nixpkgs.lib.composeExtensions emacs-overlay.overlay (final: prev: {
 });
 @
 
-Override \hrefootnote{https://pre-commit.com/}{\nix{pre-commit}} to include
-\hrefootnote{https://pypi.org/project/ruamel.yaml/}{\py{ruamel.yaml}} for the
-\yaml{check-yaml} hook.
-
-<<overlays>>=
-pre-commit = final: prev: {
-  gitAndTools = prev.gitAndTools // {
-    pre-commit = prev.gitAndTools.pre-commit.overrideAttrs (oldAttrs: {
-      propagatedBuildInputs = oldAttrs.propagatedBuildInputs ++ [
-        prev.python3Packages.ruamel_yaml # NOTE: for check-yaml hook
-      ];
-    });
-  };
-};
-@
-
 Define the ComiCal app, and make it the default.
 
 <<Per-system outputs>>=
@@ -138,7 +122,6 @@ devShell = pkgs.mkShell {
   buildInputs = with pkgs; [
     cabal-install
     ghcid
-    gitAndTools.pre-commit
     haskell-language-server
     haskellPackages.ormolu
     haskellPackages.pointfree
@@ -146,6 +129,7 @@ devShell = pkgs.mkShell {
     myEmacs
     nixpkgs-fmt
     noweb
+    pre-commit
     pythonPackages.pygments
     pythonPackages.pywatchman
     semver-tool
