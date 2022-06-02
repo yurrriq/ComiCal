@@ -47,3 +47,8 @@ install:
 
 watch:
 	@ watchman-make -s 2 -p 'src/**/*' -t srcs all
+
+part ?= patch
+.PHONY: bump-version
+bump-version:
+	@ semver bump ${part} $(file <VERSION) | tr -d '\n' >VERSION

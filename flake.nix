@@ -66,6 +66,7 @@
             noweb
             pythonPackages.pygments
             pythonPackages.pywatchman
+            semver-tool
             (
               texlive.combine {
                 inherit noweb;
