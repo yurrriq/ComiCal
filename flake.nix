@@ -4,7 +4,7 @@
   inputs = {
     emacs-overlay.url = "github:nix-community/emacs-overlay";
     flake-utils.url = "github:numtide/flake-utils";
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/release-22.05";
   };
 
   outputs = { self, emacs-overlay, flake-utils, nixpkgs }:

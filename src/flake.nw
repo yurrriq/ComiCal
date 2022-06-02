@@ -52,7 +52,7 @@ flake-utils.url = "github:numtide/flake-utils";
 Pin a version of the Nix package collection.
 
 <<inputs>>=
-nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+nixpkgs.url = "github:nixos/nixpkgs/release-22.05";
 @
 
 
