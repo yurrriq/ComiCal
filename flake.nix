@@ -64,7 +64,8 @@
             myEmacs
             nixpkgs-fmt
             noweb
-            python3Packages.pygments
+            pythonPackages.pygments
+            pythonPackages.pywatchman
             (
               texlive.combine {
                 inherit noweb;

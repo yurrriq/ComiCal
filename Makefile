@@ -44,3 +44,6 @@ all: docs/all.pdf
 
 install:
 	@ cp -vr docs/* ${PREFIX}
+
+watch:
+	@ watchman-make -s 2 -p 'src/**/*' -t srcs all
