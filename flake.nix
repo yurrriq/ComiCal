@@ -57,6 +57,7 @@
             pre-commit
             pythonPackages.pygments
             pythonPackages.pywatchman
+            rnix-lsp
             semver-tool
             (
               texlive.combine {
