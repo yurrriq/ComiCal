@@ -34,4 +34,10 @@ repos:
     entry: nixpkgs-fmt
     language: system
     files: \.nix$
+  - description: Ensure Noweb sources are in sync
+    id: make-srcs
+    name: make srcs
+    entry: make srcs
+    language: system
+    always_run: true
   repo: local
