@@ -38,6 +38,7 @@
           drv = pkgs.haskell.lib.justStaticExecutables self.defaultPackage.${system};
         };
         defaultApp = self.apps.${system}.ComiCal;
+        packages = { inherit (pkgs.haskellPackages) ComiCal; };
         defaultPackage = self.packages.${system}.ComiCal;
         devShell = pkgs.mkShell {
           FONTCONFIG_FILE = pkgs.makeFontsConf {
@@ -46,45 +47,50 @@
 
           buildInputs = with pkgs; [
             cabal-install
+            haskellPackages.pointfree
+            myEmacs
             ghcid
             haskell-language-server
-            haskellPackages.ormolu
-            haskellPackages.pointfree
-            hlint
-            myEmacs
-            nixpkgs-fmt
-            noweb
-            pre-commit
-            pythonPackages.pygments
-            pythonPackages.pywatchman
             rnix-lsp
-            semver-tool
+            noweb
+            pythonPackages.pygments
             (
               texlive.combine {
+                inherit (texlive) scheme-small;
                 inherit noweb;
-                inherit (texlive) scheme-small
+                # tufte-latex and deps
+                inherit (texlive)
                   catchfile
-                  datetime
-                  dirtytalk
-                  fancyref
                   fmtcount
                   framed
                   fvextra
                   hardwrap
-                  latexmk
                   mathpazo
-                  minted
                   titlesec
-                  todonotes
                   tufte-latex
-                  xetex
                   xstring
+                  ;
+                # my preferred packages
+                inherit (texlive)
+                  datetime
+                  dirtytalk
+                  # fancyref
+                  latexmk
+                  minted
+                  todonotes
+                  xetex
                   ;
               }
             )
+            pythonPackages.pywatchman
+            semver-tool
+            nixpkgs-fmt
+            pre-commit
+            haskellPackages.ormolu
+            hlint
+            shellcheck
             which
           ] ++ self.defaultPackage.${system}.env.nativeBuildInputs;
         };
-        packages = { inherit (pkgs.haskellPackages) ComiCal; };
       });
 }

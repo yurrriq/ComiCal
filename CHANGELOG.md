@@ -1,5 +1,9 @@
 # Revision history for ComiCal
 
+## 3.0.5 -- 2022-06-02
+
+* Try to get more literate
+
 ## 2.2.2.0 -- 2021-08-29
 
 * Add support for Marvel single issues

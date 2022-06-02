@@ -1,6 +1,9 @@
 \section{Nix flake}
+\label{sec:flake}
 
-The flake is comprised of a \nix{description},
+Nix \hrefootnote{https://nixos.wiki/wiki/Flakes}{flakes} are an excellent
+addition to the Nix ecosystem.\todor{Describe flakes a bit, preferably using a
+  glossary} This one is comprised of a \nix{description},
 \hyperref[subsec:flake-inputs]{\nix{inputs}}, and
 \hyperref[subsec:flake-outputs]{\nix{outputs}}.
 
@@ -34,7 +37,7 @@ The flake is comprised of a \nix{description},
 
 The \hrefootnote{https://github.com/nix-community/emacs-overlay}{Emacs overlay}
 \say{comes with extra functions to generate an Emacs closure from various types
-of dependency declaration.} Notably, \nix{emacsWithPackagesFromUsePackage},
+  of dependency declaration,} notably, \nix{emacsWithPackagesFromUsePackage},
 which generates an Emacs closure from an Emacs config file, by way of
 \hrefootnote{https://jwiegley.github.io/use-package/}{\elisp{use-package}}.  See
 \hyperref[sec:emacs]{the Emacs section} on page~\pageref{sec:emacs} for usage.
@@ -43,13 +46,23 @@ which generates an Emacs closure from an Emacs config file, by way of
 emacs-overlay.url = "github:nix-community/emacs-overlay";
 @
 
-\todoo{Describe flake-utils}
+\hrefootnote{https://github.com/numtide/flake-utils}{\nix{flake-utils}}
+provides \say{a collection of pure Nix functions \ldots\ that are
+  useful in the context of writing other Nix flakes.} One of the most
+useful of these functions is \nix{eachDefaultSystem}, which
+\say{build[s] the same structure for each system [supported by nixpkgs
+    and built by hydra]}. Due to some
+\hrefootnote{https://github.com/NixOS/nix/pull/5253}{IFD}\todor{Add
+  a glossary} issues, use \nix{eachSystem} for now instead.
 
 <<inputs>>=
 flake-utils.url = "github:numtide/flake-utils";
 @
 
-Pin a version of the Nix package collection.
+Pin a version, specifically
+\hrefootnote{https://nixos.org/blog/announcements.html\#nixos-22.05}{the latest
+  stable release}, of \hrefootnote{https://github.com/NixOS/nixpkgs}{the Nix
+  package collection} to ensure reproducibility.
 
 <<inputs>>=
 nixpkgs.url = "github:nixos/nixpkgs/release-22.05";
@@ -67,105 +80,160 @@ to compose all the [[<<overlays>>]] into one.
 overlay = nixpkgs.lib.composeManyExtensions (nixpkgs.lib.attrValues self.overlays);
 
 overlays = {
-  <<overlays>>
+  <<haskellPackages overlay>>
+  <<myEmacs overlay>>
 };
 @
 
-Override \nix{haskellPackages} to include this one.
+Define the \nix{haskellPackages} overlay\todor{glossary}, which overrides
+\nix{haskellPackages} to include ComiCal.
 
-<<overlays>>=
+<<haskellPackages overlay>>=
 haskellPackages = final: prev: {
   haskellPackages = prev.haskellPackages.override {
     overrides = hfinal: hprev: {
-      ComiCal = hprev.callCabal2nix "ComiCal" self { };
+      ComiCal = hprev.<<build ComiCal using cabal2nix>>
     };
   };
 };
 @
 
-Build \hrefootnote{https://www.gnu.org/software/emacs/}{Emacs} with a
-deterministic package set.
+Within that overlay\todor{glossary}, [[<<build ComiCal using cabal2nix>>]]%
+\footnote{\url{https://github.com/NixOS/cabal2nix}}.
 
-<<overlays>>=
+<<build ComiCal using cabal2nix>>=
+callCabal2nix "ComiCal" self { };
+@
+\marginnote{%
+  \nix{self} here refers to this flake.
+}
+
+Build \hrefootnote{https://www.gnu.org/software/emacs/}{Emacs} with a
+deterministic package set.  See page~\pageref{sec:emacs} for the \nix{config}.
+
+<<myEmacs overlay>>=
 myEmacs = nixpkgs.lib.composeExtensions emacs-overlay.overlay (final: prev: {
   myEmacs = prev.emacsWithPackagesFromUsePackage {
     alwaysEnsure = true;
     config = ./emacs.el;
   };
 });
-@
+@ %def myEmacs
 
-Define the ComiCal app, and make it the default.
+Define the ComiCal app and package, and make them the defaults.
 
 <<Per-system outputs>>=
 apps.ComiCal = flake-utils.lib.mkApp {
   drv = pkgs.haskell.lib.justStaticExecutables self.defaultPackage.${system};
 };
 defaultApp = self.apps.${system}.ComiCal;
-@
-
-Make ComiCal the default package, too.
-
-<<Per-system outputs>>=
+packages = { inherit (pkgs.haskellPackages) ComiCal; };
 defaultPackage = self.packages.${system}.ComiCal;
 @
 
-Define the default \nix{devShell}, which includes all the tools necessary to
-build the binary, Haskell documentation, and this PDF.
+Define the default \nix{devShell}, which includes all the [[<<tools>>]]
+necessary to build the binary, Haskell documentation, and this PDF.
 
 <<Per-system outputs>>=
 devShell = pkgs.mkShell {
-  FONTCONFIG_FILE = pkgs.makeFontsConf {
-    fontDirectories = [ pkgs.iosevka ];
-  };
+  <<fontconfig>>
 
   buildInputs = with pkgs; [
-    cabal-install
-    ghcid
-    haskell-language-server
-    haskellPackages.ormolu
-    haskellPackages.pointfree
-    hlint
-    myEmacs
-    nixpkgs-fmt
-    noweb
-    pre-commit
-    pythonPackages.pygments
-    pythonPackages.pywatchman
-    rnix-lsp
-    semver-tool
-    (
-      texlive.combine {
-        inherit noweb;
-        inherit (texlive) scheme-small
-          catchfile
-          datetime
-          dirtytalk
-          fancyref
-          fmtcount
-          framed
-          fvextra
-          hardwrap
-          latexmk
-          mathpazo
-          minted
-          titlesec
-          todonotes
-          tufte-latex
-          xetex
-          xstring
-          ;
-      }
-    )
-    which
+    <<tools>>
   ] ++ self.defaultPackage.${system}.env.nativeBuildInputs;
 };
 @
 
-Output the ComiCal derivation.
+Include \hrefootnote{https://www.haskell.org/cabal/}{Cabal} for quick iteration
+outside of Nix, and
+\hrefootnote{https://github.com/bmillwood/pointfree}{pointfree} because I can't
+help myself.
 
-<<Per-system outputs>>=
-packages = { inherit (pkgs.haskellPackages) ComiCal; };
+<<tools>>=
+cabal-install
+haskellPackages.pointfree
+@
+
+Include the hermetic build of Emacs (from the [[<<myEmacs overlay>>]]) and the
+dependencies for
+\hrefootnote{https://github.com/emacs-lsp/lsp-mode/}{\elisp{lsp-mode}},
+i.e. \hrefootnote{https://github.com/ndmitchell/ghcid}{ghcid},
+\hrefootnote{https://github.com/haskell/haskell-language-server}{haskell-language-server},
+and \hrefootnote{https://github.com/nix-community/rnix-lsp}{rnix-lsp}.
+
+<<tools>>=
+myEmacs
+ghcid
+haskell-language-server
+rnix-lsp
+@
+
+Include the literate programming toolchain,
+i.e. \hrefootnote{https://github.com/nrnrnr/noweb/}{noweb},
+\hrefootnote{https://pygments.org/}{Pygments} (for
+\hrefootnote{https://github.com/gpoore/minted}{\txt{minted}}), and a
+\hrefootnote{http://xetex.sourceforge.net/}{\XeTeX} environment with all the
+necessary packages via
+\hrefootnote{https://nixos.org/manual/nixpkgs/stable/\#sec-language-texlive}{\nix{texlive.combine}}.
+
+<<tools>>=
+noweb
+pythonPackages.pygments
+(
+  texlive.combine {
+    inherit (texlive) scheme-small;
+    inherit noweb;
+    # tufte-latex and deps
+    inherit (texlive)
+      catchfile
+      fmtcount
+      framed
+      fvextra
+      hardwrap
+      mathpazo
+      titlesec
+      tufte-latex
+      xstring
+      ;
+    # my preferred packages
+    inherit (texlive)
+      datetime
+      dirtytalk
+      # fancyref
+      latexmk
+      minted
+      todonotes
+      xetex
+      ;
+  }
+)
+@
+
+\todoo{Describe these tools}
+
+<<tools>>=
+pythonPackages.pywatchman
+semver-tool
+@
+
+\todoo{Describe the pre-commit config}
+
+<<tools>>=
+nixpkgs-fmt
+pre-commit
+haskellPackages.ormolu
+hlint
+shellcheck
+which
+@
+
+Last, but not least, configure my preferred font,
+\hrefootnote{http://be5invis.github.io/Iosevka}{Iosevka}.
+
+<<fontconfig>>=
+FONTCONFIG_FILE = pkgs.makeFontsConf {
+  fontDirectories = [ pkgs.iosevka ];
+};
 @
 
 %% Local Variables:

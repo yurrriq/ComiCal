@@ -1,7 +1,7 @@
 \section{Emacs config}
 \label{sec:emacs}
 
-Generate a project-local Emacs config.
+Generate a project-local \srclink{emacs.el}{Emacs config}.
 
 <<emacs.el>>=
 <<Configure the æsthetics>>
@@ -48,7 +48,7 @@ Ensure the package set is deterministic.
 (package-initialize)
 @
 
-Configure some global key bindings that I'm too used to omit.
+Configure some global key bindings that I'm too used to to omit.
 
 <<Configure some global key bindings>>=
 (global-set-key (kbd "C-x C-k") 'kill-this-buffer)
@@ -65,7 +65,8 @@ Configure \hrefootnote{https://github.com/jwiegley/use-package}{use-package}.
 @
 
 By way of \hrefootnote{https://direnv.net}{direnv} and \elisp{lsp-haskell},
-configure the Haskell programming environment.
+configure the Haskell programming environment. Configure
+\hrefootnote{https://github.com/nix-community/rnix-lsp}{rnix-lsp} here too.
 
 <<Configure the Haskell programming environment>>=
 (use-package direnv
@@ -75,6 +76,8 @@ configure the Haskell programming environment.
 (use-package company)
 
 (use-package haskell-mode)
+
+(use-package nix-mode)
 
 (use-package lsp-mode
   :hook ((haskell-mode . lsp-deferred))
@@ -89,12 +92,16 @@ configure the Haskell programming environment.
                       :server-id 'nix)))
 
 (use-package lsp-ui
-  :hook (haskell-mode . lsp-ui-mode)
+  :hook
+  ((haskell-mode . lsp-ui-mode)
+   (nix-mode . lsp-ui-mode))
   :config
   (setq lsp-ui-doc-position 'bottom))
 
 (use-package lsp-haskell)
 @
+
+\todor{Split this up and describe them}
 
 <<Configure some creature comforts>>=
 (use-package crux
@@ -137,13 +144,6 @@ configure the Haskell programming environment.
 
 (use-package whitespace-cleanup-mode
   :config (global-whitespace-cleanup-mode t))
-@
-
-Configure basic syntax highlighting for Nix files.
-
-<<Configure other major modes>>=
-(use-package nix-mode)
-
 @
 
 Use the major mode that comes with

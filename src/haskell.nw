@@ -210,7 +210,8 @@ fromFlags =
         )
 @
 
-Parse the flags to configue the pull list, then pull it, and output a calender in ICS format.
+Parse the flags to configure the pull list, then pull it, and output a calender
+in ICS format.
 
 <<main>>=
 main :: IO ()

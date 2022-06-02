@@ -34,6 +34,8 @@
 
 (use-package haskell-mode)
 
+(use-package nix-mode)
+
 (use-package lsp-mode
   :hook ((haskell-mode . lsp-deferred))
   :commands (lsp lsp-deferred)
@@ -47,7 +49,9 @@
                       :server-id 'nix)))
 
 (use-package lsp-ui
-  :hook (haskell-mode . lsp-ui-mode)
+  :hook
+  ((haskell-mode . lsp-ui-mode)
+   (nix-mode . lsp-ui-mode))
   :config
   (setq lsp-ui-doc-position 'bottom))
 
@@ -93,8 +97,6 @@
 
 (use-package whitespace-cleanup-mode
   :config (global-whitespace-cleanup-mode t))
-
-(use-package nix-mode)
 
 (let ((noweb-load-path
         (file-name-as-directory

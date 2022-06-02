@@ -30,7 +30,19 @@
 \newmintinline[hs]{haskell}{}
 \newmintinline[nix]{nix}{}
 \newmintinline[py]{python}{}
+\newmintinline[txt]{text}{}
 \newmintinline[yaml]{yaml}{}
+
+
+\makeatletter
+\newcommand\srclink{\@ifstar{\srclink@star}{\srclink@nostar}}
+\newcommand\srclink@star[1]{\srclink@nostar{#1}{#1}}
+\newcommand\srclink@nostar[2]{%
+  \hrefootnote{https://github.com/yurrriq/ComiCal/blob/main/#1}{%
+    \txt{#2}%
+  }%
+}
+\makeatother
 
 \makeatletter
 \hypersetup{
@@ -51,7 +63,9 @@
 
 \setlength\parindent{0pt}
 
-\title{ComiCal}
+\CatchFileDef\version{../VERSION}{}
+
+\title{ComiCal v\version}
 \author{Eric Bailey}
 
 \date{%
@@ -76,5 +90,8 @@
 \begin{multicols}{2}[\section{Index}]
   \nowebindex
 \end{multicols}
+
+%% \newpage
+\listoftodos[To-Do]
 
 \end{document}
