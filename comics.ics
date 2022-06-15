@@ -588,19 +588,19 @@ URL:https://imagecomics.com/comics/releases/spawn-vault-edition-vol-2-hc
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-enemy-of-the-state-tp
-SUMMARY:Spawn: Enemy of the State TP
-DTSTART;VALUE=DATE:20190821
-DTEND;VALUE=DATE:20190822
-URL:https://imagecomics.com/comics/releases/spawn-enemy-of-the-state-tp
-END:VEVENT
-
-BEGIN:VEVENT
 UID:spawn-cover-gallery-vol-1-hc
 SUMMARY:Spawn Cover Gallery, Vol. 1 HC
 DTSTART;VALUE=DATE:20190821
 DTEND;VALUE=DATE:20190822
 URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-vol-1-hc
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-enemy-of-the-state-tp
+SUMMARY:Spawn: Enemy of the State TP
+DTSTART;VALUE=DATE:20190821
+DTEND;VALUE=DATE:20190822
+URL:https://imagecomics.com/comics/releases/spawn-enemy-of-the-state-tp
 END:VEVENT
 
 BEGIN:VEVENT
