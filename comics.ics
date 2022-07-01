@@ -3,6 +3,14 @@ PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 VERSION:2.0
 X-WR-CALNAME:BATMAN: ONE DARK KNIGHT 2021, THE HUMAN TARGET 2021, WONDER GIRL 2021, Bitter Root, Black Magick, Geiger, Killadelphia, Monstress, Nailbiter, Reckless, Saga, Spawn, That Texas Blood, The Department of Truth, Crossover, Oblivion Song by Kirkman & De Felici, Spawn, That Texas Blood, The Department of Truth, The Scorched, Black Widow (2020 - Present), Black Cat (2020 - Present), Hulk (2021 - Present), Venom (2021 - Present)
 BEGIN:VEVENT
+UID:batman-one-dark-knight-3
+SUMMARY:BATMAN: ONE DARK KNIGHT #3
+DTSTART;VALUE=DATE:20220726
+DTEND;VALUE=DATE:20220727
+URL:https:/comics/batman-one-dark-knight-2021/batman-one-dark-knight-3
+END:VEVENT
+
+BEGIN:VEVENT
 UID:batman-one-dark-knight-2
 SUMMARY:BATMAN: ONE DARK KNIGHT #2
 DTSTART;VALUE=DATE:20220329
@@ -588,19 +596,19 @@ URL:https://imagecomics.com/comics/releases/spawn-vault-edition-vol-2-hc
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-cover-gallery-vol-1-hc
-SUMMARY:Spawn Cover Gallery, Vol. 1 HC
-DTSTART;VALUE=DATE:20190821
-DTEND;VALUE=DATE:20190822
-URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-vol-1-hc
-END:VEVENT
-
-BEGIN:VEVENT
 UID:spawn-enemy-of-the-state-tp
 SUMMARY:Spawn: Enemy of the State TP
 DTSTART;VALUE=DATE:20190821
 DTEND;VALUE=DATE:20190822
 URL:https://imagecomics.com/comics/releases/spawn-enemy-of-the-state-tp
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-cover-gallery-vol-1-hc
+SUMMARY:Spawn Cover Gallery, Vol. 1 HC
+DTSTART;VALUE=DATE:20190821
+DTEND;VALUE=DATE:20190822
+URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-vol-1-hc
 END:VEVENT
 
 BEGIN:VEVENT
@@ -676,11 +684,11 @@ URL:https://imagecomics.com/comics/releases/spawn-vault-edition-hc
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-origins-collection-book-10-hc-3
+UID:spawn-origins-collection-book-10-hc
 SUMMARY:Spawn: Origins Collection, Book 10 HC
 DTSTART;VALUE=DATE:20161012
 DTEND;VALUE=DATE:20161013
-URL:https://imagecomics.com/comics/releases/spawn-origins-collection-book-10-hc-3
+URL:https://imagecomics.com/comics/releases/spawn-origins-collection-book-10-hc
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1386,8 +1394,8 @@ BEGIN:VEVENT
 UID:the-department-of-truth-21
 SUMMARY:THE DEPARTMENT OF TRUTH #21
 
-DTSTART;VALUE=DATE:20220831
-DTEND;VALUE=DATE:20220901
+DTSTART;VALUE=DATE:20220928
+DTEND;VALUE=DATE:20220929
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-21
 END:VEVENT
 
@@ -1395,8 +1403,8 @@ BEGIN:VEVENT
 UID:the-department-of-truth-20
 SUMMARY:THE DEPARTMENT OF TRUTH #20
 
-DTSTART;VALUE=DATE:20220727
-DTEND;VALUE=DATE:20220728
+DTSTART;VALUE=DATE:20220824
+DTEND;VALUE=DATE:20220825
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-20
 END:VEVENT
 
@@ -1838,24 +1846,24 @@ END:VEVENT
 BEGIN:VEVENT
 UID:hulk_2021_10
 SUMMARY:Hulk #10
-DTSTART;VALUE=DATE:20220914
-DTEND;VALUE=DATE:20220915
+DTSTART;VALUE=DATE:20221102
+DTEND;VALUE=DATE:20221103
 URL:https://www.marvel.com/comics/issue/91729/hulk_2021_10
 END:VEVENT
 
 BEGIN:VEVENT
 UID:hulk_2021_9
 SUMMARY:Hulk #9
-DTSTART;VALUE=DATE:20220817
-DTEND;VALUE=DATE:20220818
+DTSTART;VALUE=DATE:20221005
+DTEND;VALUE=DATE:20221006
 URL:https://www.marvel.com/comics/issue/91728/hulk_2021_9
 END:VEVENT
 
 BEGIN:VEVENT
 UID:hulk_2021_8
 SUMMARY:Hulk #8
-DTSTART;VALUE=DATE:20220727
-DTEND;VALUE=DATE:20220728
+DTSTART;VALUE=DATE:20220817
+DTEND;VALUE=DATE:20220818
 URL:https://www.marvel.com/comics/issue/91727/hulk_2021_8
 END:VEVENT
 
