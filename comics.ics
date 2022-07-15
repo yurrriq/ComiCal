@@ -512,8 +512,8 @@ BEGIN:VEVENT
 UID:spawn-origins-vol-11-hc
 SUMMARY:SPAWN ORIGINS, VOL. 11 HC
 
-DTSTART;VALUE=DATE:20220928
-DTEND;VALUE=DATE:20220929
+DTSTART;VALUE=DATE:20221102
+DTEND;VALUE=DATE:20221103
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-11-hc
 END:VEVENT
 
@@ -596,19 +596,19 @@ URL:https://imagecomics.com/comics/releases/spawn-vault-edition-vol-2-hc
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-enemy-of-the-state-tp
-SUMMARY:Spawn: Enemy of the State TP
-DTSTART;VALUE=DATE:20190821
-DTEND;VALUE=DATE:20190822
-URL:https://imagecomics.com/comics/releases/spawn-enemy-of-the-state-tp
-END:VEVENT
-
-BEGIN:VEVENT
 UID:spawn-cover-gallery-vol-1-hc
 SUMMARY:Spawn Cover Gallery, Vol. 1 HC
 DTSTART;VALUE=DATE:20190821
 DTEND;VALUE=DATE:20190822
 URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-vol-1-hc
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-enemy-of-the-state-tp
+SUMMARY:Spawn: Enemy of the State TP
+DTSTART;VALUE=DATE:20190821
+DTEND;VALUE=DATE:20190822
+URL:https://imagecomics.com/comics/releases/spawn-enemy-of-the-state-tp
 END:VEVENT
 
 BEGIN:VEVENT
@@ -644,14 +644,6 @@ URL:https://imagecomics.com/comics/releases/medieval-spawn-witchblade-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-origins-vol-2
-SUMMARY:Spawn Origins, Vol. 2
-DTSTART;VALUE=DATE:20180801
-DTEND;VALUE=DATE:20180802
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
-END:VEVENT
-
-BEGIN:VEVENT
 UID:spawn-origins-vol-3
 SUMMARY:Spawn Origins, Vol. 3
 DTSTART;VALUE=DATE:20180801
@@ -665,6 +657,14 @@ SUMMARY:Spawn Origins, Vol. 5
 DTSTART;VALUE=DATE:20180801
 DTEND;VALUE=DATE:20180802
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-5
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-origins-vol-2
+SUMMARY:Spawn Origins, Vol. 2
+DTSTART;VALUE=DATE:20180801
+DTEND;VALUE=DATE:20180802
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
 END:VEVENT
 
 BEGIN:VEVENT
@@ -753,8 +753,8 @@ BEGIN:VEVENT
 UID:crossover-1-3-d-special
 SUMMARY:​​CROSSOVER #1 3D SPECIAL
 
-DTSTART;VALUE=DATE:20220720
-DTEND;VALUE=DATE:20220721
+DTSTART;VALUE=DATE:20220817
+DTEND;VALUE=DATE:20220818
 URL:https://imagecomics.com/comics/releases/crossover-1-3-d-special
 END:VEVENT
 
@@ -1921,6 +1921,14 @@ SUMMARY:Hulk #1
 DTSTART;VALUE=DATE:20211124
 DTEND;VALUE=DATE:20211125
 URL:https://www.marvel.com/comics/issue/91720/hulk_2021_1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:venom_2021_12
+SUMMARY:Venom #12
+DTSTART;VALUE=DATE:20221005
+DTEND;VALUE=DATE:20221006
+URL:https://www.marvel.com/comics/issue/103640/venom_2021_12
 END:VEVENT
 
 BEGIN:VEVENT
