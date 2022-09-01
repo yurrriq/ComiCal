@@ -131,6 +131,14 @@ URL:https:/comics/wonder-girl-2021/wonder-girl-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:bitter-root-omnibus
+SUMMARY:Bitter Root Omnibus
+DTSTART;VALUE=DATE:20230222
+DTEND;VALUE=DATE:20230223
+URL:https://imagecomics.com/comics/releases/bitter-root-omnibus
+END:VEVENT
+
+BEGIN:VEVENT
 UID:bitter-root-vol-2-rage-redemption-tp
 SUMMARY:Bitter Root, Vol. 2: Rage & Redemption TP
 DTSTART;VALUE=DATE:20220302
@@ -204,7 +212,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:killadelphia-vol-4-tp
-SUMMARY:KILLADELPHIA, Vol. 4 TP
+SUMMARY:Killadelphia, Vol. 4 Tp
 DTSTART;VALUE=DATE:20221026
 DTEND;VALUE=DATE:20221027
 URL:https://imagecomics.com/comics/releases/killadelphia-vol-4-tp
@@ -574,11 +582,11 @@ URL:https://imagecomics.com/comics/releases/spawn-origins-vol-11-hc
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-origins-tp-23
-SUMMARY:SPAWN ORIGINS TP #23
+UID:spawn-origins-vol-23
+SUMMARY:Spawn Origins, Vol. 23
 DTSTART;VALUE=DATE:20221026
 DTEND;VALUE=DATE:20221027
-URL:https://imagecomics.com/comics/releases/spawn-origins-tp-23
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-23
 END:VEVENT
 
 BEGIN:VEVENT
@@ -715,6 +723,14 @@ URL:https://imagecomics.com/comics/releases/medieval-spawn-witchblade-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-origins-vol-2
+SUMMARY:Spawn Origins, Vol. 2
+DTSTART;VALUE=DATE:20180801
+DTEND;VALUE=DATE:20180802
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-origins-vol-3
 SUMMARY:Spawn Origins, Vol. 3
 DTSTART;VALUE=DATE:20180801
@@ -728,14 +744,6 @@ SUMMARY:Spawn Origins, Vol. 5
 DTSTART;VALUE=DATE:20180801
 DTEND;VALUE=DATE:20180802
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-5
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-origins-vol-2
-SUMMARY:Spawn Origins, Vol. 2
-DTSTART;VALUE=DATE:20180801
-DTEND;VALUE=DATE:20180802
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
 END:VEVENT
 
 BEGIN:VEVENT
@@ -772,11 +780,11 @@ URL:https://imagecomics.com/comics/releases/that-texas-blood-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
-UID:department-of-truth-tp-4
-SUMMARY:DEPARTMENT OF TRUTH TP #4
+UID:department-of-truth-vol-4
+SUMMARY:Department of Truth, Vol. 4
 DTSTART;VALUE=DATE:20221130
 DTEND;VALUE=DATE:20221201
-URL:https://imagecomics.com/comics/releases/department-of-truth-tp-4
+URL:https://imagecomics.com/comics/releases/department-of-truth-vol-4
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1114,7 +1122,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:spawn-335
-SUMMARY:SPAWN #335
+SUMMARY:Spawn #335
 DTSTART;VALUE=DATE:20221019
 DTEND;VALUE=DATE:20221020
 URL:https://imagecomics.com/comics/releases/spawn-335
@@ -1314,8 +1322,16 @@ URL:https://imagecomics.com/comics/releases/spawn-314
 END:VEVENT
 
 BEGIN:VEVENT
+UID:that-texas-blood-19
+SUMMARY:That Texas Blood #19
+DTSTART;VALUE=DATE:20221102
+DTEND;VALUE=DATE:20221103
+URL:https://imagecomics.com/comics/releases/that-texas-blood-19
+END:VEVENT
+
+BEGIN:VEVENT
 UID:that-texas-blood-18
-SUMMARY:THAT TEXAS BLOOD #18
+SUMMARY:That Texas Blood #18
 DTSTART;VALUE=DATE:20221005
 DTEND;VALUE=DATE:20221006
 URL:https://imagecomics.com/comics/releases/that-texas-blood-18
@@ -1642,7 +1658,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:spawn-scorched-11
-SUMMARY:SPAWN SCORCHED #11
+SUMMARY:Spawn Scorched #11
 DTSTART;VALUE=DATE:20221026
 DTEND;VALUE=DATE:20221027
 URL:https://imagecomics.com/comics/releases/spawn-scorched-11
