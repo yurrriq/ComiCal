@@ -27,6 +27,14 @@ URL:https:/comics/batman-one-dark-knight-2021/batman-one-dark-knight-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:the-human-target-7
+SUMMARY:THE HUMAN TARGET #7
+DTSTART;VALUE=DATE:20220927
+DTEND;VALUE=DATE:20220928
+URL:https:/comics/the-human-target-2021/the-human-target-7
+END:VEVENT
+
+BEGIN:VEVENT
 UID:the-human-target-6
 SUMMARY:THE HUMAN TARGET #6
 DTSTART;VALUE=DATE:20220322
@@ -573,6 +581,14 @@ URL:https://imagecomics.com/comics/releases/deluxe-spawn-origins-hc-vol-5
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-universe-collection-tp
+SUMMARY:Spawn Universe Collection TP
+DTSTART;VALUE=DATE:20221130
+DTEND;VALUE=DATE:20221201
+URL:https://imagecomics.com/comics/releases/spawn-universe-collection-tp
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-origins-vol-11-hc
 SUMMARY:SPAWN ORIGINS, VOL. 11 HC
 
@@ -752,14 +768,6 @@ SUMMARY:Spawn: Hell On Earth Tp
 DTSTART;VALUE=DATE:20171018
 DTEND;VALUE=DATE:20171019
 URL:https://imagecomics.com/comics/releases/spawn-hell-on-earth-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-vault-edition-hc
-SUMMARY:Spawn Vault Edition HC
-DTSTART;VALUE=DATE:20170726
-DTEND;VALUE=DATE:20170727
-URL:https://imagecomics.com/comics/releases/spawn-vault-edition-hc
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1121,6 +1129,14 @@ URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-336
+SUMMARY:Spawn #336
+DTSTART;VALUE=DATE:20221116
+DTEND;VALUE=DATE:20221117
+URL:https://imagecomics.com/comics/releases/spawn-336
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-335
 SUMMARY:Spawn #335
 DTSTART;VALUE=DATE:20221019
@@ -1314,14 +1330,6 @@ URL:https://imagecomics.com/comics/releases/spawn-315
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-314
-SUMMARY:Spawn #314
-DTSTART;VALUE=DATE:20210127
-DTEND;VALUE=DATE:20210128
-URL:https://imagecomics.com/comics/releases/spawn-314
-END:VEVENT
-
-BEGIN:VEVENT
 UID:that-texas-blood-19
 SUMMARY:That Texas Blood #19
 DTSTART;VALUE=DATE:20221102
@@ -1478,8 +1486,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:the-department-of-truth-22
 SUMMARY:The Department Of Truth #22
-DTSTART;VALUE=DATE:20221026
-DTEND;VALUE=DATE:20221027
+DTSTART;VALUE=DATE:20221123
+DTEND;VALUE=DATE:20221124
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-22
 END:VEVENT
 
@@ -1654,6 +1662,14 @@ SUMMARY:The Department of Truth #1
 DTSTART;VALUE=DATE:20200930
 DTEND;VALUE=DATE:20201001
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:the-scorched-12
+SUMMARY:The Scorched #12
+DTSTART;VALUE=DATE:20221123
+DTEND;VALUE=DATE:20221124
+URL:https://imagecomics.com/comics/releases/the-scorched-12
 END:VEVENT
 
 BEGIN:VEVENT
