@@ -27,6 +27,14 @@ URL:https:/comics/batman-one-dark-knight-2021/batman-one-dark-knight-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:the-human-target-8
+SUMMARY:THE HUMAN TARGET #8
+DTSTART;VALUE=DATE:20221025
+DTEND;VALUE=DATE:20221026
+URL:https:/comics/the-human-target-2021/the-human-target-8
+END:VEVENT
+
+BEGIN:VEVENT
 UID:the-human-target-7
 SUMMARY:THE HUMAN TARGET #7
 DTSTART;VALUE=DATE:20220927
@@ -220,7 +228,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:killadelphia-vol-4-tp
-SUMMARY:Killadelphia, Vol. 4 Tp
+SUMMARY:Killadelphia, Vol. 4 TP
 DTSTART;VALUE=DATE:20221026
 DTEND;VALUE=DATE:20221027
 URL:https://imagecomics.com/comics/releases/killadelphia-vol-4-tp
@@ -581,20 +589,20 @@ URL:https://imagecomics.com/comics/releases/deluxe-spawn-origins-hc-vol-5
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-universe-collection-tp
-SUMMARY:Spawn Universe Collection TP
-DTSTART;VALUE=DATE:20221130
-DTEND;VALUE=DATE:20221201
-URL:https://imagecomics.com/comics/releases/spawn-universe-collection-tp
-END:VEVENT
-
-BEGIN:VEVENT
 UID:spawn-origins-vol-11-hc
 SUMMARY:SPAWN ORIGINS, VOL. 11 HC
 
 DTSTART;VALUE=DATE:20221130
 DTEND;VALUE=DATE:20221201
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-11-hc
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-universe-collection-tp
+SUMMARY:Spawn Universe Collection TP
+DTSTART;VALUE=DATE:20221130
+DTEND;VALUE=DATE:20221201
+URL:https://imagecomics.com/comics/releases/spawn-universe-collection-tp
 END:VEVENT
 
 BEGIN:VEVENT
@@ -739,14 +747,6 @@ URL:https://imagecomics.com/comics/releases/medieval-spawn-witchblade-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-origins-vol-2
-SUMMARY:Spawn Origins, Vol. 2
-DTSTART;VALUE=DATE:20180801
-DTEND;VALUE=DATE:20180802
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
-END:VEVENT
-
-BEGIN:VEVENT
 UID:spawn-origins-vol-3
 SUMMARY:Spawn Origins, Vol. 3
 DTSTART;VALUE=DATE:20180801
@@ -760,6 +760,14 @@ SUMMARY:Spawn Origins, Vol. 5
 DTSTART;VALUE=DATE:20180801
 DTEND;VALUE=DATE:20180802
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-5
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-origins-vol-2
+SUMMARY:Spawn Origins, Vol. 2
+DTSTART;VALUE=DATE:20180801
+DTEND;VALUE=DATE:20180802
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
 END:VEVENT
 
 BEGIN:VEVENT
@@ -789,7 +797,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:department-of-truth-vol-4
-SUMMARY:Department of Truth, Vol. 4
+SUMMARY:The Department of Truth, Vol. 4
 DTSTART;VALUE=DATE:20221130
 DTEND;VALUE=DATE:20221201
 URL:https://imagecomics.com/comics/releases/department-of-truth-vol-4
@@ -1129,6 +1137,14 @@ URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-337
+SUMMARY:Spawn #337
+DTSTART;VALUE=DATE:20221221
+DTEND;VALUE=DATE:20221222
+URL:https://imagecomics.com/comics/releases/spawn-337
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-336
 SUMMARY:Spawn #336
 DTSTART;VALUE=DATE:20221116
@@ -1147,8 +1163,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-334
 SUMMARY:Spawn #334
-DTSTART;VALUE=DATE:20221005
-DTEND;VALUE=DATE:20221006
+DTSTART;VALUE=DATE:20221012
+DTEND;VALUE=DATE:20221013
 URL:https://imagecomics.com/comics/releases/spawn-334
 END:VEVENT
 
@@ -1322,11 +1338,11 @@ URL:https://imagecomics.com/comics/releases/spawn-316
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-315
-SUMMARY:Spawn #315
-DTSTART;VALUE=DATE:20210224
-DTEND;VALUE=DATE:20210225
-URL:https://imagecomics.com/comics/releases/spawn-315
+UID:that-texas-blood-20
+SUMMARY:That Texas Blood #20
+DTSTART;VALUE=DATE:20221207
+DTEND;VALUE=DATE:20221208
+URL:https://imagecomics.com/comics/releases/that-texas-blood-20
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1665,6 +1681,14 @@ URL:https://imagecomics.com/comics/releases/the-department-of-truth-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:scorched-13
+SUMMARY:Scorched #13
+DTSTART;VALUE=DATE:20221228
+DTEND;VALUE=DATE:20221229
+URL:https://imagecomics.com/comics/releases/scorched-13
+END:VEVENT
+
+BEGIN:VEVENT
 UID:the-scorched-12
 SUMMARY:The Scorched #12
 DTSTART;VALUE=DATE:20221123
@@ -1674,7 +1698,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:spawn-scorched-11
-SUMMARY:Spawn Scorched #11
+SUMMARY:The Scorched #11
 DTSTART;VALUE=DATE:20221026
 DTEND;VALUE=DATE:20221027
 URL:https://imagecomics.com/comics/releases/spawn-scorched-11
@@ -1967,6 +1991,14 @@ URL:https://www.marvel.com/comics/issue/91367/black_cat_2020_1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:hulk_2021_10
+SUMMARY:Hulk #10
+DTSTART;VALUE=DATE:20221102
+DTEND;VALUE=DATE:20221103
+URL:https://www.marvel.com/comics/issue/91729/hulk_2021_10
+END:VEVENT
+
+BEGIN:VEVENT
 UID:hulk_2021_9
 SUMMARY:Hulk #9
 DTSTART;VALUE=DATE:20221005
@@ -2036,6 +2068,22 @@ SUMMARY:Hulk #1
 DTSTART;VALUE=DATE:20211124
 DTEND;VALUE=DATE:20211125
 URL:https://www.marvel.com/comics/issue/91720/hulk_2021_1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:venom_2021_14
+SUMMARY:Venom #14
+DTSTART;VALUE=DATE:20221207
+DTEND;VALUE=DATE:20221208
+URL:https://www.marvel.com/comics/issue/103643/venom_2021_14
+END:VEVENT
+
+BEGIN:VEVENT
+UID:venom_2021_13
+SUMMARY:Venom #13
+DTSTART;VALUE=DATE:20221109
+DTEND;VALUE=DATE:20221110
+URL:https://www.marvel.com/comics/issue/103642/venom_2021_13
 END:VEVENT
 
 BEGIN:VEVENT
