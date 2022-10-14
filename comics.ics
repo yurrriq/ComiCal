@@ -462,7 +462,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:saga-vol-10
-SUMMARY:Saga vol. 10
+SUMMARY:Saga, vol. 10
 DTSTART;VALUE=DATE:20221005
 DTEND;VALUE=DATE:20221006
 URL:https://imagecomics.com/comics/releases/saga-vol-10
@@ -589,20 +589,20 @@ URL:https://imagecomics.com/comics/releases/deluxe-spawn-origins-hc-vol-5
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-universe-collection-tp
+SUMMARY:Spawn Universe Collection TP
+DTSTART;VALUE=DATE:20221130
+DTEND;VALUE=DATE:20221201
+URL:https://imagecomics.com/comics/releases/spawn-universe-collection-tp
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-origins-vol-11-hc
 SUMMARY:SPAWN ORIGINS, VOL. 11 HC
 
 DTSTART;VALUE=DATE:20221130
 DTEND;VALUE=DATE:20221201
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-11-hc
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-universe-collection-tp
-SUMMARY:Spawn Universe Collection TP
-DTSTART;VALUE=DATE:20221130
-DTEND;VALUE=DATE:20221201
-URL:https://imagecomics.com/comics/releases/spawn-universe-collection-tp
 END:VEVENT
 
 BEGIN:VEVENT
@@ -747,6 +747,14 @@ URL:https://imagecomics.com/comics/releases/medieval-spawn-witchblade-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-origins-vol-2
+SUMMARY:Spawn Origins, Vol. 2
+DTSTART;VALUE=DATE:20180801
+DTEND;VALUE=DATE:20180802
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-origins-vol-3
 SUMMARY:Spawn Origins, Vol. 3
 DTSTART;VALUE=DATE:20180801
@@ -760,14 +768,6 @@ SUMMARY:Spawn Origins, Vol. 5
 DTSTART;VALUE=DATE:20180801
 DTEND;VALUE=DATE:20180802
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-5
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-origins-vol-2
-SUMMARY:Spawn Origins, Vol. 2
-DTSTART;VALUE=DATE:20180801
-DTEND;VALUE=DATE:20180802
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
 END:VEVENT
 
 BEGIN:VEVENT
@@ -798,8 +798,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:department-of-truth-vol-4
 SUMMARY:The Department of Truth, Vol. 4
-DTSTART;VALUE=DATE:20221130
-DTEND;VALUE=DATE:20221201
+DTSTART;VALUE=DATE:20221221
+DTEND;VALUE=DATE:20221222
 URL:https://imagecomics.com/comics/releases/department-of-truth-vol-4
 END:VEVENT
 
@@ -1155,8 +1155,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-335
 SUMMARY:Spawn #335
-DTSTART;VALUE=DATE:20221019
-DTEND;VALUE=DATE:20221020
+DTSTART;VALUE=DATE:20221109
+DTEND;VALUE=DATE:20221110
 URL:https://imagecomics.com/comics/releases/spawn-335
 END:VEVENT
 
@@ -2073,8 +2073,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:venom_2021_14
 SUMMARY:Venom #14
-DTSTART;VALUE=DATE:20221207
-DTEND;VALUE=DATE:20221208
+DTSTART;VALUE=DATE:20221228
+DTEND;VALUE=DATE:20221229
 URL:https://www.marvel.com/comics/issue/103643/venom_2021_14
 END:VEVENT
 
