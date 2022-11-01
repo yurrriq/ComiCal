@@ -27,6 +27,14 @@ URL:https:/comics/batman-one-dark-knight-2021/batman-one-dark-knight-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:the-human-target-9
+SUMMARY:THE HUMAN TARGET #9
+DTSTART;VALUE=DATE:20221122
+DTEND;VALUE=DATE:20221123
+URL:https:/comics/the-human-target-2021/the-human-target-9
+END:VEVENT
+
+BEGIN:VEVENT
 UID:the-human-target-8
 SUMMARY:THE HUMAN TARGET #8
 DTSTART;VALUE=DATE:20221025
@@ -623,7 +631,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:spawn-origins-vol-22
-SUMMARY:Spawn Origins Vol. 22  
+SUMMARY:Spawn Origins, Vol. 22  
 DTSTART;VALUE=DATE:20220907
 DTEND;VALUE=DATE:20220908
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-22
@@ -747,14 +755,6 @@ URL:https://imagecomics.com/comics/releases/medieval-spawn-witchblade-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-origins-vol-2
-SUMMARY:Spawn Origins, Vol. 2
-DTSTART;VALUE=DATE:20180801
-DTEND;VALUE=DATE:20180802
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
-END:VEVENT
-
-BEGIN:VEVENT
 UID:spawn-origins-vol-3
 SUMMARY:Spawn Origins, Vol. 3
 DTSTART;VALUE=DATE:20180801
@@ -768,6 +768,14 @@ SUMMARY:Spawn Origins, Vol. 5
 DTSTART;VALUE=DATE:20180801
 DTEND;VALUE=DATE:20180802
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-5
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-origins-vol-2
+SUMMARY:Spawn Origins, Vol. 2
+DTSTART;VALUE=DATE:20180801
+DTEND;VALUE=DATE:20180802
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1137,6 +1145,14 @@ URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-338
+SUMMARY:Spawn #338
+DTSTART;VALUE=DATE:20230125
+DTEND;VALUE=DATE:20230126
+URL:https://imagecomics.com/comics/releases/spawn-338
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-337
 SUMMARY:Spawn #337
 DTSTART;VALUE=DATE:20221221
@@ -1147,8 +1163,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-336
 SUMMARY:Spawn #336
-DTSTART;VALUE=DATE:20221116
-DTEND;VALUE=DATE:20221117
+DTSTART;VALUE=DATE:20221207
+DTEND;VALUE=DATE:20221208
 URL:https://imagecomics.com/comics/releases/spawn-336
 END:VEVENT
 
@@ -1327,14 +1343,6 @@ SUMMARY:Spawn #317
 DTSTART;VALUE=DATE:20210428
 DTEND;VALUE=DATE:20210429
 URL:https://imagecomics.com/comics/releases/spawn-317
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-316
-SUMMARY:Spawn #316
-DTSTART;VALUE=DATE:20210331
-DTEND;VALUE=DATE:20210401
-URL:https://imagecomics.com/comics/releases/spawn-316
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1681,10 +1689,18 @@ URL:https://imagecomics.com/comics/releases/the-department-of-truth-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:the-scorched-14
+SUMMARY:The Scorched #14
+DTSTART;VALUE=DATE:20230118
+DTEND;VALUE=DATE:20230119
+URL:https://imagecomics.com/comics/releases/the-scorched-14
+END:VEVENT
+
+BEGIN:VEVENT
 UID:scorched-13
 SUMMARY:Scorched #13
-DTSTART;VALUE=DATE:20221228
-DTEND;VALUE=DATE:20221229
+DTSTART;VALUE=DATE:20221221
+DTEND;VALUE=DATE:20221222
 URL:https://imagecomics.com/comics/releases/scorched-13
 END:VEVENT
 
