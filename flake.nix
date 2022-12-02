@@ -4,7 +4,7 @@
   inputs = {
     emacs-overlay.url = "github:nix-community/emacs-overlay";
     flake-utils.url = "github:numtide/flake-utils";
-    nixpkgs.url = "github:nixos/nixpkgs/release-22.05";
+    nixpkgs.url = "github:nixos/nixpkgs/release-22.11";
   };
 
   outputs = { self, emacs-overlay, flake-utils, nixpkgs }:
@@ -53,7 +53,7 @@
             haskell-language-server
             rnix-lsp
             noweb
-            pythonPackages.pygments
+            python3Packages.pygments
             (
               texlive.combine {
                 inherit (texlive) scheme-small;
@@ -82,7 +82,7 @@
                   ;
               }
             )
-            pythonPackages.pywatchman
+            python3Packages.pywatchman
             semver-tool
             nixpkgs-fmt
             pre-commit
