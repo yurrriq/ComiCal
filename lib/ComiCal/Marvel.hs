@@ -9,7 +9,7 @@ module ComiCal.Marvel (publisher) where
 
 import ComiCal.App (Publisher (..))
 import ComiCal.Types (Scraper (..), Series (..))
-import ComiCal.Util (getHttps, parseReleases, urlEncode)
+import ComiCal.Util (getHttps, parseReleases)
 import Control.Arrow (second)
 import Control.Monad.Reader (asks)
 import qualified Data.Text as T
@@ -51,7 +51,7 @@ publisher =
           issuesURI <-
             mkURI $
               "https://www.marvel.com/comics/series/"
-                <> urlEncode seriesSlug
+                <> seriesSlug
           tags <- getHttps issuesURI
           Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags
     }
