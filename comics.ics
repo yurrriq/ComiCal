@@ -1,31 +1,7 @@
 BEGIN:VCALENDAR
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 VERSION:2.0
-X-WR-CALNAME:BATMAN: ONE DARK KNIGHT 2021, THE HUMAN TARGET 2021, WONDER GIRL 2021, Bitter Root, Black Magick, Geiger, Killadelphia, Monstress, Nailbiter, Reckless, Saga, Spawn, That Texas Blood, The Department of Truth, Crossover, Oblivion Song by Kirkman & De Felici, Spawn, That Texas Blood, The Department of Truth, The Scorched, Black Widow (2020 - Present), Black Cat (2020 - Present), Hulk (2021 - Present), Venom (2021 - Present)
-BEGIN:VEVENT
-UID:batman-one-dark-knight-3
-SUMMARY:BATMAN: ONE DARK KNIGHT #3
-DTSTART;VALUE=DATE:20220726
-DTEND;VALUE=DATE:20220727
-URL:https:/comics/batman-one-dark-knight-2021/batman-one-dark-knight-3
-END:VEVENT
-
-BEGIN:VEVENT
-UID:batman-one-dark-knight-2
-SUMMARY:BATMAN: ONE DARK KNIGHT #2
-DTSTART;VALUE=DATE:20220329
-DTEND;VALUE=DATE:20220330
-URL:https:/comics/batman-one-dark-knight-2021/batman-one-dark-knight-2
-END:VEVENT
-
-BEGIN:VEVENT
-UID:batman-one-dark-knight-1
-SUMMARY:BATMAN: ONE DARK KNIGHT #1
-DTSTART;VALUE=DATE:20211221
-DTEND;VALUE=DATE:20211222
-URL:https:/comics/batman-one-dark-knight-2021/batman-one-dark-knight-1
-END:VEVENT
-
+X-WR-CALNAME:THE HUMAN TARGET 2021, Bitter Root, Black Magick, Geiger, Killadelphia, Monstress, Nailbiter, Reckless, Saga, Spawn, That Texas Blood, The Department of Truth, Crossover, Spawn, That Texas Blood, The Department of Truth, The Scorched, Hulk (2021 - Present), Venom (2021 - Present)
 BEGIN:VEVENT
 UID:the-human-target-9
 SUMMARY:THE HUMAN TARGET #9
@@ -96,62 +72,6 @@ SUMMARY:THE HUMAN TARGET #1
 DTSTART;VALUE=DATE:20211102
 DTEND;VALUE=DATE:20211103
 URL:https:/comics/the-human-target-2021/the-human-target-1
-END:VEVENT
-
-BEGIN:VEVENT
-UID:wonder-girl-7
-SUMMARY:WONDER GIRL #7
-DTSTART;VALUE=DATE:20220125
-DTEND;VALUE=DATE:20220126
-URL:https:/comics/wonder-girl-2021/wonder-girl-7
-END:VEVENT
-
-BEGIN:VEVENT
-UID:wonder-girl-6
-SUMMARY:WONDER GIRL #6
-DTSTART;VALUE=DATE:20211214
-DTEND;VALUE=DATE:20211215
-URL:https:/comics/wonder-girl-2021/wonder-girl-6
-END:VEVENT
-
-BEGIN:VEVENT
-UID:wonder-girl-5
-SUMMARY:WONDER GIRL #5
-DTSTART;VALUE=DATE:20211130
-DTEND;VALUE=DATE:20211201
-URL:https:/comics/wonder-girl-2021/wonder-girl-5
-END:VEVENT
-
-BEGIN:VEVENT
-UID:wonder-girl-4
-SUMMARY:WONDER GIRL #4
-DTSTART;VALUE=DATE:20211026
-DTEND;VALUE=DATE:20211027
-URL:https:/comics/wonder-girl-2021/wonder-girl-4
-END:VEVENT
-
-BEGIN:VEVENT
-UID:wonder-girl-3
-SUMMARY:WONDER GIRL #3
-DTSTART;VALUE=DATE:20210824
-DTEND;VALUE=DATE:20210825
-URL:https:/comics/wonder-girl-2021/wonder-girl-3
-END:VEVENT
-
-BEGIN:VEVENT
-UID:wonder-girl-2
-SUMMARY:WONDER GIRL #2
-DTSTART;VALUE=DATE:20210706
-DTEND;VALUE=DATE:20210707
-URL:https:/comics/wonder-girl-2021/wonder-girl-2
-END:VEVENT
-
-BEGIN:VEVENT
-UID:wonder-girl-1
-SUMMARY:WONDER GIRL #1
-DTSTART;VALUE=DATE:20210518
-DTEND;VALUE=DATE:20210519
-URL:https:/comics/wonder-girl-2021/wonder-girl-1
 END:VEVENT
 
 BEGIN:VEVENT
@@ -747,6 +667,14 @@ URL:https://imagecomics.com/comics/releases/medieval-spawn-witchblade-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-origins-vol-5
+SUMMARY:Spawn Origins, Vol. 5
+DTSTART;VALUE=DATE:20180801
+DTEND;VALUE=DATE:20180802
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-5
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-origins-vol-2
 SUMMARY:Spawn Origins, Vol. 2
 DTSTART;VALUE=DATE:20180801
@@ -760,14 +688,6 @@ SUMMARY:Spawn Origins, Vol. 3
 DTSTART;VALUE=DATE:20180801
 DTEND;VALUE=DATE:20180802
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-3
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-origins-vol-5
-SUMMARY:Spawn Origins, Vol. 5
-DTSTART;VALUE=DATE:20180801
-DTEND;VALUE=DATE:20180802
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-5
 END:VEVENT
 
 BEGIN:VEVENT
@@ -952,203 +872,10 @@ URL:https://imagecomics.com/comics/releases/crossover-1
 END:VEVENT
 
 BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-36
-SUMMARY:OBLIVION SONG by KIRKMAN & DE FELICI #36
-
-DTSTART;VALUE=DATE:20220608
-DTEND;VALUE=DATE:20220609
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-36
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-35
-SUMMARY:Oblivion Song By Kirkman & De Felici #35
-DTSTART;VALUE=DATE:20220223
-DTEND;VALUE=DATE:20220224
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-35
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-34
-SUMMARY:Oblivion Song by Kirkman & De Felici #34
-DTSTART;VALUE=DATE:20211027
-DTEND;VALUE=DATE:20211028
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-34
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-33
-SUMMARY:Oblivion Song By Kirkman & De Felici #33
-DTSTART;VALUE=DATE:20210825
-DTEND;VALUE=DATE:20210826
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-33
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-32
-SUMMARY:Oblivion Song By Kirkman & De Felici #32
-DTSTART;VALUE=DATE:20210714
-DTEND;VALUE=DATE:20210715
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-32
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-31
-SUMMARY:Oblivion Song By Kirkman & De Felici #31
-DTSTART;VALUE=DATE:20210609
-DTEND;VALUE=DATE:20210610
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-31
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-30
-SUMMARY:Oblivion Song By Kirkman & De Felici #30
-DTSTART;VALUE=DATE:20210224
-DTEND;VALUE=DATE:20210225
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-30
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-29
-SUMMARY:Oblivion Song By Kirkman & De Felici #29
-DTSTART;VALUE=DATE:20201223
-DTEND;VALUE=DATE:20201224
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-29
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-28
-SUMMARY:Oblivion Song By Kirkman & De Felici #28
-DTSTART;VALUE=DATE:20201111
-DTEND;VALUE=DATE:20201112
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-28
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-27
-SUMMARY:Oblivion Song By Kirkman & De Felici #27
-DTSTART;VALUE=DATE:20200909
-DTEND;VALUE=DATE:20200910
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-27
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-26
-SUMMARY:Oblivion Song By Kirkman & De Felici #26
-DTSTART;VALUE=DATE:20200812
-DTEND;VALUE=DATE:20200813
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-26
-END:VEVENT
-
-BEGIN:VEVENT
-UID:image-giant-sized-artists-proof-oblivion-song-by-kirkman-de-felici-1
-SUMMARY:Image Giant-Sized Artist's Proof: Oblivion Song By Kirkman & De Felici #1
-DTSTART;VALUE=DATE:20200715
-DTEND;VALUE=DATE:20200716
-URL:https://imagecomics.com/comics/releases/image-giant-sized-artists-proof-oblivion-song-by-kirkman-de-felici-1
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-25
-SUMMARY:Oblivion Song By Kirkman & De Felici #25
-DTSTART;VALUE=DATE:20200708
-DTEND;VALUE=DATE:20200709
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-25
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-24
-SUMMARY:Oblivion Song By Kirkman & De Felici #24
-DTSTART;VALUE=DATE:20200219
-DTEND;VALUE=DATE:20200220
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-24
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-23
-SUMMARY:Oblivion Song By Kirkman & De Felici #23
-DTSTART;VALUE=DATE:20200108
-DTEND;VALUE=DATE:20200109
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-23
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-22
-SUMMARY:Oblivion Song By Kirkman & De Felici #22
-DTSTART;VALUE=DATE:20191211
-DTEND;VALUE=DATE:20191212
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-22
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-21
-SUMMARY:Oblivion Song By Kirkman & De Felici #21
-DTSTART;VALUE=DATE:20191113
-DTEND;VALUE=DATE:20191114
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-21
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-20
-SUMMARY:Oblivion Song By Kirkman & De Felici #20
-DTSTART;VALUE=DATE:20191009
-DTEND;VALUE=DATE:20191010
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-20
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-19
-SUMMARY:Oblivion Song By Kirkman & De Felici #19
-DTSTART;VALUE=DATE:20190911
-DTEND;VALUE=DATE:20190912
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-19
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-18
-SUMMARY:Oblivion Song by Kirkman & De Felici #18
-DTSTART;VALUE=DATE:20190814
-DTEND;VALUE=DATE:20190815
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-18
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-17
-SUMMARY:Oblivion Song By Kirkman & De Felici #17
-DTSTART;VALUE=DATE:20190710
-DTEND;VALUE=DATE:20190711
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-17
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-16
-SUMMARY:Oblivion Song By Kirkman & De Felici #16
-DTSTART;VALUE=DATE:20190612
-DTEND;VALUE=DATE:20190613
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-16
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-15
-SUMMARY:Oblivion Song By Kirkman & De Felici #15
-DTSTART;VALUE=DATE:20190515
-DTEND;VALUE=DATE:20190516
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-15
-END:VEVENT
-
-BEGIN:VEVENT
-UID:oblivion-song-by-kirkman-de-felici-14
-SUMMARY:Oblivion Song by Kirkman & De Felici #14
-DTSTART;VALUE=DATE:20190410
-DTEND;VALUE=DATE:20190411
-URL:https://imagecomics.com/comics/releases/oblivion-song-by-kirkman-de-felici-14
-END:VEVENT
-
-BEGIN:VEVENT
 UID:spawn-338
 SUMMARY:Spawn #338
-DTSTART;VALUE=DATE:20230125
-DTEND;VALUE=DATE:20230126
+DTSTART;VALUE=DATE:20230208
+DTEND;VALUE=DATE:20230209
 URL:https://imagecomics.com/comics/releases/spawn-338
 END:VEVENT
 
@@ -1691,8 +1418,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:the-scorched-14
 SUMMARY:The Scorched #14
-DTSTART;VALUE=DATE:20230118
-DTEND;VALUE=DATE:20230119
+DTSTART;VALUE=DATE:20230125
+DTEND;VALUE=DATE:20230126
 URL:https://imagecomics.com/comics/releases/the-scorched-14
 END:VEVENT
 
@@ -1804,206 +1531,6 @@ SUMMARY:THE SCORCHED #1
 DTSTART;VALUE=DATE:20220112
 DTEND;VALUE=DATE:20220113
 URL:https://imagecomics.com/comics/releases/the-scorched-1
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_widow_2020_15
-SUMMARY:Black Widow #15
-DTSTART;VALUE=DATE:20220406
-DTEND;VALUE=DATE:20220407
-URL:https://www.marvel.com/comics/issue/95780/black_widow_2020_15
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_widow_2020_14
-SUMMARY:Black Widow #14
-DTSTART;VALUE=DATE:20220223
-DTEND;VALUE=DATE:20220224
-URL:https://www.marvel.com/comics/issue/95779/black_widow_2020_14
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_widow_2020_13
-SUMMARY:Black Widow #13
-DTSTART;VALUE=DATE:20220105
-DTEND;VALUE=DATE:20220106
-URL:https://www.marvel.com/comics/issue/95778/black_widow_2020_13
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_widow_2020_12
-SUMMARY:Black Widow #12
-DTSTART;VALUE=DATE:20211027
-DTEND;VALUE=DATE:20211028
-URL:https://www.marvel.com/comics/issue/95777/black_widow_2020_12
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_widow_2020_11
-SUMMARY:Black Widow #11
-DTSTART;VALUE=DATE:20210915
-DTEND;VALUE=DATE:20210916
-URL:https://www.marvel.com/comics/issue/95776/black_widow_2020_11
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_widow_2020_10
-SUMMARY:Black Widow #10
-DTSTART;VALUE=DATE:20210825
-DTEND;VALUE=DATE:20210826
-URL:https://www.marvel.com/comics/issue/93022/black_widow_2020_10
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_widow_2020_9
-SUMMARY:Black Widow #9
-DTSTART;VALUE=DATE:20210728
-DTEND;VALUE=DATE:20210729
-URL:https://www.marvel.com/comics/issue/93021/black_widow_2020_9
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_widow_2020_8
-SUMMARY:Black Widow #8
-DTSTART;VALUE=DATE:20210630
-DTEND;VALUE=DATE:20210701
-URL:https://www.marvel.com/comics/issue/93020/black_widow_2020_8
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_widow_2020_7
-SUMMARY:Black Widow #7
-DTSTART;VALUE=DATE:20210526
-DTEND;VALUE=DATE:20210527
-URL:https://www.marvel.com/comics/issue/93019/black_widow_2020_7
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_widow_2020_6
-SUMMARY:Black Widow #6
-DTSTART;VALUE=DATE:20210428
-DTEND;VALUE=DATE:20210429
-URL:https://www.marvel.com/comics/issue/93018/black_widow_2020_6
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_widow_2020_5
-SUMMARY:Black Widow #5
-DTSTART;VALUE=DATE:20210217
-DTEND;VALUE=DATE:20210218
-URL:https://www.marvel.com/comics/issue/84369/black_widow_2020_5
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_widow_2020_4
-SUMMARY:Black Widow #4
-DTSTART;VALUE=DATE:20201202
-DTEND;VALUE=DATE:20201203
-URL:https://www.marvel.com/comics/issue/84368/black_widow_2020_4
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_widow_2020_3
-SUMMARY:Black Widow #3
-DTSTART;VALUE=DATE:20201104
-DTEND;VALUE=DATE:20201105
-URL:https://www.marvel.com/comics/issue/84367/black_widow_2020_3
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_widow_2020_2
-SUMMARY:Black Widow #2
-DTSTART;VALUE=DATE:20201007
-DTEND;VALUE=DATE:20201008
-URL:https://www.marvel.com/comics/issue/84366/black_widow_2020_2
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_widow_2020_1
-SUMMARY:Black Widow #1
-DTSTART;VALUE=DATE:20200902
-DTEND;VALUE=DATE:20200903
-URL:https://www.marvel.com/comics/issue/84365/black_widow_2020_1
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_cat_2020_10
-SUMMARY:Black Cat #10
-DTSTART;VALUE=DATE:20210929
-DTEND;VALUE=DATE:20210930
-URL:https://www.marvel.com/comics/issue/91376/black_cat_2020_10
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_cat_2020_9
-SUMMARY:Black Cat #9
-DTSTART;VALUE=DATE:20210818
-DTEND;VALUE=DATE:20210819
-URL:https://www.marvel.com/comics/issue/91375/black_cat_2020_9
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_cat_2020_8
-SUMMARY:Black Cat #8
-DTSTART;VALUE=DATE:20210728
-DTEND;VALUE=DATE:20210729
-URL:https://www.marvel.com/comics/issue/91374/black_cat_2020_8
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_cat_2020_7
-SUMMARY:Black Cat #7
-DTSTART;VALUE=DATE:20210602
-DTEND;VALUE=DATE:20210603
-URL:https://www.marvel.com/comics/issue/91373/black_cat_2020_7
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_cat_2020_6
-SUMMARY:Black Cat #6
-DTSTART;VALUE=DATE:20210512
-DTEND;VALUE=DATE:20210513
-URL:https://www.marvel.com/comics/issue/91372/black_cat_2020_6
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_cat_2020_5
-SUMMARY:Black Cat #5
-DTSTART;VALUE=DATE:20210414
-DTEND;VALUE=DATE:20210415
-URL:https://www.marvel.com/comics/issue/91371/black_cat_2020_5
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_cat_2020_4
-SUMMARY:Black Cat #4
-DTSTART;VALUE=DATE:20210331
-DTEND;VALUE=DATE:20210401
-URL:https://www.marvel.com/comics/issue/91370/black_cat_2020_4
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_cat_2020_3
-SUMMARY:Black Cat #3
-DTSTART;VALUE=DATE:20210224
-DTEND;VALUE=DATE:20210225
-URL:https://www.marvel.com/comics/issue/91369/black_cat_2020_3
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_cat_2020_2
-SUMMARY:Black Cat #2
-DTSTART;VALUE=DATE:20210120
-DTEND;VALUE=DATE:20210121
-URL:https://www.marvel.com/comics/issue/91368/black_cat_2020_2
-END:VEVENT
-
-BEGIN:VEVENT
-UID:black_cat_2020_1
-SUMMARY:Black Cat #1
-DTSTART;VALUE=DATE:20201216
-DTEND;VALUE=DATE:20201217
-URL:https://www.marvel.com/comics/issue/91367/black_cat_2020_1
 END:VEVENT
 
 BEGIN:VEVENT
