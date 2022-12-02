@@ -34,13 +34,17 @@
         };
       in
       {
-        apps.ComiCal = flake-utils.lib.mkApp {
-          drv = pkgs.haskell.lib.justStaticExecutables self.defaultPackage.${system};
+        apps = {
+          ComiCal = flake-utils.lib.mkApp {
+            drv = pkgs.haskell.lib.justStaticExecutables self.packages.${system}.ComiCal;
+          };
+          default = self.apps.${system}.ComiCal;
         };
-        defaultApp = self.apps.${system}.ComiCal;
-        packages = { inherit (pkgs.haskellPackages) ComiCal; };
-        defaultPackage = self.packages.${system}.ComiCal;
-        devShell = pkgs.mkShell {
+        packages = {
+          inherit (pkgs.haskellPackages) ComiCal;
+          default = self.packages.${system}.ComiCal;
+        };
+        devShells.default = pkgs.mkShell {
           FONTCONFIG_FILE = pkgs.makeFontsConf {
             fontDirectories = [ pkgs.iosevka ];
           };
@@ -90,7 +94,7 @@
             hlint
             shellcheck
             which
-          ] ++ self.defaultPackage.${system}.env.nativeBuildInputs;
+          ] ++ self.packages.${system}.ComiCal.env.nativeBuildInputs;
         };
       });
 }
