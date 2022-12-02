@@ -1,7 +1,7 @@
 BEGIN:VCALENDAR
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 VERSION:2.0
-X-WR-CALNAME:THE HUMAN TARGET 2021, Bitter Root, Black Magick, Geiger, Killadelphia, Monstress, Nailbiter, Reckless, Saga, Spawn, That Texas Blood, The Department of Truth, Crossover, Spawn, That Texas Blood, The Department of Truth, The Scorched, Hulk (2021 - Present), Venom (2021 - Present)
+X-WR-CALNAME:THE HUMAN TARGET 2021, WONDER WOMAN HISTORIA: THE AMAZONS 2021, Bitter Root, Black Magick, Geiger, Killadelphia, Monstress, Nailbiter, Reckless, Saga, Spawn, That Texas Blood, The Department of Truth, Crossover, Gunslinger Spawn, King Spawn, Spawn, That Texas Blood, The Department of Truth, The Scorched, Hulk (2021 - Present), Venom (2021 - Present)
 BEGIN:VEVENT
 UID:the-human-target-9
 SUMMARY:THE HUMAN TARGET #9
@@ -72,6 +72,22 @@ SUMMARY:THE HUMAN TARGET #1
 DTSTART;VALUE=DATE:20211102
 DTEND;VALUE=DATE:20211103
 URL:https:/comics/the-human-target-2021/the-human-target-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:wonder-woman-historia-the-amazons-2
+SUMMARY:WONDER WOMAN HISTORIA: THE AMAZONS #2
+DTSTART;VALUE=DATE:20220405
+DTEND;VALUE=DATE:20220406
+URL:https:/comics/wonder-woman-historia-the-amazons-2021/wonder-woman-historia-the-amazons-2
+END:VEVENT
+
+BEGIN:VEVENT
+UID:wonder-woman-historia-the-amazons-1
+SUMMARY:WONDER WOMAN HISTORIA: THE AMAZONS #1
+DTSTART;VALUE=DATE:20211130
+DTEND;VALUE=DATE:20211201
+URL:https:/comics/wonder-woman-historia-the-amazons-2021/wonder-woman-historia-the-amazons-1
 END:VEVENT
 
 BEGIN:VEVENT
@@ -869,6 +885,294 @@ SUMMARY:Crossover #1
 DTSTART;VALUE=DATE:20201104
 DTEND;VALUE=DATE:20201105
 URL:https://imagecomics.com/comics/releases/crossover-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-16
+SUMMARY:Gunslinger Spawn #16
+DTSTART;VALUE=DATE:20230111
+DTEND;VALUE=DATE:20230112
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-16
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-15
+SUMMARY:Gunslinger Spawn #15
+DTSTART;VALUE=DATE:20221221
+DTEND;VALUE=DATE:20221222
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-15
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-14
+SUMMARY:Gunslinger Spawn #14
+DTSTART;VALUE=DATE:20221116
+DTEND;VALUE=DATE:20221117
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-14
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-13
+SUMMARY:Gunslinger Spawn #13
+DTSTART;VALUE=DATE:20221019
+DTEND;VALUE=DATE:20221020
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-13
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-12
+SUMMARY:Gunslinger Spawn #12
+DTSTART;VALUE=DATE:20220921
+DTEND;VALUE=DATE:20220922
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-12
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-11
+SUMMARY:Gunslinger Spawn #11 
+DTSTART;VALUE=DATE:20220824
+DTEND;VALUE=DATE:20220825
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-11
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-10
+SUMMARY:GUNSLINGER SPAWN #10
+
+DTSTART;VALUE=DATE:20220720
+DTEND;VALUE=DATE:20220721
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-10
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-9
+SUMMARY:GUNSLINGER SPAWN #9
+
+DTSTART;VALUE=DATE:20220622
+DTEND;VALUE=DATE:20220623
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-9
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-8
+SUMMARY:GUNSLINGER SPAWN #8
+
+DTSTART;VALUE=DATE:20220525
+DTEND;VALUE=DATE:20220526
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-8
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-7
+SUMMARY:GUNSLINGER SPAWN #7
+
+DTSTART;VALUE=DATE:20220427
+DTEND;VALUE=DATE:20220428
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-7
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-6
+SUMMARY:GUNSLINGER SPAWN #6
+
+DTSTART;VALUE=DATE:20220323
+DTEND;VALUE=DATE:20220324
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-6
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-5
+SUMMARY:GUNSLINGER SPAWN #5
+
+DTSTART;VALUE=DATE:20220223
+DTEND;VALUE=DATE:20220224
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-5
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-4
+SUMMARY:GUNSLINGER SPAWN #4
+
+DTSTART;VALUE=DATE:20220126
+DTEND;VALUE=DATE:20220127
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-4
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-3
+SUMMARY:GUNSLINGER SPAWN #3
+
+DTSTART;VALUE=DATE:20211222
+DTEND;VALUE=DATE:20211223
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-3
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-2
+SUMMARY:Gunslinger Spawn #2
+DTSTART;VALUE=DATE:20211124
+DTEND;VALUE=DATE:20211125
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-2
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-1
+SUMMARY:Gunslinger Spawn #1
+DTSTART;VALUE=DATE:20211027
+DTEND;VALUE=DATE:20211028
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-18
+SUMMARY:King Spawn #18
+DTSTART;VALUE=DATE:20221228
+DTEND;VALUE=DATE:20221229
+URL:https://imagecomics.com/comics/releases/king-spawn-18
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-17
+SUMMARY:King Spawn #17
+DTSTART;VALUE=DATE:20221130
+DTEND;VALUE=DATE:20221201
+URL:https://imagecomics.com/comics/releases/king-spawn-17
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-16
+SUMMARY:King Spawn #16
+DTSTART;VALUE=DATE:20221102
+DTEND;VALUE=DATE:20221103
+URL:https://imagecomics.com/comics/releases/king-spawn-16
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-15
+SUMMARY:King Spawn #15
+DTSTART;VALUE=DATE:20221005
+DTEND;VALUE=DATE:20221006
+URL:https://imagecomics.com/comics/releases/king-spawn-15
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-14
+SUMMARY:King Spawn #14
+DTSTART;VALUE=DATE:20220914
+DTEND;VALUE=DATE:20220915
+URL:https://imagecomics.com/comics/releases/king-spawn-14
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-13
+SUMMARY:King Spawn #13 
+DTSTART;VALUE=DATE:20220810
+DTEND;VALUE=DATE:20220811
+URL:https://imagecomics.com/comics/releases/king-spawn-13
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-12
+SUMMARY:KING SPAWN #12
+
+DTSTART;VALUE=DATE:20220713
+DTEND;VALUE=DATE:20220714
+URL:https://imagecomics.com/comics/releases/king-spawn-12
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-11
+SUMMARY:KING SPAWN #11
+
+DTSTART;VALUE=DATE:20220615
+DTEND;VALUE=DATE:20220616
+URL:https://imagecomics.com/comics/releases/king-spawn-11
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-10
+SUMMARY:KING SPAWN #10
+
+DTSTART;VALUE=DATE:20220518
+DTEND;VALUE=DATE:20220519
+URL:https://imagecomics.com/comics/releases/king-spawn-10
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-9
+SUMMARY:KING SPAWN #9
+
+DTSTART;VALUE=DATE:20220413
+DTEND;VALUE=DATE:20220414
+URL:https://imagecomics.com/comics/releases/king-spawn-9
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-8
+SUMMARY:KING SPAWN #8
+
+DTSTART;VALUE=DATE:20220316
+DTEND;VALUE=DATE:20220317
+URL:https://imagecomics.com/comics/releases/king-spawn-8
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-7
+SUMMARY:KING SPAWN #7
+
+DTSTART;VALUE=DATE:20220216
+DTEND;VALUE=DATE:20220217
+URL:https://imagecomics.com/comics/releases/king-spawn-7
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-6
+SUMMARY:KING SPAWN #6
+
+DTSTART;VALUE=DATE:20220119
+DTEND;VALUE=DATE:20220120
+URL:https://imagecomics.com/comics/releases/king-spawn-6
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-5
+SUMMARY:KING SPAWN #5
+
+DTSTART;VALUE=DATE:20211215
+DTEND;VALUE=DATE:20211216
+URL:https://imagecomics.com/comics/releases/king-spawn-5
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-4
+SUMMARY:King Spawn #4
+DTSTART;VALUE=DATE:20211117
+DTEND;VALUE=DATE:20211118
+URL:https://imagecomics.com/comics/releases/king-spawn-4
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-3
+SUMMARY:King Spawn #3
+DTSTART;VALUE=DATE:20211027
+DTEND;VALUE=DATE:20211028
+URL:https://imagecomics.com/comics/releases/king-spawn-3
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-2
+SUMMARY:King Spawn #2
+DTSTART;VALUE=DATE:20210922
+DTEND;VALUE=DATE:20210923
+URL:https://imagecomics.com/comics/releases/king-spawn-2
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-1
+SUMMARY:King Spawn #1
+DTSTART;VALUE=DATE:20210825
+DTEND;VALUE=DATE:20210826
+URL:https://imagecomics.com/comics/releases/king-spawn-1
 END:VEVENT
 
 BEGIN:VEVENT
