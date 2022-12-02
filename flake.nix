@@ -9,9 +9,11 @@
 
   outputs = { self, emacs-overlay, flake-utils, nixpkgs }:
     {
-      overlay = nixpkgs.lib.composeManyExtensions (nixpkgs.lib.attrValues self.overlays);
-
       overlays = {
+        default = nixpkgs.lib.composeManyExtensions
+          (nixpkgs.lib.attrValues
+            (nixpkgs.lib.filterAttrs (n: _: n != "default") self.overlays));
+
         haskellPackages = final: prev: {
           haskellPackages = prev.haskellPackages.override {
             overrides = hfinal: hprev: {
@@ -29,7 +31,7 @@
     } // flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
         pkgs = import nixpkgs {
-          overlays = [ self.overlay ];
+          overlays = [ self.overlays.default ];
           inherit system;
         };
       in
