@@ -75,6 +75,14 @@ URL:https:/comics/the-human-target-2021/the-human-target-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:wonder-woman-historia-the-amazons-3
+SUMMARY:WONDER WOMAN HISTORIA: THE AMAZONS #3
+DTSTART;VALUE=DATE:20221227
+DTEND;VALUE=DATE:20221228
+URL:https:/comics/wonder-woman-historia-the-amazons-2021/wonder-woman-historia-the-amazons-3
+END:VEVENT
+
+BEGIN:VEVENT
 UID:wonder-woman-historia-the-amazons-2
 SUMMARY:WONDER WOMAN HISTORIA: THE AMAZONS #2
 DTSTART;VALUE=DATE:20220405
@@ -533,6 +541,14 @@ URL:https://imagecomics.com/comics/releases/deluxe-spawn-origins-hc-vol-5
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-compendium-vol-4-tp
+SUMMARY:Spawn Compendium, Vol. 4 TP
+DTSTART;VALUE=DATE:20221214
+DTEND;VALUE=DATE:20221215
+URL:https://imagecomics.com/comics/releases/spawn-compendium-vol-4-tp
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-origins-vol-11-hc
 SUMMARY:SPAWN ORIGINS, VOL. 11 HC
 
@@ -712,14 +728,6 @@ SUMMARY:Spawn: Hell On Earth Tp
 DTSTART;VALUE=DATE:20171018
 DTEND;VALUE=DATE:20171019
 URL:https://imagecomics.com/comics/releases/spawn-hell-on-earth-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-vault-edition-hc
-SUMMARY:Spawn Vault Edition HC
-DTSTART;VALUE=DATE:20170726
-DTEND;VALUE=DATE:20170727
-URL:https://imagecomics.com/comics/releases/spawn-vault-edition-hc
 END:VEVENT
 
 BEGIN:VEVENT
