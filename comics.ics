@@ -3,6 +3,22 @@ PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 VERSION:2.0
 X-WR-CALNAME:THE HUMAN TARGET 2021, WONDER WOMAN HISTORIA: THE AMAZONS 2021, Bitter Root, Black Magick, Geiger, Killadelphia, Monstress, Nailbiter, Reckless, Saga, Spawn, That Texas Blood, The Department of Truth, Crossover, Gunslinger Spawn, King Spawn, Spawn, That Texas Blood, The Department of Truth, The Scorched, Hulk (2021 - Present), Venom (2021 - Present)
 BEGIN:VEVENT
+UID:the-human-target-12
+SUMMARY:THE HUMAN TARGET #12
+DTSTART;VALUE=DATE:20230228
+DTEND;VALUE=DATE:20230301
+URL:https:/comics/the-human-target-2021/the-human-target-12
+END:VEVENT
+
+BEGIN:VEVENT
+UID:the-human-target-11
+SUMMARY:THE HUMAN TARGET #11
+DTSTART;VALUE=DATE:20230124
+DTEND;VALUE=DATE:20230125
+URL:https:/comics/the-human-target-2021/the-human-target-11
+END:VEVENT
+
+BEGIN:VEVENT
 UID:the-human-target-10
 SUMMARY:THE HUMAN TARGET #10
 DTSTART;VALUE=DATE:20230110
@@ -549,6 +565,14 @@ URL:https://imagecomics.com/comics/releases/deluxe-spawn-origins-hc-vol-5
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-origins-vol-24-tpb
+SUMMARY:Spawn Origins, Vol. 24 TPB
+DTSTART;VALUE=DATE:20221228
+DTEND;VALUE=DATE:20221229
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-24-tpb
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-compendium-vol-4-tp
 SUMMARY:Spawn Compendium, Vol. 4 TP
 DTSTART;VALUE=DATE:20221214
@@ -707,6 +731,14 @@ URL:https://imagecomics.com/comics/releases/medieval-spawn-witchblade-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-origins-vol-2
+SUMMARY:Spawn Origins, Vol. 2
+DTSTART;VALUE=DATE:20180801
+DTEND;VALUE=DATE:20180802
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
+END:VEVENT
+
+BEGIN:VEVENT
 UID:spawn-origins-vol-3
 SUMMARY:Spawn Origins, Vol. 3
 DTSTART;VALUE=DATE:20180801
@@ -723,19 +755,11 @@ URL:https://imagecomics.com/comics/releases/spawn-origins-vol-5
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-origins-vol-2
-SUMMARY:Spawn Origins, Vol. 2
-DTSTART;VALUE=DATE:20180801
-DTEND;VALUE=DATE:20180802
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-hell-on-earth-tp
-SUMMARY:Spawn: Hell On Earth TP
-DTSTART;VALUE=DATE:20171018
-DTEND;VALUE=DATE:20171019
-URL:https://imagecomics.com/comics/releases/spawn-hell-on-earth-tp
+UID:that-texas-blood-vol-3-tpb
+SUMMARY:That Texas Blood, Vol. 3 TPB
+DTSTART;VALUE=DATE:20230118
+DTEND;VALUE=DATE:20230119
+URL:https://imagecomics.com/comics/releases/that-texas-blood-vol-3-tpb
 END:VEVENT
 
 BEGIN:VEVENT
@@ -912,6 +936,14 @@ URL:https://imagecomics.com/comics/releases/gunslinger-spawn-18-2
 END:VEVENT
 
 BEGIN:VEVENT
+UID:gunslinger-spawn-17
+SUMMARY:GUNSLINGER SPAWN #17
+DTSTART;VALUE=DATE:20230208
+DTEND;VALUE=DATE:20230209
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-17
+END:VEVENT
+
+BEGIN:VEVENT
 UID:gunslinger-spawn-16
 SUMMARY:Gunslinger Spawn #16
 DTSTART;VALUE=DATE:20230111
@@ -1053,6 +1085,14 @@ SUMMARY:King Spawn #20
 DTSTART;VALUE=DATE:20230329
 DTEND;VALUE=DATE:20230330
 URL:https://imagecomics.com/comics/releases/king-spawn-20-2
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-19
+SUMMARY:KING SPAWN #19
+DTSTART;VALUE=DATE:20230222
+DTEND;VALUE=DATE:20230223
+URL:https://imagecomics.com/comics/releases/king-spawn-19
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1213,6 +1253,14 @@ SUMMARY:Spawn #340
 DTSTART;VALUE=DATE:20230329
 DTEND;VALUE=DATE:20230330
 URL:https://imagecomics.com/comics/releases/spawn-340-2
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-339
+SUMMARY:SPAWN #339
+DTSTART;VALUE=DATE:20230222
+DTEND;VALUE=DATE:20230223
+URL:https://imagecomics.com/comics/releases/spawn-339
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1398,14 +1446,6 @@ SUMMARY:Spawn's Universe: #1
 DTSTART;VALUE=DATE:20210623
 DTEND;VALUE=DATE:20210624
 URL:https://imagecomics.com/comics/releases/spawns-universe-1
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-318
-SUMMARY:Spawn #318
-DTSTART;VALUE=DATE:20210526
-DTEND;VALUE=DATE:20210527
-URL:https://imagecomics.com/comics/releases/spawn-318
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1760,6 +1800,14 @@ URL:https://imagecomics.com/comics/releases/the-spawn-scorched-16
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-scorched-15
+SUMMARY:SPAWN SCORCHED #15
+DTSTART;VALUE=DATE:20230215
+DTEND;VALUE=DATE:20230216
+URL:https://imagecomics.com/comics/releases/spawn-scorched-15
+END:VEVENT
+
+BEGIN:VEVENT
 UID:the-scorched-14
 SUMMARY:The Scorched #14
 DTSTART;VALUE=DATE:20230125
@@ -1963,6 +2011,14 @@ SUMMARY:Hulk #1
 DTSTART;VALUE=DATE:20211124
 DTEND;VALUE=DATE:20211125
 URL:https://www.marvel.com/comics/issue/91720/hulk_2021_1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:venom_2021_16
+SUMMARY:Venom #16
+DTSTART;VALUE=DATE:20230201
+DTEND;VALUE=DATE:20230202
+URL:https://www.marvel.com/comics/issue/103645/venom_2021_16
 END:VEVENT
 
 BEGIN:VEVENT
