@@ -683,19 +683,19 @@ URL:https://imagecomics.com/comics/releases/spawn-vault-edition-vol-2-hc
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-enemy-of-the-state-tp
-SUMMARY:Spawn: Enemy of the State TP
-DTSTART;VALUE=DATE:20190821
-DTEND;VALUE=DATE:20190822
-URL:https://imagecomics.com/comics/releases/spawn-enemy-of-the-state-tp
-END:VEVENT
-
-BEGIN:VEVENT
 UID:spawn-cover-gallery-vol-1-hc
 SUMMARY:Spawn Cover Gallery, Vol. 1 HC
 DTSTART;VALUE=DATE:20190821
 DTEND;VALUE=DATE:20190822
 URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-vol-1-hc
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-enemy-of-the-state-tp
+SUMMARY:Spawn: Enemy of the State TP
+DTSTART;VALUE=DATE:20190821
+DTEND;VALUE=DATE:20190822
+URL:https://imagecomics.com/comics/releases/spawn-enemy-of-the-state-tp
 END:VEVENT
 
 BEGIN:VEVENT
@@ -731,14 +731,6 @@ URL:https://imagecomics.com/comics/releases/medieval-spawn-witchblade-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-origins-vol-5
-SUMMARY:Spawn Origins, Vol. 5
-DTSTART;VALUE=DATE:20180801
-DTEND;VALUE=DATE:20180802
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-5
-END:VEVENT
-
-BEGIN:VEVENT
 UID:spawn-origins-vol-2
 SUMMARY:Spawn Origins, Vol. 2
 DTSTART;VALUE=DATE:20180801
@@ -752,6 +744,14 @@ SUMMARY:Spawn Origins, Vol. 3
 DTSTART;VALUE=DATE:20180801
 DTEND;VALUE=DATE:20180802
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-3
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-origins-vol-5
+SUMMARY:Spawn Origins, Vol. 5
+DTSTART;VALUE=DATE:20180801
+DTEND;VALUE=DATE:20180802
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-5
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1825,7 +1825,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:spawn-scorched-15
-SUMMARY:SPAWN SCORCHED #15
+SUMMARY:THE SCORCHED #15
 DTSTART;VALUE=DATE:20230222
 DTEND;VALUE=DATE:20230223
 URL:https://imagecomics.com/comics/releases/spawn-scorched-15
@@ -2043,6 +2043,14 @@ SUMMARY:Hulk #1
 DTSTART;VALUE=DATE:20211124
 DTEND;VALUE=DATE:20211125
 URL:https://www.marvel.com/comics/issue/91720/hulk_2021_1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:venom_2021_17
+SUMMARY:Venom #17
+DTSTART;VALUE=DATE:20230301
+DTEND;VALUE=DATE:20230302
+URL:https://www.marvel.com/comics/issue/103646/venom_2021_17
 END:VEVENT
 
 BEGIN:VEVENT
