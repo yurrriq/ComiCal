@@ -2,7 +2,13 @@
   description = "Track the publish dates of your favorite comics";
 
   inputs = {
-    emacs-overlay.url = "github:nix-community/emacs-overlay";
+    emacs-overlay = {
+      inputs = {
+        flake-utils.follows = "flake-utils";
+        nixpkgs.follows = "nixpkgs";
+      };
+      url = "github:nix-community/emacs-overlay";
+    };
     flake-utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "github:nixos/nixpkgs/release-22.11";
   };
