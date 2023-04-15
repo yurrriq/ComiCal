@@ -1,127 +1,7 @@
 BEGIN:VCALENDAR
 PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 VERSION:2.0
-X-WR-CALNAME:THE HUMAN TARGET 2021, WONDER WOMAN HISTORIA: THE AMAZONS 2021, Bitter Root, Black Magick, Geiger, Killadelphia, Monstress, Nailbiter, Reckless, Saga, Spawn, That Texas Blood, The Department of Truth, Crossover, Gunslinger Spawn, King Spawn, Spawn, That Texas Blood, The Department of Truth, The Scorched, Hulk (2021 - Present), Venom (2021 - Present)
-BEGIN:VEVENT
-UID:the-human-target-12
-SUMMARY:THE HUMAN TARGET #12
-DTSTART;VALUE=DATE:20230228
-DTEND;VALUE=DATE:20230301
-URL:https:/comics/the-human-target-2021/the-human-target-12
-END:VEVENT
-
-BEGIN:VEVENT
-UID:the-human-target-11
-SUMMARY:THE HUMAN TARGET #11
-DTSTART;VALUE=DATE:20230124
-DTEND;VALUE=DATE:20230125
-URL:https:/comics/the-human-target-2021/the-human-target-11
-END:VEVENT
-
-BEGIN:VEVENT
-UID:the-human-target-10
-SUMMARY:THE HUMAN TARGET #10
-DTSTART;VALUE=DATE:20230110
-DTEND;VALUE=DATE:20230111
-URL:https:/comics/the-human-target-2021/the-human-target-10
-END:VEVENT
-
-BEGIN:VEVENT
-UID:the-human-target-9
-SUMMARY:THE HUMAN TARGET #9
-DTSTART;VALUE=DATE:20221122
-DTEND;VALUE=DATE:20221123
-URL:https:/comics/the-human-target-2021/the-human-target-9
-END:VEVENT
-
-BEGIN:VEVENT
-UID:the-human-target-8
-SUMMARY:THE HUMAN TARGET #8
-DTSTART;VALUE=DATE:20221025
-DTEND;VALUE=DATE:20221026
-URL:https:/comics/the-human-target-2021/the-human-target-8
-END:VEVENT
-
-BEGIN:VEVENT
-UID:the-human-target-7
-SUMMARY:THE HUMAN TARGET #7
-DTSTART;VALUE=DATE:20220927
-DTEND;VALUE=DATE:20220928
-URL:https:/comics/the-human-target-2021/the-human-target-7
-END:VEVENT
-
-BEGIN:VEVENT
-UID:the-human-target-6
-SUMMARY:THE HUMAN TARGET #6
-DTSTART;VALUE=DATE:20220322
-DTEND;VALUE=DATE:20220323
-URL:https:/comics/the-human-target-2021/the-human-target-6
-END:VEVENT
-
-BEGIN:VEVENT
-UID:the-human-target-5
-SUMMARY:THE HUMAN TARGET #5
-DTSTART;VALUE=DATE:20220222
-DTEND;VALUE=DATE:20220223
-URL:https:/comics/the-human-target-2021/the-human-target-5
-END:VEVENT
-
-BEGIN:VEVENT
-UID:the-human-target-4
-SUMMARY:THE HUMAN TARGET #4
-DTSTART;VALUE=DATE:20220125
-DTEND;VALUE=DATE:20220126
-URL:https:/comics/the-human-target-2021/the-human-target-4
-END:VEVENT
-
-BEGIN:VEVENT
-UID:the-human-target-3
-SUMMARY:THE HUMAN TARGET #3
-DTSTART;VALUE=DATE:20211228
-DTEND;VALUE=DATE:20211229
-URL:https:/comics/the-human-target-2021/the-human-target-3
-END:VEVENT
-
-BEGIN:VEVENT
-UID:the-human-target-2
-SUMMARY:THE HUMAN TARGET #2
-DTSTART;VALUE=DATE:20211130
-DTEND;VALUE=DATE:20211201
-URL:https:/comics/the-human-target-2021/the-human-target-2
-END:VEVENT
-
-BEGIN:VEVENT
-UID:the-human-target-1
-SUMMARY:THE HUMAN TARGET #1
-DTSTART;VALUE=DATE:20211102
-DTEND;VALUE=DATE:20211103
-URL:https:/comics/the-human-target-2021/the-human-target-1
-END:VEVENT
-
-BEGIN:VEVENT
-UID:wonder-woman-historia-the-amazons-3
-SUMMARY:WONDER WOMAN HISTORIA: THE AMAZONS #3
-DTSTART;VALUE=DATE:20221227
-DTEND;VALUE=DATE:20221228
-URL:https:/comics/wonder-woman-historia-the-amazons-2021/wonder-woman-historia-the-amazons-3
-END:VEVENT
-
-BEGIN:VEVENT
-UID:wonder-woman-historia-the-amazons-2
-SUMMARY:WONDER WOMAN HISTORIA: THE AMAZONS #2
-DTSTART;VALUE=DATE:20220405
-DTEND;VALUE=DATE:20220406
-URL:https:/comics/wonder-woman-historia-the-amazons-2021/wonder-woman-historia-the-amazons-2
-END:VEVENT
-
-BEGIN:VEVENT
-UID:wonder-woman-historia-the-amazons-1
-SUMMARY:WONDER WOMAN HISTORIA: THE AMAZONS #1
-DTSTART;VALUE=DATE:20211130
-DTEND;VALUE=DATE:20211201
-URL:https:/comics/wonder-woman-historia-the-amazons-2021/wonder-woman-historia-the-amazons-1
-END:VEVENT
-
+X-WR-CALNAME:Bitter Root, Black Magick, Geiger, Killadelphia, Monstress, Nailbiter, Reckless, Saga, Spawn, That Texas Blood, The Department of Truth, Crossover, Gunslinger Spawn, King Spawn, Spawn, That Texas Blood, The Department of Truth, The Scorched, Hulk (2021 - Present), Venom (2021 - Present)
 BEGIN:VEVENT
 UID:bitter-root-omnibus
 SUMMARY:Bitter Root Omnibus
@@ -928,10 +808,26 @@ URL:https://imagecomics.com/comics/releases/crossover-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:gunslinger-spawn-21
+SUMMARY:Gunslinger Spawn #21
+DTSTART;VALUE=DATE:20230614
+DTEND;VALUE=DATE:20230615
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-21
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-20
+SUMMARY:Gunslinger Spawn #20
+DTSTART;VALUE=DATE:20230517
+DTEND;VALUE=DATE:20230518
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-20
+END:VEVENT
+
+BEGIN:VEVENT
 UID:gunslinger-spawn-19
 SUMMARY:GUNSLINGER SPAWN #19
-DTSTART;VALUE=DATE:20230405
-DTEND;VALUE=DATE:20230406
+DTSTART;VALUE=DATE:20230419
+DTEND;VALUE=DATE:20230420
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-19
 END:VEVENT
 
@@ -1088,10 +984,26 @@ URL:https://imagecomics.com/comics/releases/gunslinger-spawn-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:king-spawn-23
+SUMMARY:King Spawn #23
+DTSTART;VALUE=DATE:20230621
+DTEND;VALUE=DATE:20230622
+URL:https://imagecomics.com/comics/releases/king-spawn-23
+END:VEVENT
+
+BEGIN:VEVENT
+UID:king-spawn-22
+SUMMARY:King Spawn #22
+DTSTART;VALUE=DATE:20230524
+DTEND;VALUE=DATE:20230525
+URL:https://imagecomics.com/comics/releases/king-spawn-22
+END:VEVENT
+
+BEGIN:VEVENT
 UID:king-spawn-21
 SUMMARY:KING SPAWN #21
-DTSTART;VALUE=DATE:20230426
-DTEND;VALUE=DATE:20230427
+DTSTART;VALUE=DATE:20230405
+DTEND;VALUE=DATE:20230406
 URL:https://imagecomics.com/comics/releases/king-spawn-21
 END:VEVENT
 
@@ -1264,19 +1176,35 @@ URL:https://imagecomics.com/comics/releases/king-spawn-1
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-340-2
-SUMMARY:Spawn #340
-DTSTART;VALUE=DATE:20230405
-DTEND;VALUE=DATE:20230406
-URL:https://imagecomics.com/comics/releases/spawn-340-2
+UID:spawn-343
+SUMMARY:Spawn #343
+DTSTART;VALUE=DATE:20230705
+DTEND;VALUE=DATE:20230706
+URL:https://imagecomics.com/comics/releases/spawn-343
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-342
+SUMMARY:Spawn #342
+DTSTART;VALUE=DATE:20230607
+DTEND;VALUE=DATE:20230608
+URL:https://imagecomics.com/comics/releases/spawn-342
 END:VEVENT
 
 BEGIN:VEVENT
 UID:spawn-341
 SUMMARY:SPAWN #341
-DTSTART;VALUE=DATE:20230405
-DTEND;VALUE=DATE:20230406
+DTSTART;VALUE=DATE:20230510
+DTEND;VALUE=DATE:20230511
 URL:https://imagecomics.com/comics/releases/spawn-341
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-340-2
+SUMMARY:Spawn #340
+DTSTART;VALUE=DATE:20230412
+DTEND;VALUE=DATE:20230413
+URL:https://imagecomics.com/comics/releases/spawn-340-2
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1446,22 +1374,6 @@ SUMMARY:Spawn #321
 DTSTART;VALUE=DATE:20210901
 DTEND;VALUE=DATE:20210902
 URL:https://imagecomics.com/comics/releases/spawn-321
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-320
-SUMMARY:Spawn #320
-DTSTART;VALUE=DATE:20210728
-DTEND;VALUE=DATE:20210729
-URL:https://imagecomics.com/comics/releases/spawn-320
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-319
-SUMMARY:Spawn #319
-DTSTART;VALUE=DATE:20210630
-DTEND;VALUE=DATE:20210701
-URL:https://imagecomics.com/comics/releases/spawn-319
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1808,10 +1720,26 @@ URL:https://imagecomics.com/comics/releases/the-department-of-truth-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-scorched-19
+SUMMARY:The Scorched #19
+DTSTART;VALUE=DATE:20230628
+DTEND;VALUE=DATE:20230629
+URL:https://imagecomics.com/comics/releases/spawn-scorched-19
+END:VEVENT
+
+BEGIN:VEVENT
+UID:the-scorched-18
+SUMMARY:The Scorched #18
+DTSTART;VALUE=DATE:20230531
+DTEND;VALUE=DATE:20230601
+URL:https://imagecomics.com/comics/releases/the-scorched-18
+END:VEVENT
+
+BEGIN:VEVENT
 UID:the-scorched-17
 SUMMARY:THE SCORCHED #17
-DTSTART;VALUE=DATE:20230419
-DTEND;VALUE=DATE:20230420
+DTSTART;VALUE=DATE:20230426
+DTEND;VALUE=DATE:20230427
 URL:https://imagecomics.com/comics/releases/the-scorched-17
 END:VEVENT
 
@@ -1950,6 +1878,22 @@ URL:https://imagecomics.com/comics/releases/the-scorched-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:hulk_2021_14
+SUMMARY:Hulk #14
+DTSTART;VALUE=DATE:20230426
+DTEND;VALUE=DATE:20230427
+URL:https://www.marvel.com/comics/issue/102262/hulk_2021_14
+END:VEVENT
+
+BEGIN:VEVENT
+UID:hulk_2021_13
+SUMMARY:Hulk #13
+DTSTART;VALUE=DATE:20230315
+DTEND;VALUE=DATE:20230316
+URL:https://www.marvel.com/comics/issue/102259/hulk_2021_13
+END:VEVENT
+
+BEGIN:VEVENT
 UID:hulk_2021_12
 SUMMARY:Hulk #12
 DTSTART;VALUE=DATE:20230215
@@ -2043,6 +1987,14 @@ SUMMARY:Hulk #1
 DTSTART;VALUE=DATE:20211124
 DTEND;VALUE=DATE:20211125
 URL:https://www.marvel.com/comics/issue/91720/hulk_2021_1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:venom_2021_18
+SUMMARY:Venom #18
+DTSTART;VALUE=DATE:20230405
+DTEND;VALUE=DATE:20230406
+URL:https://www.marvel.com/comics/issue/103647/venom_2021_18
 END:VEVENT
 
 BEGIN:VEVENT
