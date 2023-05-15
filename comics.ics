@@ -437,19 +437,19 @@ URL:https://imagecomics.com/comics/releases/saga-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-origins-vol-24-tpb
-SUMMARY:Spawn Origins, Vol. 24 TPB
-DTSTART;VALUE=DATE:20221228
-DTEND;VALUE=DATE:20221229
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-24-tpb
-END:VEVENT
-
-BEGIN:VEVENT
 UID:deluxe-spawn-origins-hc-vol-5
 SUMMARY:Deluxe Spawn Origins HC vol. 5
 DTSTART;VALUE=DATE:20221228
 DTEND;VALUE=DATE:20221229
 URL:https://imagecomics.com/comics/releases/deluxe-spawn-origins-hc-vol-5
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-origins-vol-24-tpb
+SUMMARY:Spawn Origins, Vol. 24 TPB
+DTSTART;VALUE=DATE:20221228
+DTEND;VALUE=DATE:20221229
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-24-tpb
 END:VEVENT
 
 BEGIN:VEVENT
@@ -611,14 +611,6 @@ URL:https://imagecomics.com/comics/releases/medieval-spawn-witchblade-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-origins-vol-3
-SUMMARY:Spawn Origins, Vol. 3
-DTSTART;VALUE=DATE:20180801
-DTEND;VALUE=DATE:20180802
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-3
-END:VEVENT
-
-BEGIN:VEVENT
 UID:spawn-origins-vol-5
 SUMMARY:Spawn Origins, Vol. 5
 DTSTART;VALUE=DATE:20180801
@@ -632,6 +624,14 @@ SUMMARY:Spawn Origins, Vol. 2
 DTSTART;VALUE=DATE:20180801
 DTEND;VALUE=DATE:20180802
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-2
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-origins-vol-3
+SUMMARY:Spawn Origins, Vol. 3
+DTSTART;VALUE=DATE:20180801
+DTEND;VALUE=DATE:20180802
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-3
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1762,8 +1762,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:the-scorched-17
 SUMMARY:THE SCORCHED #17
-DTSTART;VALUE=DATE:20230426
-DTEND;VALUE=DATE:20230427
+DTSTART;VALUE=DATE:20230503
+DTEND;VALUE=DATE:20230504
 URL:https://imagecomics.com/comics/releases/the-scorched-17
 END:VEVENT
 
