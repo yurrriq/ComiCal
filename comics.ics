@@ -333,11 +333,27 @@ URL:https://imagecomics.com/comics/releases/saga-box-set
 END:VEVENT
 
 BEGIN:VEVENT
+UID:saga-vol-1-tp
+SUMMARY:Saga, Vol. 1 TP
+DTSTART;VALUE=DATE:20211110
+DTEND;VALUE=DATE:20211111
+URL:https://imagecomics.com/comics/releases/saga-vol-1-tp
+END:VEVENT
+
+BEGIN:VEVENT
 UID:saga-compendium-one-tp
 SUMMARY:Saga: Compendium One TP
 DTSTART;VALUE=DATE:20190821
 DTEND;VALUE=DATE:20190822
 URL:https://imagecomics.com/comics/releases/saga-compendium-one-tp
+END:VEVENT
+
+BEGIN:VEVENT
+UID:saga-book-one-hc
+SUMMARY:Saga Book One HC
+DTSTART;VALUE=DATE:20190807
+DTEND;VALUE=DATE:20190808
+URL:https://imagecomics.com/comics/releases/saga-book-one-hc
 END:VEVENT
 
 BEGIN:VEVENT
@@ -405,14 +421,6 @@ URL:https://imagecomics.com/comics/releases/saga-vol-4-tp
 END:VEVENT
 
 BEGIN:VEVENT
-UID:saga-book-one-hc
-SUMMARY:Saga Book One HC
-DTSTART;VALUE=DATE:20141119
-DTEND;VALUE=DATE:20141120
-URL:https://imagecomics.com/comics/releases/saga-book-one-hc
-END:VEVENT
-
-BEGIN:VEVENT
 UID:saga-vol-3-tp
 SUMMARY:Saga, Vol. 3 TP
 DTSTART;VALUE=DATE:20140319
@@ -429,11 +437,11 @@ URL:https://imagecomics.com/comics/releases/saga-vol-2-tp
 END:VEVENT
 
 BEGIN:VEVENT
-UID:saga-vol-1-tp
-SUMMARY:Saga, Vol. 1 TP
-DTSTART;VALUE=DATE:20121010
-DTEND;VALUE=DATE:20121011
-URL:https://imagecomics.com/comics/releases/saga-vol-1-tp
+UID:spawn-origins-tp-vol-26
+SUMMARY:SPAWN ORIGINS VOL. 26 TP
+DTSTART;VALUE=DATE:20230802
+DTEND;VALUE=DATE:20230803
+URL:https://imagecomics.com/comics/releases/spawn-origins-tp-vol-26
 END:VEVENT
 
 BEGIN:VEVENT
@@ -611,14 +619,6 @@ URL:https://imagecomics.com/comics/releases/medieval-spawn-witchblade-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-origins-vol-5
-SUMMARY:Spawn Origins, Vol. 5
-DTSTART;VALUE=DATE:20180801
-DTEND;VALUE=DATE:20180802
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-5
-END:VEVENT
-
-BEGIN:VEVENT
 UID:spawn-origins-vol-2
 SUMMARY:Spawn Origins, Vol. 2
 DTSTART;VALUE=DATE:20180801
@@ -687,8 +687,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:the-department-of-truth-vol-1-the-end-of-the-world-tp
 SUMMARY:The Department of Truth, Vol. 1: The End of the World TP
-DTSTART;VALUE=DATE:20210224
-DTEND;VALUE=DATE:20210225
+DTSTART;VALUE=DATE:20210609
+DTEND;VALUE=DATE:20210610
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-vol-1-the-end-of-the-world-tp
 END:VEVENT
 
@@ -992,6 +992,14 @@ URL:https://imagecomics.com/comics/releases/gunslinger-spawn-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:king-spawn-25
+SUMMARY:KING SPAWN #25
+DTSTART;VALUE=DATE:20230816
+DTEND;VALUE=DATE:20230817
+URL:https://imagecomics.com/comics/releases/king-spawn-25
+END:VEVENT
+
+BEGIN:VEVENT
 UID:king-spawn-24
 SUMMARY:King Spawn #24
 DTSTART;VALUE=DATE:20230719
@@ -1184,11 +1192,11 @@ URL:https://imagecomics.com/comics/releases/king-spawn-2
 END:VEVENT
 
 BEGIN:VEVENT
-UID:king-spawn-1
-SUMMARY:King Spawn #1
-DTSTART;VALUE=DATE:20210825
-DTEND;VALUE=DATE:20210826
-URL:https://imagecomics.com/comics/releases/king-spawn-1
+UID:spawn-345
+SUMMARY:SPAWN #345
+DTSTART;VALUE=DATE:20230830
+DTEND;VALUE=DATE:20230831
+URL:https://imagecomics.com/comics/releases/spawn-345
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1382,14 +1390,6 @@ SUMMARY:Spawn #323
 DTSTART;VALUE=DATE:20211103
 DTEND;VALUE=DATE:20211104
 URL:https://imagecomics.com/comics/releases/spawn-323
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-322
-SUMMARY:Spawn #322
-DTSTART;VALUE=DATE:20210929
-DTEND;VALUE=DATE:20210930
-URL:https://imagecomics.com/comics/releases/spawn-322
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1736,6 +1736,14 @@ URL:https://imagecomics.com/comics/releases/the-department-of-truth-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:spawn-scorched-21
+SUMMARY:THE SCORCHED #21
+DTSTART;VALUE=DATE:20230823
+DTEND;VALUE=DATE:20230824
+URL:https://imagecomics.com/comics/releases/spawn-scorched-21
+END:VEVENT
+
+BEGIN:VEVENT
 UID:the-scorched-20
 SUMMARY:The Scorched #20
 DTSTART;VALUE=DATE:20230726
@@ -2011,6 +2019,14 @@ SUMMARY:Hulk #1
 DTSTART;VALUE=DATE:20211124
 DTEND;VALUE=DATE:20211125
 URL:https://www.marvel.com/comics/issue/91720/hulk_2021_1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:venom_2021_20
+SUMMARY:Venom #20
+DTSTART;VALUE=DATE:20230607
+DTEND;VALUE=DATE:20230608
+URL:https://www.marvel.com/comics/issue/103649/venom_2021_20
 END:VEVENT
 
 BEGIN:VEVENT
