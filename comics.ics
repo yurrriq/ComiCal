@@ -317,6 +317,14 @@ URL:https://imagecomics.com/comics/releases/reckless-ogn
 END:VEVENT
 
 BEGIN:VEVENT
+UID:saga-tp-vol-11
+SUMMARY:SAGA TP VOL. 11
+DTSTART;VALUE=DATE:20231011
+DTEND;VALUE=DATE:20231012
+URL:https://imagecomics.com/comics/releases/saga-tp-vol-11
+END:VEVENT
+
+BEGIN:VEVENT
 UID:saga-vol-10
 SUMMARY:Saga, vol. 10
 DTSTART;VALUE=DATE:20221005
@@ -442,6 +450,22 @@ SUMMARY:Spawn Origins, Vol. 1
 DTSTART;VALUE=DATE:29991231
 DTEND;VALUE=DATE:30000101
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-cover-gallery-vol-1-hc
+SUMMARY:Spawn Cover Gallery, Vol. 1 HC
+DTSTART;VALUE=DATE:20231115
+DTEND;VALUE=DATE:20231116
+URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-vol-1-hc
+END:VEVENT
+
+BEGIN:VEVENT
+UID:spawn-origins-hc-vol-13
+SUMMARY:SPAWN ORIGINS HC VOL. 13
+DTSTART;VALUE=DATE:20231025
+DTEND;VALUE=DATE:20231026
+URL:https://imagecomics.com/comics/releases/spawn-origins-hc-vol-13
 END:VEVENT
 
 BEGIN:VEVENT
@@ -595,14 +619,6 @@ URL:https://imagecomics.com/comics/releases/spawn-vault-edition-vol-2-hc
 END:VEVENT
 
 BEGIN:VEVENT
-UID:spawn-cover-gallery-vol-1-hc
-SUMMARY:Spawn Cover Gallery, Vol. 1 HC
-DTSTART;VALUE=DATE:20190821
-DTEND;VALUE=DATE:20190822
-URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-vol-1-hc
-END:VEVENT
-
-BEGIN:VEVENT
 UID:spawn-enemy-of-the-state-tp
 SUMMARY:Spawn: Enemy of the State TP
 DTSTART;VALUE=DATE:20190821
@@ -624,14 +640,6 @@ SUMMARY:Spawn: Dark Horror TP
 DTSTART;VALUE=DATE:20190417
 DTEND;VALUE=DATE:20190418
 URL:https://imagecomics.com/comics/releases/spawn-dark-horror-tp
-END:VEVENT
-
-BEGIN:VEVENT
-UID:medieval-spawn-witchblade-vol-1-tp
-SUMMARY:Medieval Spawn/Witchblade, Vol. 1 TP
-DTSTART;VALUE=DATE:20180926
-DTEND;VALUE=DATE:20180927
-URL:https://imagecomics.com/comics/releases/medieval-spawn-witchblade-vol-1-tp
 END:VEVENT
 
 BEGIN:VEVENT
@@ -805,6 +813,14 @@ SUMMARY:Crossover #1
 DTSTART;VALUE=DATE:20201104
 DTEND;VALUE=DATE:20201105
 URL:https://imagecomics.com/comics/releases/crossover-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:gunslinger-spawn-25
+SUMMARY:GUNSLINGER SPAWN #25
+DTSTART;VALUE=DATE:20231004
+DTEND;VALUE=DATE:20231005
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-25
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1000,6 +1016,14 @@ URL:https://imagecomics.com/comics/releases/gunslinger-spawn-1
 END:VEVENT
 
 BEGIN:VEVENT
+UID:king-spawn-27
+SUMMARY:KING SPAWN #27
+DTSTART;VALUE=DATE:20231011
+DTEND;VALUE=DATE:20231012
+URL:https://imagecomics.com/comics/releases/king-spawn-27
+END:VEVENT
+
+BEGIN:VEVENT
 UID:king-spawn-26
 SUMMARY:KING SPAWN #26
 DTSTART;VALUE=DATE:20230913
@@ -1192,11 +1216,11 @@ URL:https://imagecomics.com/comics/releases/king-spawn-4
 END:VEVENT
 
 BEGIN:VEVENT
-UID:king-spawn-3
-SUMMARY:King Spawn #3
-DTSTART;VALUE=DATE:20211027
-DTEND;VALUE=DATE:20211028
-URL:https://imagecomics.com/comics/releases/king-spawn-3
+UID:spawn-347
+SUMMARY:SPAWN #347
+DTSTART;VALUE=DATE:20231025
+DTEND;VALUE=DATE:20231026
+URL:https://imagecomics.com/comics/releases/spawn-347
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1390,14 +1414,6 @@ SUMMARY:SPAWN #325
 DTSTART;VALUE=DATE:20220105
 DTEND;VALUE=DATE:20220106
 URL:https://imagecomics.com/comics/releases/spawn-325
-END:VEVENT
-
-BEGIN:VEVENT
-UID:spawn-324
-SUMMARY:Spawn #324
-DTSTART;VALUE=DATE:20211201
-DTEND;VALUE=DATE:20211202
-URL:https://imagecomics.com/comics/releases/spawn-324
 END:VEVENT
 
 BEGIN:VEVENT
@@ -1741,6 +1757,14 @@ SUMMARY:The Department of Truth #1
 DTSTART;VALUE=DATE:20200930
 DTEND;VALUE=DATE:20201001
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-1
+END:VEVENT
+
+BEGIN:VEVENT
+UID:the-scorched-23
+SUMMARY:THE SCORCHED #23
+DTSTART;VALUE=DATE:20231018
+DTEND;VALUE=DATE:20231019
+URL:https://imagecomics.com/comics/releases/the-scorched-23
 END:VEVENT
 
 BEGIN:VEVENT
