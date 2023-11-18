@@ -18,6 +18,7 @@ emacs.el \
 package.yaml \
 Setup.hs \
 app/Main.hs \
+lib/ComiCal.hs \
 lib/ComiCal/App.hs
 
 srcs: ${SRCS}
