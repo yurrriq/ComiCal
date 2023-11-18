@@ -48,7 +48,7 @@ runComiCalApp getter publisher =
 
 -- |
 -- Module      : ComiCal.App
--- Copyright   : (c) Eric Bailey, 2019-2021
+-- Copyright   : (c) Eric Bailey, 2019-2023
 -- License     : MIT
 -- Maintainer  : eric@ericb.me
 -- Stability   : experimental
@@ -81,7 +81,7 @@ import Data.Text (Text)
 -- |
 -- Module      : ComiCal
 -- Description : The main API for ComiCal
--- Copyright   : (c) Eric Bailey, 2019-2021
+-- Copyright   : (c) Eric Bailey, 2019-2023
 -- License     : MIT
 -- Maintainer  : eric@ericb.me
 -- Stability   : stable
@@ -163,7 +163,7 @@ marvelIssues = runComiCalApp getIssues Marvel.publisher
 -- |
 -- Module      : Main
 -- Description : The main entrypoint for the ComiCal executable
--- Copyright   : (c) Eric Bailey, 2019-2021
+-- Copyright   : (c) Eric Bailey, 2019-2023
 -- License     : MIT
 -- Maintainer  : eric@ericb.me
 -- Stability   : stable
