@@ -24,23 +24,28 @@ publisher =
         Scraper
           { partitionReleases = \cursor ->
               cursor
-                $// element "div" >=> attributeIs "class" "JCMultiRow  JCMultiRow-comic_issue"
-                &// element "div" >=> attributeIs "class" "row-item-text",
+                $// element "div"
+                >=> attributeIs "class" "JCMultiRow  JCMultiRow-comic_issue"
+                &// element "div"
+                >=> attributeIs "class" "row-item-text",
             parseTitle = \cursor ->
               head . T.splitOn " | " . head $
                 cursor
                   $// (element "meta" >=> attributeIs "property" "og:title")
-                  &| head . attribute "content",
+                  &| head
+                  . attribute "content",
             parseReleaseTitle = \cursor ->
               T.strip . head $
                 cursor
                   $// element "h5"
-                  &// element "a" >=> attributeIs "class" "meta-title"
+                  &// element "a"
+                  >=> attributeIs "class" "meta-title"
                   &/ content,
             parseReleaseDate = \cursor ->
               parseTimeM True defaultTimeLocale "%B %e, %Y" . T.unpack . last $
                 cursor
-                  $// element "div" >=> attributeIs "class" "featured-item-meta"
+                  $// element "div"
+                  >=> attributeIs "class" "featured-item-meta"
                   &/ element "div"
                   &/ content
           },

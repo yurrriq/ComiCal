@@ -32,7 +32,7 @@ theme.
               indent-tabs-mode nil
               inhibit-splash-screen t)
 
-(set-face-attribute 'default nil :family "Iosevka" :height 100)
+(set-face-attribute 'default nil :family "Iosevka Nerd Font Mono" :height 100)
 
 (load-theme 'wombat)
 @

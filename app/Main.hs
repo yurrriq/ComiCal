@@ -27,9 +27,9 @@ main =
     let pull = mapM . (fmap ComiCal.mkCalendar .)
     print . foldr1 (<>)
       =<< pull ComiCal.dcIssues (dcIssues pullList)
-      <> pull ComiCal.imageCollections (imageCollections pullList)
-      <> pull ComiCal.imageIssues (imageIssues pullList)
-      <> pull ComiCal.marvelIssues (marvelIssues pullList)
+        <> pull ComiCal.imageCollections (imageCollections pullList)
+        <> pull ComiCal.imageIssues (imageIssues pullList)
+        <> pull ComiCal.marvelIssues (marvelIssues pullList)
 
 data AppMode
   = FromFile FilePath
@@ -47,7 +47,7 @@ mkAppMode = FromFile <$> config <|> FromFlags <$> fromFlags
   where
     config =
       strOption
-        ( long "pull-list" <> short 'p'
+        ( (long "pull-list" <> short 'p')
             <> metavar "PULL_LIST"
             <> help "Pull list file (JSON)"
         )
@@ -62,38 +62,38 @@ fromFlags =
               <> help "Track collected editions of DC comics"
           )
       )
-      <*> many
-        ( strOption
-            ( long "dc-issues"
-                <> metavar "SLUG"
-                <> help "Track single issues of DC comics"
-            )
-        )
-      <*> many
-        ( strOption
-            ( long "image-collections"
-                <> metavar "SLUG"
-                <> help "Track collected editions of Image comics"
-            )
-        )
-      <*> many
-        ( strOption
-            ( long "image-issues"
-                <> metavar "SLUG"
-                <> help "Track single issues of Image comics"
-            )
-        )
-      <*> many
-        ( strOption
-            ( long "marvel-collections"
-                <> metavar "SLUG"
-                <> help "Track collected editions of Marvel comics"
-            )
-        )
-      <*> many
-        ( strOption
-            ( long "marvel-issues"
-                <> metavar "SLUG"
-                <> help "Track single issues of Marvel comics"
-            )
-        )
+    <*> many
+      ( strOption
+          ( long "dc-issues"
+              <> metavar "SLUG"
+              <> help "Track single issues of DC comics"
+          )
+      )
+    <*> many
+      ( strOption
+          ( long "image-collections"
+              <> metavar "SLUG"
+              <> help "Track collected editions of Image comics"
+          )
+      )
+    <*> many
+      ( strOption
+          ( long "image-issues"
+              <> metavar "SLUG"
+              <> help "Track single issues of Image comics"
+          )
+      )
+    <*> many
+      ( strOption
+          ( long "marvel-collections"
+              <> metavar "SLUG"
+              <> help "Track collected editions of Marvel comics"
+          )
+      )
+    <*> many
+      ( strOption
+          ( long "marvel-issues"
+              <> metavar "SLUG"
+              <> help "Track single issues of Marvel comics"
+          )
+      )
