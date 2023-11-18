@@ -9,55 +9,71 @@
       };
       url = "github:nix-community/emacs-overlay";
     };
+    flake-parts.url = "github:hercules-ci/flake-parts";
     flake-utils.url = "github:numtide/flake-utils";
-    nixpkgs.url = "github:nixos/nixpkgs/release-22.11";
+    nixpkgs.url = "github:nixos/nixpkgs/release-23.05";
+    pre-commit-hooks-nix = {
+      inputs = {
+        flake-utils.follows = "flake-utils";
+        nixpkgs.follows = "nixpkgs";
+      };
+      url = "github:cachix/pre-commit-hooks.nix";
+    };
   };
 
-  outputs = { self, emacs-overlay, flake-utils, nixpkgs }:
-    {
-      overlays = {
-        default = nixpkgs.lib.composeManyExtensions
-          (nixpkgs.lib.attrValues
-            (nixpkgs.lib.filterAttrs (n: _: n != "default") self.overlays));
+  outputs = inputs@{ self, emacs-overlay, flake-utils, nixpkgs, ... }:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        inputs.pre-commit-hooks-nix.flakeModule
+      ];
 
-        haskellPackages = final: prev: {
-          haskellPackages = prev.haskellPackages.override {
-            overrides = hfinal: hprev: {
-              ComiCal = hprev.callCabal2nix "ComiCal" self { };
+      flake = {
+        overlays = {
+          default =
+            nixpkgs.lib.composeManyExtensions
+              (nixpkgs.lib.attrValues
+                (nixpkgs.lib.filterAttrs
+                  (n: _: n != "default")
+                  self.overlays));
+
+          myEmacs = nixpkgs.lib.composeExtensions emacs-overlay.overlay (final: prev: {
+            myEmacs = prev.emacsWithPackagesFromUsePackage {
+              alwaysEnsure = true;
+              config = ./emacs.el;
             };
-          };
+          });
         };
-        myEmacs = nixpkgs.lib.composeExtensions emacs-overlay.overlay (final: prev: {
-          myEmacs = prev.emacsWithPackagesFromUsePackage {
-            alwaysEnsure = true;
-            config = ./emacs.el;
-          };
-        });
       };
-    } // flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
-      let
-        pkgs = import nixpkgs {
+
+      systems = [
+        "x86_64-linux"
+      ];
+
+      perSystem = { config, lib, pkgs, self', system, ... }: {
+        _module.args.pkgs = import nixpkgs {
           overlays = [ self.overlays.default ];
           inherit system;
         };
-      in
-      {
+
         apps = {
           ComiCal = flake-utils.lib.mkApp {
-            drv = pkgs.haskell.lib.justStaticExecutables self.packages.${system}.ComiCal;
+            drv = pkgs.haskell.lib.justStaticExecutables self'.packages.ComiCal;
           };
-          default = self.apps.${system}.ComiCal;
+          default = self'.apps.ComiCal;
         };
-        packages = {
-          inherit (pkgs.haskellPackages) ComiCal;
-          default = self.packages.${system}.ComiCal;
-        };
+
         devShells.default = pkgs.mkShell {
           FONTCONFIG_FILE = pkgs.makeFontsConf {
             fontDirectories = [ pkgs.iosevka ];
           };
 
-          buildInputs = with pkgs; [
+          inputsFrom = [
+            # TODO: make this its own chunk and describe it
+            self'.packages.ComiCal.env
+            config.pre-commit.devShell
+          ];
+
+          nativeBuildInputs = with pkgs; [
             cabal-install
             haskellPackages.pointfree
             myEmacs
@@ -96,13 +112,38 @@
             )
             python3Packages.pywatchman
             semver-tool
-            nixpkgs-fmt
-            pre-commit
-            haskellPackages.ormolu
-            hlint
-            shellcheck
-            which
-          ] ++ self.packages.${system}.ComiCal.env.nativeBuildInputs;
+          ];
         };
-      });
+
+        packages = {
+          ComiCal = pkgs.haskellPackages.callCabal2nix "ComiCal" self { };
+          default = self'.packages.ComiCal;
+        };
+
+        pre-commit.settings = {
+          hooks = {
+            deadnix.enable = true;
+            hlint.enable = true;
+            nixpkgs-fmt.enable = true;
+            ormolu.enable = true;
+            # TODO: create PR to add noCabal
+            ormolu.entry =
+              let
+                inherit (config.pre-commit.settings) settings;
+                extensions =
+                  lib.escapeShellArgs (lib.concatMap (ext: [ "--ghc-opt" "-X${ext}" ]) settings.ormolu.defaultExtensions);
+                noCabal = "--no-cabal";
+              in
+              lib.mkForce "${pkgs.ormolu}/bin/ormolu --mode inplace ${extensions} ${noCabal}";
+          };
+          settings = {
+            deadnix.noLambdaArg = true;
+            ormolu.defaultExtensions = [
+              "OverloadedStrings"
+              "TemplateHaskell"
+            ];
+          };
+        };
+      };
+    };
 }

@@ -30,7 +30,8 @@ publisher =
               last . T.splitOn " | " . head $
                 cursor
                   $// (element "meta" >=> attributeIs "property" "og:title")
-                  &| head . attribute "content",
+                  &| head
+                  . attribute "content",
             parseReleaseTitle = \cursor ->
               head $
                 cursor
@@ -40,7 +41,8 @@ publisher =
             parseReleaseDate = \cursor ->
               parseTimeM True defaultTimeLocale "%b %e, %Y" . T.unpack . head $
                 cursor
-                  $// element "span" >=> attributeIs "class" "date"
+                  $// element "span"
+                  >=> attributeIs "class" "date"
                   &/ content
           },
       getCollections =

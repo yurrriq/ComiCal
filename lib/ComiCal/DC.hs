@@ -27,16 +27,18 @@ publisher =
               filter (not . null . ($// element "div")) $
                 cursor
                   $// element "tbody"
-                    &// element "td",
+                  &// element "td",
             parseTitle = \cursor ->
               head $
                 cursor
                   $// (element "meta" >=> attributeIs "property" "og:title")
-                  &| head . attribute "content",
+                  &| head
+                  . attribute "content",
             parseReleaseTitle = \cursor ->
               head $
                 cursor
-                  $// element "div" >=> attributeIs "class" "views-field views-field-title"
+                  $// element "div"
+                  >=> attributeIs "class" "views-field views-field-title"
                   &// element "span"
                   &// content,
             parseReleaseDate = \cursor ->

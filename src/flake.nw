@@ -15,19 +15,35 @@ addition to the Nix ecosystem.\todor{Describe flakes a bit, preferably using a
     <<inputs>>
   };
 
-  outputs = { self, emacs-overlay, flake-utils, nixpkgs }:
-    {
-      <<Top-level outputs>>
-    } // flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
-      let
-        pkgs = import nixpkgs {
-          overlays = [ self.overlay ];
+  outputs = inputs@{ self, emacs-overlay, flake-utils, nixpkgs, ... }:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        <<import pre-commit-hooks-nix>>
+      ];
+
+      flake = {
+        <<Top-level outputs>>
+      };
+
+      systems = [
+        "x86_64-linux"
+      ];
+
+      perSystem = { config, lib, pkgs, self', system, ... }: {
+        _module.args.pkgs = import nixpkgs {
+          overlays = [ self.overlays.default ];
           inherit system;
         };
-      in
-      {
-        <<Per-system outputs>>
-      });
+
+        <<apps>>
+
+        <<devShells>>
+
+        <<packages>>
+
+        <<Configure pre-commit hooks>>
+      };
+    };
 }
 @
 
@@ -43,7 +59,19 @@ which generates an Emacs closure from an Emacs config file, by way of
 \hyperref[sec:emacs]{the Emacs section} on page~\pageref{sec:emacs} for usage.
 
 <<inputs>>=
-emacs-overlay.url = "github:nix-community/emacs-overlay";
+emacs-overlay = {
+  inputs = {
+    flake-utils.follows = "flake-utils";
+    nixpkgs.follows = "nixpkgs";
+  };
+  url = "github:nix-community/emacs-overlay";
+};
+@
+
+\todoo{Describe flake-parts}
+
+<<inputs>>=
+flake-parts.url = "github:hercules-ci/flake-parts";
 @
 
 \hrefootnote{https://github.com/numtide/flake-utils}{\nix{flake-utils}}
@@ -60,14 +88,60 @@ flake-utils.url = "github:numtide/flake-utils";
 @
 
 Pin a version, specifically
-\hrefootnote{https://nixos.org/blog/announcements.html\#nixos-22.05}{the latest
+\hrefootnote{https://nixos.org/blog/announcements.html\#nixos-23.05}{the latest
   stable release}, of \hrefootnote{https://github.com/NixOS/nixpkgs}{the Nix
   package collection} to ensure reproducibility.
 
 <<inputs>>=
-nixpkgs.url = "github:nixos/nixpkgs/release-22.05";
+nixpkgs.url = "github:nixos/nixpkgs/release-23.05";
 @
 
+\todoo{Describe pre-commit-hooks.nix}
+
+<<inputs>>=
+pre-commit-hooks-nix = {
+  inputs = {
+    flake-utils.follows = "flake-utils";
+    nixpkgs.follows = "nixpkgs";
+  };
+  url = "github:cachix/pre-commit-hooks.nix";
+};
+@
+
+<<import pre-commit-hooks-nix>>=
+inputs.pre-commit-hooks-nix.flakeModule
+@
+
+<<inherit from the pre-commit devShell>>=
+config.pre-commit.devShell
+@
+
+<<Configure pre-commit hooks>>=
+pre-commit.settings = {
+  hooks = {
+    deadnix.enable = true;
+    hlint.enable = true;
+    nixpkgs-fmt.enable = true;
+    ormolu.enable = true;
+    # TODO: create PR to add noCabal
+    ormolu.entry =
+      let
+        inherit (config.pre-commit.settings) settings;
+        extensions =
+          lib.escapeShellArgs (lib.concatMap (ext: [ "--ghc-opt" "-X${ext}" ]) settings.ormolu.defaultExtensions);
+        noCabal = "--no-cabal";
+      in
+      lib.mkForce "${pkgs.ormolu}/bin/ormolu --mode inplace ${extensions} ${noCabal}";
+  };
+  settings = {
+    deadnix.noLambdaArg = true;
+    ormolu.defaultExtensions = [
+      "OverloadedStrings"
+      "TemplateHaskell"
+    ];
+  };
+};
+@
 
 \subsection{Outputs}
 \label{subsec:flake-outputs}
@@ -77,36 +151,17 @@ Use
 to compose all the [[<<overlays>>]] into one.
 
 <<Top-level outputs>>=
-overlay = nixpkgs.lib.composeManyExtensions (nixpkgs.lib.attrValues self.overlays);
-
 overlays = {
-  <<haskellPackages overlay>>
+  default =
+    nixpkgs.lib.composeManyExtensions
+      (nixpkgs.lib.attrValues
+        (nixpkgs.lib.filterAttrs
+          (n: _: n != "default")
+          self.overlays));
+
   <<myEmacs overlay>>
 };
 @
-
-Define the \nix{haskellPackages} overlay\todor{glossary}, which overrides
-\nix{haskellPackages} to include ComiCal.
-
-<<haskellPackages overlay>>=
-haskellPackages = final: prev: {
-  haskellPackages = prev.haskellPackages.override {
-    overrides = hfinal: hprev: {
-      ComiCal = hprev.<<build ComiCal using cabal2nix>>
-    };
-  };
-};
-@
-
-Within that overlay\todor{glossary}, [[<<build ComiCal using cabal2nix>>]]%
-\footnote{\url{https://github.com/NixOS/cabal2nix}}.
-
-<<build ComiCal using cabal2nix>>=
-callCabal2nix "ComiCal" self { };
-@
-\marginnote{%
-  \nix{self} here refers to this flake.
-}
 
 Build \hrefootnote{https://www.gnu.org/software/emacs/}{Emacs} with a
 deterministic package set.  See page~\pageref{sec:emacs} for the \nix{config}.
@@ -122,25 +177,48 @@ myEmacs = nixpkgs.lib.composeExtensions emacs-overlay.overlay (final: prev: {
 
 Define the ComiCal app and package, and make them the defaults.
 
-<<Per-system outputs>>=
-apps.ComiCal = flake-utils.lib.mkApp {
-  drv = pkgs.haskell.lib.justStaticExecutables self.defaultPackage.${system};
+<<apps>>=
+apps = {
+  ComiCal = flake-utils.lib.mkApp {
+    drv = pkgs.haskell.lib.justStaticExecutables self'.packages.ComiCal;
+  };
+  default = self'.apps.ComiCal;
 };
-defaultApp = self.apps.${system}.ComiCal;
-packages = { inherit (pkgs.haskellPackages) ComiCal; };
-defaultPackage = self.packages.${system}.ComiCal;
+@
+
+[[<<Build ComiCal using cabal2nix>>]]%
+\footnote{\url{https://github.com/NixOS/cabal2nix}}.
+
+<<Build ComiCal using cabal2nix>>=
+pkgs.haskellPackages.callCabal2nix "ComiCal" self { };
+@
+\marginnote{%
+  \nix{self} here refers to this flake.
+}
+
+<<packages>>=
+packages = {
+  ComiCal = <<Build ComiCal using cabal2nix>>
+  default = self'.packages.ComiCal;
+};
 @
 
 Define the default \nix{devShell}, which includes all the [[<<tools>>]]
 necessary to build the binary, Haskell documentation, and this PDF.
 
-<<Per-system outputs>>=
-devShell = pkgs.mkShell {
+<<devShells>>=
+devShells.default = pkgs.mkShell {
   <<fontconfig>>
 
-  buildInputs = with pkgs; [
+  inputsFrom = [
+    # TODO: make this its own chunk and describe it
+    self'.packages.ComiCal.env
+    <<inherit from the pre-commit devShell>>
+  ];
+
+  nativeBuildInputs = with pkgs; [
     <<tools>>
-  ] ++ self.defaultPackage.${system}.env.nativeBuildInputs;
+  ];
 };
 @
 
@@ -178,7 +256,7 @@ necessary packages via
 
 <<tools>>=
 noweb
-pythonPackages.pygments
+python3Packages.pygments
 (
   texlive.combine {
     inherit (texlive) scheme-small;
@@ -212,19 +290,8 @@ pythonPackages.pygments
 \todoo{Describe these tools}
 
 <<tools>>=
-pythonPackages.pywatchman
+python3Packages.pywatchman
 semver-tool
-@
-
-\todoo{Describe the pre-commit config}
-
-<<tools>>=
-nixpkgs-fmt
-pre-commit
-haskellPackages.ormolu
-hlint
-shellcheck
-which
 @
 
 Last, but not least, configure my preferred font,
