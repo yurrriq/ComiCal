@@ -112,6 +112,8 @@
             )
             python3Packages.pywatchman
             semver-tool
+            coreutils
+            perl
           ];
         };
 
@@ -124,6 +126,25 @@
           hooks = {
             deadnix.enable = true;
             hlint.enable = true;
+            make-srcs = {
+              always_run = true;
+              description = "Ensure literate sources are tangled";
+              enable = true;
+              entry =
+                let
+                  make-srcs = pkgs.writeShellApplication {
+                    name = "make-srcs";
+                    runtimeInputs = with pkgs; [
+                      coreutils
+                      gnumake
+                      noweb
+                      perl
+                    ];
+                    text = "make srcs";
+                  };
+                in
+                "${make-srcs}/bin/make-srcs";
+            };
             nixpkgs-fmt.enable = true;
             ormolu.enable = true;
             # TODO: create PR to add noCabal

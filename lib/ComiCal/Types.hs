@@ -5,7 +5,7 @@
 
 -- |
 -- Module      : ComiCal.Types
--- Copyright   : (c) Eric Bailey, 2019-2021
+-- Copyright   : (c) Eric Bailey, 2019-2023
 -- License     : MIT
 -- Maintainer  : eric@ericb.me
 -- Stability   : experimental
@@ -97,7 +97,7 @@ instance Show Series where
       (series ^. title)
       (length (series ^. releases))
 
--- | A calender 'Event' represents a 'Release' date.
+-- | A calendar 'Event' represents a 'Release' date.
 data Event = Event
   { _eventDtstamp :: Day,
     _eventUid :: Text,

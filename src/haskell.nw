@@ -1,5 +1,281 @@
 \section{Haskell}
 
+\subsection{The ComiCal.Types module}
+
+Define a record type [[Event]] to hold a timetstamp UID, summary, and \hs{URI}.
+
+<<Define the Event and Calendar types>>=
+-- | A calendar 'Event' represents a 'Release' date.
+data Event = Event
+  { _eventDtstamp :: Day,
+    _eventUid :: Text,
+    _eventSummary :: Text,
+    _eventUri :: URI
+  }
+  deriving (Eq)
+
+@ %def Event
+
+Build read-only \hrefootnote{https://hackage.haskell.org/package/lens}{lenses},
+i.e. \hs{Fold}s and \hs{Getters}, for [[Event]]s.
+
+<<Define the Event and Calendar types>>=
+makeLensesWith (defaultFieldRules & generateUpdateableOptics .~ False) ''Event
+
+@ %def dtstamp
+@ %def uid
+@ %def summary
+@ %def uri
+
+Define the \hs{Show} instance for [[Event]].
+
+<<Define the Event and Calendar types>>=
+instance Show Event where
+  show event =
+    unlines
+      [ "BEGIN:VEVENT",
+        printf "UID:%s" (event ^. uid),
+        printf "SUMMARY:%s" (event ^. summary),
+        printf "DTSTART;VALUE=DATE:%s" $ formatDay time,
+        printf "DTEND;VALUE=DATE:%s" $ formatDay (addUTCTime nominalDay time),
+        printf "URL:%s" (URI.render (event ^. uri)),
+        "END:VEVENT"
+      ]
+    where
+      formatDay :: UTCTime -> String
+      formatDay = formatTime defaultTimeLocale "%Y%m%d"
+      time = UTCTime (event ^. dtstamp) (secondsToDiffTime 0)
+
+@
+
+Define a record type [[Calendar]] to hold a name and a \hs{NonEmpty} list of
+[[Event]]s.
+
+<<Define the Event and Calendar types>>=
+-- | A 'Calendar' is a nonempty collection of 'Event's.
+data Calendar = Calendar
+  { _calendarName :: Text,
+    _calendarEvents :: NE.NonEmpty Event
+  }
+  deriving (Eq)
+
+@ %def Calendar
+
+Generate overloaded field accessors for [[Calendar]].
+
+<<Define the Event and Calendar types>>=
+makeFields ''Calendar
+
+@ %def name
+@ %def events
+
+Define a \hs{Semigroup} instance for [[Calendar]] where the binary operation
+concatenates [[name]]s (comma-separated) as well as [[events]].
+
+<<Define the Event and Calendar types>>=
+instance Semigroup Calendar where
+  a <> b = Calendar ((a ^. name) <> ", " <> (b ^. name)) (a ^. events <> b ^. events)
+
+@
+
+Define the \hs{Show} instance [[Calendar]].
+
+<<Define the Event and Calendar types>>=
+instance Show Calendar where
+  show cal =
+    unlines $
+      [ "BEGIN:VCALENDAR",
+        "PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN",
+        "VERSION:2.0",
+        printf "X-WR-CALNAME:%s" (cal ^. name)
+      ]
+        <> NE.toList (show <$> cal ^. events)
+        <> ["END:VCALENDAR"]
+@
+
+Define a record type [[Release]] to hold a slug, title, maybe a number, a
+\hs{URI}, and date.
+
+<<Define the Release and Series types>>=
+-- | A 'Release' represents a single issue or a trade paperback.
+data Release = Release
+  { _releaseSlug :: Text,
+    _releaseTitle :: Text,
+    _releaseNumber :: Maybe Int,
+    _releaseUri :: URI,
+    _releaseDate :: Day
+  }
+  deriving (Eq)
+
+@
+
+Build \hs{Fold}s and \hs{Getters}, for [[Event]]s
+
+<<Define the Release and Series types>>=
+makeLensesWith (defaultFieldRules & generateUpdateableOptics .~ False) ''Release
+
+@
+
+Define the \hs{Show} instance for [[Release]], which prints the [[title]] and
+[[release]] [[date]].
+
+<<Define the Release and Series types>>=
+instance Show Release where
+  show release = printf "%s on %s" (T.unpack (release ^. title)) (show (release ^. date))
+
+@
+
+Define a record type [[Series]] to hold a title, slug, \hs{URI}, and a
+\hs{NonEmpty} list of [[Release]]s.
+
+<<Define the Release and Series types>>=
+-- | A 'Series' is a collection of 'Release's.
+data Series = Series
+  { _seriesTitle :: Text,
+    _seriesSlug :: Text,
+    _seriesUri :: URI,
+    _seriesReleases :: NE.NonEmpty Release
+  }
+  deriving (Eq)
+
+@
+
+<<Define the Release and Series types>>=
+makeLensesWith (defaultFieldRules & generateUpdateableOptics .~ False) ''Series
+
+@
+
+Define the \hs{Show} instance for [[Series]], which prints the [[title]] and
+number of [[releases]].
+
+<<Define the Release and Series types>>=
+instance Show Series where
+  show series =
+    printf
+      "%s (%d releases)"
+      (series ^. title)
+      (length (series ^. releases))
+@
+
+<<Define the Scraper type>>=
+data Scraper = Scraper
+  { partitionReleases :: Cursor -> [Cursor],
+    parseTitle :: Cursor -> Text,
+    parseReleaseTitle :: Cursor -> Text,
+    parseReleaseDate :: Cursor -> Maybe Day
+  }
+@
+
+<<Define the PullList type>>=
+data PullList = PullList
+  { dcCollections :: [Text],
+    dcIssues :: [Text],
+    imageCollections :: [Text],
+    imageIssues :: [Text],
+    marvelCollections :: [Text],
+    marvelIssues :: [Text]
+  }
+  deriving (Show, Generic)
+
+@
+
+<<Define the PullList type>>=
+instance FromJSON PullList where
+  parseJSON (Object v) =
+    PullList
+      <$> maybeSlugs "dcCollections"
+      <*> maybeSlugs "dcIssues"
+      <*> maybeSlugs "imageCollections"
+      <*> maybeSlugs "imageIssues"
+      <*> maybeSlugs "marvelCollections"
+      <*> maybeSlugs "marvelIssues"
+    where
+      maybeSlugs key = T.pack <$$> v .: key <|> pure []
+  parseJSON invalid =
+    prependFailure
+      "parsing ComiCalConfig failed, "
+      (typeMismatch "Object" invalid)
+@
+
+<<lib/ComiCal/Types.hs>>=
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE FunctionalDependencies #-}
+
+-- |
+-- Module      : ComiCal.Types
+-- Copyright   : (c) Eric Bailey, 2019-2023
+-- License     : MIT
+-- Maintainer  : eric@ericb.me
+-- Stability   : experimental
+-- Portability : POSIX
+module ComiCal.Types
+  ( Release (Release),
+    number,
+    Series (Series),
+    title,
+    releases,
+    Event (Event),
+    dtstamp,
+    uid,
+    summary,
+    Calendar (Calendar),
+    name,
+    events,
+    HasDate,
+    date,
+    HasSlug,
+    slug,
+    HasUri,
+    uri,
+    Scraper (..),
+    PullList (..),
+  )
+where
+
+import Control.Applicative ((<|>))
+import Control.Lens
+  ( defaultFieldRules,
+    generateUpdateableOptics,
+    makeFields,
+    makeLensesWith,
+    (&),
+    (.~),
+    (^.),
+  )
+import Data.Aeson.Types hiding (Series)
+import Data.Functor.Syntax ((<$$>))
+import qualified Data.List.NonEmpty as NE
+import Data.Text (Text)
+import qualified Data.Text as T
+import Data.Time.Compat
+  ( Day,
+    UTCTime (UTCTime),
+    addUTCTime,
+    defaultTimeLocale,
+    formatTime,
+    nominalDay,
+    secondsToDiffTime,
+  )
+import GHC.Generics
+import Text.Printf (printf)
+import Text.URI (URI)
+import qualified Text.URI as URI
+import Text.XML.Cursor
+
+@
+
+<<lib/ComiCal/Types.hs>>=
+<<Define the Release and Series types>>
+
+<<Define the Event and Calendar types>>
+
+<<Define the Scraper type>>
+
+<<Define the PullList type>>
+@
+
 \subsection{The ComiCal.App module}
 
 Define one of the fundamental data types to model a comic publisher. Each
@@ -157,6 +433,357 @@ marvelIssues :: Text -> IO Series
 marvelIssues = runComiCalApp getIssues Marvel.publisher
 @ %def marvelIssues
 
+\subsection{Handle DC comics}
+
+<<Define the Publisher for DC comics>>=
+publisher :: Publisher
+publisher =
+  Publisher
+    { scraper =
+        Scraper
+          { partitionReleases = \cursor ->
+              filter (not . null . ($// element "div")) $
+                cursor
+                  $// element "tbody"
+                  &// element "td",
+            parseTitle = \cursor ->
+              head $
+                cursor
+                  $// (element "meta" >=> attributeIs "property" "og:title")
+                  &| head
+                  . attribute "content",
+            parseReleaseTitle = \cursor ->
+              head $
+                cursor
+                  $// element "div"
+                  >=> attributeIs "class" "views-field views-field-title"
+                  &// element "span"
+                  &// content,
+            parseReleaseDate = \cursor ->
+              fmap (localDay . zonedTimeToLocalTime) . iso8601ParseM . T.unpack . head $
+                cursor
+                  $// element "span"
+                  >=> attributeIs "class" "date-display-single"
+                  >=> attribute "content"
+          },
+      getCollections = fail "Not yet implemented",
+      getIssues =
+        do
+          (seriesSlug, cfg) <- asks (second scraper)
+          issuesURI <-
+            mkURI $ "https://www.dccomics.com/comics/" <> urlEncode seriesSlug
+          tags <- getHttps issuesURI
+          Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags
+    }
+@
+
+\subsection{Handle Image comics}
+
+<<Define the scraper for Image comics>>=
+scraper =
+  Scraper
+    { partitionReleases = \cursor ->
+        cursor $// element "div" >=> attributeIs "class" "cell u-mb1",
+      parseTitle = \cursor ->
+        last . T.splitOn " | " . head $
+          cursor
+            $// (element "meta" >=> attributeIs "property" "og:title")
+            &| head
+            . attribute "content",
+      parseReleaseTitle = \cursor ->
+        head $
+          cursor
+            $// element "a"
+            &// element "span"
+            &/ content,
+      parseReleaseDate = \cursor ->
+        parseTimeM True defaultTimeLocale "%b %e, %Y" . T.unpack . head $
+          cursor
+            $// element "span"
+            >=> attributeIs "class" "date"
+            &/ content
+    }
+@
+
+<<Define the collections parser for Image comics>>=
+getCollections =
+  do
+    (seriesSlug, cfg) <- asks (second scraper)
+    collectionsURI <-
+      mkURI $
+        "https://imagecomics.com/comics/list/series/"
+          <> urlEncode seriesSlug
+          <> "/collected-editions"
+    tags <- getHttps collectionsURI
+    Series (parseTitle cfg tags) seriesSlug collectionsURI <$> parseReleases tags
+@
+
+<<Define the single issues parser for Image comics>>=
+getIssues =
+  do
+    (seriesSlug, cfg) <- asks (second scraper)
+    issuesURI <-
+      mkURI $
+        "https://imagecomics.com/comics/list/series/"
+          <> urlEncode seriesSlug
+          <> "/releases"
+    tags <- getHttps issuesURI
+    Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags
+@
+
+<<Define the Publisher for Image comics>>=
+publisher :: Publisher
+publisher =
+  Publisher
+    { <<Define the scraper for Image comics>>,
+      <<Define the collections parser for Image comics>>,
+      <<Define the single issues parser for Image comics>>
+    }
+@
+
+<<lib/ComiCal/Image.hs>>=
+{-# LANGUAGE DataKinds #-}
+
+-- |
+-- Module      : ComiCal.Image
+-- Copyright   : (c) Eric Bailey, 2019-2023
+-- License     : MIT
+-- Maintainer  : eric@ericb.me
+-- Stability   : experimental
+-- Portability : POSIX
+module ComiCal.Image (publisher) where
+
+import ComiCal.App (Publisher (..))
+import ComiCal.Types (Scraper (..), Series (..))
+import ComiCal.Util (getHttps, parseReleases, urlEncode)
+import Control.Arrow (second)
+import Control.Monad.Reader (asks)
+import qualified Data.Text as T
+import Data.Time.Compat (defaultTimeLocale, parseTimeM)
+import Text.URI (mkURI)
+import Text.XML.Cursor
+
+<<Define the Publisher for Image comics>>
+@
+
+\subsection{Handle Marvel comics}
+
+<<Define the Publisher for Marvel comics>>=
+publisher :: Publisher
+publisher =
+  Publisher
+    { scraper =
+        Scraper
+          { partitionReleases = \cursor ->
+              cursor
+                $// element "div"
+                >=> attributeIs "class" "JCMultiRow  JCMultiRow-comic_issue"
+                &// element "div"
+                >=> attributeIs "class" "row-item-text",
+            parseTitle = \cursor ->
+              head . T.splitOn " | " . head $
+                cursor
+                  $// (element "meta" >=> attributeIs "property" "og:title")
+                  &| head
+                  . attribute "content",
+            parseReleaseTitle = \cursor ->
+              T.strip . head $
+                cursor
+                  $// element "h5"
+                  &// element "a"
+                  >=> attributeIs "class" "meta-title"
+                  &/ content,
+            parseReleaseDate = \cursor ->
+              parseTimeM True defaultTimeLocale "%B %e, %Y" . T.unpack . last $
+                cursor
+                  $// element "div"
+                  >=> attributeIs "class" "featured-item-meta"
+                  &/ element "div"
+                  &/ content
+          },
+      getCollections = fail "Not yet implemented",
+      getIssues =
+        do
+          (seriesSlug, cfg) <- asks (second scraper)
+          issuesURI <-
+            mkURI $
+              "https://www.marvel.com/comics/series/"
+                <> seriesSlug
+          tags <- getHttps issuesURI
+          Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags
+    }
+@
+
+<<lib/ComiCal/Marvel.hs>>=
+-- |
+-- Module      : ComiCal.Marvel
+-- Copyright   : (c) Eric Bailey, 2019-2023
+-- License     : MIT
+-- Maintainer  : eric@ericb.me
+-- Stability   : experimental
+-- Portability : POSIX
+module ComiCal.Marvel (publisher) where
+
+import ComiCal.App (Publisher (..))
+import ComiCal.Types (Scraper (..), Series (..))
+import ComiCal.Util (getHttps, parseReleases)
+import Control.Arrow (second)
+import Control.Monad.Reader (asks)
+import qualified Data.Text as T
+import Data.Time.Compat (defaultTimeLocale, parseTimeM)
+import Text.URI (mkURI)
+import Text.XML.Cursor
+
+<<Define the Publisher for Marvel comics>>
+@
+
+<<lib/ComiCal/DC.hs>>=
+-- |
+-- Module      : ComiCal.DC
+-- Copyright   : (c) Eric Bailey, 2019-2023
+-- License     : MIT
+-- Maintainer  : eric@ericb.me
+-- Stability   : experimental
+-- Portability : POSIX
+module ComiCal.DC (publisher) where
+
+import ComiCal.App (Publisher (..))
+import ComiCal.Types (Scraper (..), Series (..))
+import ComiCal.Util (getHttps, parseReleases, urlEncode)
+import Control.Arrow (second)
+import Control.Monad.Reader (asks)
+import qualified Data.Text as T
+import Data.Time.Compat (localDay, zonedTimeToLocalTime)
+import Data.Time.Format.ISO8601.Compat (iso8601ParseM)
+import Text.URI (mkURI)
+import Text.XML.Cursor
+
+<<Define the Publisher for DC comics>>
+@
+
+\subsection{The ComiCal.Util module}
+
+<<Define helper functions to parse releases>>=
+parseReleases :: Cursor -> ComiCalApp (NE.NonEmpty Release)
+parseReleases cursor =
+  asks (partitionReleases . scraper . snd) <*> pure cursor
+    >>= fmap (NE.fromList . catMaybes)
+      . mapM parseRelease
+
+-- FIXME: This is messy and brittle.
+parseRelease :: Cursor -> ComiCalApp (Maybe Release)
+parseRelease cursor =
+  do
+    theURI <- (uriScheme .~ mkScheme "https") <$> parseReleaseURI cursor
+    let lastPath = views uriPath (unRText . last) theURI
+    (maybeReleaseNumber, finalTags) <- case parseReleaseNumber lastPath of
+      Nothing ->
+        pure (Nothing, cursor)
+      Just (Left n) ->
+        pure (Just n, cursor)
+      Just (Right n) ->
+        (Just n,) <$> getHttps theURI
+    theTitle <- asks (flip parseReleaseTitle cursor . scraper . snd)
+    maybeRelease <- mkRelease lastPath theTitle maybeReleaseNumber theURI finalTags
+    maybe
+      ($(logError) ("Failed to parse release from " <> render theURI))
+      $(logDebugSH)
+      maybeRelease
+    pure maybeRelease
+
+parseReleaseNumber :: Text -> Maybe (Either Int Int)
+parseReleaseNumber lastPath = (Left <$> go "-") <|> (Right <$> go "_")
+  where
+    go sep = readMaybe (T.unpack (last (T.splitOn sep lastPath)))
+
+newtype ComiCalException = NoParse Cursor
+  deriving (Show)
+
+instance Exception ComiCalException where
+  displayException (NoParse tags) = "Failed to parse tags: " <> show tags
+
+parseReleaseURI :: (MonadLogger m, MonadThrow m) => Cursor -> m URI
+parseReleaseURI cursor =
+  do
+    anchorTag <- headM (NoParse cursor) (cursor $// element "a")
+    -- FIXME: urlEncode path
+    mkURI (head (attribute "href" anchorTag))
+
+mkRelease :: Text -> Text -> Maybe Int -> URI -> Cursor -> ComiCalApp (Maybe Release)
+mkRelease lastPath theTitle maybeReleaseNumber theURI tags =
+  asks $
+    fmap (Release lastPath theTitle maybeReleaseNumber theURI)
+      . (flip parseReleaseDate tags . scraper . snd)
+
+throwInvalidUrlM :: MonadThrow m => String -> String -> m a
+throwInvalidUrlM url reason = throwM . VanillaHttpException $ InvalidUrlException url reason
+
+headM :: (MonadThrow m, Exception e) => e -> [a] -> m a
+headM e xs =
+  do
+    case listToMaybe xs of
+      Nothing -> throwM e
+      Just x -> pure x
+
+urlEncode :: Text -> Text
+urlEncode = TE.decodeUtf8 . HTTP.urlEncode False . TE.encodeUtf8
+@
+
+<<Define a helper function to fetch an HTTPS URL>>=
+getHttps :: (MonadIO m, MonadLogger m, MonadThrow m) => URI -> m Cursor
+getHttps theURI =
+  do
+    $(logDebug) $ "GET " <> render theURI
+    url <- maybe badURI (pure . fst) (useHttpsURI theURI)
+    res <- runReq defaultHttpConfig $ req GET url NoReqBody lbsResponse mempty
+    pure (fromDocument (parseLBS (responseBody res)))
+  where
+    badURI = throwInvalidUrlM (renderStr theURI) "Unable to construct Network.HTTP.Req.Url"
+@
+
+<<lib/ComiCal/Util.hs>>=
+{-# LANGUAGE TupleSections #-}
+
+-- |
+-- Module      : ComiCal.Util
+-- Copyright   : (c) Eric Bailey, 2019-2023
+-- License     : MIT
+-- Maintainer  : eric@ericb.me
+-- Stability   : experimental
+-- Portability : POSIX
+module ComiCal.Util
+  ( getHttps,
+    parseReleases,
+    urlEncode,
+  )
+where
+
+import ComiCal.App
+import ComiCal.Types
+import Control.Applicative ((<|>))
+import Control.Lens (views, (.~))
+import Control.Monad.Catch (Exception, MonadThrow, displayException, throwM)
+import Control.Monad.Logger
+import Control.Monad.Reader
+import qualified Data.List.NonEmpty as NE
+import Data.Maybe (catMaybes, listToMaybe)
+import Data.Text (Text)
+import qualified Data.Text as T
+import Data.Text.Encoding as TE
+import Network.HTTP.Client (HttpException (..))
+import Network.HTTP.Req
+import qualified Network.HTTP.Types.URI as HTTP
+import Text.HTML.DOM (parseLBS)
+import Text.Read (readMaybe)
+import Text.URI (URI, mkScheme, mkURI, render, renderStr, unRText)
+import Text.URI.Lens (uriPath, uriScheme)
+import Text.XML.Cursor
+
+<<Define a helper function to fetch an HTTPS URL>>
+
+<<Define helper functions to parse releases>>
+@
+
 \subsection{Main}
 
 <<app/Main.hs>>=
@@ -294,7 +921,7 @@ fromFlags =
       )
 @
 
-Parse the flags to configure the pull list, then pull it, and output a calender
+Parse the flags to configure the pull list, then pull it, and output a calendar
 in ICS format.
 
 <<main>>=
