@@ -74,7 +74,10 @@ concatenates [[name]]s (comma-separated) as well as [[events]].
 
 <<Define the Event and Calendar types>>=
 instance Semigroup Calendar where
-  a <> b = Calendar ((a ^. name) <> ", " <> (b ^. name)) (a ^. events <> b ^. events)
+  a <> b =
+    name <>~ ", " <> b ^. name $
+      events <>~ b ^. events $
+        a
 
 @
 
@@ -242,6 +245,7 @@ import Control.Lens
     makeLensesWith,
     (&),
     (.~),
+    (<>~),
     (^.),
   )
 import Data.Aeson.Types hiding (Series)

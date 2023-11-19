@@ -42,6 +42,7 @@ import Control.Lens
     makeLensesWith,
     (&),
     (.~),
+    (<>~),
     (^.),
   )
 import Data.Aeson.Types hiding (Series)
@@ -134,7 +135,10 @@ data Calendar = Calendar
 makeFields ''Calendar
 
 instance Semigroup Calendar where
-  a <> b = Calendar ((a ^. name) <> ", " <> (b ^. name)) (a ^. events <> b ^. events)
+  a <> b =
+    name <>~ ", " <> b ^. name $
+      events <>~ b ^. events $
+        a
 
 instance Show Calendar where
   show cal =
