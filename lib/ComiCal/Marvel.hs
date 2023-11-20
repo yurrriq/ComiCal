@@ -29,7 +29,7 @@ publisher =
                 &// element "div"
                 >=> attributeIs "class" "row-item-text",
             parseTitle = \cursor ->
-              head . T.splitOn " | " . head $
+              T.strip . head . T.splitOn " | " . head $
                 cursor
                   $// (element "meta" >=> attributeIs "property" "og:title")
                   &| head

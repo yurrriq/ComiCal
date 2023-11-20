@@ -29,13 +29,13 @@ publisher =
                   $// element "tbody"
                   &// element "td",
             parseTitle = \cursor ->
-              head $
+              T.strip . head $
                 cursor
                   $// (element "meta" >=> attributeIs "property" "og:title")
                   &| head
                   . attribute "content",
             parseReleaseTitle = \cursor ->
-              head $
+              T.strip . head $
                 cursor
                   $// element "div"
                   >=> attributeIs "class" "views-field views-field-title"

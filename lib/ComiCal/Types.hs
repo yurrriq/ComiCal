@@ -47,6 +47,7 @@ import Control.Lens
   )
 import Data.Aeson.Types hiding (Series)
 import Data.Functor.Syntax ((<$$>))
+import Data.List (intercalate)
 import qualified Data.List.NonEmpty as NE
 import Data.Text (Text)
 import qualified Data.Text as T
@@ -111,9 +112,11 @@ makeLensesWith (defaultFieldRules & generateUpdateableOptics .~ False) ''Event
 
 instance Show Event where
   show event =
-    unlines
+    intercalate
+      "\r\n"
       [ "BEGIN:VEVENT",
         printf "UID:%s" (event ^. uid),
+        printf "DTSTAMP:%s" (formatTime defaultTimeLocale "%Y%m%dT%H%M%S" time),
         printf "SUMMARY:%s" (event ^. summary),
         printf "DTSTART;VALUE=DATE:%s" $ formatDay time,
         printf "DTEND;VALUE=DATE:%s" $ formatDay (addUTCTime nominalDay time),
@@ -142,7 +145,7 @@ instance Semigroup Calendar where
 
 instance Show Calendar where
   show cal =
-    unlines $
+    intercalate "\r\n" $
       [ "BEGIN:VCALENDAR",
         "PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN",
         "VERSION:2.0",

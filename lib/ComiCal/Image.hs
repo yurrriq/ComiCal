@@ -27,13 +27,13 @@ publisher =
           { partitionReleases = \cursor ->
               cursor $// element "div" >=> attributeIs "class" "cell u-mb1",
             parseTitle = \cursor ->
-              last . T.splitOn " | " . head $
+              T.strip . last . T.splitOn " | " . head $
                 cursor
                   $// (element "meta" >=> attributeIs "property" "og:title")
                   &| head
                   . attribute "content",
             parseReleaseTitle = \cursor ->
-              head $
+              T.strip . head $
                 cursor
                   $// element "a"
                   &// element "span"

@@ -32,9 +32,11 @@ Define the \hs{Show} instance for [[Event]].
 <<Define the Event and Calendar types>>=
 instance Show Event where
   show event =
-    unlines
+    intercalate
+      "\r\n"
       [ "BEGIN:VEVENT",
         printf "UID:%s" (event ^. uid),
+        printf "DTSTAMP:%s" (formatTime defaultTimeLocale "%Y%m%dT%H%M%S" time),
         printf "SUMMARY:%s" (event ^. summary),
         printf "DTSTART;VALUE=DATE:%s" $ formatDay time,
         printf "DTEND;VALUE=DATE:%s" $ formatDay (addUTCTime nominalDay time),
@@ -86,7 +88,7 @@ Define the \hs{Show} instance [[Calendar]].
 <<Define the Event and Calendar types>>=
 instance Show Calendar where
   show cal =
-    unlines $
+    intercalate "\r\n" $
       [ "BEGIN:VCALENDAR",
         "PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN",
         "VERSION:2.0",
@@ -250,6 +252,7 @@ import Control.Lens
   )
 import Data.Aeson.Types hiding (Series)
 import Data.Functor.Syntax ((<$$>))
+import Data.List (intercalate)
 import qualified Data.List.NonEmpty as NE
 import Data.Text (Text)
 import qualified Data.Text as T
@@ -451,13 +454,13 @@ publisher =
                   $// element "tbody"
                   &// element "td",
             parseTitle = \cursor ->
-              head $
+              T.strip . head $
                 cursor
                   $// (element "meta" >=> attributeIs "property" "og:title")
                   &| head
                   . attribute "content",
             parseReleaseTitle = \cursor ->
-              head $
+              T.strip . head $
                 cursor
                   $// element "div"
                   >=> attributeIs "class" "views-field views-field-title"
@@ -489,13 +492,13 @@ scraper =
     { partitionReleases = \cursor ->
         cursor $// element "div" >=> attributeIs "class" "cell u-mb1",
       parseTitle = \cursor ->
-        last . T.splitOn " | " . head $
+        T.strip . last . T.splitOn " | " . head $
           cursor
             $// (element "meta" >=> attributeIs "property" "og:title")
             &| head
             . attribute "content",
       parseReleaseTitle = \cursor ->
-        head $
+        T.strip . head $
           cursor
             $// element "a"
             &// element "span"
@@ -585,7 +588,7 @@ publisher =
                 &// element "div"
                 >=> attributeIs "class" "row-item-text",
             parseTitle = \cursor ->
-              head . T.splitOn " | " . head $
+              T.strip . head . T.splitOn " | " . head $
                 cursor
                   $// (element "meta" >=> attributeIs "property" "og:title")
                   &| head
