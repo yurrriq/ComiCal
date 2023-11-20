@@ -45,6 +45,9 @@ getHttps theURI =
   where
     badURI = throwInvalidUrlM (renderStr theURI) "Unable to construct Network.HTTP.Req.Url"
 
+throwInvalidUrlM :: MonadThrow m => String -> String -> m a
+throwInvalidUrlM url reason = throwM . VanillaHttpException $ InvalidUrlException url reason
+
 parseReleases :: Cursor -> ComiCalApp (NE.NonEmpty Release)
 parseReleases cursor =
   asks (partitionReleases . scraper . snd) <*> pure cursor
@@ -95,9 +98,6 @@ mkRelease lastPath theTitle maybeReleaseNumber theURI tags =
   asks $
     fmap (Release lastPath theTitle maybeReleaseNumber theURI)
       . (flip parseReleaseDate tags . scraper . snd)
-
-throwInvalidUrlM :: MonadThrow m => String -> String -> m a
-throwInvalidUrlM url reason = throwM . VanillaHttpException $ InvalidUrlException url reason
 
 headM :: (MonadThrow m, Exception e) => e -> [a] -> m a
 headM e xs =

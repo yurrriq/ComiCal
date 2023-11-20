@@ -25,7 +25,7 @@ src/%.defs: src/%.nw
 src/all.defs: ${DEFS}
 	sort -u $^ ${cpif} $@
 
-docs/all.pdf: src/all.tex $(addsuffix .tex,$(basename ${NW_SRCS}))
+docs/all.pdf: src/all.tex $(addsuffix .tex,$(basename ${NW_SRCS})) VERSION
 	@ mkdir -p $(@D)
 	@ latexmk $(latexmk_flags) -outdir=$(CURDIR)/$(@D) $<
 	@ noindex src/all

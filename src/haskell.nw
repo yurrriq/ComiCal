@@ -27,7 +27,9 @@ makeLensesWith (defaultFieldRules & generateUpdateableOptics .~ False) ''Event
 @ %def summary
 @ %def uri
 
-Define the \hs{Show} instance for [[Event]].
+Define the \hs{Show} instance for [[Event]].  This loosely adheres to
+\hrefootnote{https://datatracker.ietf.org/doc/html/rfc5545\#section-3.6.1}{RFC
+  5545 Section 3.6.1}.
 
 <<Define the Event and Calendar types>>=
 instance Show Event where
@@ -83,7 +85,9 @@ instance Semigroup Calendar where
 
 @
 
-Define the \hs{Show} instance [[Calendar]].
+Define the \hs{Show} instance [[Calendar]].  This very loosely adheres to
+\hrefootnote{https://datatracker.ietf.org/doc/html/rfc5545\#section-3}{RFC 5455
+  Section 3}.
 
 <<Define the Event and Calendar types>>=
 instance Show Calendar where
@@ -112,7 +116,12 @@ data Release = Release
   }
   deriving (Eq)
 
-@
+@ %def Release
+@ %def slug
+@ %def title
+@ %def number
+@ %def uri
+@ %def date
 
 Build \hs{Fold}s and \hs{Getters}, for [[Event]]s
 
@@ -122,7 +131,7 @@ makeLensesWith (defaultFieldRules & generateUpdateableOptics .~ False) ''Release
 @
 
 Define the \hs{Show} instance for [[Release]], which prints the [[title]] and
-[[release]] [[date]].
+[[date]].
 
 <<Define the Release and Series types>>=
 instance Show Release where
@@ -143,7 +152,8 @@ data Series = Series
   }
   deriving (Eq)
 
-@
+@ %def Series
+@ %def releases
 
 <<Define the Release and Series types>>=
 makeLensesWith (defaultFieldRules & generateUpdateableOptics .~ False) ''Series
@@ -162,6 +172,8 @@ instance Show Series where
       (length (series ^. releases))
 @
 
+\todoo{Describe Scraper}
+
 <<Define the Scraper type>>=
 data Scraper = Scraper
   { partitionReleases :: Cursor -> [Cursor],
@@ -169,7 +181,9 @@ data Scraper = Scraper
     parseReleaseTitle :: Cursor -> Text,
     parseReleaseDate :: Cursor -> Maybe Day
   }
-@
+@ %def partitionReleases
+
+A [[PullList]] consists of various possibly empty lists of slugs.
 
 <<Define the PullList type>>=
 data PullList = PullList
@@ -182,7 +196,9 @@ data PullList = PullList
   }
   deriving (Show, Generic)
 
-@
+@ %def PullList
+
+A [[PullList]] can be deserialized from JSON.
 
 <<Define the PullList type>>=
 instance FromJSON PullList where
@@ -208,6 +224,9 @@ instance FromJSON PullList where
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE FunctionalDependencies #-}
 
+@
+
+<<lib/ComiCal/Types.hs>>=
 -- |
 -- Module      : ComiCal.Types
 -- Copyright   : (c) Eric Bailey, 2019-2023
@@ -215,6 +234,9 @@ instance FromJSON PullList where
 -- Maintainer  : eric@ericb.me
 -- Stability   : experimental
 -- Portability : POSIX
+@
+
+<<lib/ComiCal/Types.hs>>=
 module ComiCal.Types
   ( Release (Release),
     number,
@@ -239,6 +261,9 @@ module ComiCal.Types
   )
 where
 
+@
+
+<<lib/ComiCal/Types.hs>>=
 import Control.Applicative ((<|>))
 import Control.Lens
   ( defaultFieldRules,
@@ -442,46 +467,78 @@ marvelIssues = runComiCalApp getIssues Marvel.publisher
 
 \subsection{Handle DC comics}
 
+<<Define the single issues parser for DC comics>>=
+getIssues =
+  do
+    (seriesSlug, cfg) <- asks (second scraper)
+    issuesURI <-
+      mkURI $ "https://www.dccomics.com/comics/" <> urlEncode seriesSlug
+    tags <- getHttps issuesURI
+    Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags
+@
+
+<<Define the scraper for DC comics>>=
+scraper =
+  Scraper
+    { partitionReleases = \cursor ->
+        filter (not . null . ($// element "div")) $
+          cursor
+            $// element "tbody"
+            &// element "td",
+      parseTitle = \cursor ->
+        T.strip . head $
+          cursor
+            $// (element "meta" >=> attributeIs "property" "og:title")
+            &| head
+            . attribute "content",
+      parseReleaseTitle = \cursor ->
+        T.strip . head $
+          cursor
+            $// element "div"
+            >=> attributeIs "class" "views-field views-field-title"
+            &// element "span"
+            &// content,
+      parseReleaseDate = \cursor ->
+        fmap (localDay . zonedTimeToLocalTime) . iso8601ParseM . T.unpack . head $
+          cursor
+            $// element "span"
+            >=> attributeIs "class" "date-display-single"
+            >=> attribute "content"
+    }
+@
+
 <<Define the Publisher for DC comics>>=
 publisher :: Publisher
 publisher =
   Publisher
-    { scraper =
-        Scraper
-          { partitionReleases = \cursor ->
-              filter (not . null . ($// element "div")) $
-                cursor
-                  $// element "tbody"
-                  &// element "td",
-            parseTitle = \cursor ->
-              T.strip . head $
-                cursor
-                  $// (element "meta" >=> attributeIs "property" "og:title")
-                  &| head
-                  . attribute "content",
-            parseReleaseTitle = \cursor ->
-              T.strip . head $
-                cursor
-                  $// element "div"
-                  >=> attributeIs "class" "views-field views-field-title"
-                  &// element "span"
-                  &// content,
-            parseReleaseDate = \cursor ->
-              fmap (localDay . zonedTimeToLocalTime) . iso8601ParseM . T.unpack . head $
-                cursor
-                  $// element "span"
-                  >=> attributeIs "class" "date-display-single"
-                  >=> attribute "content"
-          },
+    { <<Define the scraper for DC comics>>,
       getCollections = fail "Not yet implemented",
-      getIssues =
-        do
-          (seriesSlug, cfg) <- asks (second scraper)
-          issuesURI <-
-            mkURI $ "https://www.dccomics.com/comics/" <> urlEncode seriesSlug
-          tags <- getHttps issuesURI
-          Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags
+      <<Define the single issues parser for DC comics>>
     }
+@ %def DC.publisher
+
+<<lib/ComiCal/DC.hs>>=
+-- |
+-- Module      : ComiCal.DC
+-- Copyright   : (c) Eric Bailey, 2019-2023
+-- License     : MIT
+-- Maintainer  : eric@ericb.me
+-- Stability   : experimental
+-- Portability : POSIX
+module ComiCal.DC (publisher) where
+
+import ComiCal.App (Publisher (..))
+import ComiCal.Types (Scraper (..), Series (..))
+import ComiCal.Util (getHttps, parseReleases, urlEncode)
+import Control.Arrow (second)
+import Control.Monad.Reader (asks)
+import qualified Data.Text as T
+import Data.Time.Compat (localDay, zonedTimeToLocalTime)
+import Data.Time.Format.ISO8601.Compat (iso8601ParseM)
+import Text.URI (mkURI)
+import Text.XML.Cursor
+
+<<Define the Publisher for DC comics>>
 @
 
 \subsection{Handle Image comics}
@@ -546,7 +603,7 @@ publisher =
       <<Define the collections parser for Image comics>>,
       <<Define the single issues parser for Image comics>>
     }
-@
+@ %def Image.publisher
 
 <<lib/ComiCal/Image.hs>>=
 {-# LANGUAGE DataKinds #-}
@@ -579,45 +636,53 @@ import Text.XML.Cursor
 publisher :: Publisher
 publisher =
   Publisher
-    { scraper =
-        Scraper
-          { partitionReleases = \cursor ->
-              cursor
-                $// element "div"
-                >=> attributeIs "class" "JCMultiRow  JCMultiRow-comic_issue"
-                &// element "div"
-                >=> attributeIs "class" "row-item-text",
-            parseTitle = \cursor ->
-              T.strip . head . T.splitOn " | " . head $
-                cursor
-                  $// (element "meta" >=> attributeIs "property" "og:title")
-                  &| head
-                  . attribute "content",
-            parseReleaseTitle = \cursor ->
-              T.strip . head $
-                cursor
-                  $// element "h5"
-                  &// element "a"
-                  >=> attributeIs "class" "meta-title"
-                  &/ content,
-            parseReleaseDate = \cursor ->
-              parseTimeM True defaultTimeLocale "%B %e, %Y" . T.unpack . last $
-                cursor
-                  $// element "div"
-                  >=> attributeIs "class" "featured-item-meta"
-                  &/ element "div"
-                  &/ content
-          },
+    { <<Define the scraper for Marvel comics>>,
       getCollections = fail "Not yet implemented",
-      getIssues =
-        do
-          (seriesSlug, cfg) <- asks (second scraper)
-          issuesURI <-
-            mkURI $
-              "https://www.marvel.com/comics/series/"
-                <> seriesSlug
-          tags <- getHttps issuesURI
-          Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags
+      <<Define the single issues parser for Marvel comics>>
+    }
+@ %def Marvel.publisher
+
+<<Define the single issues parser for Marvel comics>>=
+getIssues =
+  do
+    (seriesSlug, cfg) <- asks (second scraper)
+    issuesURI <-
+      mkURI $
+        "https://www.marvel.com/comics/series/"
+          <> seriesSlug
+    tags <- getHttps issuesURI
+    Series (parseTitle cfg tags) seriesSlug issuesURI <$> parseReleases tags
+@
+
+<<Define the scraper for Marvel comics>>=
+scraper =
+  Scraper
+    { partitionReleases = \cursor ->
+        cursor
+          $// element "div"
+          >=> attributeIs "class" "JCMultiRow  JCMultiRow-comic_issue"
+          &// element "div"
+          >=> attributeIs "class" "row-item-text",
+      parseTitle = \cursor ->
+        T.strip . head . T.splitOn " | " . head $
+          cursor
+            $// (element "meta" >=> attributeIs "property" "og:title")
+            &| head
+            . attribute "content",
+      parseReleaseTitle = \cursor ->
+        T.strip . head $
+          cursor
+            $// element "h5"
+            &// element "a"
+            >=> attributeIs "class" "meta-title"
+            &/ content,
+      parseReleaseDate = \cursor ->
+        parseTimeM True defaultTimeLocale "%B %e, %Y" . T.unpack . last $
+          cursor
+            $// element "div"
+            >=> attributeIs "class" "featured-item-meta"
+            &/ element "div"
+            &/ content
     }
 @
 
@@ -644,109 +709,8 @@ import Text.XML.Cursor
 <<Define the Publisher for Marvel comics>>
 @
 
-<<lib/ComiCal/DC.hs>>=
--- |
--- Module      : ComiCal.DC
--- Copyright   : (c) Eric Bailey, 2019-2023
--- License     : MIT
--- Maintainer  : eric@ericb.me
--- Stability   : experimental
--- Portability : POSIX
-module ComiCal.DC (publisher) where
-
-import ComiCal.App (Publisher (..))
-import ComiCal.Types (Scraper (..), Series (..))
-import ComiCal.Util (getHttps, parseReleases, urlEncode)
-import Control.Arrow (second)
-import Control.Monad.Reader (asks)
-import qualified Data.Text as T
-import Data.Time.Compat (localDay, zonedTimeToLocalTime)
-import Data.Time.Format.ISO8601.Compat (iso8601ParseM)
-import Text.URI (mkURI)
-import Text.XML.Cursor
-
-<<Define the Publisher for DC comics>>
-@
-
 \subsection{The ComiCal.Util module}
 
-<<Define helper functions to parse releases>>=
-parseReleases :: Cursor -> ComiCalApp (NE.NonEmpty Release)
-parseReleases cursor =
-  asks (partitionReleases . scraper . snd) <*> pure cursor
-    >>= fmap (NE.fromList . catMaybes)
-      . mapM parseRelease
-
--- FIXME: This is messy and brittle.
-parseRelease :: Cursor -> ComiCalApp (Maybe Release)
-parseRelease cursor =
-  do
-    theURI <- (uriScheme .~ mkScheme "https") <$> parseReleaseURI cursor
-    let lastPath = views uriPath (unRText . last) theURI
-    (maybeReleaseNumber, finalTags) <- case parseReleaseNumber lastPath of
-      Nothing ->
-        pure (Nothing, cursor)
-      Just (Left n) ->
-        pure (Just n, cursor)
-      Just (Right n) ->
-        (Just n,) <$> getHttps theURI
-    theTitle <- asks (flip parseReleaseTitle cursor . scraper . snd)
-    maybeRelease <- mkRelease lastPath theTitle maybeReleaseNumber theURI finalTags
-    maybe
-      ($(logError) ("Failed to parse release from " <> render theURI))
-      $(logDebugSH)
-      maybeRelease
-    pure maybeRelease
-
-parseReleaseNumber :: Text -> Maybe (Either Int Int)
-parseReleaseNumber lastPath = (Left <$> go "-") <|> (Right <$> go "_")
-  where
-    go sep = readMaybe (T.unpack (last (T.splitOn sep lastPath)))
-
-newtype ComiCalException = NoParse Cursor
-  deriving (Show)
-
-instance Exception ComiCalException where
-  displayException (NoParse tags) = "Failed to parse tags: " <> show tags
-
-parseReleaseURI :: (MonadLogger m, MonadThrow m) => Cursor -> m URI
-parseReleaseURI cursor =
-  do
-    anchorTag <- headM (NoParse cursor) (cursor $// element "a")
-    -- FIXME: urlEncode path
-    mkURI (head (attribute "href" anchorTag))
-
-mkRelease :: Text -> Text -> Maybe Int -> URI -> Cursor -> ComiCalApp (Maybe Release)
-mkRelease lastPath theTitle maybeReleaseNumber theURI tags =
-  asks $
-    fmap (Release lastPath theTitle maybeReleaseNumber theURI)
-      . (flip parseReleaseDate tags . scraper . snd)
-
-throwInvalidUrlM :: MonadThrow m => String -> String -> m a
-throwInvalidUrlM url reason = throwM . VanillaHttpException $ InvalidUrlException url reason
-
-headM :: (MonadThrow m, Exception e) => e -> [a] -> m a
-headM e xs =
-  do
-    case listToMaybe xs of
-      Nothing -> throwM e
-      Just x -> pure x
-
-urlEncode :: Text -> Text
-urlEncode = TE.decodeUtf8 . HTTP.urlEncode False . TE.encodeUtf8
-@
-
-<<Define a helper function to fetch an HTTPS URL>>=
-getHttps :: (MonadIO m, MonadLogger m, MonadThrow m) => URI -> m Cursor
-getHttps theURI =
-  do
-    $(logDebug) $ "GET " <> render theURI
-    url <- maybe badURI (pure . fst) (useHttpsURI theURI)
-    res <- runReq defaultHttpConfig $ req GET url NoReqBody lbsResponse mempty
-    pure (fromDocument (parseLBS (responseBody res)))
-  where
-    badURI = throwInvalidUrlM (renderStr theURI) "Unable to construct Network.HTTP.Req.Url"
-@
 
 <<lib/ComiCal/Util.hs>>=
 {-# LANGUAGE TupleSections #-}
@@ -765,6 +729,16 @@ module ComiCal.Util
   )
 where
 
+<<ComiCal.Util imports>>
+
+<<Define a helper function to fetch an HTTPS URL>>
+
+<<Define a helper function to parse releases>>
+
+<<Define a helper function to URL encode some Text>>
+@
+
+<<ComiCal.Util imports>>=
 import ComiCal.App
 import ComiCal.Types
 import Control.Applicative ((<|>))
@@ -785,10 +759,131 @@ import Text.Read (readMaybe)
 import Text.URI (URI, mkScheme, mkURI, render, renderStr, unRText)
 import Text.URI.Lens (uriPath, uriScheme)
 import Text.XML.Cursor
+@
 
-<<Define a helper function to fetch an HTTPS URL>>
+<<Define a helper function to fetch an HTTPS URL>>=
+getHttps :: (MonadIO m, MonadLogger m, MonadThrow m) => URI -> m Cursor
+getHttps theURI =
+  do
+    $(logDebug) $ "GET " <> render theURI
+    url <- maybe badURI (pure . fst) (useHttpsURI theURI)
+    res <- runReq defaultHttpConfig $ req GET url NoReqBody lbsResponse mempty
+    pure (fromDocument (parseLBS (responseBody res)))
+  where
+    badURI = throwInvalidUrlM (renderStr theURI) "Unable to construct Network.HTTP.Req.Url"
 
-<<Define helper functions to parse releases>>
+throwInvalidUrlM :: MonadThrow m => String -> String -> m a
+throwInvalidUrlM url reason = throwM . VanillaHttpException $ InvalidUrlException url reason
+@ %def getHttps
+
+<<Define a helper function to URL encode some Text>>=
+urlEncode :: Text -> Text
+urlEncode = TE.decodeUtf8 . HTTP.urlEncode False . TE.encodeUtf8
+@ %def urlEncode
+
+In a given [[ComiCalApp]] context, take a \hs{Cursor} and return a
+\hs{NonEmpty} list of [[Release]]s by calling the relevant [[partitionReleases]]
+function.
+
+<<Define a helper function to parse releases>>=
+parseReleases :: Cursor -> ComiCalApp (NE.NonEmpty Release)
+parseReleases cursor =
+  asks (partitionReleases . scraper . snd) <*> pure cursor
+    >>= fmap (NE.fromList . catMaybes)
+      . mapM parseRelease
+
+@ %def parseReleases
+
+In a given [[ComiCalApp]] context, try to parse a [[Release]].
+
+<<Define a helper function to parse releases>>=
+-- FIXME: This is messy and brittle.
+parseRelease :: Cursor -> ComiCalApp (Maybe Release)
+parseRelease cursor =
+  do
+    <<Extract the release URI>>
+    <<Try to extract a release number>>
+    <<Extract the release title>>
+    <<Build a Release or log an error>>
+
+@
+
+First, extract the [[Release]] URI.
+
+<<Extract the release URI>>=
+theURI <- (uriScheme .~ mkScheme "https") <$> parseReleaseURI cursor
+@
+
+Next, try to extract a release number from the last path of the URI.
+
+<<Try to extract a release number>>=
+let lastPath = views uriPath (unRText . last) theURI
+(maybeReleaseNumber, finalTags) <- case parseReleaseNumber lastPath of
+  Nothing ->
+    pure (Nothing, cursor)
+  Just (Left n) ->
+    pure (Just n, cursor)
+  Just (Right n) ->
+    (Just n,) <$> getHttps theURI
+@
+
+Then, extract the title via [[parseReleaseTitle]].
+
+<<Extract the release title>>=
+theTitle <- asks (flip parseReleaseTitle cursor . scraper . snd)
+@
+
+Finally, try to pull it all together, logging an error if something went wrong.
+
+<<Build a Release or log an error>>=
+maybeRelease <- mkRelease lastPath theTitle maybeReleaseNumber theURI finalTags
+maybe
+  ($(logError) ("Failed to parse release from " <> render theURI))
+  $(logDebugSH)
+  maybeRelease
+pure maybeRelease
+@
+
+<<Define a helper function to parse releases>>=
+parseReleaseNumber :: Text -> Maybe (Either Int Int)
+parseReleaseNumber lastPath = (Left <$> go "-") <|> (Right <$> go "_")
+  where
+    go sep = readMaybe (T.unpack (last (T.splitOn sep lastPath)))
+
+@
+
+<<Define a helper function to parse releases>>=
+newtype ComiCalException = NoParse Cursor
+  deriving (Show)
+
+instance Exception ComiCalException where
+  displayException (NoParse tags) = "Failed to parse tags: " <> show tags
+
+parseReleaseURI :: (MonadLogger m, MonadThrow m) => Cursor -> m URI
+parseReleaseURI cursor =
+  do
+    anchorTag <- headM (NoParse cursor) (cursor $// element "a")
+    -- FIXME: urlEncode path
+    mkURI (head (attribute "href" anchorTag))
+
+@
+
+<<Define a helper function to parse releases>>=
+mkRelease :: Text -> Text -> Maybe Int -> URI -> Cursor -> ComiCalApp (Maybe Release)
+mkRelease lastPath theTitle maybeReleaseNumber theURI tags =
+  asks $
+    fmap (Release lastPath theTitle maybeReleaseNumber theURI)
+      . (flip parseReleaseDate tags . scraper . snd)
+
+@ %def mkRelease
+
+<<Define a helper function to parse releases>>=
+headM :: (MonadThrow m, Exception e) => e -> [a] -> m a
+headM e xs =
+  do
+    case listToMaybe xs of
+      Nothing -> throwM e
+      Just x -> pure x
 @
 
 \subsection{Main}
@@ -977,8 +1072,9 @@ dependencies:
 - mtl
 @
 
-Use the OverloadedStrings extension by default, so as to avoid worrying about
-type annotations for string literals.
+Use the \hs{OverloadedStrings} extension by default, so as to avoid worrying
+about type annotations for string literals.  Use \hs{TemplateHaskell} for lenses
+and logging magic.
 
 <<package.yaml>>=
 default-extensions:
