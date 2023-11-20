@@ -102,7 +102,7 @@
                 inherit (texlive)
                   datetime
                   dirtytalk
-                  # fancyref
+                  fancyref
                   latexmk
                   minted
                   todonotes

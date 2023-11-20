@@ -19,6 +19,8 @@
 
 \usepackage{dirtytalk}
 
+\usepackage[english]{fancyref}
+
 \usepackage[outputdir=../docs]{minted}
 \usemintedstyle{tango}
 \setminted{baselinestretch=1,fontsize=\small,autogobble}
@@ -32,7 +34,6 @@
 \newmintinline[py]{python}{}
 \newmintinline[txt]{text}{}
 \newmintinline[yaml]{yaml}{}
-
 
 \makeatletter
 \newcommand\srclink{\@ifstar{\srclink@star}{\srclink@nostar}}
@@ -59,7 +60,12 @@
 \makeatother
 
 \usepackage{noweb}
-\noweboptions{smallcode,shortxref,hideunuseddefs,webnumbering}
+\noweboptions{hideunuseddefs,nomargintag,shortxref,smallcode,webnumbering}
+
+%% https://tex.stackexchange.com/a/673393
+\makeatletter
+\let\obeyedspace\@xobeysp
+\makeatother
 
 \setlength\parindent{0pt}
 

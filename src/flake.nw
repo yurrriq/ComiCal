@@ -300,7 +300,7 @@ python3Packages.pygments
     inherit (texlive)
       datetime
       dirtytalk
-      # fancyref
+      fancyref
       latexmk
       minted
       todonotes
