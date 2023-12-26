@@ -63,8 +63,10 @@
         };
 
         devShells.default = pkgs.mkShell {
-          FONTCONFIG_FILE = pkgs.makeFontsConf {
-            fontDirectories = [ pkgs.iosevka ];
+          FONTCONFIG_FILE = with pkgs; makeFontsConf {
+            fontDirectories = [
+              (nerdfonts.override { fonts = [ "Iosevka" ]; })
+            ];
           };
 
           inputsFrom = [

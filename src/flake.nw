@@ -326,8 +326,10 @@ Last, but not least, configure my preferred font,
 \hrefootnote{http://be5invis.github.io/Iosevka}{Iosevka}.
 
 <<fontconfig>>=
-FONTCONFIG_FILE = pkgs.makeFontsConf {
-  fontDirectories = [ pkgs.iosevka ];
+FONTCONFIG_FILE = with pkgs; makeFontsConf {
+  fontDirectories = [
+    (nerdfonts.override { fonts = [ "Iosevka" ]; })
+  ];
 };
 @
 
