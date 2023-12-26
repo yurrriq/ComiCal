@@ -11,7 +11,7 @@
     };
     flake-parts.url = "github:hercules-ci/flake-parts";
     flake-utils.url = "github:numtide/flake-utils";
-    nixpkgs.url = "github:nixos/nixpkgs/release-23.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     pre-commit-hooks-nix = {
       inputs = {
         flake-utils.follows = "flake-utils";

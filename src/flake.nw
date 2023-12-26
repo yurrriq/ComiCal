@@ -87,13 +87,11 @@ useful of these functions is \nix{eachDefaultSystem}, which
 flake-utils.url = "github:numtide/flake-utils";
 @
 
-Pin a version, specifically
-\hrefootnote{https://nixos.org/blog/announcements.html\#nixos-23.05}{the latest
-  stable release}, of \hrefootnote{https://github.com/NixOS/nixpkgs}{the Nix
-  package collection} to ensure reproducibility.
+Pin \hrefootnote{https://github.com/NixOS/nixpkgs}{the Nix package collection}
+to the latest unstable version that's been built on Hydra.
 
 <<inputs>>=
-nixpkgs.url = "github:nixos/nixpkgs/release-23.05";
+nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 @
 
 \todoo{Describe pre-commit-hooks.nix}
