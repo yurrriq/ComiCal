@@ -45,7 +45,7 @@ getHttps theURI =
   where
     badURI = throwInvalidUrlM (renderStr theURI) "Unable to construct Network.HTTP.Req.Url"
 
-throwInvalidUrlM :: MonadThrow m => String -> String -> m a
+throwInvalidUrlM :: (MonadThrow m) => String -> String -> m a
 throwInvalidUrlM url reason = throwM . VanillaHttpException $ InvalidUrlException url reason
 
 parseReleases :: Cursor -> ComiCalApp (NE.NonEmpty Release)
