@@ -507,20 +507,20 @@ DTEND;VALUE=DATE:20231130
 URL:https://imagecomics.com/comics/releases/spawns-universe-box-set-2
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-cover-gallery-vol-1-hc
-DTSTAMP:20231101T000000
-SUMMARY:Spawn Cover Gallery, Vol. 1 HC
-DTSTART;VALUE=DATE:20231101
-DTEND;VALUE=DATE:20231102
-URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-vol-1-hc
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-cover-gallery-hc-vol-1-2
 DTSTAMP:20231101T000000
 SUMMARY:Spawn Cover Gallery HC, Vol. 1
 DTSTART;VALUE=DATE:20231101
 DTEND;VALUE=DATE:20231102
 URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-hc-vol-1-2
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-cover-gallery-vol-1-hc
+DTSTAMP:20231101T000000
+SUMMARY:Spawn Cover Gallery, Vol. 1 HC
+DTSTART;VALUE=DATE:20231101
+DTEND;VALUE=DATE:20231102
+URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-vol-1-hc
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-origins-hc-vol-13
@@ -563,20 +563,20 @@ DTEND;VALUE=DATE:20230420
 URL:https://imagecomics.com/comics/releases/spawn-origins-hc-vol-12-2
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-origins-vol-24-tpb
-DTSTAMP:20221228T000000
-SUMMARY:Spawn Origins, Vol. 24 TPB
-DTSTART;VALUE=DATE:20221228
-DTEND;VALUE=DATE:20221229
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-24-tpb
-END:VEVENT
-BEGIN:VEVENT
 UID:deluxe-spawn-origins-hc-vol-5
 DTSTAMP:20221228T000000
 SUMMARY:Deluxe Spawn Origins HC vol. 5
 DTSTART;VALUE=DATE:20221228
 DTEND;VALUE=DATE:20221229
 URL:https://imagecomics.com/comics/releases/deluxe-spawn-origins-hc-vol-5
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-origins-vol-24-tpb
+DTSTAMP:20221228T000000
+SUMMARY:Spawn Origins, Vol. 24 TPB
+DTSTART;VALUE=DATE:20221228
+DTEND;VALUE=DATE:20221229
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-24-tpb
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-compendium-vol-4-tp
@@ -2051,6 +2051,14 @@ DTEND;VALUE=DATE:20211125
 URL:https://www.marvel.com/comics/issue/91720/hulk_2021_1
 END:VEVENT
 BEGIN:VEVENT
+UID:venom_2021_32
+DTSTAMP:20240403T000000
+SUMMARY:Venom #32
+DTSTART;VALUE=DATE:20240403
+DTEND;VALUE=DATE:20240404
+URL:https://www.marvel.com/comics/issue/109753/venom_2021_32
+END:VEVENT
+BEGIN:VEVENT
 UID:venom_2021_31
 DTSTAMP:20240306T000000
 SUMMARY:Venom #31
@@ -2201,13 +2209,5 @@ SUMMARY:Venom #13
 DTSTART;VALUE=DATE:20221109
 DTEND;VALUE=DATE:20221110
 URL:https://www.marvel.com/comics/issue/103642/venom_2021_13
-END:VEVENT
-BEGIN:VEVENT
-UID:venom_2021_12
-DTSTAMP:20221026T000000
-SUMMARY:Venom #12
-DTSTART;VALUE=DATE:20221026
-DTEND;VALUE=DATE:20221027
-URL:https://www.marvel.com/comics/issue/103640/venom_2021_12
 END:VEVENT
 END:VCALENDAR
