@@ -139,27 +139,29 @@ make-srcs = {
 <<Configure pre-commit hooks>>=
 pre-commit.settings = {
   hooks = {
-    deadnix.enable = true;
+    deadnix = {
+      enable = true;
+      settings.noLambdaArg = true;
+    };
     hlint.enable = true;
     <<Define a pre-commit hook to ensure literate sources are tangled>>
     nixpkgs-fmt.enable = true;
-    ormolu.enable = true;
-    # TODO: create PR to add noCabal
-    ormolu.entry =
-      let
-        inherit (config.pre-commit.settings) settings;
-        extensions =
-          lib.escapeShellArgs (lib.concatMap (ext: [ "--ghc-opt" "-X${ext}" ]) settings.ormolu.defaultExtensions);
-        noCabal = "--no-cabal";
-      in
-      lib.mkForce "${pkgs.ormolu}/bin/ormolu --mode inplace ${extensions} ${noCabal}";
-  };
-  settings = {
-    deadnix.noLambdaArg = true;
-    ormolu.defaultExtensions = [
-      "OverloadedStrings"
-      "TemplateHaskell"
-    ];
+    ormolu = {
+      enable = true;
+      # TODO: create PR to add noCabal
+      entry =
+        let
+          inherit (config.pre-commit.settings.hooks.ormolu) settings;
+          extensions =
+            lib.escapeShellArgs (lib.concatMap (ext: [ "--ghc-opt" "-X${ext}" ]) settings.defaultExtensions);
+          noCabal = "--no-cabal";
+        in
+        lib.mkForce "${pkgs.ormolu}/bin/ormolu --mode inplace ${extensions} ${noCabal}";
+      settings.defaultExtensions = [
+        "OverloadedStrings"
+        "TemplateHaskell"
+      ];
+    };
   };
 };
 @
@@ -257,14 +259,12 @@ Include the hermetic build of Emacs (from the [[<<myEmacs overlay>>]]) and the
 dependencies for
 \hrefootnote{https://github.com/emacs-lsp/lsp-mode/}{\elisp{lsp-mode}},
 i.e. \hrefootnote{https://github.com/ndmitchell/ghcid}{ghcid},
-\hrefootnote{https://github.com/haskell/haskell-language-server}{haskell-language-server},
-and \hrefootnote{https://github.com/nix-community/rnix-lsp}{rnix-lsp}.
+and \hrefootnote{https://github.com/haskell/haskell-language-server}{haskell-language-server}.
 
 <<tools>>=
 myEmacs
 ghcid
 haskell-language-server
-rnix-lsp
 @
 
 Include the literate programming toolchain,
