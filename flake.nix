@@ -81,7 +81,6 @@
             myEmacs
             ghcid
             haskell-language-server
-            rnix-lsp
             noweb
             python3Packages.pygments
             (
@@ -126,7 +125,10 @@
 
         pre-commit.settings = {
           hooks = {
-            deadnix.enable = true;
+            deadnix = {
+              enable = true;
+              settings.noLambdaArg = true;
+            };
             hlint.enable = true;
             make-srcs = {
               always_run = true;
@@ -148,23 +150,22 @@
                 "${make-srcs}/bin/make-srcs";
             };
             nixpkgs-fmt.enable = true;
-            ormolu.enable = true;
-            # TODO: create PR to add noCabal
-            ormolu.entry =
-              let
-                inherit (config.pre-commit.settings) settings;
-                extensions =
-                  lib.escapeShellArgs (lib.concatMap (ext: [ "--ghc-opt" "-X${ext}" ]) settings.ormolu.defaultExtensions);
-                noCabal = "--no-cabal";
-              in
-              lib.mkForce "${pkgs.ormolu}/bin/ormolu --mode inplace ${extensions} ${noCabal}";
-          };
-          settings = {
-            deadnix.noLambdaArg = true;
-            ormolu.defaultExtensions = [
-              "OverloadedStrings"
-              "TemplateHaskell"
-            ];
+            ormolu = {
+              enable = true;
+              # TODO: create PR to add noCabal
+              entry =
+                let
+                  inherit (config.pre-commit.settings.hooks.ormolu) settings;
+                  extensions =
+                    lib.escapeShellArgs (lib.concatMap (ext: [ "--ghc-opt" "-X${ext}" ]) settings.defaultExtensions);
+                  noCabal = "--no-cabal";
+                in
+                  lib.mkForce "${pkgs.ormolu}/bin/ormolu --mode inplace ${extensions} ${noCabal}";
+              settings.defaultExtensions = [
+                "OverloadedStrings"
+                "TemplateHaskell"
+              ];
+            };
           };
         };
       };
