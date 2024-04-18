@@ -2,7 +2,7 @@
 
 -- |
 -- Module      : ComiCal.Image
--- Copyright   : (c) Eric Bailey, 2019-2023
+-- Copyright   : (c) Eric Bailey, 2019-2024
 -- License     : MIT
 -- Maintainer  : eric@ericb.me
 -- Stability   : experimental
@@ -25,7 +25,7 @@ publisher =
     { scraper =
         Scraper
           { partitionReleases = \cursor ->
-              cursor $// element "div" >=> attributeIs "class" "cell u-mb1",
+              cursor $// element "div" >=> attributeIs "class" "cell  u-mb1",
             parseTitle = \cursor ->
               T.strip . last . T.splitOn " | " . head $
                 cursor

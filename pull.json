@@ -2,31 +2,23 @@
   "dcIssues": [
   ],
   "imageCollections": [
-    "bitter-root",
-    "black-magick",
     "geiger",
     "killadelphia",
     "monstress",
-    "nailbiter",
     "reckless",
-    "saga",
     "spawn",
-    "that-texas-blood",
     "the-department-of-truth"
   ],
   "imageIssues": [
-    "crossover",
     "gunslinger-spawn",
     "king-spawn-2",
     "spawn",
-    "that-texas-blood",
     "the-department-of-truth",
     "the-scorched"
   ],
   "marvelCollections": [
   ],
   "marvelIssues": [
-    "31374/hulk_2021_-_present",
     "32870/venom_2021_-_present"
   ]
 }

@@ -229,7 +229,7 @@ instance FromJSON PullList where
 <<lib/ComiCal/Types.hs>>=
 -- |
 -- Module      : ComiCal.Types
--- Copyright   : (c) Eric Bailey, 2019-2023
+-- Copyright   : (c) Eric Bailey, 2019-2024
 -- License     : MIT
 -- Maintainer  : eric@ericb.me
 -- Stability   : experimental
@@ -356,7 +356,7 @@ runComiCalApp getter publisher =
 
 -- |
 -- Module      : ComiCal.App
--- Copyright   : (c) Eric Bailey, 2019-2023
+-- Copyright   : (c) Eric Bailey, 2019-2024
 -- License     : MIT
 -- Maintainer  : eric@ericb.me
 -- Stability   : experimental
@@ -389,7 +389,7 @@ import Data.Text (Text)
 -- |
 -- Module      : ComiCal
 -- Description : The main API for ComiCal
--- Copyright   : (c) Eric Bailey, 2019-2023
+-- Copyright   : (c) Eric Bailey, 2019-2024
 -- License     : MIT
 -- Maintainer  : eric@ericb.me
 -- Stability   : stable
@@ -520,7 +520,7 @@ publisher =
 <<lib/ComiCal/DC.hs>>=
 -- |
 -- Module      : ComiCal.DC
--- Copyright   : (c) Eric Bailey, 2019-2023
+-- Copyright   : (c) Eric Bailey, 2019-2024
 -- License     : MIT
 -- Maintainer  : eric@ericb.me
 -- Stability   : experimental
@@ -547,7 +547,7 @@ import Text.XML.Cursor
 scraper =
   Scraper
     { partitionReleases = \cursor ->
-        cursor $// element "div" >=> attributeIs "class" "cell u-mb1",
+        cursor $// element "div" >=> attributeIs "class" "cell  u-mb1",
       parseTitle = \cursor ->
         T.strip . last . T.splitOn " | " . head $
           cursor
@@ -610,7 +610,7 @@ publisher =
 
 -- |
 -- Module      : ComiCal.Image
--- Copyright   : (c) Eric Bailey, 2019-2023
+-- Copyright   : (c) Eric Bailey, 2019-2024
 -- License     : MIT
 -- Maintainer  : eric@ericb.me
 -- Stability   : experimental
@@ -689,7 +689,7 @@ scraper =
 <<lib/ComiCal/Marvel.hs>>=
 -- |
 -- Module      : ComiCal.Marvel
--- Copyright   : (c) Eric Bailey, 2019-2023
+-- Copyright   : (c) Eric Bailey, 2019-2024
 -- License     : MIT
 -- Maintainer  : eric@ericb.me
 -- Stability   : experimental
@@ -717,7 +717,7 @@ import Text.XML.Cursor
 
 -- |
 -- Module      : ComiCal.Util
--- Copyright   : (c) Eric Bailey, 2019-2023
+-- Copyright   : (c) Eric Bailey, 2019-2024
 -- License     : MIT
 -- Maintainer  : eric@ericb.me
 -- Stability   : experimental
@@ -892,7 +892,7 @@ headM e xs =
 -- |
 -- Module      : Main
 -- Description : The main entrypoint for the ComiCal executable
--- Copyright   : (c) Eric Bailey, 2019-2023
+-- Copyright   : (c) Eric Bailey, 2019-2024
 -- License     : MIT
 -- Maintainer  : eric@ericb.me
 -- Stability   : stable

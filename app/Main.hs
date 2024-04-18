@@ -1,7 +1,7 @@
 -- |
 -- Module      : Main
 -- Description : The main entrypoint for the ComiCal executable
--- Copyright   : (c) Eric Bailey, 2019-2023
+-- Copyright   : (c) Eric Bailey, 2019-2024
 -- License     : MIT
 -- Maintainer  : eric@ericb.me
 -- Stability   : stable

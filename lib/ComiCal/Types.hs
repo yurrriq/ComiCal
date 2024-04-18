@@ -5,7 +5,7 @@
 
 -- |
 -- Module      : ComiCal.Types
--- Copyright   : (c) Eric Bailey, 2019-2023
+-- Copyright   : (c) Eric Bailey, 2019-2024
 -- License     : MIT
 -- Maintainer  : eric@ericb.me
 -- Stability   : experimental
