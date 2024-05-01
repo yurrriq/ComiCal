@@ -211,6 +211,14 @@ DTEND;VALUE=DATE:20240523
 URL:https://imagecomics.com/comics/releases/spawn-origins-deluxe-edition-hc-vol-7
 END:VEVENT
 BEGIN:VEVENT
+UID:spawn-origins-vol-8
+DTSTAMP:20240417T000000
+SUMMARY:Spawn Origins, Vol. 8
+DTSTART;VALUE=DATE:20240417
+DTEND;VALUE=DATE:20240418
+URL:https://imagecomics.com/comics/releases/spawn-origins-vol-8
+END:VEVENT
+BEGIN:VEVENT
 UID:spawn-unwanted-violence-tp
 DTSTAMP:20240410T000000
 SUMMARY:Spawn Unwanted Violence TP
@@ -259,20 +267,20 @@ DTEND;VALUE=DATE:20231130
 URL:https://imagecomics.com/comics/releases/spawns-universe-box-set-2
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-cover-gallery-hc-vol-1-2
-DTSTAMP:20231101T000000
-SUMMARY:Spawn Cover Gallery HC, Vol. 1
-DTSTART;VALUE=DATE:20231101
-DTEND;VALUE=DATE:20231102
-URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-hc-vol-1-2
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-cover-gallery-vol-1-hc
 DTSTAMP:20231101T000000
 SUMMARY:Spawn Cover Gallery, Vol. 1 HC
 DTSTART;VALUE=DATE:20231101
 DTEND;VALUE=DATE:20231102
 URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-vol-1-hc
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-cover-gallery-hc-vol-1-2
+DTSTAMP:20231101T000000
+SUMMARY:Spawn Cover Gallery HC, Vol. 1
+DTSTART;VALUE=DATE:20231101
+DTEND;VALUE=DATE:20231102
+URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-hc-vol-1-2
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-origins-hc-vol-13
@@ -331,20 +339,20 @@ DTEND;VALUE=DATE:20230420
 URL:https://imagecomics.com/comics/releases/spawn-origins-hc-vol-12-2
 END:VEVENT
 BEGIN:VEVENT
-UID:deluxe-spawn-origins-hc-vol-5
-DTSTAMP:20221228T000000
-SUMMARY:Deluxe Spawn Origins HC vol. 5
-DTSTART;VALUE=DATE:20221228
-DTEND;VALUE=DATE:20221229
-URL:https://imagecomics.com/comics/releases/deluxe-spawn-origins-hc-vol-5
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-origins-vol-24-tpb
 DTSTAMP:20221228T000000
 SUMMARY:Spawn Origins, Vol. 24 TPB
 DTSTART;VALUE=DATE:20221228
 DTEND;VALUE=DATE:20221229
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-24-tpb
+END:VEVENT
+BEGIN:VEVENT
+UID:deluxe-spawn-origins-hc-vol-5
+DTSTAMP:20221228T000000
+SUMMARY:Deluxe Spawn Origins HC vol. 5
+DTSTART;VALUE=DATE:20221228
+DTEND;VALUE=DATE:20221229
+URL:https://imagecomics.com/comics/releases/deluxe-spawn-origins-hc-vol-5
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-compendium-vol-4-tp
@@ -377,14 +385,6 @@ SUMMARY:Spawn: Omega
 DTSTART;VALUE=DATE:20220921
 DTEND;VALUE=DATE:20220922
 URL:https://imagecomics.com/comics/releases/spawn-omega
-END:VEVENT
-BEGIN:VEVENT
-UID:spawn-origins-vol-22
-DTSTAMP:20220907T000000
-SUMMARY:Spawn Origins, Vol. 22
-DTSTART;VALUE=DATE:20220907
-DTEND;VALUE=DATE:20220908
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-22
 END:VEVENT
 BEGIN:VEVENT
 UID:department-of-truth-the-comp-conspiracy-deluxe-hc-vol-01
@@ -427,6 +427,14 @@ DTEND;VALUE=DATE:20210225
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-vol-1-the-end-of-the-world-tp
 END:VEVENT
 BEGIN:VEVENT
+UID:gunslinger-spawn-34
+DTSTAMP:20240724T000000
+SUMMARY:Gunslinger Spawn #34
+DTSTART;VALUE=DATE:20240724
+DTEND;VALUE=DATE:20240725
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-34
+END:VEVENT
+BEGIN:VEVENT
 UID:gunslinger-spawn-33
 DTSTAMP:20240626T000000
 SUMMARY:Gunslinger Spawn #33
@@ -436,10 +444,10 @@ URL:https://imagecomics.com/comics/releases/gunslinger-spawn-33
 END:VEVENT
 BEGIN:VEVENT
 UID:gunslinger-spawn-32
-DTSTAMP:20240529T000000
+DTSTAMP:20240605T000000
 SUMMARY:Gunslinger Spawn #32
-DTSTART;VALUE=DATE:20240529
-DTEND;VALUE=DATE:20240530
+DTSTART;VALUE=DATE:20240605
+DTEND;VALUE=DATE:20240606
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-32
 END:VEVENT
 BEGIN:VEVENT
@@ -451,20 +459,20 @@ DTEND;VALUE=DATE:20240509
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-31
 END:VEVENT
 BEGIN:VEVENT
-UID:gunslinger-spawn-30
-DTSTAMP:20240306T000000
-SUMMARY:Gunslinger Spawn #30
-DTSTART;VALUE=DATE:20240306
-DTEND;VALUE=DATE:20240307
-URL:https://imagecomics.com/comics/releases/gunslinger-spawn-30
-END:VEVENT
-BEGIN:VEVENT
 UID:gunslinger-spawn-29
 DTSTAMP:20240306T000000
 SUMMARY:Gunslinger Spawn #29
 DTSTART;VALUE=DATE:20240306
 DTEND;VALUE=DATE:20240307
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-29
+END:VEVENT
+BEGIN:VEVENT
+UID:gunslinger-spawn-30
+DTSTAMP:20240306T000000
+SUMMARY:Gunslinger Spawn #30
+DTSTART;VALUE=DATE:20240306
+DTEND;VALUE=DATE:20240307
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-30
 END:VEVENT
 BEGIN:VEVENT
 UID:gunslinger-spawn-28
@@ -611,12 +619,12 @@ DTEND;VALUE=DATE:20220825
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-11
 END:VEVENT
 BEGIN:VEVENT
-UID:gunslinger-spawn-10
-DTSTAMP:20220720T000000
-SUMMARY:GUNSLINGER SPAWN #10
-DTSTART;VALUE=DATE:20220720
-DTEND;VALUE=DATE:20220721
-URL:https://imagecomics.com/comics/releases/gunslinger-spawn-10
+UID:king-spawn-36
+DTSTAMP:20240717T000000
+SUMMARY:King Spawn #36
+DTSTART;VALUE=DATE:20240717
+DTEND;VALUE=DATE:20240718
+URL:https://imagecomics.com/comics/releases/king-spawn-36
 END:VEVENT
 BEGIN:VEVENT
 UID:king-spawn-35
@@ -628,18 +636,18 @@ URL:https://imagecomics.com/comics/releases/king-spawn-35
 END:VEVENT
 BEGIN:VEVENT
 UID:king-spawn-34
-DTSTAMP:20240522T000000
+DTSTAMP:20240529T000000
 SUMMARY:King Spawn #34
-DTSTART;VALUE=DATE:20240522
-DTEND;VALUE=DATE:20240523
+DTSTART;VALUE=DATE:20240529
+DTEND;VALUE=DATE:20240530
 URL:https://imagecomics.com/comics/releases/king-spawn-34
 END:VEVENT
 BEGIN:VEVENT
 UID:king-spawn-33
-DTSTAMP:20240410T000000
+DTSTAMP:20240501T000000
 SUMMARY:King Spawn #33
-DTSTART;VALUE=DATE:20240410
-DTEND;VALUE=DATE:20240411
+DTSTART;VALUE=DATE:20240501
+DTEND;VALUE=DATE:20240502
 URL:https://imagecomics.com/comics/releases/king-spawn-33
 END:VEVENT
 BEGIN:VEVENT
@@ -803,43 +811,43 @@ DTEND;VALUE=DATE:20220811
 URL:https://imagecomics.com/comics/releases/king-spawn-13
 END:VEVENT
 BEGIN:VEVENT
-UID:king-spawn-12
-DTSTAMP:20220713T000000
-SUMMARY:KING SPAWN #12
-DTSTART;VALUE=DATE:20220713
-DTEND;VALUE=DATE:20220714
-URL:https://imagecomics.com/comics/releases/king-spawn-12
+UID:spawn-356
+DTSTAMP:20240731T000000
+SUMMARY:Spawn #356
+DTSTART;VALUE=DATE:20240731
+DTEND;VALUE=DATE:20240801
+URL:https://imagecomics.com/comics/releases/spawn-356
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-355
-DTSTAMP:20240626T000000
+DTSTAMP:20240717T000000
 SUMMARY:Spawn #355
-DTSTART;VALUE=DATE:20240626
-DTEND;VALUE=DATE:20240627
+DTSTART;VALUE=DATE:20240717
+DTEND;VALUE=DATE:20240718
 URL:https://imagecomics.com/comics/releases/spawn-355
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-354
-DTSTAMP:20240522T000000
+DTSTAMP:20240619T000000
 SUMMARY:Spawn #354
-DTSTART;VALUE=DATE:20240522
-DTEND;VALUE=DATE:20240523
+DTSTART;VALUE=DATE:20240619
+DTEND;VALUE=DATE:20240620
 URL:https://imagecomics.com/comics/releases/spawn-354
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-353
-DTSTAMP:20240424T000000
+DTSTAMP:20240515T000000
 SUMMARY:Spawn #353
-DTSTART;VALUE=DATE:20240424
-DTEND;VALUE=DATE:20240425
+DTSTART;VALUE=DATE:20240515
+DTEND;VALUE=DATE:20240516
 URL:https://imagecomics.com/comics/releases/spawn-353
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-352
-DTSTAMP:20240327T000000
+DTSTAMP:20240417T000000
 SUMMARY:Spawn #352
-DTSTART;VALUE=DATE:20240327
-DTEND;VALUE=DATE:20240328
+DTSTART;VALUE=DATE:20240417
+DTEND;VALUE=DATE:20240418
 URL:https://imagecomics.com/comics/releases/spawn-352
 END:VEVENT
 BEGIN:VEVENT
@@ -995,12 +1003,12 @@ DTEND;VALUE=DATE:20220908
 URL:https://imagecomics.com/comics/releases/spawn-333
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-332
-DTSTAMP:20220803T000000
-SUMMARY:SPAWN #332
-DTSTART;VALUE=DATE:20220803
-DTEND;VALUE=DATE:20220804
-URL:https://imagecomics.com/comics/releases/spawn-332
+UID:the-department-of-truth-24
+DTSTAMP:20240731T000000
+SUMMARY:The Department Of Truth #24
+DTSTART;VALUE=DATE:20240731
+DTEND;VALUE=DATE:20240801
+URL:https://imagecomics.com/comics/releases/the-department-of-truth-24
 END:VEVENT
 BEGIN:VEVENT
 UID:the-department-of-truth-23
@@ -1187,6 +1195,14 @@ DTEND;VALUE=DATE:20201001
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-1
 END:VEVENT
 BEGIN:VEVENT
+UID:the-scorched-32
+DTSTAMP:20240724T000000
+SUMMARY:The Scorched #32
+DTSTART;VALUE=DATE:20240724
+DTEND;VALUE=DATE:20240725
+URL:https://imagecomics.com/comics/releases/the-scorched-32
+END:VEVENT
+BEGIN:VEVENT
 UID:the-scorched-31
 DTSTAMP:20240703T000000
 SUMMARY:The Scorched #31
@@ -1196,10 +1212,10 @@ URL:https://imagecomics.com/comics/releases/the-scorched-31
 END:VEVENT
 BEGIN:VEVENT
 UID:the-scorched-29
-DTSTAMP:20240417T000000
+DTSTAMP:20240508T000000
 SUMMARY:The Scorched #29
-DTSTART;VALUE=DATE:20240417
-DTEND;VALUE=DATE:20240418
+DTSTART;VALUE=DATE:20240508
+DTEND;VALUE=DATE:20240509
 URL:https://imagecomics.com/comics/releases/the-scorched-29
 END:VEVENT
 BEGIN:VEVENT
@@ -1371,12 +1387,20 @@ DTEND;VALUE=DATE:20220728
 URL:https://imagecomics.com/comics/releases/the-scorched-8
 END:VEVENT
 BEGIN:VEVENT
-UID:the-scorched-7
-DTSTAMP:20220629T000000
-SUMMARY:THE SCORCHED #7
-DTSTART;VALUE=DATE:20220629
-DTEND;VALUE=DATE:20220630
-URL:https://imagecomics.com/comics/releases/the-scorched-7
+UID:venom_2021_35
+DTSTAMP:20240703T000000
+SUMMARY:Venom #35
+DTSTART;VALUE=DATE:20240703
+DTEND;VALUE=DATE:20240704
+URL:https://www.marvel.com/comics/issue/109756/venom_2021_35
+END:VEVENT
+BEGIN:VEVENT
+UID:venom_2021_34
+DTSTAMP:20240605T000000
+SUMMARY:Venom #34
+DTSTART;VALUE=DATE:20240605
+DTEND;VALUE=DATE:20240606
+URL:https://www.marvel.com/comics/issue/109755/venom_2021_34
 END:VEVENT
 BEGIN:VEVENT
 UID:venom_2021_33
@@ -1521,21 +1545,5 @@ SUMMARY:Venom #16
 DTSTART;VALUE=DATE:20230201
 DTEND;VALUE=DATE:20230202
 URL:https://www.marvel.com/comics/issue/103645/venom_2021_16
-END:VEVENT
-BEGIN:VEVENT
-UID:venom_2021_15
-DTSTAMP:20230118T000000
-SUMMARY:Venom #15
-DTSTART;VALUE=DATE:20230118
-DTEND;VALUE=DATE:20230119
-URL:https://www.marvel.com/comics/issue/103644/venom_2021_15
-END:VEVENT
-BEGIN:VEVENT
-UID:venom_2021_14
-DTSTAMP:20221228T000000
-SUMMARY:Venom #14
-DTSTART;VALUE=DATE:20221228
-DTEND;VALUE=DATE:20221229
-URL:https://www.marvel.com/comics/issue/103643/venom_2021_14
 END:VEVENT
 END:VCALENDAR
