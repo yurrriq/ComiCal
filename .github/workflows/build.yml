@@ -20,7 +20,7 @@ jobs:
           access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
     - name: Check whether the flake evaluates
       run: nix flake check
-    - uses: cachix/cachix-action@v14
+    - uses: cachix/cachix-action@v15
       with:
         name: yurrriq
         skipPush: true
