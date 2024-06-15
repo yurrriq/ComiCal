@@ -195,20 +195,20 @@ DTEND;VALUE=DATE:20201217
 URL:https://imagecomics.com/comics/releases/reckless-ogn
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-origins-deluxe-edition-hc-vol-7
-DTSTAMP:20240529T000000
-SUMMARY:Spawn: Origins Deluxe Edition HC, Vol. 7
-DTSTART;VALUE=DATE:20240529
-DTEND;VALUE=DATE:20240530
-URL:https://imagecomics.com/comics/releases/spawn-origins-deluxe-edition-hc-vol-7
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-origins-deluxe-edition-signed-and-numbered-hc-vol-7
 DTSTAMP:20240529T000000
 SUMMARY:Spawn: Origins Deluxe Edition: Signed And Numbered HC, Vol. 7
 DTSTART;VALUE=DATE:20240529
 DTEND;VALUE=DATE:20240530
 URL:https://imagecomics.com/comics/releases/spawn-origins-deluxe-edition-signed-and-numbered-hc-vol-7
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-origins-deluxe-edition-hc-vol-7
+DTSTAMP:20240529T000000
+SUMMARY:Spawn: Origins Deluxe Edition HC, Vol. 7
+DTSTART;VALUE=DATE:20240529
+DTEND;VALUE=DATE:20240530
+URL:https://imagecomics.com/comics/releases/spawn-origins-deluxe-edition-hc-vol-7
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-origins-vol-8
@@ -828,10 +828,10 @@ URL:https://imagecomics.com/comics/releases/spawn-356
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-355
-DTSTAMP:20240724T000000
+DTSTAMP:20240814T000000
 SUMMARY:Spawn #355
-DTSTART;VALUE=DATE:20240724
-DTEND;VALUE=DATE:20240725
+DTSTART;VALUE=DATE:20240814
+DTEND;VALUE=DATE:20240815
 URL:https://imagecomics.com/comics/releases/spawn-355
 END:VEVENT
 BEGIN:VEVENT
