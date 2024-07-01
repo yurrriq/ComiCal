@@ -267,20 +267,20 @@ DTEND;VALUE=DATE:20231130
 URL:https://imagecomics.com/comics/releases/spawns-universe-box-set-2
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-cover-gallery-hc-vol-1-2
-DTSTAMP:20231101T000000
-SUMMARY:Spawn Cover Gallery HC, Vol. 1
-DTSTART;VALUE=DATE:20231101
-DTEND;VALUE=DATE:20231102
-URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-hc-vol-1-2
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-cover-gallery-vol-1-hc
 DTSTAMP:20231101T000000
 SUMMARY:Spawn Cover Gallery, Vol. 1 HC
 DTSTART;VALUE=DATE:20231101
 DTEND;VALUE=DATE:20231102
 URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-vol-1-hc
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-cover-gallery-hc-vol-1-2
+DTSTAMP:20231101T000000
+SUMMARY:Spawn Cover Gallery HC, Vol. 1
+DTSTART;VALUE=DATE:20231101
+DTEND;VALUE=DATE:20231102
+URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-hc-vol-1-2
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-origins-hc-vol-13
@@ -339,20 +339,20 @@ DTEND;VALUE=DATE:20230420
 URL:https://imagecomics.com/comics/releases/spawn-origins-hc-vol-12-2
 END:VEVENT
 BEGIN:VEVENT
-UID:deluxe-spawn-origins-hc-vol-5
-DTSTAMP:20221228T000000
-SUMMARY:Deluxe Spawn Origins HC vol. 5
-DTSTART;VALUE=DATE:20221228
-DTEND;VALUE=DATE:20221229
-URL:https://imagecomics.com/comics/releases/deluxe-spawn-origins-hc-vol-5
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-origins-vol-24-tpb
 DTSTAMP:20221228T000000
 SUMMARY:Spawn Origins, Vol. 24 TPB
 DTSTART;VALUE=DATE:20221228
 DTEND;VALUE=DATE:20221229
 URL:https://imagecomics.com/comics/releases/spawn-origins-vol-24-tpb
+END:VEVENT
+BEGIN:VEVENT
+UID:deluxe-spawn-origins-hc-vol-5
+DTSTAMP:20221228T000000
+SUMMARY:Deluxe Spawn Origins HC vol. 5
+DTSTART;VALUE=DATE:20221228
+DTEND;VALUE=DATE:20221229
+URL:https://imagecomics.com/comics/releases/deluxe-spawn-origins-hc-vol-5
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-compendium-vol-4-tp
@@ -433,6 +433,14 @@ SUMMARY:Gunslinger Spawn #35
 DTSTART;VALUE=DATE:20240904
 DTEND;VALUE=DATE:20240905
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-35
+END:VEVENT
+BEGIN:VEVENT
+UID:gunslinger-spawn-36
+DTSTAMP:20240904T000000
+SUMMARY:Gunslinger Spawn #36
+DTSTART;VALUE=DATE:20240904
+DTEND;VALUE=DATE:20240905
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-36
 END:VEVENT
 BEGIN:VEVENT
 UID:gunslinger-spawn-34
@@ -611,12 +619,12 @@ DTEND;VALUE=DATE:20221020
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-13
 END:VEVENT
 BEGIN:VEVENT
-UID:gunslinger-spawn-12
-DTSTAMP:20220921T000000
-SUMMARY:Gunslinger Spawn #12
-DTSTART;VALUE=DATE:20220921
-DTEND;VALUE=DATE:20220922
-URL:https://imagecomics.com/comics/releases/gunslinger-spawn-12
+UID:king-spawn-38
+DTSTAMP:20240911T000000
+SUMMARY:King Spawn #38
+DTSTART;VALUE=DATE:20240911
+DTEND;VALUE=DATE:20240912
+URL:https://imagecomics.com/comics/releases/king-spawn-38
 END:VEVENT
 BEGIN:VEVENT
 UID:king-spawn-37
@@ -803,35 +811,35 @@ DTEND;VALUE=DATE:20221006
 URL:https://imagecomics.com/comics/releases/king-spawn-15
 END:VEVENT
 BEGIN:VEVENT
-UID:king-spawn-14
-DTSTAMP:20220914T000000
-SUMMARY:King Spawn #14
-DTSTART;VALUE=DATE:20220914
-DTEND;VALUE=DATE:20220915
-URL:https://imagecomics.com/comics/releases/king-spawn-14
+UID:spawn-358
+DTSTAMP:20240925T000000
+SUMMARY:Spawn #358
+DTSTART;VALUE=DATE:20240925
+DTEND;VALUE=DATE:20240926
+URL:https://imagecomics.com/comics/releases/spawn-358
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-357
-DTSTAMP:20240911T000000
+DTSTAMP:20240925T000000
 SUMMARY:Spawn #357
-DTSTART;VALUE=DATE:20240911
-DTEND;VALUE=DATE:20240912
+DTSTART;VALUE=DATE:20240925
+DTEND;VALUE=DATE:20240926
 URL:https://imagecomics.com/comics/releases/spawn-357
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-356
-DTSTAMP:20240821T000000
+DTSTAMP:20240828T000000
 SUMMARY:Spawn #356
-DTSTART;VALUE=DATE:20240821
-DTEND;VALUE=DATE:20240822
+DTSTART;VALUE=DATE:20240828
+DTEND;VALUE=DATE:20240829
 URL:https://imagecomics.com/comics/releases/spawn-356
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-355
-DTSTAMP:20240814T000000
+DTSTAMP:20240731T000000
 SUMMARY:Spawn #355
-DTSTART;VALUE=DATE:20240814
-DTEND;VALUE=DATE:20240815
+DTSTART;VALUE=DATE:20240731
+DTEND;VALUE=DATE:20240801
 URL:https://imagecomics.com/comics/releases/spawn-355
 END:VEVENT
 BEGIN:VEVENT
@@ -995,12 +1003,12 @@ DTEND;VALUE=DATE:20221110
 URL:https://imagecomics.com/comics/releases/spawn-335
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-334
-DTSTAMP:20221012T000000
-SUMMARY:Spawn #334
-DTSTART;VALUE=DATE:20221012
-DTEND;VALUE=DATE:20221013
-URL:https://imagecomics.com/comics/releases/spawn-334
+UID:the-department-of-truth-26
+DTSTAMP:20240925T000000
+SUMMARY:The Department of Truth #26
+DTSTART;VALUE=DATE:20240925
+DTEND;VALUE=DATE:20240926
+URL:https://imagecomics.com/comics/releases/the-department-of-truth-26
 END:VEVENT
 BEGIN:VEVENT
 UID:the-department-of-truth-25
@@ -1187,12 +1195,12 @@ DTEND;VALUE=DATE:20201126
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-3
 END:VEVENT
 BEGIN:VEVENT
-UID:the-department-of-truth-2
-DTSTAMP:20201028T000000
-SUMMARY:The Department of Truth #2
-DTSTART;VALUE=DATE:20201028
-DTEND;VALUE=DATE:20201029
-URL:https://imagecomics.com/comics/releases/the-department-of-truth-2
+UID:spawn-the-scorched-34
+DTSTAMP:20240925T000000
+SUMMARY:Spawn: The Scorched #34
+DTSTART;VALUE=DATE:20240925
+DTEND;VALUE=DATE:20240926
+URL:https://imagecomics.com/comics/releases/spawn-the-scorched-34
 END:VEVENT
 BEGIN:VEVENT
 UID:the-scorched-33
@@ -1204,10 +1212,10 @@ URL:https://imagecomics.com/comics/releases/the-scorched-33
 END:VEVENT
 BEGIN:VEVENT
 UID:the-scorched-32
-DTSTAMP:20240731T000000
+DTSTAMP:20240807T000000
 SUMMARY:The Scorched #32
-DTSTART;VALUE=DATE:20240731
-DTEND;VALUE=DATE:20240801
+DTSTART;VALUE=DATE:20240807
+DTEND;VALUE=DATE:20240808
 URL:https://imagecomics.com/comics/releases/the-scorched-32
 END:VEVENT
 BEGIN:VEVENT
@@ -1377,13 +1385,5 @@ SUMMARY:The Scorched #10
 DTSTART;VALUE=DATE:20220928
 DTEND;VALUE=DATE:20220929
 URL:https://imagecomics.com/comics/releases/the-scorched-10
-END:VEVENT
-BEGIN:VEVENT
-UID:the-scorched-9
-DTSTAMP:20220824T000000
-SUMMARY:The Scorched #9
-DTSTART;VALUE=DATE:20220824
-DTEND;VALUE=DATE:20220825
-URL:https://imagecomics.com/comics/releases/the-scorched-9
 END:VEVENT
 END:VCALENDAR
