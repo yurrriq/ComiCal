@@ -1204,10 +1204,10 @@ URL:https://imagecomics.com/comics/releases/the-department-of-truth-4
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-the-scorched-35
-DTSTAMP:20241030T000000
+DTSTAMP:20241106T000000
 SUMMARY:Spawn: The Scorched #35
-DTSTART;VALUE=DATE:20241030
-DTEND;VALUE=DATE:20241031
+DTSTART;VALUE=DATE:20241106
+DTEND;VALUE=DATE:20241107
 URL:https://imagecomics.com/comics/releases/spawn-the-scorched-35
 END:VEVENT
 BEGIN:VEVENT
