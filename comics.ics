@@ -3,14 +3,6 @@ PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 VERSION:2.0
 X-WR-CALNAME:Geiger, Killadelphia, Monstress, Reckless, Spawn, The Department of Truth, Gunslinger Spawn, King Spawn, Spawn, The Department of Truth, The Scorched
 BEGIN:VEVENT
-UID:geiger-deluxe-edition-hc
-DTSTAMP:20240605T000000
-SUMMARY:Geiger Deluxe Edition HC
-DTSTART;VALUE=DATE:20240605
-DTEND;VALUE=DATE:20240606
-URL:https://imagecomics.com/comics/releases/geiger-deluxe-edition-hc
-END:VEVENT
-BEGIN:VEVENT
 UID:geiger-vol-1-tp
 DTSTAMP:20211124T000000
 SUMMARY:Geiger, Vol. 1 TP
@@ -435,6 +427,22 @@ DTEND;VALUE=DATE:20210225
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-vol-1-the-end-of-the-world-tp
 END:VEVENT
 BEGIN:VEVENT
+UID:gunslinger-spawn-40
+DTSTAMP:20250226T000000
+SUMMARY:Gunslinger Spawn #40
+DTSTART;VALUE=DATE:20250226
+DTEND;VALUE=DATE:20250227
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-40
+END:VEVENT
+BEGIN:VEVENT
+UID:gunslinger-spawn-39
+DTSTAMP:20250115T000000
+SUMMARY:Gunslinger Spawn #39
+DTSTART;VALUE=DATE:20250115
+DTEND;VALUE=DATE:20250116
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-39
+END:VEVENT
+BEGIN:VEVENT
 UID:spawn-360
 DTSTAMP:20250101T000000
 SUMMARY:Spawn #360
@@ -449,14 +457,6 @@ SUMMARY:Gunslinger Spawn #38
 DTSTART;VALUE=DATE:20241204
 DTEND;VALUE=DATE:20241205
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-38
-END:VEVENT
-BEGIN:VEVENT
-UID:gunslinger-spawn-39
-DTSTAMP:20241204T000000
-SUMMARY:Gunslinger Spawn #39
-DTSTART;VALUE=DATE:20241204
-DTEND;VALUE=DATE:20241205
-URL:https://imagecomics.com/comics/releases/gunslinger-spawn-39
 END:VEVENT
 BEGIN:VEVENT
 UID:gunslinger-spawn-37
@@ -619,28 +619,28 @@ DTEND;VALUE=DATE:20230316
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-18-2
 END:VEVENT
 BEGIN:VEVENT
-UID:gunslinger-spawn-17
-DTSTAMP:20230215T000000
-SUMMARY:GUNSLINGER SPAWN #17
-DTSTART;VALUE=DATE:20230215
-DTEND;VALUE=DATE:20230216
-URL:https://imagecomics.com/comics/releases/gunslinger-spawn-17
-END:VEVENT
-BEGIN:VEVENT
-UID:king-spawn-40
-DTSTAMP:20241211T000000
-SUMMARY:King Spawn #40
-DTSTART;VALUE=DATE:20241211
-DTEND;VALUE=DATE:20241212
-URL:https://imagecomics.com/comics/releases/king-spawn-40
+UID:king-spawn-42
+DTSTAMP:20250219T000000
+SUMMARY:King Spawn #42
+DTSTART;VALUE=DATE:20250219
+DTEND;VALUE=DATE:20250220
+URL:https://imagecomics.com/comics/releases/king-spawn-42
 END:VEVENT
 BEGIN:VEVENT
 UID:king-spawn-41
-DTSTAMP:20241211T000000
+DTSTAMP:20250122T000000
 SUMMARY:King Spawn #41
-DTSTART;VALUE=DATE:20241211
-DTEND;VALUE=DATE:20241212
+DTSTART;VALUE=DATE:20250122
+DTEND;VALUE=DATE:20250123
 URL:https://imagecomics.com/comics/releases/king-spawn-41
+END:VEVENT
+BEGIN:VEVENT
+UID:king-spawn-40
+DTSTAMP:20241218T000000
+SUMMARY:King Spawn #40
+DTSTART;VALUE=DATE:20241218
+DTEND;VALUE=DATE:20241219
+URL:https://imagecomics.com/comics/releases/king-spawn-40
 END:VEVENT
 BEGIN:VEVENT
 UID:king-spawn-39
@@ -811,27 +811,27 @@ DTEND;VALUE=DATE:20230202
 URL:https://imagecomics.com/comics/releases/king-spawn-19
 END:VEVENT
 BEGIN:VEVENT
-UID:king-spawn-18
-DTSTAMP:20221228T000000
-SUMMARY:King Spawn #18
-DTSTART;VALUE=DATE:20221228
-DTEND;VALUE=DATE:20221229
-URL:https://imagecomics.com/comics/releases/king-spawn-18
+UID:spawn-362
+DTSTAMP:20250305T000000
+SUMMARY:Spawn #362
+DTSTART;VALUE=DATE:20250305
+DTEND;VALUE=DATE:20250306
+URL:https://imagecomics.com/comics/releases/spawn-362
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-361
-DTSTAMP:20241226T000000
+DTSTAMP:20250205T000000
 SUMMARY:Spawn #361
-DTSTART;VALUE=DATE:20241226
-DTEND;VALUE=DATE:20241227
+DTSTART;VALUE=DATE:20250205
+DTEND;VALUE=DATE:20250206
 URL:https://imagecomics.com/comics/releases/spawn-361
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-the-dark-ages-tp-the-complete-collection-1
-DTSTAMP:20241204T000000
+DTSTAMP:20241211T000000
 SUMMARY:Spawn The Dark Ages TP The Complete Collection #1
-DTSTART;VALUE=DATE:20241204
-DTEND;VALUE=DATE:20241205
+DTSTART;VALUE=DATE:20241211
+DTEND;VALUE=DATE:20241212
 URL:https://imagecomics.com/comics/releases/spawn-the-dark-ages-tp-the-complete-collection-1
 END:VEVENT
 BEGIN:VEVENT
@@ -1003,12 +1003,12 @@ DTEND;VALUE=DATE:20230309
 URL:https://imagecomics.com/comics/releases/spawn-339
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-338
-DTSTAMP:20230208T000000
-SUMMARY:Spawn #338
-DTSTART;VALUE=DATE:20230208
-DTEND;VALUE=DATE:20230209
-URL:https://imagecomics.com/comics/releases/spawn-338
+UID:the-department-of-truth-28
+DTSTAMP:20250129T000000
+SUMMARY:The Department Of Truth #28
+DTSTART;VALUE=DATE:20250129
+DTEND;VALUE=DATE:20250130
+URL:https://imagecomics.com/comics/releases/the-department-of-truth-28
 END:VEVENT
 BEGIN:VEVENT
 UID:the-department-of-truth-27
@@ -1195,19 +1195,11 @@ DTEND;VALUE=DATE:20210128
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-5
 END:VEVENT
 BEGIN:VEVENT
-UID:the-department-of-truth-4
-DTSTAMP:20201223T000000
-SUMMARY:The Department of Truth #4
-DTSTART;VALUE=DATE:20201223
-DTEND;VALUE=DATE:20201224
-URL:https://imagecomics.com/comics/releases/the-department-of-truth-4
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-scorched-37
-DTSTAMP:20241226T000000
+DTSTAMP:20250115T000000
 SUMMARY:Spawn Scorched #37
-DTSTART;VALUE=DATE:20241226
-DTEND;VALUE=DATE:20241227
+DTSTART;VALUE=DATE:20250115
+DTEND;VALUE=DATE:20250116
 URL:https://imagecomics.com/comics/releases/spawn-scorched-37
 END:VEVENT
 BEGIN:VEVENT
