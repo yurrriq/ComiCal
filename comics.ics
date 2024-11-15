@@ -3,12 +3,36 @@ PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 VERSION:2.0
 X-WR-CALNAME:Geiger, Killadelphia, Monstress, Reckless, Spawn, The Department of Truth, Gunslinger Spawn, King Spawn, Spawn, The Department of Truth, The Scorched
 BEGIN:VEVENT
+UID:geiger-deluxe-edition-hc
+DTSTAMP:20240605T000000
+SUMMARY:Geiger Deluxe Edition HC
+DTSTART;VALUE=DATE:20240605
+DTEND;VALUE=DATE:20240606
+URL:https://imagecomics.com/comics/releases/geiger-deluxe-edition-hc
+END:VEVENT
+BEGIN:VEVENT
 UID:geiger-vol-1-tp
 DTSTAMP:20211124T000000
 SUMMARY:Geiger, Vol. 1 TP
 DTSTART;VALUE=DATE:20211124
 DTEND;VALUE=DATE:20211125
 URL:https://imagecomics.com/comics/releases/geiger-vol-1-tp
+END:VEVENT
+BEGIN:VEVENT
+UID:killadelphia-tp-vol-6
+DTSTAMP:20241211T000000
+SUMMARY:Killadelphia TP, Vol. 6
+DTSTART;VALUE=DATE:20241211
+DTEND;VALUE=DATE:20241212
+URL:https://imagecomics.com/comics/releases/killadelphia-tp-vol-6
+END:VEVENT
+BEGIN:VEVENT
+UID:killadelphia-deluxe-edition-hc-vol-2
+DTSTAMP:20240814T000000
+SUMMARY:Killadelphia Deluxe Edition HC, Vol. 2
+DTSTART;VALUE=DATE:20240814
+DTEND;VALUE=DATE:20240815
+URL:https://imagecomics.com/comics/releases/killadelphia-deluxe-edition-hc-vol-2
 END:VEVENT
 BEGIN:VEVENT
 UID:killadelphia-tp-vol-05-mr
@@ -57,6 +81,14 @@ SUMMARY:Killadelphia, Vol. 1: Sins Of The Father TP
 DTSTART;VALUE=DATE:20200708
 DTEND;VALUE=DATE:20200709
 URL:https://imagecomics.com/comics/releases/killadelphia-vol-1-sins-of-the-father-tp
+END:VEVENT
+BEGIN:VEVENT
+UID:monstress-tp-vol-9
+DTSTAMP:20241113T000000
+SUMMARY:Monstress TP, Vol. 9
+DTSTART;VALUE=DATE:20241113
+DTEND;VALUE=DATE:20241114
+URL:https://imagecomics.com/comics/releases/monstress-tp-vol-9
 END:VEVENT
 BEGIN:VEVENT
 UID:monstress-deluxe-signed-limited-edition-hc-vol-2
@@ -185,6 +217,22 @@ SUMMARY:Reckless OGN
 DTSTART;VALUE=DATE:20201216
 DTEND;VALUE=DATE:20201217
 URL:https://imagecomics.com/comics/releases/reckless-ogn
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-origins-hc-vol-15
+DTSTAMP:20241218T000000
+SUMMARY:Spawn Origins HC, Vol. 15
+DTSTART;VALUE=DATE:20241218
+DTEND;VALUE=DATE:20241219
+URL:https://imagecomics.com/comics/releases/spawn-origins-hc-vol-15
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-the-dark-ages-tp-the-complete-collection-1
+DTSTAMP:20241211T000000
+SUMMARY:Spawn The Dark Ages TP The Complete Collection #1
+DTSTART;VALUE=DATE:20241211
+DTEND;VALUE=DATE:20241212
+URL:https://imagecomics.com/comics/releases/spawn-the-dark-ages-tp-the-complete-collection-1
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-compendium-vol-6-tp-vol-6
@@ -363,20 +411,12 @@ DTEND;VALUE=DATE:20230420
 URL:https://imagecomics.com/comics/releases/spawn-origins-hc-vol-12-2
 END:VEVENT
 BEGIN:VEVENT
-UID:deluxe-spawn-origins-hc-vol-5
-DTSTAMP:20221228T000000
-SUMMARY:Deluxe Spawn Origins HC vol. 5
-DTSTART;VALUE=DATE:20221228
-DTEND;VALUE=DATE:20221229
-URL:https://imagecomics.com/comics/releases/deluxe-spawn-origins-hc-vol-5
-END:VEVENT
-BEGIN:VEVENT
-UID:spawn-origins-vol-24-tpb
-DTSTAMP:20221228T000000
-SUMMARY:Spawn Origins, Vol. 24 TPB
-DTSTART;VALUE=DATE:20221228
-DTEND;VALUE=DATE:20221229
-URL:https://imagecomics.com/comics/releases/spawn-origins-vol-24-tpb
+UID:the-department-of-truth-tp-vol-5
+DTSTAMP:20250129T000000
+SUMMARY:The Department Of Truth TP, Vol. 5
+DTSTART;VALUE=DATE:20250129
+DTEND;VALUE=DATE:20250130
+URL:https://imagecomics.com/comics/releases/the-department-of-truth-tp-vol-5
 END:VEVENT
 BEGIN:VEVENT
 UID:the-department-of-truth-wild-fictions-hc
@@ -827,14 +867,6 @@ DTEND;VALUE=DATE:20250206
 URL:https://imagecomics.com/comics/releases/spawn-361
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-the-dark-ages-tp-the-complete-collection-1
-DTSTAMP:20241211T000000
-SUMMARY:Spawn The Dark Ages TP The Complete Collection #1
-DTSTART;VALUE=DATE:20241211
-DTEND;VALUE=DATE:20241212
-URL:https://imagecomics.com/comics/releases/spawn-the-dark-ages-tp-the-complete-collection-1
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-359
 DTSTAMP:20241127T000000
 SUMMARY:Spawn #359
@@ -1001,6 +1033,14 @@ SUMMARY:SPAWN #339
 DTSTART;VALUE=DATE:20230308
 DTEND;VALUE=DATE:20230309
 URL:https://imagecomics.com/comics/releases/spawn-339
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-338
+DTSTAMP:20230208T000000
+SUMMARY:Spawn #338
+DTSTART;VALUE=DATE:20230208
+DTEND;VALUE=DATE:20230209
+URL:https://imagecomics.com/comics/releases/spawn-338
 END:VEVENT
 BEGIN:VEVENT
 UID:the-department-of-truth-28
