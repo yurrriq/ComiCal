@@ -339,20 +339,20 @@ DTEND;VALUE=DATE:20231130
 URL:https://imagecomics.com/comics/releases/spawns-universe-box-set-2
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-cover-gallery-hc-vol-1-2
-DTSTAMP:20231101T000000
-SUMMARY:Spawn Cover Gallery HC, Vol. 1
-DTSTART;VALUE=DATE:20231101
-DTEND;VALUE=DATE:20231102
-URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-hc-vol-1-2
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-cover-gallery-vol-1-hc
 DTSTAMP:20231101T000000
 SUMMARY:Spawn Cover Gallery, Vol. 1 HC
 DTSTART;VALUE=DATE:20231101
 DTEND;VALUE=DATE:20231102
 URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-vol-1-hc
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-cover-gallery-hc-vol-1-2
+DTSTAMP:20231101T000000
+SUMMARY:Spawn Cover Gallery HC, Vol. 1
+DTSTART;VALUE=DATE:20231101
+DTEND;VALUE=DATE:20231102
+URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-hc-vol-1-2
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-origins-hc-vol-13
