@@ -563,20 +563,20 @@ DTEND;VALUE=DATE:20240509
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-31
 END:VEVENT
 BEGIN:VEVENT
-UID:gunslinger-spawn-30
-DTSTAMP:20240306T000000
-SUMMARY:Gunslinger Spawn #30
-DTSTART;VALUE=DATE:20240306
-DTEND;VALUE=DATE:20240307
-URL:https://imagecomics.com/comics/releases/gunslinger-spawn-30
-END:VEVENT
-BEGIN:VEVENT
 UID:gunslinger-spawn-29
 DTSTAMP:20240306T000000
 SUMMARY:Gunslinger Spawn #29
 DTSTART;VALUE=DATE:20240306
 DTEND;VALUE=DATE:20240307
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-29
+END:VEVENT
+BEGIN:VEVENT
+UID:gunslinger-spawn-30
+DTSTAMP:20240306T000000
+SUMMARY:Gunslinger Spawn #30
+DTSTART;VALUE=DATE:20240306
+DTEND;VALUE=DATE:20240307
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-30
 END:VEVENT
 BEGIN:VEVENT
 UID:gunslinger-spawn-28
@@ -1044,18 +1044,18 @@ URL:https://imagecomics.com/comics/releases/spawn-339
 END:VEVENT
 BEGIN:VEVENT
 UID:the-department-of-truth-29
-DTSTAMP:20250226T000000
+DTSTAMP:20250326T000000
 SUMMARY:The Department Of Truth #29
-DTSTART;VALUE=DATE:20250226
-DTEND;VALUE=DATE:20250227
+DTSTART;VALUE=DATE:20250326
+DTEND;VALUE=DATE:20250327
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-29
 END:VEVENT
 BEGIN:VEVENT
 UID:the-department-of-truth-28
-DTSTAMP:20250129T000000
+DTSTAMP:20250226T000000
 SUMMARY:The Department Of Truth #28
-DTSTART;VALUE=DATE:20250129
-DTEND;VALUE=DATE:20250130
+DTSTART;VALUE=DATE:20250226
+DTEND;VALUE=DATE:20250227
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-28
 END:VEVENT
 BEGIN:VEVENT
