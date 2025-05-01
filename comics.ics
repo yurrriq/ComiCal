@@ -83,6 +83,14 @@ DTEND;VALUE=DATE:20200709
 URL:https://imagecomics.com/comics/releases/killadelphia-vol-1-sins-of-the-father-tp
 END:VEVENT
 BEGIN:VEVENT
+UID:monstress-hc-vol-3
+DTSTAMP:20250723T000000
+SUMMARY:Monstress HC, Vol. 3
+DTSTART;VALUE=DATE:20250723
+DTEND;VALUE=DATE:20250724
+URL:https://imagecomics.com/comics/releases/monstress-hc-vol-3
+END:VEVENT
+BEGIN:VEVENT
 UID:monstress-tp-vol-9
 DTSTAMP:20241113T000000
 SUMMARY:Monstress TP, Vol. 9
@@ -387,20 +395,20 @@ DTEND;VALUE=DATE:20231130
 URL:https://imagecomics.com/comics/releases/spawns-universe-box-set-2
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-cover-gallery-hc-vol-1-2
-DTSTAMP:20231101T000000
-SUMMARY:Spawn Cover Gallery HC, Vol. 1
-DTSTART;VALUE=DATE:20231101
-DTEND;VALUE=DATE:20231102
-URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-hc-vol-1-2
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-cover-gallery-vol-1-hc
 DTSTAMP:20231101T000000
 SUMMARY:Spawn Cover Gallery, Vol. 1 HC
 DTSTART;VALUE=DATE:20231101
 DTEND;VALUE=DATE:20231102
 URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-vol-1-hc
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-cover-gallery-hc-vol-1-2
+DTSTAMP:20231101T000000
+SUMMARY:Spawn Cover Gallery HC, Vol. 1
+DTSTART;VALUE=DATE:20231101
+DTEND;VALUE=DATE:20231102
+URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-hc-vol-1-2
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-origins-hc-vol-13
@@ -473,6 +481,14 @@ SUMMARY:Gunslinger Spawn #45
 DTSTART;VALUE=DATE:20250723
 DTEND;VALUE=DATE:20250724
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-45
+END:VEVENT
+BEGIN:VEVENT
+UID:gunslinger-spawn-46
+DTSTAMP:20250709T000000
+SUMMARY:Gunslinger Spawn #46
+DTSTART;VALUE=DATE:20250709
+DTEND;VALUE=DATE:20250710
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-46
 END:VEVENT
 BEGIN:VEVENT
 UID:gunslinger-spawn-44
@@ -651,12 +667,12 @@ DTEND;VALUE=DATE:20230921
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-24
 END:VEVENT
 BEGIN:VEVENT
-UID:gunslinger-spawn-23
-DTSTAMP:20230809T000000
-SUMMARY:GUNSLINGER SPAWN #23
-DTSTART;VALUE=DATE:20230809
-DTEND;VALUE=DATE:20230810
-URL:https://imagecomics.com/comics/releases/gunslinger-spawn-23
+UID:king-spawn-48
+DTSTAMP:20250716T000000
+SUMMARY:King Spawn #48
+DTSTART;VALUE=DATE:20250716
+DTEND;VALUE=DATE:20250717
+URL:https://imagecomics.com/comics/releases/king-spawn-48
 END:VEVENT
 BEGIN:VEVENT
 UID:king-spawn-47
@@ -843,12 +859,12 @@ DTEND;VALUE=DATE:20230824
 URL:https://imagecomics.com/comics/releases/king-spawn-25
 END:VEVENT
 BEGIN:VEVENT
-UID:king-spawn-24
-DTSTAMP:20230719T000000
-SUMMARY:King Spawn #24
-DTSTART;VALUE=DATE:20230719
-DTEND;VALUE=DATE:20230720
-URL:https://imagecomics.com/comics/releases/king-spawn-24
+UID:spawn-368
+DTSTAMP:20250903T000000
+SUMMARY:Spawn #368
+DTSTART;VALUE=DATE:20250903
+DTEND;VALUE=DATE:20250904
+URL:https://imagecomics.com/comics/releases/spawn-368
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-367
@@ -1035,12 +1051,12 @@ DTEND;VALUE=DATE:20231116
 URL:https://imagecomics.com/comics/releases/spawn-347
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-346
-DTSTAMP:20231025T000000
-SUMMARY:SPAWN #346
-DTSTART;VALUE=DATE:20231025
-DTEND;VALUE=DATE:20231026
-URL:https://imagecomics.com/comics/releases/spawn-346
+UID:the-department-of-truth-33
+DTSTAMP:20250730T000000
+SUMMARY:The Department of Truth #33
+DTSTART;VALUE=DATE:20250730
+DTEND;VALUE=DATE:20250731
+URL:https://imagecomics.com/comics/releases/the-department-of-truth-33
 END:VEVENT
 BEGIN:VEVENT
 UID:department-of-truth-32
@@ -1225,14 +1241,6 @@ SUMMARY:The Department of Truth #10
 DTSTART;VALUE=DATE:20210630
 DTEND;VALUE=DATE:20210701
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-10
-END:VEVENT
-BEGIN:VEVENT
-UID:the-department-of-truth-9
-DTSTAMP:20210526T000000
-SUMMARY:The Department of Truth #9
-DTSTART;VALUE=DATE:20210526
-DTEND;VALUE=DATE:20210527
-URL:https://imagecomics.com/comics/releases/the-department-of-truth-9
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-scorched-37
