@@ -227,20 +227,20 @@ DTEND;VALUE=DATE:20201217
 URL:https://imagecomics.com/comics/releases/reckless-ogn
 END:VEVENT
 BEGIN:VEVENT
+UID:spawn-origins-deluxe-edition-hc-vol-8
+DTSTAMP:20250611T000000
+SUMMARY:Spawn Origins Deluxe Edition HC, Vol. 8
+DTSTART;VALUE=DATE:20250611
+DTEND;VALUE=DATE:20250612
+URL:https://imagecomics.com/comics/releases/spawn-origins-deluxe-edition-hc-vol-8
+END:VEVENT
+BEGIN:VEVENT
 UID:adventure-of-spawn-complete-collection-tp-vol-1
 DTSTAMP:20250514T000000
 SUMMARY:Adventure of Spawn Complete Collection TP, Vol. 1
 DTSTART;VALUE=DATE:20250514
 DTEND;VALUE=DATE:20250515
 URL:https://imagecomics.com/comics/releases/adventure-of-spawn-complete-collection-tp-vol-1
-END:VEVENT
-BEGIN:VEVENT
-UID:spawn-origins-deluxe-edition-hc-vol-8
-DTSTAMP:20250507T000000
-SUMMARY:Spawn Origins Deluxe Edition HC, Vol. 8
-DTSTART;VALUE=DATE:20250507
-DTEND;VALUE=DATE:20250508
-URL:https://imagecomics.com/comics/releases/spawn-origins-deluxe-edition-hc-vol-8
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-monolith-tp-vol-1
@@ -323,20 +323,20 @@ DTEND;VALUE=DATE:20240711
 URL:https://imagecomics.com/comics/releases/spawn-origins-hc-vol-14
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-origins-deluxe-edition-signed-and-numbered-hc-vol-7
-DTSTAMP:20240529T000000
-SUMMARY:Spawn: Origins Deluxe Edition: Signed And Numbered HC, Vol. 7
-DTSTART;VALUE=DATE:20240529
-DTEND;VALUE=DATE:20240530
-URL:https://imagecomics.com/comics/releases/spawn-origins-deluxe-edition-signed-and-numbered-hc-vol-7
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-origins-deluxe-edition-hc-vol-7
 DTSTAMP:20240529T000000
 SUMMARY:Spawn: Origins Deluxe Edition HC, Vol. 7
 DTSTART;VALUE=DATE:20240529
 DTEND;VALUE=DATE:20240530
 URL:https://imagecomics.com/comics/releases/spawn-origins-deluxe-edition-hc-vol-7
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-origins-deluxe-edition-signed-and-numbered-hc-vol-7
+DTSTAMP:20240529T000000
+SUMMARY:Spawn: Origins Deluxe Edition: Signed And Numbered HC, Vol. 7
+DTSTART;VALUE=DATE:20240529
+DTEND;VALUE=DATE:20240530
+URL:https://imagecomics.com/comics/releases/spawn-origins-deluxe-edition-signed-and-numbered-hc-vol-7
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-origins-vol-8
@@ -395,20 +395,20 @@ DTEND;VALUE=DATE:20231130
 URL:https://imagecomics.com/comics/releases/spawns-universe-box-set-2
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-cover-gallery-vol-1-hc
-DTSTAMP:20231101T000000
-SUMMARY:Spawn Cover Gallery, Vol. 1 HC
-DTSTART;VALUE=DATE:20231101
-DTEND;VALUE=DATE:20231102
-URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-vol-1-hc
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-cover-gallery-hc-vol-1-2
 DTSTAMP:20231101T000000
 SUMMARY:Spawn Cover Gallery HC, Vol. 1
 DTSTART;VALUE=DATE:20231101
 DTEND;VALUE=DATE:20231102
 URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-hc-vol-1-2
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-cover-gallery-vol-1-hc
+DTSTAMP:20231101T000000
+SUMMARY:Spawn Cover Gallery, Vol. 1 HC
+DTSTART;VALUE=DATE:20231101
+DTEND;VALUE=DATE:20231102
+URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-vol-1-hc
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-origins-hc-vol-13
@@ -475,20 +475,20 @@ DTEND;VALUE=DATE:20210225
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-vol-1-the-end-of-the-world-tp
 END:VEVENT
 BEGIN:VEVENT
+UID:gunslinger-spawn-46
+DTSTAMP:20250820T000000
+SUMMARY:Gunslinger Spawn #46
+DTSTART;VALUE=DATE:20250820
+DTEND;VALUE=DATE:20250821
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-46
+END:VEVENT
+BEGIN:VEVENT
 UID:gunslinger-spawn-45
 DTSTAMP:20250723T000000
 SUMMARY:Gunslinger Spawn #45
 DTSTART;VALUE=DATE:20250723
 DTEND;VALUE=DATE:20250724
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-45
-END:VEVENT
-BEGIN:VEVENT
-UID:gunslinger-spawn-46
-DTSTAMP:20250709T000000
-SUMMARY:Gunslinger Spawn #46
-DTSTART;VALUE=DATE:20250709
-DTEND;VALUE=DATE:20250710
-URL:https://imagecomics.com/comics/releases/gunslinger-spawn-46
 END:VEVENT
 BEGIN:VEVENT
 UID:gunslinger-spawn-44
@@ -668,10 +668,10 @@ URL:https://imagecomics.com/comics/releases/gunslinger-spawn-24
 END:VEVENT
 BEGIN:VEVENT
 UID:king-spawn-48
-DTSTAMP:20250716T000000
+DTSTAMP:20250806T000000
 SUMMARY:King Spawn #48
-DTSTART;VALUE=DATE:20250716
-DTEND;VALUE=DATE:20250717
+DTSTART;VALUE=DATE:20250806
+DTEND;VALUE=DATE:20250807
 URL:https://imagecomics.com/comics/releases/king-spawn-48
 END:VEVENT
 BEGIN:VEVENT
@@ -899,20 +899,20 @@ DTEND;VALUE=DATE:20250522
 URL:https://imagecomics.com/comics/releases/medieval-spawn-2-of-4
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-364
-DTSTAMP:20250514T000000
-SUMMARY:Spawn #364
-DTSTART;VALUE=DATE:20250514
-DTEND;VALUE=DATE:20250515
-URL:https://imagecomics.com/comics/releases/spawn-364
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-black-ritual-the-book-of-nyx-2-of-7
 DTSTAMP:20250514T000000
 SUMMARY:Spawn Black Ritual The Book Of Nyx #2 (of 7)
 DTSTART;VALUE=DATE:20250514
 DTEND;VALUE=DATE:20250515
 URL:https://imagecomics.com/comics/releases/spawn-black-ritual-the-book-of-nyx-2-of-7
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-364
+DTSTAMP:20250514T000000
+SUMMARY:Spawn #364
+DTSTART;VALUE=DATE:20250514
+DTEND;VALUE=DATE:20250515
+URL:https://imagecomics.com/comics/releases/spawn-364
 END:VEVENT
 BEGIN:VEVENT
 UID:medieval-spawn-1-of-4
