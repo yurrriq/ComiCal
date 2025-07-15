@@ -243,20 +243,20 @@ DTEND;VALUE=DATE:20251211
 URL:https://imagecomics.com/comics/releases/spawn-vault-edition-hc-vol-3
 END:VEVENT
 BEGIN:VEVENT
-UID:spread-compendium-tp-vol-1
-DTSTAMP:20250924T000000
-SUMMARY:Spread Compendium TP, Vol. 1
-DTSTART;VALUE=DATE:20250924
-DTEND;VALUE=DATE:20250925
-URL:https://imagecomics.com/comics/releases/spread-compendium-tp-vol-1
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-battle-for-the-throne-part-1-tp-vol-1
 DTSTAMP:20250924T000000
 SUMMARY:Spawn Battle For The Throne Part 1 TP, Vol. 1
 DTSTART;VALUE=DATE:20250924
 DTEND;VALUE=DATE:20250925
 URL:https://imagecomics.com/comics/releases/spawn-battle-for-the-throne-part-1-tp-vol-1
+END:VEVENT
+BEGIN:VEVENT
+UID:spread-compendium-tp-vol-1
+DTSTAMP:20250917T000000
+SUMMARY:Spread Compendium TP, Vol. 1
+DTSTART;VALUE=DATE:20250917
+DTEND;VALUE=DATE:20250918
+URL:https://imagecomics.com/comics/releases/spread-compendium-tp-vol-1
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-compendium-tp-vol-7
