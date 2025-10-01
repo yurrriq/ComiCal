@@ -3,6 +3,14 @@ PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 VERSION:2.0
 X-WR-CALNAME:Geiger, Killadelphia, Monstress, Reckless, Spawn, The Department of Truth, Gunslinger Spawn, King Spawn, Spawn, The Department of Truth, The Scorched
 BEGIN:VEVENT
+UID:geiger-deluxe-edition-hc-vol-2
+DTSTAMP:20251203T000000
+SUMMARY:Geiger Deluxe Edition HC, Vol. 2
+DTSTART;VALUE=DATE:20251203
+DTEND;VALUE=DATE:20251204
+URL:https://imagecomics.com/comics/releases/geiger-deluxe-edition-hc-vol-2
+END:VEVENT
+BEGIN:VEVENT
 UID:geiger-deluxe-edition-hc
 DTSTAMP:20240605T000000
 SUMMARY:Geiger Deluxe Edition HC
@@ -259,14 +267,6 @@ DTEND;VALUE=DATE:20250925
 URL:https://imagecomics.com/comics/releases/spawn-battle-for-the-throne-part-1-tp-vol-1
 END:VEVENT
 BEGIN:VEVENT
-UID:spread-compendium-tp-vol-1
-DTSTAMP:20250917T000000
-SUMMARY:Spread Compendium TP, Vol. 1
-DTSTART;VALUE=DATE:20250917
-DTEND;VALUE=DATE:20250918
-URL:https://imagecomics.com/comics/releases/spread-compendium-tp-vol-1
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-compendium-tp-vol-7
 DTSTAMP:20250827T000000
 SUMMARY:Spawn Compendium TP, Vol. 7
@@ -435,6 +435,14 @@ DTEND;VALUE=DATE:20231221
 URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-hc-vol-2
 END:VEVENT
 BEGIN:VEVENT
+UID:spawns-universe-box-set-2
+DTSTAMP:20231129T000000
+SUMMARY:Spawn's Universe Box Set
+DTSTART;VALUE=DATE:20231129
+DTEND;VALUE=DATE:20231130
+URL:https://imagecomics.com/comics/releases/spawns-universe-box-set-2
+END:VEVENT
+BEGIN:VEVENT
 UID:department-of-truth-tp-vol-6
 DTSTAMP:20251029T000000
 SUMMARY:Department Of Truth TP, Vol. 6
@@ -497,6 +505,14 @@ SUMMARY:The Department of Truth, Vol. 1: The End of the World TP
 DTSTART;VALUE=DATE:20210224
 DTEND;VALUE=DATE:20210225
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-vol-1-the-end-of-the-world-tp
+END:VEVENT
+BEGIN:VEVENT
+UID:gunslinger-spawn-50
+DTSTAMP:20251231T000000
+SUMMARY:Gunslinger Spawn #50
+DTSTART;VALUE=DATE:20251231
+DTEND;VALUE=DATE:20260101
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-50
 END:VEVENT
 BEGIN:VEVENT
 UID:gunslinger-spawn-49
@@ -683,12 +699,12 @@ DTEND;VALUE=DATE:20240208
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-28
 END:VEVENT
 BEGIN:VEVENT
-UID:gunslinger-spawn-27
-DTSTAMP:20231227T000000
-SUMMARY:Gunslinger Spawn #27
-DTSTART;VALUE=DATE:20231227
-DTEND;VALUE=DATE:20231228
-URL:https://imagecomics.com/comics/releases/gunslinger-spawn-27
+UID:king-spawn-52
+DTSTAMP:20251224T000000
+SUMMARY:King Spawn #52
+DTSTART;VALUE=DATE:20251224
+DTEND;VALUE=DATE:20251225
+URL:https://imagecomics.com/comics/releases/king-spawn-52
 END:VEVENT
 BEGIN:VEVENT
 UID:king-spawn-51
@@ -875,12 +891,12 @@ DTEND;VALUE=DATE:20240111
 URL:https://imagecomics.com/comics/releases/king-spawn-29
 END:VEVENT
 BEGIN:VEVENT
-UID:king-spawn-28-2
-DTSTAMP:20231206T000000
-SUMMARY:King Spawn #28
-DTSTART;VALUE=DATE:20231206
-DTEND;VALUE=DATE:20231207
-URL:https://imagecomics.com/comics/releases/king-spawn-28-2
+UID:spawn-373
+DTSTAMP:20251217T000000
+SUMMARY:Spawn #373
+DTSTART;VALUE=DATE:20251217
+DTEND;VALUE=DATE:20251218
+URL:https://imagecomics.com/comics/releases/spawn-373
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-371
@@ -955,20 +971,20 @@ DTEND;VALUE=DATE:20250522
 URL:https://imagecomics.com/comics/releases/medieval-spawn-2-of-4
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-black-ritual-the-book-of-nyx-2-of-7
-DTSTAMP:20250514T000000
-SUMMARY:Spawn Black Ritual The Book Of Nyx #2 (of 7)
-DTSTART;VALUE=DATE:20250514
-DTEND;VALUE=DATE:20250515
-URL:https://imagecomics.com/comics/releases/spawn-black-ritual-the-book-of-nyx-2-of-7
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-364
 DTSTAMP:20250514T000000
 SUMMARY:Spawn #364
 DTSTART;VALUE=DATE:20250514
 DTEND;VALUE=DATE:20250515
 URL:https://imagecomics.com/comics/releases/spawn-364
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-black-ritual-the-book-of-nyx-2-of-7
+DTSTAMP:20250514T000000
+SUMMARY:Spawn Black Ritual The Book Of Nyx #2 (of 7)
+DTSTART;VALUE=DATE:20250514
+DTEND;VALUE=DATE:20250515
+URL:https://imagecomics.com/comics/releases/spawn-black-ritual-the-book-of-nyx-2-of-7
 END:VEVENT
 BEGIN:VEVENT
 UID:medieval-spawn-1-of-4
@@ -1065,14 +1081,6 @@ SUMMARY:Spawn #352
 DTSTART;VALUE=DATE:20240417
 DTEND;VALUE=DATE:20240418
 URL:https://imagecomics.com/comics/releases/spawn-352
-END:VEVENT
-BEGIN:VEVENT
-UID:spawn-351
-DTSTAMP:20240320T000000
-SUMMARY:Spawn #351
-DTSTART;VALUE=DATE:20240320
-DTEND;VALUE=DATE:20240321
-URL:https://imagecomics.com/comics/releases/spawn-351
 END:VEVENT
 BEGIN:VEVENT
 UID:the-department-of-truth-35
@@ -1267,6 +1275,14 @@ DTEND;VALUE=DATE:20210930
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-13
 END:VEVENT
 BEGIN:VEVENT
+UID:spawn-scorched-49
+DTSTAMP:20251231T000000
+SUMMARY:Spawn Scorched #49
+DTSTART;VALUE=DATE:20251231
+DTEND;VALUE=DATE:20260101
+URL:https://imagecomics.com/comics/releases/spawn-scorched-49
+END:VEVENT
+BEGIN:VEVENT
 UID:spawn-scorched-47
 DTSTAMP:20251126T000000
 SUMMARY:Spawn Scorched #47
@@ -1449,13 +1465,5 @@ SUMMARY:The Scorched #25
 DTSTART;VALUE=DATE:20240117
 DTEND;VALUE=DATE:20240118
 URL:https://imagecomics.com/comics/releases/the-scorched-25
-END:VEVENT
-BEGIN:VEVENT
-UID:the-scorched-24-2
-DTSTAMP:20231213T000000
-SUMMARY:The Scorched #24
-DTSTART;VALUE=DATE:20231213
-DTEND;VALUE=DATE:20231214
-URL:https://imagecomics.com/comics/releases/the-scorched-24-2
 END:VEVENT
 END:VCALENDAR
