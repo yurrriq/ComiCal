@@ -251,6 +251,14 @@ DTEND;VALUE=DATE:20201217
 URL:https://imagecomics.com/comics/releases/reckless-ogn
 END:VEVENT
 BEGIN:VEVENT
+UID:spawn-battle-for-the-throne-part-2-tp-vol-2
+DTSTAMP:20260114T000000
+SUMMARY:Spawn Battle For The Throne Part 2 TP, Vol. 2
+DTSTART;VALUE=DATE:20260114
+DTEND;VALUE=DATE:20260115
+URL:https://imagecomics.com/comics/releases/spawn-battle-for-the-throne-part-2-tp-vol-2
+END:VEVENT
+BEGIN:VEVENT
 UID:spawn-vault-edition-hc-vol-3
 DTSTAMP:20260107T000000
 SUMMARY:Spawn Vault Edition HC, Vol. 3
@@ -435,14 +443,6 @@ DTEND;VALUE=DATE:20231221
 URL:https://imagecomics.com/comics/releases/spawn-cover-gallery-hc-vol-2
 END:VEVENT
 BEGIN:VEVENT
-UID:spawns-universe-box-set-2
-DTSTAMP:20231129T000000
-SUMMARY:Spawn's Universe Box Set
-DTSTART;VALUE=DATE:20231129
-DTEND;VALUE=DATE:20231130
-URL:https://imagecomics.com/comics/releases/spawns-universe-box-set-2
-END:VEVENT
-BEGIN:VEVENT
 UID:department-of-truth-tp-vol-6
 DTSTAMP:20251029T000000
 SUMMARY:Department Of Truth TP, Vol. 6
@@ -505,6 +505,14 @@ SUMMARY:The Department of Truth, Vol. 1: The End of the World TP
 DTSTART;VALUE=DATE:20210224
 DTEND;VALUE=DATE:20210225
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-vol-1-the-end-of-the-world-tp
+END:VEVENT
+BEGIN:VEVENT
+UID:gunslinger-spawn-51
+DTSTAMP:20260128T000000
+SUMMARY:Gunslinger Spawn #51
+DTSTART;VALUE=DATE:20260128
+DTEND;VALUE=DATE:20260129
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-51
 END:VEVENT
 BEGIN:VEVENT
 UID:gunslinger-spawn-50
@@ -691,12 +699,12 @@ DTEND;VALUE=DATE:20240307
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-30
 END:VEVENT
 BEGIN:VEVENT
-UID:gunslinger-spawn-28
-DTSTAMP:20240207T000000
-SUMMARY:Gunslinger Spawn #28
-DTSTART;VALUE=DATE:20240207
-DTEND;VALUE=DATE:20240208
-URL:https://imagecomics.com/comics/releases/gunslinger-spawn-28
+UID:king-spawn-53
+DTSTAMP:20260211T000000
+SUMMARY:King Spawn #53
+DTSTART;VALUE=DATE:20260211
+DTEND;VALUE=DATE:20260212
+URL:https://imagecomics.com/comics/releases/king-spawn-53
 END:VEVENT
 BEGIN:VEVENT
 UID:king-spawn-52
@@ -883,12 +891,12 @@ DTEND;VALUE=DATE:20240201
 URL:https://imagecomics.com/comics/releases/king-spawn-30
 END:VEVENT
 BEGIN:VEVENT
-UID:king-spawn-29
-DTSTAMP:20240110T000000
-SUMMARY:King Spawn #29
-DTSTART;VALUE=DATE:20240110
-DTEND;VALUE=DATE:20240111
-URL:https://imagecomics.com/comics/releases/king-spawn-29
+UID:spawn-374
+DTSTAMP:20260401T000000
+SUMMARY:Spawn #374
+DTSTART;VALUE=DATE:20260401
+DTEND;VALUE=DATE:20260402
+URL:https://imagecomics.com/comics/releases/spawn-374
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-373
@@ -1073,14 +1081,6 @@ SUMMARY:Spawn #353
 DTSTART;VALUE=DATE:20240515
 DTEND;VALUE=DATE:20240516
 URL:https://imagecomics.com/comics/releases/spawn-353
-END:VEVENT
-BEGIN:VEVENT
-UID:spawn-352
-DTSTAMP:20240417T000000
-SUMMARY:Spawn #352
-DTSTART;VALUE=DATE:20240417
-DTEND;VALUE=DATE:20240418
-URL:https://imagecomics.com/comics/releases/spawn-352
 END:VEVENT
 BEGIN:VEVENT
 UID:the-department-of-truth-35
@@ -1292,10 +1292,10 @@ URL:https://imagecomics.com/comics/releases/spawn-scorched-48
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-scorched-47
-DTSTAMP:20251217T000000
+DTSTAMP:20260107T000000
 SUMMARY:Spawn Scorched #47
-DTSTART;VALUE=DATE:20251217
-DTEND;VALUE=DATE:20251218
+DTSTART;VALUE=DATE:20260107
+DTEND;VALUE=DATE:20260108
 URL:https://imagecomics.com/comics/releases/spawn-scorched-47
 END:VEVENT
 BEGIN:VEVENT
