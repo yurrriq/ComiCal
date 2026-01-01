@@ -691,12 +691,12 @@ DTEND;VALUE=DATE:20240509
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-31
 END:VEVENT
 BEGIN:VEVENT
-UID:gunslinger-spawn-30
+UID:gunslinger-spawn-29
 DTSTAMP:20240306T000000
-SUMMARY:Gunslinger Spawn #30
+SUMMARY:Gunslinger Spawn #29
 DTSTART;VALUE=DATE:20240306
 DTEND;VALUE=DATE:20240307
-URL:https://imagecomics.com/comics/releases/gunslinger-spawn-30
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-29
 END:VEVENT
 BEGIN:VEVENT
 UID:king-spawn-54
