@@ -373,7 +373,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-origins-hc-vol-14
 DTSTAMP:20240710T000000
-SUMMARY:Spawn Origins HC, Vol. 14 (CANCELED)
+SUMMARY:Spawn Origins HC, Vol. 14
 DTSTART;VALUE=DATE:20240710
 DTEND;VALUE=DATE:20240711
 URL:https://imagecomics.com/comics/releases/spawn-origins-hc-vol-14
@@ -453,7 +453,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:department-of-truth-tp-vol-6
 DTSTAMP:20251029T000000
-SUMMARY:Department Of Truth TP, Vol. 6
+SUMMARY:The Department Of Truth TP, Vol. 6
 DTSTART;VALUE=DATE:20251029
 DTEND;VALUE=DATE:20251030
 URL:https://imagecomics.com/comics/releases/department-of-truth-tp-vol-6
@@ -513,6 +513,14 @@ SUMMARY:The Department of Truth, Vol. 1: The End of the World TP
 DTSTART;VALUE=DATE:20210224
 DTEND;VALUE=DATE:20210225
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-vol-1-the-end-of-the-world-tp
+END:VEVENT
+BEGIN:VEVENT
+UID:gunslinger-spawn-54
+DTSTAMP:20260422T000000
+SUMMARY:GUNSLINGER SPAWN #54
+DTSTART;VALUE=DATE:20260422
+DTEND;VALUE=DATE:20260423
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-54
 END:VEVENT
 BEGIN:VEVENT
 UID:gunslinger-spawn-53
@@ -699,12 +707,12 @@ DTEND;VALUE=DATE:20240606
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-32
 END:VEVENT
 BEGIN:VEVENT
-UID:gunslinger-spawn-31
-DTSTAMP:20240508T000000
-SUMMARY:Gunslinger Spawn #31
-DTSTART;VALUE=DATE:20240508
-DTEND;VALUE=DATE:20240509
-URL:https://imagecomics.com/comics/releases/gunslinger-spawn-31
+UID:king-spawn-56
+DTSTAMP:20260422T000000
+SUMMARY:KING SPAWN #56
+DTSTART;VALUE=DATE:20260422
+DTEND;VALUE=DATE:20260423
+URL:https://imagecomics.com/comics/releases/king-spawn-56
 END:VEVENT
 BEGIN:VEVENT
 UID:king-spawn-55
@@ -891,14 +899,6 @@ DTEND;VALUE=DATE:20240502
 URL:https://imagecomics.com/comics/releases/king-spawn-33
 END:VEVENT
 BEGIN:VEVENT
-UID:king-spawn-32
-DTSTAMP:20240327T000000
-SUMMARY:King Spawn #32
-DTSTART;VALUE=DATE:20240327
-DTEND;VALUE=DATE:20240328
-URL:https://imagecomics.com/comics/releases/king-spawn-32
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-376
 DTSTAMP:20260603T000000
 SUMMARY:SPAWN #376
@@ -913,6 +913,14 @@ SUMMARY:Spawn #375
 DTSTART;VALUE=DATE:20260506
 DTEND;VALUE=DATE:20260507
 URL:https://imagecomics.com/comics/releases/spawn-375
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-377
+DTSTAMP:20260429T000000
+SUMMARY:SPAWN #377
+DTSTART;VALUE=DATE:20260429
+DTEND;VALUE=DATE:20260430
+URL:https://imagecomics.com/comics/releases/spawn-377
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-374
@@ -1003,20 +1011,20 @@ DTEND;VALUE=DATE:20250522
 URL:https://imagecomics.com/comics/releases/medieval-spawn-2-of-4
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-black-ritual-the-book-of-nyx-2-of-7
-DTSTAMP:20250514T000000
-SUMMARY:Spawn Black Ritual The Book Of Nyx #2 (of 7)
-DTSTART;VALUE=DATE:20250514
-DTEND;VALUE=DATE:20250515
-URL:https://imagecomics.com/comics/releases/spawn-black-ritual-the-book-of-nyx-2-of-7
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-364
 DTSTAMP:20250514T000000
 SUMMARY:Spawn #364
 DTSTART;VALUE=DATE:20250514
 DTEND;VALUE=DATE:20250515
 URL:https://imagecomics.com/comics/releases/spawn-364
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-black-ritual-the-book-of-nyx-2-of-7
+DTSTAMP:20250514T000000
+SUMMARY:Spawn Black Ritual The Book Of Nyx #2 (of 7)
+DTSTART;VALUE=DATE:20250514
+DTEND;VALUE=DATE:20250515
+URL:https://imagecomics.com/comics/releases/spawn-black-ritual-the-book-of-nyx-2-of-7
 END:VEVENT
 BEGIN:VEVENT
 UID:medieval-spawn-1-of-4
@@ -1083,12 +1091,12 @@ DTEND;VALUE=DATE:20240905
 URL:https://imagecomics.com/comics/releases/spawn-356
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-355
-DTSTAMP:20240731T000000
-SUMMARY:Spawn #355
-DTSTART;VALUE=DATE:20240731
-DTEND;VALUE=DATE:20240801
-URL:https://imagecomics.com/comics/releases/spawn-355
+UID:the-department-of-truth-38
+DTSTAMP:20260429T000000
+SUMMARY:THE DEPARTMENT OF TRUTH #38
+DTSTART;VALUE=DATE:20260429
+DTEND;VALUE=DATE:20260430
+URL:https://imagecomics.com/comics/releases/the-department-of-truth-38
 END:VEVENT
 BEGIN:VEVENT
 UID:the-department-of-truth-37
@@ -1117,7 +1125,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:department-of-truth-34
 DTSTAMP:20251126T000000
-SUMMARY:Department Of Truth #34
+SUMMARY:The Department Of Truth #34
 DTSTART;VALUE=DATE:20251126
 DTEND;VALUE=DATE:20251127
 URL:https://imagecomics.com/comics/releases/department-of-truth-34
@@ -1125,7 +1133,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:department-of-truth-0
 DTSTAMP:20251001T000000
-SUMMARY:Department Of Truth #0
+SUMMARY:The Department Of Truth #0
 DTSTART;VALUE=DATE:20251001
 DTEND;VALUE=DATE:20251002
 URL:https://imagecomics.com/comics/releases/department-of-truth-0
@@ -1141,7 +1149,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:department-of-truth-32
 DTSTAMP:20250723T000000
-SUMMARY:Department Of Truth #32
+SUMMARY:The Department Of Truth #32
 DTSTART;VALUE=DATE:20250723
 DTEND;VALUE=DATE:20250724
 URL:https://imagecomics.com/comics/releases/department-of-truth-32
@@ -1157,7 +1165,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:department-of-truth-30
 DTSTAMP:20250528T000000
-SUMMARY:Department Of Truth #30
+SUMMARY:The Department Of Truth #30
 DTSTART;VALUE=DATE:20250528
 DTEND;VALUE=DATE:20250529
 URL:https://imagecomics.com/comics/releases/department-of-truth-30
@@ -1275,12 +1283,12 @@ DTEND;VALUE=DATE:20220224
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-16
 END:VEVENT
 BEGIN:VEVENT
-UID:the-department-of-truth-15
-DTSTAMP:20220112T000000
-SUMMARY:THE DEPARTMENT OF TRUTH #15
-DTSTART;VALUE=DATE:20220112
-DTEND;VALUE=DATE:20220113
-URL:https://imagecomics.com/comics/releases/the-department-of-truth-15
+UID:the-scorched-52
+DTSTAMP:20260429T000000
+SUMMARY:THE SCORCHED #52
+DTSTART;VALUE=DATE:20260429
+DTEND;VALUE=DATE:20260430
+URL:https://imagecomics.com/comics/releases/the-scorched-52
 END:VEVENT
 BEGIN:VEVENT
 UID:the-scorched-51
@@ -1293,7 +1301,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-scorched-50
 DTSTAMP:20260225T000000
-SUMMARY:Spawn Scorched #50
+SUMMARY:The Scorched #50
 DTSTART;VALUE=DATE:20260225
 DTEND;VALUE=DATE:20260226
 URL:https://imagecomics.com/comics/releases/spawn-scorched-50
@@ -1301,7 +1309,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-scorched-49
 DTSTAMP:20260204T000000
-SUMMARY:Spawn Scorched #49
+SUMMARY:The Scorched #49
 DTSTART;VALUE=DATE:20260204
 DTEND;VALUE=DATE:20260205
 URL:https://imagecomics.com/comics/releases/spawn-scorched-49
@@ -1309,7 +1317,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-scorched-48
 DTSTAMP:20260121T000000
-SUMMARY:Spawn Scorched #48
+SUMMARY:The Scorched #48
 DTSTART;VALUE=DATE:20260121
 DTEND;VALUE=DATE:20260122
 URL:https://imagecomics.com/comics/releases/spawn-scorched-48
@@ -1317,7 +1325,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-scorched-47
 DTSTAMP:20260107T000000
-SUMMARY:Spawn Scorched #47
+SUMMARY:The Scorched #47
 DTSTART;VALUE=DATE:20260107
 DTEND;VALUE=DATE:20260108
 URL:https://imagecomics.com/comics/releases/spawn-scorched-47
@@ -1325,7 +1333,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-scorched-46
 DTSTAMP:20251105T000000
-SUMMARY:Spawn Scorched #46
+SUMMARY:The Scorched #46
 DTSTART;VALUE=DATE:20251105
 DTEND;VALUE=DATE:20251106
 URL:https://imagecomics.com/comics/releases/spawn-scorched-46
@@ -1333,7 +1341,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-scorched-45
 DTSTAMP:20251001T000000
-SUMMARY:Spawn Scorched #45
+SUMMARY:The Scorched #45
 DTSTART;VALUE=DATE:20251001
 DTEND;VALUE=DATE:20251002
 URL:https://imagecomics.com/comics/releases/spawn-scorched-45
@@ -1341,7 +1349,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-scorched-44
 DTSTAMP:20250827T000000
-SUMMARY:Spawn Scorched #44
+SUMMARY:The Scorched #44
 DTSTART;VALUE=DATE:20250827
 DTEND;VALUE=DATE:20250828
 URL:https://imagecomics.com/comics/releases/spawn-scorched-44
@@ -1349,7 +1357,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-scorched-43
 DTSTAMP:20250730T000000
-SUMMARY:Spawn Scorched #43
+SUMMARY:The Scorched #43
 DTSTART;VALUE=DATE:20250730
 DTEND;VALUE=DATE:20250731
 URL:https://imagecomics.com/comics/releases/spawn-scorched-43
@@ -1357,7 +1365,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-scorched-42
 DTSTAMP:20250702T000000
-SUMMARY:Spawn Scorched #42
+SUMMARY:The Scorched #42
 DTSTART;VALUE=DATE:20250702
 DTEND;VALUE=DATE:20250703
 URL:https://imagecomics.com/comics/releases/spawn-scorched-42
@@ -1365,7 +1373,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-scorched-41
 DTSTAMP:20250604T000000
-SUMMARY:Spawn Scorched #41
+SUMMARY:The Scorched #41
 DTSTART;VALUE=DATE:20250604
 DTEND;VALUE=DATE:20250605
 URL:https://imagecomics.com/comics/releases/spawn-scorched-41
@@ -1373,7 +1381,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-scorched-40
 DTSTAMP:20250507T000000
-SUMMARY:Spawn Scorched #40
+SUMMARY:The Scorched #40
 DTSTART;VALUE=DATE:20250507
 DTEND;VALUE=DATE:20250508
 URL:https://imagecomics.com/comics/releases/spawn-scorched-40
@@ -1381,7 +1389,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-scorched-39
 DTSTAMP:20250402T000000
-SUMMARY:Spawn Scorched #39
+SUMMARY:The Scorched #39
 DTSTART;VALUE=DATE:20250402
 DTEND;VALUE=DATE:20250403
 URL:https://imagecomics.com/comics/releases/spawn-scorched-39
@@ -1389,7 +1397,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:scorched-38
 DTSTAMP:20250226T000000
-SUMMARY:Scorched #38
+SUMMARY:The Scorched #38
 DTSTART;VALUE=DATE:20250226
 DTEND;VALUE=DATE:20250227
 URL:https://imagecomics.com/comics/releases/scorched-38
@@ -1397,7 +1405,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-scorched-37
 DTSTAMP:20250115T000000
-SUMMARY:Spawn Scorched #37
+SUMMARY:The Scorched #37
 DTSTART;VALUE=DATE:20250115
 DTEND;VALUE=DATE:20250116
 URL:https://imagecomics.com/comics/releases/spawn-scorched-37
@@ -1405,7 +1413,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-scorched-36
 DTSTAMP:20241204T000000
-SUMMARY:Spawn Scorched #36
+SUMMARY:The Scorched #36
 DTSTART;VALUE=DATE:20241204
 DTEND;VALUE=DATE:20241205
 URL:https://imagecomics.com/comics/releases/spawn-scorched-36
@@ -1413,7 +1421,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-the-scorched-35
 DTSTAMP:20241106T000000
-SUMMARY:Spawn: The Scorched #35
+SUMMARY:The Scorched #35
 DTSTART;VALUE=DATE:20241106
 DTEND;VALUE=DATE:20241107
 URL:https://imagecomics.com/comics/releases/spawn-the-scorched-35
@@ -1421,7 +1429,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:spawn-the-scorched-34
 DTSTAMP:20241009T000000
-SUMMARY:Spawn: The Scorched #34
+SUMMARY:The Scorched #34
 DTSTART;VALUE=DATE:20241009
 DTEND;VALUE=DATE:20241010
 URL:https://imagecomics.com/comics/releases/spawn-the-scorched-34
@@ -1465,13 +1473,5 @@ SUMMARY:The Scorched #28
 DTSTART;VALUE=DATE:20240320
 DTEND;VALUE=DATE:20240321
 URL:https://imagecomics.com/comics/releases/the-scorched-28
-END:VEVENT
-BEGIN:VEVENT
-UID:scorched-27
-DTSTAMP:20240313T000000
-SUMMARY:The Scorched #27
-DTSTART;VALUE=DATE:20240313
-DTEND;VALUE=DATE:20240314
-URL:https://imagecomics.com/comics/releases/scorched-27
 END:VEVENT
 END:VCALENDAR
