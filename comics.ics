@@ -493,7 +493,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:department-of-truth-the-comp-conspiracy-deluxe-hc-vol-01
 DTSTAMP:20230503T000000
-SUMMARY:The Department Of Truth: The Comp Conspiracy Deluxe HC Vol 01
+SUMMARY:The Department Of Truth: The Complete Conspiracy Deluxe HC Vol 01
 DTSTART;VALUE=DATE:20230503
 DTEND;VALUE=DATE:20230504
 URL:https://imagecomics.com/comics/releases/department-of-truth-the-comp-conspiracy-deluxe-hc-vol-01
@@ -529,6 +529,14 @@ SUMMARY:The Department of Truth, Vol. 1: The End of the World TP
 DTSTART;VALUE=DATE:20210224
 DTEND;VALUE=DATE:20210225
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-vol-1-the-end-of-the-world-tp
+END:VEVENT
+BEGIN:VEVENT
+UID:gunslinger-spawn-58-cvr-a-carlo-barberi
+DTSTAMP:20260923T000000
+SUMMARY:GUNSLINGER SPAWN #58
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+URL:https://imagecomics.com/comics/releases/gunslinger-spawn-58-cvr-a-carlo-barberi
 END:VEVENT
 BEGIN:VEVENT
 UID:gunslinger-spawn-57
@@ -715,12 +723,12 @@ DTEND;VALUE=DATE:20241010
 URL:https://imagecomics.com/comics/releases/gunslinger-spawn-36
 END:VEVENT
 BEGIN:VEVENT
-UID:gunslinger-spawn-35
-DTSTAMP:20240904T000000
-SUMMARY:Gunslinger Spawn #35
-DTSTART;VALUE=DATE:20240904
-DTEND;VALUE=DATE:20240905
-URL:https://imagecomics.com/comics/releases/gunslinger-spawn-35
+UID:king-spawn-59-cvr-a-ryan-carr
+DTSTAMP:20260923T000000
+SUMMARY:KING SPAWN #59
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+URL:https://imagecomics.com/comics/releases/king-spawn-59-cvr-a-ryan-carr
 END:VEVENT
 BEGIN:VEVENT
 UID:king-spawn-58
@@ -907,12 +915,12 @@ DTEND;VALUE=DATE:20240725
 URL:https://imagecomics.com/comics/releases/king-spawn-36
 END:VEVENT
 BEGIN:VEVENT
-UID:king-spawn-35
-DTSTAMP:20240626T000000
-SUMMARY:King Spawn #35
-DTSTART;VALUE=DATE:20240626
-DTEND;VALUE=DATE:20240627
-URL:https://imagecomics.com/comics/releases/king-spawn-35
+UID:spawn-379-cvr-a-aaron-campbell
+DTSTAMP:20260930T000000
+SUMMARY:SPAWN #379
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+URL:https://imagecomics.com/comics/releases/spawn-379-cvr-a-aaron-campbell
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-378
@@ -1035,20 +1043,20 @@ DTEND;VALUE=DATE:20250522
 URL:https://imagecomics.com/comics/releases/medieval-spawn-2-of-4
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-black-ritual-the-book-of-nyx-2-of-7
-DTSTAMP:20250514T000000
-SUMMARY:Spawn Black Ritual The Book Of Nyx #2 (of 7)
-DTSTART;VALUE=DATE:20250514
-DTEND;VALUE=DATE:20250515
-URL:https://imagecomics.com/comics/releases/spawn-black-ritual-the-book-of-nyx-2-of-7
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-364
 DTSTAMP:20250514T000000
 SUMMARY:Spawn #364
 DTSTART;VALUE=DATE:20250514
 DTEND;VALUE=DATE:20250515
 URL:https://imagecomics.com/comics/releases/spawn-364
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-black-ritual-the-book-of-nyx-2-of-7
+DTSTAMP:20250514T000000
+SUMMARY:Spawn Black Ritual The Book Of Nyx #2 (of 7)
+DTSTART;VALUE=DATE:20250514
+DTEND;VALUE=DATE:20250515
+URL:https://imagecomics.com/comics/releases/spawn-black-ritual-the-book-of-nyx-2-of-7
 END:VEVENT
 BEGIN:VEVENT
 UID:medieval-spawn-1-of-4
@@ -1099,12 +1107,12 @@ DTEND;VALUE=DATE:20241031
 URL:https://imagecomics.com/comics/releases/spawn-358
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-357
-DTSTAMP:20241002T000000
-SUMMARY:Spawn #357
-DTSTART;VALUE=DATE:20241002
-DTEND;VALUE=DATE:20241003
-URL:https://imagecomics.com/comics/releases/spawn-357
+UID:department-of-truth-39-cvr-a-martin-simmonds-mr
+DTSTAMP:20260923T000000
+SUMMARY:DEPARTMENT OF TRUTH #39
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+URL:https://imagecomics.com/comics/releases/department-of-truth-39-cvr-a-martin-simmonds-mr
 END:VEVENT
 BEGIN:VEVENT
 UID:the-department-of-truth-38
@@ -1291,12 +1299,12 @@ DTEND;VALUE=DATE:20220324
 URL:https://imagecomics.com/comics/releases/the-department-of-truth-17
 END:VEVENT
 BEGIN:VEVENT
-UID:the-department-of-truth-16
-DTSTAMP:20220223T000000
-SUMMARY:THE DEPARTMENT OF TRUTH #16
-DTSTART;VALUE=DATE:20220223
-DTEND;VALUE=DATE:20220224
-URL:https://imagecomics.com/comics/releases/the-department-of-truth-16
+UID:spawn-scorched-55-cvr-a-jonathan-glapion
+DTSTAMP:20260923T000000
+SUMMARY:SPAWN SCORCHED #55
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+URL:https://imagecomics.com/comics/releases/spawn-scorched-55-cvr-a-jonathan-glapion
 END:VEVENT
 BEGIN:VEVENT
 UID:the-scorched-54
@@ -1481,13 +1489,5 @@ SUMMARY:The Scorched #32
 DTSTART;VALUE=DATE:20240807
 DTEND;VALUE=DATE:20240808
 URL:https://imagecomics.com/comics/releases/the-scorched-32
-END:VEVENT
-BEGIN:VEVENT
-UID:the-scorched-31
-DTSTAMP:20240703T000000
-SUMMARY:The Scorched #31
-DTSTART;VALUE=DATE:20240703
-DTEND;VALUE=DATE:20240704
-URL:https://imagecomics.com/comics/releases/the-scorched-31
 END:VEVENT
 END:VCALENDAR
