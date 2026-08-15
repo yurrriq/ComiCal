@@ -11,20 +11,20 @@ DTEND;VALUE=DATE:20260618
 URL:https://imagecomics.com/comics/releases/geiger-vol-5-tp
 END:VEVENT
 BEGIN:VEVENT
-UID:geiger-deluxe-edition-hc-vol-2
-DTSTAMP:20251203T000000
-SUMMARY:Geiger Deluxe Edition HC, Vol. 2
-DTSTART;VALUE=DATE:20251203
-DTEND;VALUE=DATE:20251204
-URL:https://imagecomics.com/comics/releases/geiger-deluxe-edition-hc-vol-2
-END:VEVENT
-BEGIN:VEVENT
 UID:geiger-deluxe-edition-hc
 DTSTAMP:20251203T000000
 SUMMARY:Geiger Deluxe Edition HC
 DTSTART;VALUE=DATE:20251203
 DTEND;VALUE=DATE:20251204
 URL:https://imagecomics.com/comics/releases/geiger-deluxe-edition-hc
+END:VEVENT
+BEGIN:VEVENT
+UID:geiger-deluxe-edition-hc-vol-2
+DTSTAMP:20251203T000000
+SUMMARY:Geiger Deluxe Edition HC, Vol. 2
+DTSTART;VALUE=DATE:20251203
+DTEND;VALUE=DATE:20251204
+URL:https://imagecomics.com/comics/releases/geiger-deluxe-edition-hc-vol-2
 END:VEVENT
 BEGIN:VEVENT
 UID:geiger-tp-vol-4
@@ -435,20 +435,20 @@ DTEND;VALUE=DATE:20240711
 URL:https://imagecomics.com/comics/releases/spawn-origins-hc-vol-14
 END:VEVENT
 BEGIN:VEVENT
-UID:spawn-origins-deluxe-edition-signed-and-numbered-hc-vol-7
-DTSTAMP:20240529T000000
-SUMMARY:Spawn: Origins Deluxe Edition: Signed And Numbered HC, Vol. 7
-DTSTART;VALUE=DATE:20240529
-DTEND;VALUE=DATE:20240530
-URL:https://imagecomics.com/comics/releases/spawn-origins-deluxe-edition-signed-and-numbered-hc-vol-7
-END:VEVENT
-BEGIN:VEVENT
 UID:spawn-origins-deluxe-edition-hc-vol-7
 DTSTAMP:20240529T000000
 SUMMARY:Spawn: Origins Deluxe Edition HC, Vol. 7
 DTSTART;VALUE=DATE:20240529
 DTEND;VALUE=DATE:20240530
 URL:https://imagecomics.com/comics/releases/spawn-origins-deluxe-edition-hc-vol-7
+END:VEVENT
+BEGIN:VEVENT
+UID:spawn-origins-deluxe-edition-signed-and-numbered-hc-vol-7
+DTSTAMP:20240529T000000
+SUMMARY:Spawn: Origins Deluxe Edition: Signed And Numbered HC, Vol. 7
+DTSTART;VALUE=DATE:20240529
+DTEND;VALUE=DATE:20240530
+URL:https://imagecomics.com/comics/releases/spawn-origins-deluxe-edition-signed-and-numbered-hc-vol-7
 END:VEVENT
 BEGIN:VEVENT
 UID:spawn-origins-vol-8
@@ -1132,10 +1132,10 @@ URL:https://imagecomics.com/comics/releases/spawn-358
 END:VEVENT
 BEGIN:VEVENT
 UID:department-of-truth-39-cvr-a-martin-simmonds-mr
-DTSTAMP:20260923T000000
+DTSTAMP:20261028T000000
 SUMMARY:DEPARTMENT OF TRUTH #39
-DTSTART;VALUE=DATE:20260923
-DTEND;VALUE=DATE:20260924
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
 URL:https://imagecomics.com/comics/releases/department-of-truth-39-cvr-a-martin-simmonds-mr
 END:VEVENT
 BEGIN:VEVENT
